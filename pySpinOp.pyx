@@ -1,4 +1,5 @@
-cimport pySpinOp as clib
+cdef extern from "spinOp.h":
+    double fac(double x)
 
-def pyFac(x):
-    return clib.fac(x)
+def pyFac(x: double):
+    return fac(x)

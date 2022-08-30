@@ -1,12 +1,12 @@
-CC = gcc
+LIB_DIR = lib
 
-objects =  spinOp.o
+default: pyexamples
 
-libexamples.a : $(objects)
-	ar rcs spinOp.a $(objects)
+pyexamples: setup.py pySpinOp.pyx $(LIB_DIR)/libspinOp.a
+	python3 setup.py build_ext --inplace && rm -f pySpinOp.c && rm -Rf build
 
-spinOp.o : spinOp.h
-	CC -c -O3 spinOp.c
+$(LIB_DIR)/libspinOp.a:
+	make -C $(LIB_DIR) libspinOp.a
 
-clean :
-	rm $(objects) spinOp.a 
+clean:
+	rm *.so

@@ -3,7 +3,7 @@ from distutils.extension import Extension
 from Cython.Build import cythonize
 
 examples_extension = Extension(
-    name="myPackage",
+    name="pySpinOp",
     sources=["pySpinOp.pyx"],
     libraries=["spinOp"],
     library_dirs=["lib"],

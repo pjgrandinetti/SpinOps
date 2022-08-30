@@ -1,1 +1,1 @@
-double __fac(double x);
+double fac(double x);

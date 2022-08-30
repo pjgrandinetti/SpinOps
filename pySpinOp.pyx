@@ -1,4 +1,4 @@
-cimport pySpinOp
+cimport pySpinOp as clib
 
 def fac(x):
-    return __fac(x)
+    return clib.fac(x)

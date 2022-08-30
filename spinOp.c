@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-double __fac(double x)
+double fac(double x)
 {
     double sum = 1;
     int ix;

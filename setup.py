@@ -1,9 +1,9 @@
-from distutils.core import setup
-from distutils.extension import Extension
+from setuptools import setup
+from setuptools import Extension
 from Cython.Build import cythonize
 
 examples_extension = Extension(
-    name="pySpinOp",
+    name="myPackage",
     sources=["pySpinOp.pyx"],
     libraries=["spinOp"],
 )

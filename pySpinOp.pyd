@@ -1,2 +1,2 @@
 cdef extern from "spinOp.h":
-    double __fac(double x)
+    double fac(double x)

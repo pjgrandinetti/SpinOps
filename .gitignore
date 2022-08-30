@@ -1,52 +1,148 @@
-# Prerequisites
-*.d
+# Byte-compiled / optimized / DLL files
+__pycache__/*
+*.py[cod]
+*$py.class
+.vscode/*
 
-# Object files
-*.o
-*.ko
-*.obj
-*.elf
-
-# Linker output
-*.ilk
-*.map
-*.exp
-
-# Precompiled Headers
-*.gch
-*.pch
-
-# Libraries
-*.lib
-*.a
-*.la
-*.lo
-
-# Shared objects (inc. Windows DLLs)
-*.dll
+# C extensions
 *.so
-*.so.*
-*.dylib
 
-# Executables
-*.exe
+# Distribution / packaging
+.Python
+build/
+.vscode/*
+.idea/*
+develop-eggs/
+dist/
+downloads/
+fftw-master/
+DerivedData/
+eggs/
+.eggs/
+sdist/
+wheels/
+dist_*/
+*.egg-info/
+.installed.cfg
+cython_debug/**
+*.egg
+*.whl
+
+# PyInstaller
+#  Usually these files are written by a python script from a template
+#  before PyInstaller builds the exe, so as to inject date/other infos into it.
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+
+# Translations
+*.mo
+*.pot
+
+# Django stuff:
+*.log
+local_settings.py
+db.sqlite3
+
+# Flask stuff:
+instance/
+.webassets-cache
+
+# Scrapy stuff:
+.scrapy
+
+# Sphinx documentation
+docs/_build/
+docs/introduction/Al_acac
+
+# Spinx Gallery build dirs
+docs/examples/
+docs/fitting/
+docs/signal_processor
+
+# Doxygen output
+docs/xml/
+
+# PyBuilder
+target/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# pyenv
+.python-version
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Xcode projects
+*.xcodeproj
+*.xcworkspace
+
+# mypy
+.mypy_cache/
+
+# mac folder
+.DS_Store
+
+# build
+*.DSYM/**
+
+# folders
+src/c_lib/test_c/**
+tests/simpson/quad/**
+version/
+_temp/
+
+# files
+class-diagram*
 *.out
-*.app
-*.i*86
-*.x86_64
-*.hex
+*.prof
+*.mp4
+*.temp
+*.csdf
+*.csdfe
+*.mrsim
+*.mrsys
+*.mrmtd
+test_os.py
+note.txt
+simulate_lineshape.py
+main.c
+*.code-workspace
+jquery.js
+__config__.json
+test_dash.py
 
-# Debug files
-*.dSYM/
-*.su
-*.idb
-*.pdb
-
-# Kernel Module Compile Results
-*.mod*
-*.cmd
-.tmp_versions/
-modules.order
-Module.symvers
-Mkfile.old
-dkms.conf
+# cython generated files
+test.c
+base_model.c
+sandbox.c
+*.bib
+3iKij9H
+2RFKYke
+337Oqe4

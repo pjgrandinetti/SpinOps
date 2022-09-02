@@ -4,13 +4,13 @@ from Cython.Build import cythonize
 import numpy
 
 examples_extension = Extension(
-    name="spinOpy",
-    sources=["SpinOpy.pyx"],
-    libraries=["spinOp"],
+    name="spinOps",
+    sources=["SpinOps.pyx"],
+    libraries=["spinOps"],
     library_dirs=["lib"],
     include_dirs=["lib",numpy.get_include()]
 )
 setup(
-    name="spinOpy",
+    name="spinOps",
     ext_modules=cythonize([examples_extension])
 )

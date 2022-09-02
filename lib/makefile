@@ -1,12 +1,12 @@
 CC = gcc
 
-objects =  spinOp.o
+objects =  spinOps.o
 
-libspinOp.a : $(objects)
-	ar rcs libspinOp.a $(objects)
+libspinOps.a : $(objects)
+	ar rcs libspinOps.a $(objects)
 
-spinOp.o : spinOp.h
-	CC -c -O3 spinOp.c
+spinOps.o : spinOps.h
+	CC -c -O3 spinOps.c
 
 clean :
-	rm $(objects) libspinOp.a 
+	rm $(objects) libspinOps.a 

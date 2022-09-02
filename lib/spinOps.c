@@ -1,4 +1,4 @@
-#include "spinOp.h"
+#include "spinOps.h"
 
 double fac(double x)
 {
@@ -112,20 +112,20 @@ double unitTLM_(double l,double m,double j1,double m1,double j2,double m2)
     return(element);
 }
 
-int numberOfStates_(int spinCount, int *allSpinsTimesTwo)
+int numberOfStates_(int spinCount, int *spinsTimesTwo)
 {
     /* Calculate size of state space */
     int nstates=1;
     for(unsigned int index = 0; index<spinCount; index++) {
-        float spin = (float) allSpinsTimesTwo[index]/2.;
+        float spin = (float) spinsTimesTwo[index]/2.;
         nstates *= (unsigned int) (2. * spin + 1.);
     }
     return nstates;
 }
 
-float **createQuantumNumbers(int spinCount, int *allSpinsTimesTwo)
+float **createQuantumNumbers(int spinCount, int *spinsTimesTwo)
 {
-    int nstates = numberOfStates_(spinCount, allSpinsTimesTwo);
+    int nstates = numberOfStates_(spinCount, spinsTimesTwo);
 
     /* Create quantum numbers matrix */
     float **qnum = malloc(sizeof(float)*nstates*spinCount);
@@ -133,7 +133,7 @@ float **createQuantumNumbers(int spinCount, int *allSpinsTimesTwo)
     double x = 1.;
     for(int index=0; index<spinCount; index++) {
         int state=0;
-        float spin = (float) allSpinsTimesTwo[index]/2.;
+        float spin = (float) spinsTimesTwo[index]/2.;
         
         do {float m = - spin;
             do {
@@ -162,18 +162,18 @@ float systemDeltaProduct(float **qnum, int spinCount, int iskip, int bra, int ke
  @function getIx
  @abstract create the Complex Square Matrix for Ix for the Spin in a Spin System
  @param spinIndex the index of spin in spin system.
- @param allSpinsTimesTwo the integer array of 2*I for each spin in system.
+ @param spinsTimesTwo the integer array of 2*I for each spin in system.
  @param spinCount the count of spins in system.
  @result the Complex Square Matrix for Ix
  */
-void getIx_(double complex **operator, int spinIndex, int *allSpinsTimesTwo, int spinCount)
+void getIx_(double complex **operator, int spinIndex, int *spinsTimesTwo, int spinCount)
 {
     if(spinIndex<0 || spinIndex>spinCount-1) return; 
     
-    float **qnum = createQuantumNumbers(spinCount, allSpinsTimesTwo);
-    int nstates = numberOfStates_(spinCount, allSpinsTimesTwo);
+    float **qnum = createQuantumNumbers(spinCount, spinsTimesTwo);
+    int nstates = numberOfStates_(spinCount, spinsTimesTwo);
 
-    float spin = (float) allSpinsTimesTwo[spinIndex]/2.;
+    float spin = (float) spinsTimesTwo[spinIndex]/2.;
     
     for(int bra=0; bra<nstates; bra++) {
         for(int ket=0; ket<nstates; ket++) {
@@ -192,18 +192,18 @@ void getIx_(double complex **operator, int spinIndex, int *allSpinsTimesTwo, int
  @function getIy
  @abstract create the Complex Square Matrix for Iy for the Spin in a Spin System
  @param spinIndex the index of spin in spin system.
- @param allSpinsTimesTwo the integer array of 2*I for each spin in system.
+ @param spinsTimesTwo the integer array of 2*I for each spin in system.
  @param spinCount the count of spins in system.
  @result the Complex Square Matrix for Iy
  */
-void getIy_(double complex **operator, int spinIndex, int *allSpinsTimesTwo, int spinCount)
+void getIy_(double complex **operator, int spinIndex, int *spinsTimesTwo, int spinCount)
 {
     if(spinIndex<0 || spinIndex>spinCount-1) return; 
     
-    float **qnum = createQuantumNumbers(spinCount, allSpinsTimesTwo);
-    int nstates = numberOfStates_(spinCount, allSpinsTimesTwo);
+    float **qnum = createQuantumNumbers(spinCount, spinsTimesTwo);
+    int nstates = numberOfStates_(spinCount, spinsTimesTwo);
 
-    float spin = (float) allSpinsTimesTwo[spinIndex]/2.;
+    float spin = (float) spinsTimesTwo[spinIndex]/2.;
     
     for(int bra=0; bra<nstates; bra++) {
         for(int ket=0; ket<nstates; ket++) {
@@ -222,18 +222,18 @@ void getIy_(double complex **operator, int spinIndex, int *allSpinsTimesTwo, int
  @function getIz
  @abstract create the Complex Square Matrix for Iz for the Spin in a Spin System
  @param spinIndex the index of spin in spin system.
- @param allSpinsTimesTwo the integer array of 2*I for each spin in system.
+ @param spinsTimesTwo the integer array of 2*I for each spin in system.
  @param spinCount the count of spins in system.
  @result the Complex Square Matrix for Iz
  */
-void getIz_(double complex **operator, int spinIndex, int *allSpinsTimesTwo, int spinCount)
+void getIz_(double complex **operator, int spinIndex, int *spinsTimesTwo, int spinCount)
 {
     if(spinIndex<0 || spinIndex>spinCount-1) return; 
     
-    float **qnum = createQuantumNumbers(spinCount, allSpinsTimesTwo);
-    int nstates = numberOfStates_(spinCount, allSpinsTimesTwo);
+    float **qnum = createQuantumNumbers(spinCount, spinsTimesTwo);
+    int nstates = numberOfStates_(spinCount, spinsTimesTwo);
 
-    float spin = (float) allSpinsTimesTwo[spinIndex]/2.;
+    float spin = (float) spinsTimesTwo[spinIndex]/2.;
     
     for(int bra=0; bra<nstates; bra++) {
         for(int ket=0; ket<nstates; ket++) {
@@ -249,18 +249,18 @@ void getIz_(double complex **operator, int spinIndex, int *allSpinsTimesTwo, int
  @function getIp
  @abstract create the Complex Square Matrix for Ip for the Spin in a Spin System
  @param spinIndex the index of spin in spin system.
- @param allSpinsTimesTwo the integer array of 2*I for each spin in system.
+ @param spinsTimesTwo the integer array of 2*I for each spin in system.
  @param spinCount the count of spins in system.
  @result the Complex Square Matrix for Ip
  */
-void getIp_(double complex **operator, int spinIndex, int *allSpinsTimesTwo, int spinCount)
+void getIp_(double complex **operator, int spinIndex, int *spinsTimesTwo, int spinCount)
 {
     if(spinIndex<0 || spinIndex>spinCount-1) return; 
     
-    float **qnum = createQuantumNumbers(spinCount, allSpinsTimesTwo);
-    int nstates = numberOfStates_(spinCount, allSpinsTimesTwo);
+    float **qnum = createQuantumNumbers(spinCount, spinsTimesTwo);
+    int nstates = numberOfStates_(spinCount, spinsTimesTwo);
 
-    float spin = (float) allSpinsTimesTwo[spinIndex]/2.;
+    float spin = (float) spinsTimesTwo[spinIndex]/2.;
     
     for(int bra=0; bra<nstates; bra++) {
         for(int ket=0; ket<nstates; ket++) {
@@ -276,18 +276,18 @@ void getIp_(double complex **operator, int spinIndex, int *allSpinsTimesTwo, int
  @function getIm
  @abstract create the Complex Square Matrix for Im for the Spin in a Spin System
  @param spinIndex the index of spin in spin system.
- @param allSpinsTimesTwo the integer array of 2*I for each spin in system.
+ @param spinsTimesTwo the integer array of 2*I for each spin in system.
  @param spinCount the count of spins in system.
  @result the Complex Square Matrix for Im
  */
-void getIm_(double complex **operator, int spinIndex, int *allSpinsTimesTwo, int spinCount)
+void getIm_(double complex **operator, int spinIndex, int *spinsTimesTwo, int spinCount)
 {
     if(spinIndex<0 || spinIndex>spinCount-1) return; 
     
-    float **qnum = createQuantumNumbers(spinCount, allSpinsTimesTwo);
-    int nstates = numberOfStates_(spinCount, allSpinsTimesTwo);
+    float **qnum = createQuantumNumbers(spinCount, spinsTimesTwo);
+    int nstates = numberOfStates_(spinCount, spinsTimesTwo);
 
-    float spin = (float) allSpinsTimesTwo[spinIndex]/2.;
+    float spin = (float) spinsTimesTwo[spinIndex]/2.;
     
     for(int bra=0; bra<nstates; bra++) {
         for(int ket=0; ket<nstates; ket++) {
@@ -304,18 +304,18 @@ void getIm_(double complex **operator, int spinIndex, int *allSpinsTimesTwo, int
  @function getTlm
  @abstract create the Complex Square Matrix for Tlm for the Spin in a Spin System
  @param spinIndex the index of spin in spin system.
- @param allSpinsTimesTwo the integer array of 2*I for each spin in system.
+ @param spinsTimesTwo the integer array of 2*I for each spin in system.
  @param spinCount the count of spins in system.
  @result the Complex Square Matrix for Tlm
  */
-void getTlm_(double complex **operator, int spinIndex, int *allSpinsTimesTwo, int spinCount, int L, int M)
+void getTlm_(double complex **operator, int spinIndex, int *spinsTimesTwo, int spinCount, int L, int M)
 {
     if(spinIndex<0 || spinIndex>spinCount-1) return; 
     
-    float **qnum = createQuantumNumbers(spinCount, allSpinsTimesTwo);
-    int nstates = numberOfStates_(spinCount, allSpinsTimesTwo);
+    float **qnum = createQuantumNumbers(spinCount, spinsTimesTwo);
+    int nstates = numberOfStates_(spinCount, spinsTimesTwo);
 
-    float spin = (float) allSpinsTimesTwo[spinIndex]/2.;
+    float spin = (float) spinsTimesTwo[spinIndex]/2.;
     
     for(int bra=0; bra<nstates; bra++) {
         for(int ket=0; ket<nstates; ket++) {

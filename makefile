@@ -1,12 +1,12 @@
 LIB_DIR = lib
 
-default: spinOpy
+default: spinOps
 
-spinOpy: setup.py spinOpy.pyx $(LIB_DIR)/libspinOp.a
-	python3 setup.py build_ext --inplace && rm -f spinOpy.c && rm -Rf build
+spinOps: setup.py spinOps.pyx $(LIB_DIR)/libspinOps.a
+	python3 setup.py build_ext --inplace && rm -f spinOps.c && rm -Rf build
 
-$(LIB_DIR)/libspinOp.a:
-	make -C $(LIB_DIR) libspinOp.a
+$(LIB_DIR)/libspinOps.a:
+	make -C $(LIB_DIR) libspinOps.a
 
 clean:
 	rm *.so

@@ -128,8 +128,8 @@ float *createQuantumNumbers(int spinCount, int *spinsTimesTwo)
     int nstates = numberOfStates_(spinCount, spinsTimesTwo);
 
     /* Create quantum numbers matrix */
-    float *qnum = malloc(sizeof(float)*nstates*spinCount);
-    float (*array)[nstates] = (float (*)[nstates]) qnum;
+    float *qnum_data = malloc(sizeof(float)*nstates*spinCount);
+    float (*qnum)[nstates] = (float (*)[nstates]) qnum_data;
 
     double x = 1.;
     for(int index=0; index<spinCount; index++) {
@@ -138,7 +138,7 @@ float *createQuantumNumbers(int spinCount, int *spinsTimesTwo)
         
         do {float m = - spin;
             do {
-                array[index][state] = (float) m;
+                qnum[index][state] = (float) m;
                 state++;
                 double ip;
                 if(modf( (double) state/x,&ip) == 0.) m++;
@@ -146,7 +146,7 @@ float *createQuantumNumbers(int spinCount, int *spinsTimesTwo)
         } while(state < nstates);
         x *= (2 * spin + 1.);
     }
-    return qnum;
+    return qnum_data;
 }
 
 /* This routine calculates the product of delta(qnum[i][m1], qnum[i][m2]) for every spin i except spin iskip.*/
@@ -187,7 +187,7 @@ void getIx_(double complex *operator, int spinIndex, int *spinsTimesTwo, int spi
             }
         }
     }
-    free(qnum);
+    free(qnum_data);
 }
 
 /*!
@@ -217,7 +217,7 @@ void getIy_(double complex *operator, int spinIndex, int *spinsTimesTwo, int spi
             }
         }
     }
-    free(qnum);
+    free(qnum_data);
 }
 
 /*!
@@ -244,7 +244,7 @@ void getIz_(double complex *operator, int spinIndex, int *spinsTimesTwo, int spi
             else matrix[bra][ket] = tlm_(1.,0.,spin,qnum[spinIndex][bra],spin,qnum[spinIndex][ket]) * del;
         }
     }
-    free(qnum);
+    free(qnum_data);
 }
 
 /*!
@@ -271,7 +271,7 @@ void getIp_(double complex *operator, int spinIndex, int *spinsTimesTwo, int spi
             else matrix[bra][ket] = - sqrt(2)*tlm_(1.,1.,spin,qnum[spinIndex][bra],spin,qnum[spinIndex][ket]) * del;
         }
     }
-    free(qnum);
+    free(qnum_data);
 }
 
 /*!
@@ -298,7 +298,7 @@ void getIm_(double complex *operator, int spinIndex, int *spinsTimesTwo, int spi
             else matrix[bra][ket] = sqrt(2)*tlm_(1.,-1.,spin,qnum[spinIndex][bra],spin,qnum[spinIndex][ket]) * del;
         }
     }
-    free(qnum);
+    free(qnum_data);
 }
 
 
@@ -326,7 +326,7 @@ void getTlm_(double complex *operator, int spinIndex, int *spinsTimesTwo, int sp
             else matrix[bra][ket] = tlm_(L,M,spin,qnum[spinIndex][bra],spin,qnum[spinIndex][ket]) * del;
         }
     }
-    free(qnum);
+    free(qnum_data);
 }
 
 /*!
@@ -353,6 +353,6 @@ void getTlm_unit_(double complex *operator, int spinIndex, int *spinsTimesTwo, i
             else matrix[bra][ket] = unit_tlm_(L,M,spin,qnum[spinIndex][bra],spin,qnum[spinIndex][ket]) * del;
         }
     }
-    free(qnum);
+    free(qnum_data);
 }
 

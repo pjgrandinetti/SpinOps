@@ -1,6 +1,9 @@
 from numpy cimport ndarray
 import numpy as np
 
+cdef extern from "complex.h":
+    pass
+
 cdef extern from "spinOps.h":
     double clebsch_(double j1,double m1,double j2,double m2,double j,double m)
     double tlm_(double l,double m,double j1,double m1,double j2,double m2)
@@ -31,38 +34,6 @@ def createIx(spinIndex, list spinsTimesTwo):
     nstates = numberOfStates(spinsTimesTwo)
     cdef int spinCount = len(spinsTimesTwo)
     cdef ndarray[int] spins=np.array(spinsTimesTwo,dtype=np.int32)
-    cdef ndarray[double, ndim=2] operator=np.zeros((nstates,nstates), dtype=numpy.cdouble)
-    getIx_(&operator[0], spinIndex,  &spins[0], spinCount)
-    return operator
-
-def createIy(spinIndex, list spinsTimesTwo):
-    nstates = numberOfStates(spinsTimesTwo)
-    cdef int spinCount = len(spinsTimesTwo)
-    cdef ndarray[int] spins=np.array(spinsTimesTwo,dtype=np.int32)
-    cdef ndarray[double, ndim=2] operator=np.zeros((nstates,nstates), dtype=numpy.cdouble)
-    getIy_(&operator[0], spinIndex,  &spins[0], spinCount)
-    return operator
-
-def createIz(spinIndex, list spinsTimesTwo):
-    nstates = numberOfStates(spinsTimesTwo)
-    cdef int spinCount = len(spinsTimesTwo)
-    cdef ndarray[int] spins=np.array(spinsTimesTwo,dtype=np.int32)
-    cdef ndarray[double, ndim=2] operator=np.zeros((nstates,nstates), dtype=numpy.cdouble)
-    getIz_(&operator[0], spinIndex,  &spins[0], spinCount)
-    return operator
-
-def createIp(spinIndex, list spinsTimesTwo):
-    nstates = numberOfStates(spinsTimesTwo)
-    cdef int spinCount = len(spinsTimesTwo)
-    cdef ndarray[int] spins=np.array(spinsTimesTwo,dtype=np.int32)
-    cdef ndarray[double, ndim=2] operator=np.zeros((nstates,nstates), dtype=numpy.cdouble)
-    getIp_(&operator[0], spinIndex,  &spins[0], spinCount)
-    return operator
-
-def createIm(spinIndex, list spinsTimesTwo):
-    nstates = numberOfStates(spinsTimesTwo)
-    cdef int spinCount = len(spinsTimesTwo)
-    cdef ndarray[int] spins=np.array(spinsTimesTwo,dtype=np.int32)
-    cdef ndarray[double, ndim=2] operator=np.zeros((nstates,nstates), dtype=numpy.cdouble)
-    getIm_(&operator[0], spinIndex,  &spins[0], spinCount)
-    return operator
+    cdef ndarray[double complex, ndim=2] myOp = np.zeros((nstates,nstates), dtype=np.complex128)
+    getIx_(&myOp[0,0], spinIndex,  &spins[0], spinCount)
+    return myOp

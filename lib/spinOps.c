@@ -53,7 +53,7 @@ double min(double a,double b,double c)
 /* < j, m | j1, j2, m1, m2>, using a routine taken from the */
 /* Mathematica textbook, page 519. */
 
-double Clebsch_(double j1,double m1,double j2,double m2,double j,double m)
+double clebsch_(double j1,double m1,double j2,double m2,double j,double m)
 {
     double C1 = 0.0, C2, C3, temp;
     double cg = 0.0;
@@ -80,13 +80,13 @@ double Clebsch_(double j1,double m1,double j2,double m2,double j,double m)
 /* This routines evaluates the matrix element <j1 m1|T(lm)|j2 m2> using */
 /* definition from Bowden and Hutchinson, J. magn. reson. 67, 403, 1986 */
 
-double TLM_(double l,double m,double j1,double m1,double j2,double m2)
+double tlm_(double l,double m,double j1,double m1,double j2,double m2)
 {
     double j;
     double element=0;
     if(j1==j2) {
         j = j1;
-        double clebsch = Clebsch_(j,m2,l,m,j,m1);
+        double clebsch = clebsch_(j,m2,l,m,j,m1);
         if(clebsch!=0.0) {
             double rme = fac(l) * fac(l) * fac(2*j+l+1);
             rme /= pow(2.,l) * fac(2*l) * fac(2*j - l);
@@ -100,14 +100,14 @@ double TLM_(double l,double m,double j1,double m1,double j2,double m2)
 /* This routines evaluates the matrix element <j1 m1|T_hat(lm)|j2 m2> using */
 /* definition of unit Tensors from Bowden and Hutchinson, J. magn. reson. 67, 403, 1986 */
 
-double unitTLM_(double l,double m,double j1,double m1,double j2,double m2)
+double unit_tlm_(double l,double m,double j1,double m1,double j2,double m2)
 {
     double j;
     
     double element=0;
     if(j1==j2) {
         j = j1;
-        element = Clebsch_(j2,m2,l,m,j1,m1)*sqrt(2*l+1)/sqrt(2*j+1);
+        element = clebsch_(j2,m2,l,m,j1,m1)*sqrt(2*l+1)/sqrt(2*j+1);
     }
     return(element);
 }
@@ -180,8 +180,8 @@ void getIx_(double complex **operator, int spinIndex, int *spinsTimesTwo, int sp
             float del = systemDeltaProduct(qnum, spinCount, spinIndex, bra, ket);
             if(del==0) operator[bra][ket] = 0;
             else {
-                operator[bra][ket] = 1/ sqrt(2)*TLM_(1.,-1.,spin,qnum[spinIndex][bra],spin,qnum[spinIndex][ket]) * del;
-                operator[bra][ket] -= 1/sqrt(2)*TLM_(1.,1.,spin,qnum[spinIndex][bra],spin,qnum[spinIndex][ket]) * del;
+                operator[bra][ket] = 1/ sqrt(2)*tlm_(1.,-1.,spin,qnum[spinIndex][bra],spin,qnum[spinIndex][ket]) * del;
+                operator[bra][ket] -= 1/sqrt(2)*tlm_(1.,1.,spin,qnum[spinIndex][bra],spin,qnum[spinIndex][ket]) * del;
             }
         }
     }
@@ -210,8 +210,8 @@ void getIy_(double complex **operator, int spinIndex, int *spinsTimesTwo, int sp
             float del = systemDeltaProduct(qnum, spinCount, spinIndex, bra, ket);
             if(del==0) operator[bra][ket] = 0;
             else {
-                operator[bra][ket] = I/sqrt(2)*TLM_(1.,-1.,spin,qnum[spinIndex][bra],spin,qnum[spinIndex][ket]) * del;
-                operator[bra][ket] += I/sqrt(2)*TLM_(1.,1.,spin,qnum[spinIndex][bra],spin,qnum[spinIndex][ket]) * del;
+                operator[bra][ket] = I/sqrt(2)*tlm_(1.,-1.,spin,qnum[spinIndex][bra],spin,qnum[spinIndex][ket]) * del;
+                operator[bra][ket] += I/sqrt(2)*tlm_(1.,1.,spin,qnum[spinIndex][bra],spin,qnum[spinIndex][ket]) * del;
             }
         }
     }
@@ -239,7 +239,7 @@ void getIz_(double complex **operator, int spinIndex, int *spinsTimesTwo, int sp
         for(int ket=0; ket<nstates; ket++) {
             float del = systemDeltaProduct(qnum, spinCount, spinIndex, bra, ket);
             if(del==0) operator[bra][ket] = 0;
-            else operator[bra][ket] = TLM_(1.,0.,spin,qnum[spinIndex][bra],spin,qnum[spinIndex][ket]) * del;
+            else operator[bra][ket] = tlm_(1.,0.,spin,qnum[spinIndex][bra],spin,qnum[spinIndex][ket]) * del;
         }
     }
     free(qnum);
@@ -266,7 +266,7 @@ void getIp_(double complex **operator, int spinIndex, int *spinsTimesTwo, int sp
         for(int ket=0; ket<nstates; ket++) {
             float del = systemDeltaProduct(qnum, spinCount, spinIndex, bra, ket);
             if(del==0) operator[bra][ket] = 0;
-            else operator[bra][ket] = - sqrt(2)*TLM_(1.,1.,spin,qnum[spinIndex][bra],spin,qnum[spinIndex][ket]) * del;
+            else operator[bra][ket] = - sqrt(2)*tlm_(1.,1.,spin,qnum[spinIndex][bra],spin,qnum[spinIndex][ket]) * del;
         }
     }
     free(qnum);
@@ -293,7 +293,7 @@ void getIm_(double complex **operator, int spinIndex, int *spinsTimesTwo, int sp
         for(int ket=0; ket<nstates; ket++) {
             float del = systemDeltaProduct(qnum, spinCount, spinIndex, bra, ket);
             if(del==0) operator[bra][ket] = 0;
-            else operator[bra][ket] = sqrt(2)*TLM_(1.,-1.,spin,qnum[spinIndex][bra],spin,qnum[spinIndex][ket]) * del;
+            else operator[bra][ket] = sqrt(2)*tlm_(1.,-1.,spin,qnum[spinIndex][bra],spin,qnum[spinIndex][ket]) * del;
         }
     }
     free(qnum);
@@ -308,7 +308,7 @@ void getIm_(double complex **operator, int spinIndex, int *spinsTimesTwo, int sp
  @param spinCount the count of spins in system.
  @result the Complex Square Matrix for Tlm
  */
-void getTlm_(double complex **operator, int spinIndex, int *spinsTimesTwo, int spinCount, int L, int M)
+void gettlm_(double complex **operator, int spinIndex, int *spinsTimesTwo, int spinCount, int L, int M)
 {
     if(spinIndex<0 || spinIndex>spinCount-1) return; 
     
@@ -321,7 +321,7 @@ void getTlm_(double complex **operator, int spinIndex, int *spinsTimesTwo, int s
         for(int ket=0; ket<nstates; ket++) {
             float del = systemDeltaProduct(qnum, spinCount, spinIndex, bra, ket);
             if(del==0) operator[bra][ket] = 0;
-            else operator[bra][ket] = TLM_(L,M,spin,qnum[spinIndex][bra],spin,qnum[spinIndex][ket]) * del;
+            else operator[bra][ket] = tlm_(L,M,spin,qnum[spinIndex][bra],spin,qnum[spinIndex][ket]) * del;
         }
     }
     free(qnum);

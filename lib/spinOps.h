@@ -3,9 +3,9 @@
 #include <complex.h>
 #include <stdlib.h>
 
-double Clebsch_(double j1,double m1,double j2,double m2,double j,double m);
-double TLM_(double l,double m,double j1,double m1,double j2,double m2);
-double unitTLM_(double l,double m,double j1,double m1,double j2,double m2);
+double clebsch_(double j1,double m1,double j2,double m2,double j,double m);
+double tlm_(double l,double m,double j1,double m1,double j2,double m2);
+double unit_tlm_(double l,double m,double j1,double m1,double j2,double m2);
 int numberOfStates_(int spinCount, int *spinsTimesTwo);
 void getIx_(double complex **operator, int spinIndex, int *spinsTimesTwo, int spinCount);
 void getIy_(double complex **operator, int spinIndex, int *spinsTimesTwo, int spinCount);

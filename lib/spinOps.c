@@ -135,14 +135,13 @@ float *createQuantumNumbers(int spinCount, int *spinsTimesTwo)
     for(int index=0; index<spinCount; index++) {
         int state=0;
         float spin = (float) spinsTimesTwo[index]/2.;
-        
         do {float m = - spin;
             do {
                 qnum[index][state] = (float) m;
                 state++;
                 double ip;
                 if(modf( (double) state/x,&ip) == 0.) m++;
-            }while(m <= spin);
+            } while(m <= spin);
         } while(state < nstates);
         x *= (2 * spin + 1.);
     }

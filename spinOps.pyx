@@ -87,3 +87,26 @@ def createTLM_unit(L, M, spinIndex, list spinsTimesTwo):
     getTlm_unit_(&myOp[0,0], spinIndex,  &spins[0], spinCount, L, M)
     return myOp
 
+cdef extern from "spatialOps.h":
+    void getrho1_pas_(double complex *tensor, double zeta, double eta)
+    void getrho2_pas_(double complex *tensor, double zeta, double eta)
+    double wigner_d_(double l,double m1,double m2,double beta)
+    double complex DLM_(double l,double  m1,double m2, double alpha, double beta, double gamma)
+
+def createRho1(zeta, eta):
+    cdef ndarray[double complex, ndim=1] myOp = np.zeros(3, dtype=np.complex128)
+    getrho1_pas_(&myOp[0], zeta, eta)
+    return myOp
+
+def createRho2(zeta, eta):
+    cdef ndarray[double complex, ndim=1] myOp = np.zeros(5, dtype=np.complex128)
+    getrho2_pas_(&myOp[0], zeta, eta)
+    return myOp
+
+def wigner_d(l: double, m1: double, m2: double, beta: double):
+    return wigner_d_(l,m1,m2,beta)
+
+def DLM(l: double, m1: double, m2: double, alpha: double, beta: double, gamma: double):
+    return DLM_(l, m1, m2, alpha, beta, gamma)
+
+

@@ -209,7 +209,7 @@ void Rot(double j, double complex *initial, euler angle, double complex *final)
 		for (m2 = -2; m2 <= 2; m2++) {
 			final[m2] =0.;
 			for (m1 = -2; m1 <= 2; m1++) {
-				db = wigner_d(j, m1, m2, angle.beta);                                   
+				db = wigner_d_(j, m1, m2, angle.beta);                                   
 				pha = m1 * angle.alpha + m2 * angle.gamma;
 				d = cos(pha) * db - I* sin(pha) * db;
 	        	final[m2] += d * initial[m1];
@@ -222,7 +222,7 @@ void Rot(double j, double complex *initial, euler angle, double complex *final)
 
 		for (m2 = -(int)j; m2 <= (int)j; m2++)
 			for (m1 = -(int)j; m1 <= (int)j; m1++) {
-				d = DLM(j, (double)m1, (double)m2, angle); 
+				d = DLM_(j, (double)m1, (double)m2, angle); 
 	        	temp[m2] += d * initial[m1];
 				}
 

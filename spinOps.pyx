@@ -1,4 +1,8 @@
+# cython: language_level=3
+#define NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION
+
 from numpy cimport ndarray
+cimport numpy as cnp
 import numpy as np
 
 cdef extern from "complex.h":
@@ -92,15 +96,16 @@ cdef extern from "spatialOps.h":
     void getrho2_pas_(double complex *tensor, double zeta, double eta)
     double wigner_d_(double l,double m1,double m2,double beta)
     double complex DLM_(double l,double  m1,double m2, double alpha, double beta, double gamma)
+    void Rot_(double j, double complex *initial, double alpha, double beta, double gamma, double complex *final)
 
-def createRho1(zeta, eta):
-    cdef ndarray[double complex, ndim=1] myOp = np.zeros(3, dtype=np.complex128)
-    getrho1_pas_(&myOp[0], zeta, eta)
+def createRho1(double zeta, double eta):
+    cdef cnp.ndarray[double complex, ndim=1] myOp = np.zeros(3, dtype=np.complex128)
+    getrho1_pas_(<double complex *> cnp.PyArray_DATA(myOp), zeta, eta)
     return myOp
 
-def createRho2(zeta, eta):
-    cdef ndarray[double complex, ndim=1] myOp = np.zeros(5, dtype=np.complex128)
-    getrho2_pas_(&myOp[0], zeta, eta)
+def createRho2(double zeta, double eta):
+    cdef cnp.ndarray[double complex, ndim=1] myOp = np.zeros(5, dtype=np.complex128)
+    getrho2_pas_(<double complex *> cnp.PyArray_DATA(myOp), zeta, eta)
     return myOp
 
 def wigner_d(l: double, m1: double, m2: double, beta: double):
@@ -109,4 +114,8 @@ def wigner_d(l: double, m1: double, m2: double, beta: double):
 def DLM(l: double, m1: double, m2: double, alpha: double, beta: double, gamma: double):
     return DLM_(l, m1, m2, alpha, beta, gamma)
 
+def Rotate(double j, cnp.ndarray[double complex, ndim=1] initial, double alpha, double beta, double gamma):
+    cdef cnp.ndarray[double complex, ndim=1] myOp = np.zeros(2*j+1, dtype=np.complex128)
+    Rot_(j, <double complex *> cnp.PyArray_DATA(initial), alpha, beta, gamma, <double complex *> cnp.PyArray_DATA(myOp))
+    return myOp
 

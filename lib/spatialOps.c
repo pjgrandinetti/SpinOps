@@ -194,12 +194,12 @@ double complex DLM_(double l,double  m1,double m2, double alpha, double beta, do
 
 /* Rotational transformation from one frame to another frame */
 
-void Rot(double j, double complex *initial, euler angle, double complex *final)
+void Rot_(double j, double complex *initial, double alpha, double beta, double gamma, double complex *final)
 {
 	int m1, m2;
 	double complex d;
 
-	if((angle.alpha==0.)&&(angle.beta==0.)&&(angle.gamma==0.)) {
+	if((alpha==0.)&&(beta==0.)&&(gamma==0.)) {
 		for (m2 = -(int)j; m2 <= (int)j; m2++) final[m2] = initial[m2];
 		return;
 		} 
@@ -209,26 +209,25 @@ void Rot(double j, double complex *initial, euler angle, double complex *final)
 		for (m2 = -2; m2 <= 2; m2++) {
 			final[m2] =0.;
 			for (m1 = -2; m1 <= 2; m1++) {
-				db = wigner_d_(j, m1, m2, angle.beta);                                   
-				pha = m1 * angle.alpha + m2 * angle.gamma;
+				db = wigner_d_(j, m1, m2, beta);                                   
+				pha = m1 * alpha + m2 * gamma;
 				d = cos(pha) * db - I* sin(pha) * db;
 	        	final[m2] += d * initial[m1];
 				}
 			}
 		}
 	else {
-		double complex *temp;
-		temp = cvector(-(long)j,(long)j);
+		double complex tempvector[2*(long unsigned) j +1];
+		double complex *temp = tempvector+(long unsigned) j;
 
 		for (m2 = -(int)j; m2 <= (int)j; m2++)
 			for (m1 = -(int)j; m1 <= (int)j; m1++) {
-				d = DLM_(j, (double)m1, (double)m2, angle); 
+				d = DLM_(j, (double)m1, (double)m2, alpha, beta, gamma); 
 	        	temp[m2] += d * initial[m1];
 				}
 
 		for (m2 = -(int)j; m2 <= (int)j; m2++)
 			final[m2] = temp[m2];
-		free_cvector(&temp, -(long)j,(long)j);
 		}
 }
 

@@ -4,6 +4,9 @@
         "stdlib.h": "c",
         "time.h": "c",
         "math.h": "c",
-        "type_traits": "c"
+        "type_traits": "c",
+        "spatialops.h": "c",
+        "spinops.h": "c",
+        "variant": "c"
     }
 }

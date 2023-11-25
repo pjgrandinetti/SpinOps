@@ -14,3 +14,6 @@ void getIp_(double complex *operator, int spinIndex, int *spinsTimesTwo, int spi
 void getIm_(double complex *operator, int spinIndex, int *spinsTimesTwo, int spinCount);
 void getTlm_(double complex *operator, int spinIndex, int *spinsTimesTwo, int spinCount, int L, int M);
 void getTlm_unit_(double complex *operator, int spinIndex, int *spinsTimesTwo, int spinCount, int L, int M);
+
+double mypow(double x, int n);
+double fac(double x);

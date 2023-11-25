@@ -10,7 +10,7 @@ typedef struct EULER {
 	} euler;
 
 void getrho2_pas_(double complex *tensor, double zeta, double eta);
-void getrho1_pas_(double complex *tensor, double zeta, double eta);
+void getrho1_pas_(double complex *tensor, double zeta);
 double wigner_d_(double l,double m1,double m2,double beta);
 double complex DLM_(double l,double  m1,double m2, double alpha, double beta, double gamma);
 void Rot_(double j, double complex *initial, double alpha, double beta, double gamma, double complex *final);

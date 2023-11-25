@@ -1,15 +1,29 @@
 CC = gcc
+CFLAGS = -I/opt/homebrew/Cellar/cunit/2.1-3/include
+LDFLAGS = -L/opt/homebrew/lib -lcunit
+ARFLAGS = rcs
 
-objects =  spinOps.o spatialOps.o
+# List of objects
+OBJECTS =  spinOps.o spatialOps.o
 
-libspinOps.a : $(objects)
-	ar rcs libspinOps.a $(objects)
+# Name of the library
+LIBRARY = libspinOps.a
 
-spatialOps.o : spatialOps.h
-	CC -c -O3 spatialOps.c
+# Default target
+all: $(LIBRARY)
 
-spinOps.o : spinOps.h
-	CC -c -O3 spinOps.c
+# Rule to create the library
+$(LIBRARY) : $(OBJECTS)
+	ar $(ARFLAGS) $(LIBRARY) $(OBJECTS)
 
+# Rule to compile source files
+%.o : %.c %.h
+	$(CC) $(CFLAGS) -c -O3 $< -o $@
+
+# Rule to clean the objects and the library
 clean :
-	rm $(objects) libspinOps.a 
+	rm -f $(OBJECTS) $(LIBRARY)
+
+# Rule to compile and run the tests
+test: test.c $(OBJECTS)
+	$(CC) -o test test.c $(OBJECTS) $(CFLAGS) $(LDFLAGS)

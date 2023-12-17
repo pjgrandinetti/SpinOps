@@ -14,7 +14,14 @@
             "-O3"
         ],
         "include_dirs": [
-            "/Users/philip/anaconda3/envs/mrsimulator-dev/lib/python3.9/site-packages/numpy/core/include"
+            "/Users/philip/anaconda3/envs/mrsimulator-dev/lib/python3.9/site-packages/numpy/core/include",
+            "c_code"
+        ],
+        "libraries": [
+            "spinOps"
+        ],
+        "library_dirs": [
+            "lib"
         ],
         "name": "spinOps.spinOps",
         "sources": [

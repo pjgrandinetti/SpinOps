@@ -1,5 +1,5 @@
-#include "spatialOps.h"
-#include "spinOps.h"
+#include "spatial.h"
+#include "spin.h"
 
 /*!
  @function getrho2_pas

@@ -6,11 +6,10 @@ import numpy
 extensions = [
     Extension(
         "spinOps.spinOps",
-        ["spinOps/spinOps.pyx"],
+        ["spinOps/spinOps.pyx", "spinOps/c_code/spin.c", "spinOps/c_code/spatial.c"], 
         include_dirs=[numpy.get_include(),"spinOps/c_code"],  # If you're using numpy
         extra_compile_args=["-O3"], 
         extra_link_args=['-fPIC'],
-        libraries=["spinOps"],
         library_dirs=["spinOps/c_code"],
 
     )
@@ -18,7 +17,7 @@ extensions = [
 
 setup(
     name="spinOps",
-    version="0.1",
+    version="0.1.1",
     url='https://github.com/pjgrandinetti/spinOps',
     description='A Python package for spin operations',
     author='Philip J. Grandinetti',

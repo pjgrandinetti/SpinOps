@@ -1,4 +1,4 @@
-#include "spinOps.h"
+#include "spin.h"
 
 double fac(double x)
 {

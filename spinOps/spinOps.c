@@ -8,20 +8,25 @@
             "/Users/philip/anaconda3/envs/mrsimulator-dev/lib/python3.9/site-packages/numpy/core/include/numpy/arrayscalars.h",
             "/Users/philip/anaconda3/envs/mrsimulator-dev/lib/python3.9/site-packages/numpy/core/include/numpy/ndarrayobject.h",
             "/Users/philip/anaconda3/envs/mrsimulator-dev/lib/python3.9/site-packages/numpy/core/include/numpy/ndarraytypes.h",
-            "/Users/philip/anaconda3/envs/mrsimulator-dev/lib/python3.9/site-packages/numpy/core/include/numpy/ufuncobject.h"
+            "/Users/philip/anaconda3/envs/mrsimulator-dev/lib/python3.9/site-packages/numpy/core/include/numpy/ufuncobject.h",
+            "spinOps/c_code/spatialOps.h",
+            "spinOps/c_code/spinOps.h"
         ],
         "extra_compile_args": [
             "-O3"
         ],
+        "extra_link_args": [
+            "-fPIC"
+        ],
         "include_dirs": [
             "/Users/philip/anaconda3/envs/mrsimulator-dev/lib/python3.9/site-packages/numpy/core/include",
-            "c_code"
+            "spinOps/c_code"
         ],
         "libraries": [
             "spinOps"
         ],
         "library_dirs": [
-            "lib"
+            "spinOps/c_code"
         ],
         "name": "spinOps.spinOps",
         "sources": [

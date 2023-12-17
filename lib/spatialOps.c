@@ -22,8 +22,8 @@ void getrho1_pas_(double complex *tensor, double zeta)
 void getrho2_pas_(double complex *tensor, double zeta, double eta)
 {
 	tensor[1] = tensor[3] = 0; 
-	tensor[2] = zeta/sqrt(6.);   
-	tensor[4] = tensor[0] = tensor[2] * eta/sqrt(6.);
+	tensor[2] = 1.224744871391589*zeta;   
+	tensor[4] = tensor[0] = eta*zeta/2;
 }
 
 /* calculate Wigner rotation matrices */

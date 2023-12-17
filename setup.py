@@ -1,16 +1,20 @@
-from distutils.core import setup
-from distutils.extension import Extension
+from setuptools import setup
+from setuptools.extension import Extension
 from Cython.Build import cythonize
 import numpy
 
-examples_extension = Extension(
-    name="spinOps",
-    sources=["SpinOps.pyx"],
-    libraries=["spinOps"],
-    library_dirs=["lib"],
-    include_dirs=["lib",numpy.get_include()]
-)
+extensions = [
+    Extension(
+        "spinOps.spinOps",
+        ["spinOps/spinOps.pyx"],
+        include_dirs=[numpy.get_include(),"c_code"],  # If you're using numpy
+        extra_compile_args=["-O3"],  # Optional: extra arguments for the compiler
+        extra_link_args=[],  # Optional: extra arguments for the linker
+    )
+]
+
 setup(
     name="spinOps",
-    ext_modules=cythonize([examples_extension])
+    version="0.1",
+    ext_modules=cythonize(extensions),
 )

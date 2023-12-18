@@ -116,7 +116,7 @@ int numberOfStates_(int spinCount, int *spinsTimesTwo)
 {
     /* Calculate size of state space */
     int nstates=1;
-    for(unsigned int index = 0; index<spinCount; index++) {
+    for(int index = 0; index<spinCount; index++) {
         float spin = (float) spinsTimesTwo[index]/2.;
         nstates *= (unsigned int) (2. * spin + 1.);
     }
@@ -188,6 +188,7 @@ void getIx_(double complex *operator, int spinIndex, int *spinsTimesTwo, int spi
     }
     free(qnum_data);
 }
+
 
 /*!
  @function getIy
@@ -355,3 +356,144 @@ void getTlm_unit_(double complex *operator, int spinIndex, int *spinsTimesTwo, i
     free(qnum_data);
 }
 
+/*!
+ @function getEf_
+ @abstract create the Complex Square Matrix for Fictitious Spin 1/2 
+ Identity Operator in a Spin System
+ @param r state index.
+ @param s state index.
+ @param spinsTimesTwo the integer array of 2*I for each spin in system.
+ @param spinCount the count of spins in system.
+ @result the Complex Square Matrix for Im
+ */
+void getEf_(double complex *operator, int r, int s, int *spinsTimesTwo, int spinCount)
+{
+    int nstates = numberOfStates_(spinCount, spinsTimesTwo);
+    double complex (*matrix)[nstates] = (double complex (*)[nstates]) operator;
+    
+    for(int bra=0; bra<nstates; bra++) {
+        for(int ket=0; ket<nstates; ket++) {
+            matrix[bra][ket] = 0;
+			if(bra==ket&&ket==s) matrix[bra][ket] = 1;
+			else if(bra==ket&&ket==r) matrix[bra][ket] = 1;
+        }
+    }
+}
+
+/*!
+ @function getIxf_
+ @abstract create the Complex Square Matrix for Fictitious Spin 1/2 
+ Ix Operator in a Spin System
+ @param r state index.
+ @param s state index.
+ @param spinsTimesTwo the integer array of 2*I for each spin in system.
+ @param spinCount the count of spins in system.
+ @result the Complex Square Matrix for Im
+ */
+void getIxf_(double complex *operator, int r, int s, int *spinsTimesTwo, int spinCount)
+{
+    int nstates = numberOfStates_(spinCount, spinsTimesTwo);
+    double complex (*matrix)[nstates] = (double complex (*)[nstates]) operator;
+    
+    for(int bra=0; bra<nstates; bra++) {
+        for(int ket=0; ket<nstates; ket++) {
+            matrix[bra][ket] = 0;
+			if((bra==r)&&(ket==s)) matrix[bra][ket] = .5;
+			else if((bra==s)&&(ket==r)) matrix[bra][ket] = .5;
+        }
+    }
+}
+
+/*!
+ @function getIyf_
+ @abstract create the Complex Square Matrix for Fictitious Spin 1/2 
+ Iy Operator in a Spin System
+ @param r state index.
+ @param s state index.
+ @param spinsTimesTwo the integer array of 2*I for each spin in system.
+ @param spinCount the count of spins in system.
+ @result the Complex Square Matrix for Im
+ */
+void getIyf_(double complex *operator, int r, int s, int *spinsTimesTwo, int spinCount)
+{
+    int nstates = numberOfStates_(spinCount, spinsTimesTwo);
+    double complex (*matrix)[nstates] = (double complex (*)[nstates]) operator;
+    
+    for(int bra=0; bra<nstates; bra++) {
+        for(int ket=0; ket<nstates; ket++) {
+            matrix[bra][ket] = 0;
+			if(bra==r&&ket==s) matrix[bra][ket] = .5*I;
+			else if(bra==s&&ket==r) matrix[bra][ket] = -.5*I;
+        }
+    }
+}
+
+/*!
+ @function getIzf_
+ @abstract create the Complex Square Matrix for Fictitious Spin 1/2 
+ Iz Operator in a Spin System
+ @param r state index.
+ @param s state index.
+ @param spinsTimesTwo the integer array of 2*I for each spin in system.
+ @param spinCount the count of spins in system.
+ @result the Complex Square Matrix for Im
+ */
+void getIzf_(double complex *operator, int r, int s, int *spinsTimesTwo, int spinCount)
+{
+    int nstates = numberOfStates_(spinCount, spinsTimesTwo);
+    double complex (*matrix)[nstates] = (double complex (*)[nstates]) operator;
+    
+    for(int bra=0; bra<nstates; bra++) {
+        for(int ket=0; ket<nstates; ket++) {
+            matrix[bra][ket] = 0;
+			if(bra==ket&&ket==s) matrix[bra][ket] = .5;
+			else if(bra==ket&&ket==r) matrix[bra][ket] = -.5;
+        }
+    }
+}
+
+/*!
+ @function getIpf_
+ @abstract create the Complex Square Matrix for Fictitious Spin 1/2 
+ Iplus Operator in a Spin System
+ @param r state index.
+ @param s state index.
+ @param spinsTimesTwo the integer array of 2*I for each spin in system.
+ @param spinCount the count of spins in system.
+ @result the Complex Square Matrix for Im
+ */
+void getIpf_(double complex *operator, int r, int s, int *spinsTimesTwo, int spinCount)
+{
+    int nstates = numberOfStates_(spinCount, spinsTimesTwo);
+    double complex (*matrix)[nstates] = (double complex (*)[nstates]) operator;
+    
+    for(int bra=0; bra<nstates; bra++) {
+        for(int ket=0; ket<nstates; ket++) {
+            matrix[bra][ket] = 0;
+			if((ket==r)&&(bra==s)) matrix[bra][ket] = 1;
+        }
+    }
+}
+
+/*!
+ @function getImf_
+ @abstract create the Complex Square Matrix for Fictitious Spin 1/2 
+ Iminus Operator in a Spin System
+ @param r state index.
+ @param s state index.
+ @param spinsTimesTwo the integer array of 2*I for each spin in system.
+ @param spinCount the count of spins in system.
+ @result the Complex Square Matrix for Im
+ */
+void getImf_(double complex *operator, int r, int s, int *spinsTimesTwo, int spinCount)
+{
+    int nstates = numberOfStates_(spinCount, spinsTimesTwo);
+    double complex (*matrix)[nstates] = (double complex (*)[nstates]) operator;
+    
+    for(int bra=0; bra<nstates; bra++) {
+        for(int ket=0; ket<nstates; ket++) {
+            matrix[bra][ket] = 0;
+			if((bra==r)&&(ket==s)) matrix[bra][ket] = 1;
+        }
+    }
+}

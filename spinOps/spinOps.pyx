@@ -20,6 +20,13 @@ cdef extern from "spin.h":
     void getIm_(double complex *operator, int spinIndex, int *spinsTimesTwo, int spinCount)
     void getTlm_(double complex *operator, int spinIndex, int *spinsTimesTwo, int spinCount, int L, int M)
     void getTlm_unit_(double complex *operator, int spinIndex, int *spinsTimesTwo, int spinCount, int L, int M)
+    void getEf_(double complex *operator, int r, int s, int *spinsTimesTwo, int spinCount);
+    void getIxf_(double complex *operator, int r, int s, int *spinsTimesTwo, int spinCount);
+    void getIyf_(double complex *operator, int r, int s, int *spinsTimesTwo, int spinCount);
+    void getIzf_(double complex *operator, int r, int s, int *spinsTimesTwo, int spinCount);
+    void getIpf_(double complex *operator, int r, int s, int *spinsTimesTwo, int spinCount);
+    void getImf_(double complex *operator, int r, int s, int *spinsTimesTwo, int spinCount);
+
 
 cpdef clebsch(j1: double, m1: double, j2: double, m2: double, j: double, m: double):
     return clebsch_(j1,m1,j2,m2,j,m)
@@ -90,6 +97,55 @@ cpdef createTLM_unit(L, M, spinIndex, list spinsTimesTwo):
     cdef ndarray[double complex, ndim=2] myOp = np.zeros((nstates,nstates), dtype=np.complex128)
     getTlm_unit_(&myOp[0,0], spinIndex,  &spins[0], spinCount, L, M)
     return myOp
+
+cpdef createEf(r, s, list spinsTimesTwo):
+    nstates = numberOfStates(spinsTimesTwo)
+    cdef int spinCount = len(spinsTimesTwo)
+    cdef ndarray[int] spins=np.array(spinsTimesTwo,dtype=np.int32)
+    cdef ndarray[double complex, ndim=2] myOp = np.zeros((nstates,nstates), dtype=np.complex128)
+    getEf_(&myOp[0,0], r, s,  &spins[0], spinCount)
+    return myOp
+
+cpdef createIxf(r, s, list spinsTimesTwo):
+    nstates = numberOfStates(spinsTimesTwo)
+    cdef int spinCount = len(spinsTimesTwo)
+    cdef ndarray[int] spins=np.array(spinsTimesTwo,dtype=np.int32)
+    cdef ndarray[double complex, ndim=2] myOp = np.zeros((nstates,nstates), dtype=np.complex128)
+    getIxf_(&myOp[0,0], r, s,  &spins[0], spinCount)
+    return myOp
+
+cpdef createIyf(r, s, list spinsTimesTwo):
+    nstates = numberOfStates(spinsTimesTwo)
+    cdef int spinCount = len(spinsTimesTwo)
+    cdef ndarray[int] spins=np.array(spinsTimesTwo,dtype=np.int32)
+    cdef ndarray[double complex, ndim=2] myOp = np.zeros((nstates,nstates), dtype=np.complex128)
+    getIyf_(&myOp[0,0], r, s,  &spins[0], spinCount)
+    return myOp
+
+cpdef createIzf(r, s, list spinsTimesTwo):
+    nstates = numberOfStates(spinsTimesTwo)
+    cdef int spinCount = len(spinsTimesTwo)
+    cdef ndarray[int] spins=np.array(spinsTimesTwo,dtype=np.int32)
+    cdef ndarray[double complex, ndim=2] myOp = np.zeros((nstates,nstates), dtype=np.complex128)
+    getIzf_(&myOp[0,0], r, s,  &spins[0], spinCount)
+    return myOp
+
+cpdef createIpf(r, s, list spinsTimesTwo):
+    nstates = numberOfStates(spinsTimesTwo)
+    cdef int spinCount = len(spinsTimesTwo)
+    cdef ndarray[int] spins=np.array(spinsTimesTwo,dtype=np.int32)
+    cdef ndarray[double complex, ndim=2] myOp = np.zeros((nstates,nstates), dtype=np.complex128)
+    getIpf_(&myOp[0,0], r, s,  &spins[0], spinCount)
+    return myOp
+
+cpdef createImf(r, s, list spinsTimesTwo):
+    nstates = numberOfStates(spinsTimesTwo)
+    cdef int spinCount = len(spinsTimesTwo)
+    cdef ndarray[int] spins=np.array(spinsTimesTwo,dtype=np.int32)
+    cdef ndarray[double complex, ndim=2] myOp = np.zeros((nstates,nstates), dtype=np.complex128)
+    getImf_(&myOp[0,0], r, s,  &spins[0], spinCount)
+    return myOp
+
 
 cdef extern from "spatial.h":
     void getrho1_pas_(double complex *tensor, double zeta)

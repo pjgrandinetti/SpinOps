@@ -2,32 +2,58 @@
 #include "spin.h"
 
 /*!
- @function getrho2_pas
- @abstract create the Complex vector for the spherical tensor of rank 2
- @param zeta the traceless 2nd-rank symetric tensor anisotropy.
- @param eta the traceless 2nd-rank symetric tensor asymmetrt.
+ @function getrho1_pas_
+ @abstract Creates the complex vector for the spherical tensor of rank 1.
+ @discussion The spherical tensor of rank 1 has three components corresponding to 
+              the magnetic quantum numbers m = -1, 0, +1. These components are mapped 
+              to the indices 0, 1, and 2 in the array. The function initializes the 
+              tensor based on the traceless 1st-rank symmetric tensor anisotropy `zeta`.
+ @param tensor A pointer to the array representing the spherical tensor components.
+ @param zeta The traceless 1st-rank symmetric tensor anisotropy.
  */
 void getrho1_pas_(double complex *tensor, double zeta)
 {
-	tensor[1] =  -I*sqrt(2)*zeta;   
-	tensor[0] =tensor[2 ] = 0;
+    tensor[1] = -I * sqrt(2) * zeta;   
+    tensor[0] = tensor[2] = 0;
 }
 
+
 /*!
- @function getrho2_pas
- @abstract create the Complex vector for the spherical tensor of rank 2
- @param zeta the traceless 2nd-rank symetric tensor anisotropy.
- @param eta the traceless 2nd-rank symetric tensor asymmetrt.
+ @function getrho2_pas_
+ @abstract Creates the complex vector for the spherical tensor of rank 2.
+ @discussion The spherical tensor of rank 2 has five components corresponding to 
+              the magnetic quantum numbers m = -2, -1, 0, +1, +2. These components 
+              are mapped to the indices 0, 1, 2, 3, and 4 in the array. The function 
+              initializes the tensor based on the traceless 2nd-rank symmetric tensor 
+              anisotropy `zeta` and the asymmetry parameter `eta`.
+ @param tensor A pointer to the array representing the spherical tensor components.
+ @param zeta The traceless 2nd-rank symmetric tensor anisotropy.
+ @param eta The traceless 2nd-rank symmetric tensor asymmetry parameter.
  */
 void getrho2_pas_(double complex *tensor, double zeta, double eta)
 {
-	tensor[1] = tensor[3] = 0; 
-	tensor[2] = 1.224744871391589*zeta;   
-	tensor[4] = tensor[0] = eta*zeta/2;
+    // 2nd-rank spherical tensor has 5 components
+    // labeled by m = -2, -1, 0, +1, +2, which map to 
+    // the indices 0, 1, 2, 3, and 4 in the array.
+    tensor[1] = tensor[3] = 0; 
+    tensor[2] = 1.224744871391589 * zeta;   
+    tensor[4] = tensor[0] = eta * zeta / 2;
 }
 
-/* calculate Wigner rotation matrices */
-
+/*!
+ @function wigner_d_
+ @abstract Computes the Wigner small-d function d(l, m1, m2, beta).
+ @discussion The Wigner small-d function is a component of the Wigner rotation matrix element 
+              and depends on the angular momentum quantum number `l`, the magnetic quantum numbers 
+              `m1` and `m2`, and the Euler angle `beta`. For `l = 2`, the function uses explicit 
+              formulas for efficiency. For general `l`, it computes the value using a summation 
+              formula involving factorials and powers of trigonometric functions.
+ @param l The angular momentum quantum number (non-negative integer or half-integer).
+ @param m1 The magnetic quantum number in the initial frame (-l <= m1 <= l).
+ @param m2 The magnetic quantum number in the final frame (-l <= m2 <= l).
+ @param beta The second Euler angle (rotation about the y-axis).
+ @return The value of the Wigner small-d function d(l, m1, m2, beta).
+ */
 double wigner_d_(double l,double m1,double m2,double beta)
 {
 	if(l==2) {
@@ -181,15 +207,43 @@ double wigner_d_(double l,double m1,double m2,double beta)
 	return(0);
 }
 
-double complex DLM_(double l,double  m1,double m2, double alpha, double beta, double gamma)
+/*!
+ @function DLM_
+ @abstract Computes the Wigner rotation matrix element D(l, m1, m2).
+ @discussion The Wigner rotation matrix element is defined as:
+              D(l, m1, m2) = e^(-i * m1 * alpha) * d(l, m1, m2, beta) * e^(-i * m2 * gamma),
+              where d(l, m1, m2, beta) is the Wigner small-d function, and
+              alpha, beta, gamma are the Euler angles.
+ @param l The angular momentum quantum number (non-negative integer or half-integer).
+ @param m1 The magnetic quantum number in the initial frame (-l <= m1 <= l).
+ @param m2 The magnetic quantum number in the final frame (-l <= m2 <= l).
+ @param alpha The first Euler angle (rotation about the z-axis).
+ @param beta The second Euler angle (rotation about the y-axis).
+ @param gamma The third Euler angle (rotation about the z-axis).
+ @return The complex value of the Wigner rotation matrix element D(l, m1, m2).
+ */
+double complex DLM_(double l, double m1, double m2, double alpha, double beta, double gamma)
 {
-	double pha = m1 * alpha + m2 *gamma;
-	double db = wigner_d_(l, m1, m2, beta);                                   
-	return cos(pha) * db -I* sin(pha) * db;
+    double pha = m1 * alpha + m2 * gamma;
+    double db = wigner_d_(l, m1, m2, beta);                                   
+    return cos(pha) * db - I * sin(pha) * db;
 }
 
-/* Rotational transformation from one frame to another frame */
-
+/*!
+ @function Rot_
+ @abstract Performs a rotational transformation of a tensor from one frame to another.
+ @discussion This function applies a rotational transformation to a tensor represented 
+              in the initial frame, using the Euler angles `alpha`, `beta`, and `gamma`. 
+              The transformation is performed using Wigner rotation matrix elements. 
+              For `j = 2`, the function uses the `wigner_d_` function for efficiency. 
+              For general `j`, it uses the `DLM_` function to compute the rotation matrix.
+ @param j The rank of the tensor (non-negative integer or half-integer).
+ @param initial A pointer to the array representing the tensor components in the initial frame.
+ @param alpha The first Euler angle (rotation about the z-axis).
+ @param beta The second Euler angle (rotation about the y-axis).
+ @param gamma The third Euler angle (rotation about the z-axis).
+ @param final A pointer to the array where the transformed tensor components will be stored.
+ */
 void Rot_(double j, double complex *initial, double alpha, double beta, double gamma, double complex *final)
 {
 	double m1, m2;

@@ -18,19 +18,22 @@ extensions = [
     'sphinx.ext.autodoc',    # Automatically document modules
     'sphinx.ext.napoleon',  # Support for NumPy/Google-style docstrings
     'sphinx.ext.viewcode',  # Add links to source code
+    # 'myst_parser',         # Uncomment if using Markdown files
 ]
 
 templates_path = ['_templates']
 exclude_patterns = []
 
-
+# Set the master document
+master_doc = 'index'
 
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
 html_theme = 'sphinx_rtd_theme'
-html_static_path = ['_static']
+html_static_path = ['_static']  # Ensure this directory exists or comment it out
 
+# Add the module path
 import os
 import sys
 sys.path.insert(0, os.path.abspath('../spinOps'))

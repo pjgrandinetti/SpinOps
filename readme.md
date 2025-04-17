@@ -2,6 +2,8 @@
 
 **spinOps** is a Python package for performing operations on quantum spin systems. It provides tools for creating and manipulating spin operators, irreducible spherical tensors, and performing quantum state rotations using Wigner D-matrix elements.
 
+[![Documentation Status](https://readthedocs.org/projects/spinops/badge/?version=latest)](https://spinops.readthedocs.io/en/latest/)
+
 ## Features
 
 - Generate Clebsch-Gordan coefficients and tensor operators.
@@ -15,7 +17,4 @@
 To install the package, clone the repository and build the package:
 
 ```bash
-git clone https://github.com/pjgrandinetti/spinOps.git
-cd spinOps
-pip install .
-
+git clone https://github

@@ -6,20 +6,32 @@
  @discussion This function calculates the factorial of a non-negative number `x`. 
               If `x` is not an integer, it is truncated to its integer part. 
               If `x` is negative, an error message is printed, and the function 
-              returns 0.
+              returns 0. For `x = 0`, the function returns 1 (by definition).
  @param x The input number for which the factorial is to be computed.
  @return The factorial of the input number `x` as a double. Returns 0 if `x` is negative.
  */
-double fac(double x)
-{
+double fac(double x) {
+    // Validate input
     if (x < 0) {
-        fprintf(stderr, "illegal argument x = %g in factorial...\n",x);
+        fprintf(stderr, "Error: illegal argument x = %g in factorial. Factorial is undefined for negative numbers.\n", x);
         return 0;
     }
-    int ix = (int) x;
-    double sum = 1;
-    for (; ix > 1; ix--) sum *= ix;
-    return sum;
+
+    // Handle edge case for x = 0
+    if (x == 0) {
+        return 1.0;
+    }
+
+    // Truncate x to its integer part
+    int ix = (int)x;
+
+    // Compute factorial iteratively
+    double result = 1.0;
+    for (int i = 2; i <= ix; i++) {
+        result *= i;
+    }
+
+    return result;
 }
 
 /*!

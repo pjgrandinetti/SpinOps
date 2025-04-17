@@ -11,12 +11,17 @@
  @param tensor A pointer to the array representing the spherical tensor components.
  @param zeta The traceless 1st-rank symmetric tensor anisotropy.
  */
-void getrho1_pas_(double complex *tensor, double zeta)
-{
-    tensor[1] = -I * sqrt(2) * zeta;   
-    tensor[0] = tensor[2] = 0;
-}
+void getrho1_pas_(double complex *tensor, double zeta) {
+    if (tensor == NULL) {
+        fprintf(stderr, "Error: tensor pointer is NULL.\n");
+        return;
+    }
 
+    const double SQRT_2 = 1.41421356237;
+    tensor[0] = 0;
+    tensor[1] = -I * SQRT_2 * zeta;
+    tensor[2] = 0;
+}
 
 /*!
  @function getrho2_pas_
@@ -30,14 +35,22 @@ void getrho1_pas_(double complex *tensor, double zeta)
  @param zeta The traceless 2nd-rank symmetric tensor anisotropy.
  @param eta The traceless 2nd-rank symmetric tensor asymmetry parameter.
  */
-void getrho2_pas_(double complex *tensor, double zeta, double eta)
-{
-    // 2nd-rank spherical tensor has 5 components
-    // labeled by m = -2, -1, 0, +1, +2, which map to 
-    // the indices 0, 1, 2, 3, and 4 in the array.
-    tensor[1] = tensor[3] = 0; 
-    tensor[2] = 1.224744871391589 * zeta;   
-    tensor[4] = tensor[0] = eta * zeta / 2;
+void getrho2_pas_(double complex *tensor, double zeta, double eta) {
+    // Validate input
+    if (tensor == NULL) {
+        fprintf(stderr, "Error: tensor pointer is NULL.\n");
+        return;
+    }
+
+    // Define constants for clarity
+    const double SQRT_6_OVER_2 = 1.224744871391589;  // sqrt(6)/2
+
+    // Initialize the tensor components
+    tensor[0] = eta * zeta / 2;               // m = -2
+    tensor[1] = 0;                            // m = -1
+    tensor[2] = SQRT_6_OVER_2 * zeta;         // m = 0
+    tensor[3] = 0;                            // m = +1
+    tensor[4] = eta * zeta / 2;               // m = +2
 }
 
 /*!

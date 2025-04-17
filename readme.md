@@ -7,8 +7,8 @@
 - Generate Clebsch-Gordan coefficients and tensor operators.
 - Create spin operator matrices (e.g., \(I_x\), \(I_y\), \(I_z\), \(I_+\), \(I_-\)).
 - Handle fictitious spin-1/2 systems.
-- Compute irreducible spherical tensors (\(\rho_1\), \(\rho_2\)).
-- Perform quantum state rotations using Wigner D-matrix elements.
+- Compute irreducible spherical tensors in PAS (\(\rho_1\), \(\rho_2\)).
+- Perform rotations using Wigner D-matrix elements.
 
 ## Installation
 

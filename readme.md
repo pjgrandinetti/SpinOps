@@ -17,4 +17,4 @@
 To install the package, clone the repository and build the package:
 
 ```bash
-git clone https://github
+git clone https://github.com/pjgrandinetti/SpinOps

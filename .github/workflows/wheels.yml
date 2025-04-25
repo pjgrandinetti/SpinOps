@@ -43,6 +43,9 @@ jobs:
           name: wheels-${{ matrix.os }}-${{ matrix.python-version }}-${{ matrix.implementation }}
           path: wheelhouse/*.whl
 
+# This job builds wheels for Windows using MSYS2 and MinGW-w64
+# It seems that only the 3.12 CPython build is available in the MSYS2 repository
+# so we are not building for 3.11 or 3.10
   build-windows:
     runs-on: windows-latest
     strategy:
@@ -100,4 +103,23 @@ jobs:
         with:
           name: spinops-windows-${{ matrix.python-version }}-${{ matrix.implementation }}
           path: wheelhouse/*.whl
+
+  publish:
+    needs: [ build_wheels_unix, build-windows ]
+    if: startsWith(github.ref, 'refs/tags/v')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download built wheels
+        uses: actions/download-artifact@v4
+        with:
+          path: wheelhouse
+
+      - name: Install Twine
+        run: pip install --upgrade twine
+
+      - name: Publish wheels to PyPI
+        env:
+          TWINE_USERNAME: __token__
+          TWINE_PASSWORD: ${{ secrets.PYPI_API_TOKEN }}
+        run: twine upload wheelhouse/*.whl
 

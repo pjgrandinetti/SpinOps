@@ -9,9 +9,6 @@ on:
 jobs:
   build_wheels_unix:
     runs-on: ubuntu-latest
-    container:
-      image: quay.io/pypa/manylinux2014_x86_64
-      options: --privileged
     strategy:
       matrix:
         os: [ ubuntu-latest, macos-latest ]

@@ -8,12 +8,12 @@ on:
 
 jobs:
   build_wheels_unix:
-    runs-on: ubuntu-latest
     strategy:
       matrix:
         os: [ ubuntu-latest, macos-latest ]
         python-version: [ "3.12" ]
         implementation: [ "cpython", "pypy" ]
+    runs-on: ${{ matrix.os }}
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -28,19 +28,21 @@ jobs:
           pip install --upgrade pip setuptools wheel Cython cibuildwheel "numpy>=1.21,<2"
       - name: Build wheels
         env:
+          # For Linux builds, you can control the manylinux image.
+          # (For macOS, this variable is ignored.)
           CIBW_MANYLINUX_VERSION: "2014"
         run: |
-          # In manylinux container for Linux, macOS builds natively
-          extra=''
-          if [ "${{ matrix.implementation }}" = "pypy" ]; then
-            extra='--enable pypy'
+          if [ "${{ matrix.implementation }}" = "cpython" ]; then
+              cibuildwheel --output-dir wheelhouse
+          elif [ "${{ matrix.implementation }}" = "pypy" ]; then
+              cibuildwheel --output-dir wheelhouse
           fi
-          cibuildwheel --output-dir wheelhouse --arch x86_64 $extra
       - name: Upload wheels
         uses: actions/upload-artifact@v4
         with:
           name: wheels-${{ matrix.os }}-${{ matrix.python-version }}-${{ matrix.implementation }}
           path: wheelhouse/*.whl
+
 
 # This job builds wheels for Windows using MSYS2 and MinGW-w64
 # It seems that only the 3.12 CPython build is available in the MSYS2 repository

@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=64", "wheel", "Cython", "numpy>=1.21,<2"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "SpinOps"
+version = "0.2.1"                   # ← bump on each release
+description = "Fast spin-operator generation in Cython"
+readme = "README.md"
+requires-python = ">=3.12"
+authors = [
+  { name = "Philip", email = "grandinetti.1@osu.edu" }
+]
+license = "MIT"
+dependencies = [
+  "numpy>=1.21,<2",
+  "matplotlib>=3.3.4"
+]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Operating System :: OS Independent",
+]
+
+[tool.setuptools.packages.find]
+include = ["spinOps", "spinOps.*"]
+namespaces = false

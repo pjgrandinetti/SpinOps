@@ -1,0 +1,9 @@
+sphinx>=8.0
+sphinx-rtd-theme
+myst-parser
+sphinx-copybutton
+breathe
+sphinxjp.themes.basicstrap
+sphinx-tabs
+sphinx-version-warning
+matplotlib

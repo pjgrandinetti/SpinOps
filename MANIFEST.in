@@ -1,0 +1,7 @@
+include README.md
+include LICENSE
+
+include spinOps/*.pyx
+include spinOps/c_code/*.c
+include spinOps/*.pxd
+include spinOps/c_code/*.h

@@ -7,8 +7,12 @@ concurrency:
 on:
   push:
     branches: [ main ]
+    paths-ignore:
+      - '.github/workflows/**'
   pull_request:
     branches: [ main ]
+    paths-ignore:
+      - '.github/workflows/**'
 
 jobs:
   build_wheels_unix:

@@ -116,6 +116,10 @@ jobs:
         with:
           path: dist/
 
+      - name: Flatten artifacts
+        run: |
+          find dist -mindepth 2 -type f -exec mv {} dist/ \;
+
       - name: Publish to PyPI
         uses: pypa/gh-action-pypi-publish@release/v1
         with:

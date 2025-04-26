@@ -16,34 +16,34 @@ on:
     types:
       - completed
 
- jobs:
-   publish:
-+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
-     # We only want to publish when the wheels build ran on a pushed tag,
-     # but since Build Wheels only triggers on `push: tags: ['v*']`, no extra `if:` is needed.
-     runs-on: ubuntu-latest
+jobs:
+  publish:
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    # We only want to publish when the wheels build ran on a pushed tag,
+    # but since Build Wheels only triggers on `push: tags: ['v*']`, no extra `if:` is needed.
+    runs-on: ubuntu-latest
 
-     steps:
-       - name: Checkout code at tagged commit
-         uses: actions/checkout@v4
-         with:
-           fetch-depth: 0
+    steps:
+      - name: Checkout code at tagged commit
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
-       - name: Download wheel artifacts
-         uses: actions/download-artifact@v4
-         with:
-           path: dist/
+      - name: Download wheel artifacts
+        uses: actions/download-artifact@v4
+        with:
+          path: dist/
 
-       - name: Flatten wheel directory
-         run: |
-           mkdir -p dist-flat
-           find dist -type f -exec mv {} dist-flat/ \;
-           rm -rf dist
-           mv dist-flat dist
+      - name: Flatten wheel directory
+        run: |
+          mkdir -p dist-flat
+          find dist -type f -exec mv {} dist-flat/ \;
+          rm -rf dist
+          mv dist-flat dist
 
-       - name: Publish to PyPI
-         uses: pypa/gh-action-pypi-publish@v1
-         with:
-           user: __token__
-           password: ${{ secrets.PYPI_API_TOKEN }}
-           packages-dir: dist/
+      - name: Publish to PyPI
+        uses: pypa/gh-action-pypi-publish@v1
+        with:
+          user: __token__
+          password: ${{ secrets.PYPI_API_TOKEN }}
+          packages-dir: dist/

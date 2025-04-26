@@ -18,9 +18,8 @@ on:
 
 jobs:
   publish:
-    if: ${{ github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.event == 'push' && startsWith(github.event.workflow_run.head_tag, 'v') }}
-    # We only want to publish when the wheels build ran on a pushed tag,
-    # but since Build Wheels only triggers on `push: tags: ['v*']`, no extra `if:` is needed.
+    if: ${{ github.event.workflow_run.conclusion == 'success' && startsWith(github.event.workflow_run.head_ref, 'v') }}
+
     runs-on: ubuntu-latest
 
     steps:
@@ -32,6 +31,7 @@ jobs:
       - name: Download wheel artifacts
         uses: actions/download-artifact@v4
         with:
+          run_id: ${{ github.event.workflow_run.id }}
           path: dist/
 
       - name: Flatten wheel directory

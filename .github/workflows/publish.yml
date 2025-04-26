@@ -1,46 +1,48 @@
 name: Release to PyPI
 
 permissions:
-  contents: read       # only read repo contents
-  actions: read        # allow reading workflow runs
+  contents: read       # read the repo to get tags, workflow files
+  actions: read        # allow reading workflow_run events
   packages: write      # needed to publish to PyPI
 
 concurrency:
-  group: release-${{ github.ref_name }}
+  group: release-${{ github.event.workflow_run.id }}
   cancel-in-progress: true
 
 on:
--  workflow_run:
--    workflows: ["Build & Test"]
--    types: [completed]
-+  workflow_run:
-+    workflows: ["Build Wheels"]
-+    types: [completed]
-- workflow_dispatch: {}
+  workflow_run:
+    workflows:
+      - "Build Wheels"
+    types:
+      - completed
+
 jobs:
   publish:
--    runs-on: ubuntu-latest
-+    if: github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.event == 'push' && startsWith(github.event.workflow_run.head_branch, 'v')
-+    runs-on: ubuntu-latest
-     steps:
-       - uses: actions/checkout@v4
-         with:
-           fetch-depth: 0    # ensure full history for tag metadata
-       - name: Download build artifacts
-         uses: actions/download-artifact@v4
-         with:
-           path: dist/
-       - name: Flatten & clean
-         run: |
-           if [ -d "dist" ]; then
-             find dist -mindepth 2 -type f -exec mv {} dist/ \;
-             find dist -mindepth 1 -maxdepth 1 -type d -exec rm -rf {} +
-           else
-             echo "No dist directory found. Skipping flatten & clean step."
-           fi
-       - name: Publish to PyPI
--        uses: pypa/gh-action-pypi-publish@release/v1
-+        uses: pypa/gh-action-pypi-publish@v1
-         with:
-           password: ${{ secrets.PYPI_API_TOKEN }}
-           packages-dir: dist
+    # We only want to publish when the wheels build ran on a pushed tag,
+    # but since Build Wheels only triggers on `push: tags: ['v*']`, no extra `if:` is needed.
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code at tagged commit
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Download wheel artifacts
+        uses: actions/download-artifact@v4
+        with:
+          path: dist/
+
+      - name: Flatten wheel directory
+        run: |
+          mkdir -p dist-flat
+          find dist -type f -exec mv {} dist-flat/ \;
+          rm -rf dist
+          mv dist-flat dist
+
+      - name: Publish to PyPI
+        uses: pypa/gh-action-pypi-publish@v1
+        with:
+          user: __token__
+          password: ${{ secrets.PYPI_API_TOKEN }}
+          packages-dir: dist/

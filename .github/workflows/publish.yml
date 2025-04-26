@@ -6,15 +6,13 @@ permissions:
   packages: write      # needed to publish to PyPI
 
 concurrency:
-  group: release-${{ github.event.workflow_run.id }}
+  group: release-${{ github.event.release.id }}
   cancel-in-progress: true
 
 on:
-  workflow_run:
-    workflows:
-      - "Build Wheels"
+  release:
     types:
-      - completed
+      - published
 
 jobs:
   publish:

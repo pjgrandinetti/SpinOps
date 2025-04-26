@@ -121,6 +121,10 @@ jobs:
         run: |
           find dist -mindepth 2 -type f -exec mv {} dist/ \;
 
+      - name: Remove artifact folders
+        run: |
+          find dist -mindepth 1 -maxdepth 1 -type d -exec rm -rf {} +
+
       - name: Publish to PyPI
         uses: pypa/gh-action-pypi-publish@release/v1
         with:

@@ -1,0 +1,37 @@
+name: Release to PyPI
+
+permissions:
+  contents: read       # only read repo contents
+  actions: read        # allow reading workflow runs
+  packages: write      # needed to publish to PyPI
+
+concurrency:
+  group: release-${{ github.ref_name }}
+  cancel-in-progress: true
+
+on:
+  workflow_run:
+    workflows: ["Build & Test"]
+    types: [completed]
+  workflow_dispatch: {}
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0    # ensure full history for tag metadata
+      - name: Download build artifacts
+        uses: actions/download-artifact@v4
+        with:
+          path: dist/
+      - name: Flatten & clean
+        run: |
+          find dist -mindepth 2 -type f -exec mv {} dist/ \;
+          find dist -mindepth 1 -maxdepth 1 -type d -exec rm -rf {} +
+      - name: Publish to PyPI
+        uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          password: ${{ secrets.PYPI_API_TOKEN }}
+          packages-dir: dist

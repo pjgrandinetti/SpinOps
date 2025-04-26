@@ -28,8 +28,12 @@ jobs:
           path: dist/
       - name: Flatten & clean
         run: |
-          find dist -mindepth 2 -type f -exec mv {} dist/ \;
-          find dist -mindepth 1 -maxdepth 1 -type d -exec rm -rf {} +
+          if [ -d "dist" ]; then
+            find dist -mindepth 2 -type f -exec mv {} dist/ \;
+            find dist -mindepth 1 -maxdepth 1 -type d -exec rm -rf {} +
+          else
+            echo "No dist directory found. Skipping flatten & clean step."
+          fi
       - name: Publish to PyPI
         uses: pypa/gh-action-pypi-publish@release/v1
         with:

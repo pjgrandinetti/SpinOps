@@ -8,11 +8,11 @@ sys.path.insert(0, os.path.abspath("../.."))
 
 now = datetime.datetime.now()
 year = now.year
- 
-project = 'spinOps'
-copyright = '2025, Philip Grandinetti'
-author = 'Philip Grandinetti'
-release = '0.1.1'
+
+project = "spinOps"
+copyright = "2025, Philip Grandinetti"
+author = "Philip Grandinetti"
+release = "0.1.1"
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
@@ -35,16 +35,16 @@ extensions = [
     "versionwarning.extension",
 ]
 
-templates_path = ['_templates']
+templates_path = ["_templates"]
 exclude_patterns = []
 
 # Set the master document
-master_doc = 'index'
+master_doc = "index"
 
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
-html_theme = 'sphinx_rtd_theme'
-# html_static_path = ['_static']  
+html_theme = "sphinx_rtd_theme"
+# html_static_path = ['_static']
 
-autodoc_member_order = 'bysource'
+autodoc_member_order = "bysource"

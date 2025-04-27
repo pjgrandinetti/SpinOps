@@ -4,11 +4,12 @@ from spinOps import createIx
 import unittest
 from spinOps import clebsch
 
+
 class TestClebsch(unittest.TestCase):
     def test_valid_clebsch(self):
         # Test valid Clebsch-Gordan coefficients
         result = clebsch(j1=1, m1=1, j2=1, m2=-1, j=1, m=0)
-        expected = 1/np.sqrt(2)  # Known result for these quantum numbers
+        expected = 1 / np.sqrt(2)  # Known result for these quantum numbers
         self.assertAlmostEqual(result, expected, places=6)
 
         result = clebsch(j1=1, m1=0, j2=1, m2=0, j=1, m=0)
@@ -28,13 +29,12 @@ class TestClebsch(unittest.TestCase):
     def test_edge_cases(self):
         # Test edge cases
         result = clebsch(j1=0.5, m1=0.5, j2=0.5, m2=-0.5, j=1, m=0)
-        expected = 1/np.sqrt(2)  # Known result for these quantum numbers
+        expected = 1 / np.sqrt(2)  # Known result for these quantum numbers
         self.assertAlmostEqual(result, expected, places=6)
 
         result = clebsch(j1=0.5, m1=-0.5, j2=0.5, m2=0.5, j=1, m=0)
-        expected = 1/np.sqrt(2)  # Known result for these quantum numbers
+        expected = 1 / np.sqrt(2)  # Known result for these quantum numbers
         self.assertAlmostEqual(result, expected, places=6)
-
 
 
 class TestSpinOps(unittest.TestCase):
@@ -52,6 +52,6 @@ class TestSpinOps(unittest.TestCase):
         with self.assertRaises(ValueError):
             createIx(0, [])  # Empty i_times_2 list should raise an error
 
+
 if __name__ == "__main__":
     unittest.main()
-    

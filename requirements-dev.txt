@@ -1,0 +1,6 @@
+sympy>=1.10
+pytest
+black
+flake8
+isort
+mypy

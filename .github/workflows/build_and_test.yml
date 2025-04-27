@@ -113,3 +113,33 @@ jobs:
           name: spinops-windows-${{ matrix.python-version }}-${{ matrix.implementation }}
           path: wheelhouse/*.whl
 
+  publish:
+    needs: [build_wheels_unix, build-windows]
+    if: startsWith(github.ref, 'refs/tags/')
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code at tagged commit
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Download all wheel artifacts
+        uses: actions/download-artifact@v4
+        with:
+          path: dist/
+
+      - name: Flatten wheel directory
+        run: |
+          mkdir -p dist-flat
+          find dist -type f -exec mv {} dist-flat/ \;
+          rm -rf dist
+          mv dist-flat dist
+
+      - name: Publish to PyPI
+        uses: pypa/gh-action-pypi-publish@v1.5.1
+        with:
+          user: __token__
+          password: ${{ secrets.PYPI_API_TOKEN }}
+          packages_dir: dist/
+

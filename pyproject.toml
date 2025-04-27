@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "SpinOps"
-version = "0.1.0"                   # ← resetting to initial release
+version = "0.1.1"                   # ← resetting to initial release
 description = "Fast spin-operator generation in Cython"
 readme = "README.md"
 requires-python = ">=3.12"

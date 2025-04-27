@@ -62,147 +62,147 @@ double tlm_(double l,double m,double j1,double m1,double j2,double m2);
 double unit_tlm_(const double l,const double m,const double j1,const double m1,const double j2,const double m2);
 
 /*!
- @function numberOfStates_
+ @function number_of_states_
  @abstract Calculates the size of the state space for a spin system.
  @discussion This function computes the total number of quantum states in a spin system 
               based on the number of spins and their respective spin quantum numbers. 
               The size of the state space is determined by the product of `(2 * spin + 1)` 
               for each spin in the system.
- @param spinCount The number of spins in the system.
- @param spinsTimesTwo An array containing `2 * I` values for each spin, where `I` is the spin quantum number.
+ @param spin_count The number of spins in the system.
+ @param i_times_2 An array containing `2 * I` values for each spin, where `I` is the spin quantum number.
  @return The total number of quantum states in the spin system as an integer.
  */
-int numberOfStates_(int spinCount, int *spinsTimesTwo);
+int number_of_states_(int spin_count, int *i_times_2);
 
 /*!
  @function getIx_
  @abstract Creates the complex square matrix representation of the Ix operator for a single spin in a spin system.
- @discussion This function generates the matrix representation of the Ix operator for the spin specified by `spinIndex` 
+ @discussion This function generates the matrix representation of the Ix operator for the spin specified by `spin_index` 
               in a spin system. The matrix is constructed in the basis of quantum states for the system, and the 
               calculation involves Clebsch-Gordon coefficients and Kronecker delta products to ensure proper coupling 
               between states. The resulting matrix is stored in the provided `operator` array.
  @param operator A pointer to the array where the resulting complex square matrix for the Ix operator will be stored.
- @param spinIndex The index of the spin in the spin system for which the Ix operator is being calculated.
- @param spinsTimesTwo An array containing `2 * I` values for each spin in the system, where `I` is the spin quantum number.
- @param spinCount The total number of spins in the system.
+ @param spin_index The index of the spin in the spin system for which the Ix operator is being calculated.
+ @param i_times_2 An array containing `2 * I` values for each spin in the system, where `I` is the spin quantum number.
+ @param spin_count The total number of spins in the system.
  @return This function does not return a value. The resulting matrix is stored in the `operator` array.
- @note If `spinIndex` is out of bounds, the function returns without performing any calculations.
+ @note If `spin_index` is out of bounds, the function returns without performing any calculations.
  */
 
 /*!
  @function getIx_
  @abstract Creates the complex square matrix representation of the Ix operator for a single spin in a spin system.
- @discussion This function generates the matrix representation of the Ix operator for the spin specified by `spinIndex` 
+ @discussion This function generates the matrix representation of the Ix operator for the spin specified by `spin_index` 
               in a spin system. The matrix is constructed in the basis of quantum states for the system, and the 
               calculation involves Clebsch-Gordon coefficients and Kronecker delta products to ensure proper coupling 
               between states. The resulting matrix is stored in the provided `operator` array.
  @param operator A pointer to the array where the resulting complex square matrix for the Ix operator will be stored.
- @param spinIndex The index of the spin in the spin system for which the Ix operator is being calculated.
- @param spinsTimesTwo An array containing `2 * I` values for each spin in the system, where `I` is the spin quantum number.
- @param spinCount The total number of spins in the system.
+ @param spin_index The index of the spin in the spin system for which the Ix operator is being calculated.
+ @param i_times_2 An array containing `2 * I` values for each spin in the system, where `I` is the spin quantum number.
+ @param spin_count The total number of spins in the system.
  @return This function does not return a value. The resulting matrix is stored in the `operator` array.
- @note If `spinIndex` is out of bounds, the function returns without performing any calculations.
+ @note If `spin_index` is out of bounds, the function returns without performing any calculations.
  */
-void getIx_(double complex *operator, int spinIndex, int *spinsTimesTwo, int spinCount);
+void getIx_(double complex *operator, int spin_index, int *i_times_2, int spin_count);
 
 /*!
  @function getIy_
  @abstract Creates the complex square matrix representation of the Iy operator for a single spin in a spin system.
- @discussion This function generates the matrix representation of the Iy operator for the spin specified by `spinIndex` 
+ @discussion This function generates the matrix representation of the Iy operator for the spin specified by `spin_index` 
               in a spin system. The matrix is constructed in the basis of quantum states for the system, and the 
               calculation involves Clebsch-Gordon coefficients and Kronecker delta products to ensure proper coupling 
               between states. The resulting matrix is stored in the provided `operator` array.
  @param operator A pointer to the array where the resulting complex square matrix for the Iy operator will be stored.
- @param spinIndex The index of the spin in the spin system for which the Iy operator is being calculated.
- @param spinsTimesTwo An array containing `2 * I` values for each spin in the system, where `I` is the spin quantum number.
- @param spinCount The total number of spins in the system.
+ @param spin_index The index of the spin in the spin system for which the Iy operator is being calculated.
+ @param i_times_2 An array containing `2 * I` values for each spin in the system, where `I` is the spin quantum number.
+ @param spin_count The total number of spins in the system.
  @return This function does not return a value. The resulting matrix is stored in the `operator` array.
- @note If `spinIndex` is out of bounds, the function returns without performing any calculations.
+ @note If `spin_index` is out of bounds, the function returns without performing any calculations.
  */
-void getIy_(double complex *operator, int spinIndex, int *spinsTimesTwo, int spinCount);
+void getIy_(double complex *operator, int spin_index, int *i_times_2, int spin_count);
 
 /*!
  @function getIz_
  @abstract Creates the complex square matrix representation of the Iz operator for a single spin in a spin system.
- @discussion This function generates the matrix representation of the Iz operator for the spin specified by `spinIndex` 
+ @discussion This function generates the matrix representation of the Iz operator for the spin specified by `spin_index` 
               in a spin system. The matrix is constructed in the basis of quantum states for the system, and the 
               calculation involves Clebsch-Gordon coefficients and Kronecker delta products to ensure proper coupling 
               between states. The resulting matrix is stored in the provided `operator` array.
  @param operator A pointer to the array where the resulting complex square matrix for the Iz operator will be stored.
- @param spinIndex The index of the spin in the spin system for which the Iz operator is being calculated.
- @param spinsTimesTwo An array containing `2 * I` values for each spin in the system, where `I` is the spin quantum number.
- @param spinCount The total number of spins in the system.
+ @param spin_index The index of the spin in the spin system for which the Iz operator is being calculated.
+ @param i_times_2 An array containing `2 * I` values for each spin in the system, where `I` is the spin quantum number.
+ @param spin_count The total number of spins in the system.
  @return This function does not return a value. The resulting matrix is stored in the `operator` array.
- @note If `spinIndex` is out of bounds, the function returns without performing any calculations.
+ @note If `spin_index` is out of bounds, the function returns without performing any calculations.
  */
-void getIz_(double complex *operator, int spinIndex, int *spinsTimesTwo, int spinCount);
+void getIz_(double complex *operator, int spin_index, int *i_times_2, int spin_count);
 
 /*!
  @function getIp_
  @abstract Creates the complex square matrix representation of the Ip (I+) operator for a single spin in a spin system.
- @discussion This function generates the matrix representation of the Ip operator for the spin specified by `spinIndex` 
+ @discussion This function generates the matrix representation of the Ip operator for the spin specified by `spin_index` 
               in a spin system. The matrix is constructed in the basis of quantum states for the system, and the 
               calculation involves Clebsch-Gordon coefficients and Kronecker delta products to ensure proper coupling 
               between states. The resulting matrix is stored in the provided `operator` array.
  @param operator A pointer to the array where the resulting complex square matrix for the Ip operator will be stored.
- @param spinIndex The index of the spin in the spin system for which the Ip operator is being calculated.
- @param spinsTimesTwo An array containing `2 * I` values for each spin in the system, where `I` is the spin quantum number.
- @param spinCount The total number of spins in the system.
+ @param spin_index The index of the spin in the spin system for which the Ip operator is being calculated.
+ @param i_times_2 An array containing `2 * I` values for each spin in the system, where `I` is the spin quantum number.
+ @param spin_count The total number of spins in the system.
  @return This function does not return a value. The resulting matrix is stored in the `operator` array.
- @note If `spinIndex` is out of bounds, the function returns without performing any calculations.
+ @note If `spin_index` is out of bounds, the function returns without performing any calculations.
  */
-void getIp_(double complex *operator, int spinIndex, int *spinsTimesTwo, int spinCount);
+void getIp_(double complex *operator, int spin_index, int *i_times_2, int spin_count);
 
 /*!
  @function getIm_
  @abstract Creates the complex square matrix representation of the Im (I−) operator for a single spin in a spin system.
- @discussion This function generates the matrix representation of the Im operator for the spin specified by `spinIndex` 
+ @discussion This function generates the matrix representation of the Im operator for the spin specified by `spin_index` 
               in a spin system. The matrix is constructed in the basis of quantum states for the system, and the 
               calculation involves Clebsch-Gordon coefficients and Kronecker delta products to ensure proper coupling 
               between states. The resulting matrix is stored in the provided `operator` array.
  @param operator A pointer to the array where the resulting complex square matrix for the Im operator will be stored.
- @param spinIndex The index of the spin in the spin system for which the Im operator is being calculated.
- @param spinsTimesTwo An array containing `2 * I` values for each spin in the system, where `I` is the spin quantum number.
- @param spinCount The total number of spins in the system.
+ @param spin_index The index of the spin in the spin system for which the Im operator is being calculated.
+ @param i_times_2 An array containing `2 * I` values for each spin in the system, where `I` is the spin quantum number.
+ @param spin_count The total number of spins in the system.
  @return This function does not return a value. The resulting matrix is stored in the `operator` array.
- @note If `spinIndex` is out of bounds, the function returns without performing any calculations.
+ @note If `spin_index` is out of bounds, the function returns without performing any calculations.
  */
-void getIm_(double complex *operator, int spinIndex, int *spinsTimesTwo, int spinCount);
+void getIm_(double complex *operator, int spin_index, int *i_times_2, int spin_count);
 
 /*!
  @function getTlm_
  @abstract Creates the complex square matrix representation of the Tlm operator for a single spin in a spin system.
- @discussion This function generates the matrix representation of the Tlm operator for the spin specified by `spinIndex` 
+ @discussion This function generates the matrix representation of the Tlm operator for the spin specified by `spin_index` 
               in a spin system. The matrix is constructed in the basis of quantum states for the system, and the 
               calculation involves Clebsch-Gordon coefficients and Kronecker delta products to ensure proper coupling 
               between states. The resulting matrix is stored in the provided `operator` array.
  @param operator A pointer to the array where the resulting complex square matrix for the Tlm operator will be stored.
- @param spinIndex The index of the spin in the spin system for which the Tlm operator is being calculated.
- @param spinsTimesTwo An array containing `2 * I` values for each spin in the system, where `I` is the spin quantum number.
- @param spinCount The total number of spins in the system.
+ @param spin_index The index of the spin in the spin system for which the Tlm operator is being calculated.
+ @param i_times_2 An array containing `2 * I` values for each spin in the system, where `I` is the spin quantum number.
+ @param spin_count The total number of spins in the system.
  @param L The rank of the tensor operator.
  @param M The magnetic quantum number of the tensor operator.
  @return This function does not return a value. The resulting matrix is stored in the `operator` array.
- @note If `spinIndex` is out of bounds, the function returns without performing any calculations.
+ @note If `spin_index` is out of bounds, the function returns without performing any calculations.
  */
-void getTlm_(double complex *operator, int spinIndex, int *spinsTimesTwo, int spinCount, int L, int M);
+void getTlm_(double complex *operator, int spin_index, int *i_times_2, int spin_count, int L, int M);
 /*!
  @function getTlm_unit_
  @abstract Creates the complex square matrix representation of the unit Tlm operator for a single spin in a spin system.
- @discussion This function generates the matrix representation of the unit Tlm operator for the spin specified by `spinIndex` 
+ @discussion This function generates the matrix representation of the unit Tlm operator for the spin specified by `spin_index` 
               in a spin system. The matrix is constructed in the basis of quantum states for the system, and the 
               calculation involves Clebsch-Gordon coefficients, normalization factors, and Kronecker delta products 
               to ensure proper coupling between states. The resulting matrix is stored in the provided `operator` array.
  @param operator A pointer to the array where the resulting complex square matrix for the unit Tlm operator will be stored.
- @param spinIndex The index of the spin in the spin system for which the unit Tlm operator is being calculated.
- @param spinsTimesTwo An array containing `2 * I` values for each spin in the system, where `I` is the spin quantum number.
- @param spinCount The total number of spins in the system.
+ @param spin_index The index of the spin in the spin system for which the unit Tlm operator is being calculated.
+ @param i_times_2 An array containing `2 * I` values for each spin in the system, where `I` is the spin quantum number.
+ @param spin_count The total number of spins in the system.
  @param L The rank of the tensor operator.
  @param M The magnetic quantum number of the tensor operator.
  @return This function does not return a value. The resulting matrix is stored in the `operator` array.
- @note If `spinIndex` is out of bounds, the function returns without performing any calculations.
+ @note If `spin_index` is out of bounds, the function returns without performing any calculations.
  */
-void getTlm_unit_(double complex *operator, int spinIndex, int *spinsTimesTwo, int spinCount, int L, int M);
+void getTlm_unit_(double complex *operator, int spin_index, int *i_times_2, int spin_count, int L, int M);
 
 /*!
  @function getEf_
@@ -213,11 +213,11 @@ void getTlm_unit_(double complex *operator, int spinIndex, int *spinsTimesTwo, i
  @param operator A pointer to the array where the resulting complex square matrix for the identity operator will be stored.
  @param r The index of the first state.
  @param s The index of the second state.
- @param spinsTimesTwo An array containing `2 * I` values for each spin in the system, where `I` is the spin quantum number.
- @param spinCount The total number of spins in the system.
+ @param i_times_2 An array containing `2 * I` values for each spin in the system, where `I` is the spin quantum number.
+ @param spin_count The total number of spins in the system.
  @return This function does not return a value. The resulting matrix is stored in the `operator` array.
  */
-void getEf_(double complex *operator, int r, int s, int *spinsTimesTwo, int spinCount);
+void getEf_(double complex *operator, int r, int s, int *i_times_2, int spin_count);
 
 /*!
  @function getIxf_
@@ -229,11 +229,11 @@ void getEf_(double complex *operator, int r, int s, int *spinsTimesTwo, int spin
  @param operator A pointer to the array where the resulting complex square matrix for the Ix operator will be stored.
  @param r The index of the first state.
  @param s The index of the second state.
- @param spinsTimesTwo An array containing `2 * I` values for each spin in the system, where `I` is the spin quantum number.
- @param spinCount The total number of spins in the system.
+ @param i_times_2 An array containing `2 * I` values for each spin in the system, where `I` is the spin quantum number.
+ @param spin_count The total number of spins in the system.
  @return This function does not return a value. The resulting matrix is stored in the `operator` array.
  */
-void getIxf_(double complex *operator, int r, int s, int *spinsTimesTwo, int spinCount);
+void getIxf_(double complex *operator, int r, int s, int *i_times_2, int spin_count);
 
 /*!
  @function getIyf_
@@ -245,11 +245,11 @@ void getIxf_(double complex *operator, int r, int s, int *spinsTimesTwo, int spi
  @param operator A pointer to the array where the resulting complex square matrix for the Iy operator will be stored.
  @param r The index of the first state.
  @param s The index of the second state.
- @param spinsTimesTwo An array containing `2 * I` values for each spin in the system, where `I` is the spin quantum number.
- @param spinCount The total number of spins in the system.
+ @param i_times_2 An array containing `2 * I` values for each spin in the system, where `I` is the spin quantum number.
+ @param spin_count The total number of spins in the system.
  @return This function does not return a value. The resulting matrix is stored in the `operator` array.
  */
-void getIyf_(double complex *operator, int r, int s, int *spinsTimesTwo, int spinCount);
+void getIyf_(double complex *operator, int r, int s, int *i_times_2, int spin_count);
 
 /*!
  @function getIzf_
@@ -261,11 +261,11 @@ void getIyf_(double complex *operator, int r, int s, int *spinsTimesTwo, int spi
  @param operator A pointer to the array where the resulting complex square matrix for the Iz operator will be stored.
  @param r The index of the first state.
  @param s The index of the second state.
- @param spinsTimesTwo An array containing `2 * I` values for each spin in the system, where `I` is the spin quantum number.
- @param spinCount The total number of spins in the system.
+ @param i_times_2 An array containing `2 * I` values for each spin in the system, where `I` is the spin quantum number.
+ @param spin_count The total number of spins in the system.
  @return This function does not return a value. The resulting matrix is stored in the `operator` array.
  */
-void getIzf_(double complex *operator, int r, int s, int *spinsTimesTwo, int spinCount);
+void getIzf_(double complex *operator, int r, int s, int *i_times_2, int spin_count);
 
 /*!
  @function getIpf_
@@ -277,11 +277,11 @@ void getIzf_(double complex *operator, int r, int s, int *spinsTimesTwo, int spi
  @param operator A pointer to the array where the resulting complex square matrix for the I+ operator will be stored.
  @param r The index of the first state.
  @param s The index of the second state.
- @param spinsTimesTwo An array containing `2 * I` values for each spin in the system, where `I` is the spin quantum number.
- @param spinCount The total number of spins in the system.
+ @param i_times_2 An array containing `2 * I` values for each spin in the system, where `I` is the spin quantum number.
+ @param spin_count The total number of spins in the system.
  @return This function does not return a value. The resulting matrix is stored in the `operator` array.
  */
-void getIpf_(double complex *operator, int r, int s, int *spinsTimesTwo, int spinCount);
+void getIpf_(double complex *operator, int r, int s, int *i_times_2, int spin_count);
 
 /*!
  @function getImf_
@@ -293,11 +293,11 @@ void getIpf_(double complex *operator, int r, int s, int *spinsTimesTwo, int spi
  @param operator A pointer to the array where the resulting complex square matrix for the I− operator will be stored.
  @param r The index of the first state.
  @param s The index of the second state.
- @param spinsTimesTwo An array containing `2 * I` values for each spin in the system, where `I` is the spin quantum number.
- @param spinCount The total number of spins in the system.
+ @param i_times_2 An array containing `2 * I` values for each spin in the system, where `I` is the spin quantum number.
+ @param spin_count The total number of spins in the system.
  @return This function does not return a value. The resulting matrix is stored in the `operator` array.
  */
-void getImf_(double complex *operator, int r, int s, int *spinsTimesTwo, int spinCount);
+void getImf_(double complex *operator, int r, int s, int *i_times_2, int spin_count);
 
 
 /*!

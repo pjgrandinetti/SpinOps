@@ -1,6 +1,6 @@
 # Changelog
 
-## [0.1.0] - 2025-04-25
+## [0.1.1] - 2025-04-25
 ### Added
 - Initial release of the project.
 - Core functionality implemented.

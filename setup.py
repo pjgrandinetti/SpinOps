@@ -59,7 +59,7 @@ class CustomBuildExt(_build_ext):
 # ---- Package metadata ---------------------------------------------------
 setup(
     name="SpinOps",
-    version="0.1.0",
+    version="0.1.1",
     description="Angular-momentum / spin operators in C + Cython",
     author="Philip Grandinetti",
     license="MIT",

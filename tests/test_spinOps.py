@@ -40,8 +40,8 @@ class TestClebsch(unittest.TestCase):
 class TestSpinOps(unittest.TestCase):
     def test_createIx(self):
         # Example input
-        spinsTimesTwo = [2, 2]  # Spin-1 system
-        result = createIx(0, spinsTimesTwo)
+        i_times_2 = [2, 2]  # Spin-1 system
+        result = createIx(0, i_times_2)
 
         # Expected output (manually computed or verified)
         expected_shape = (9, 9)  # For a spin-1 system
@@ -50,7 +50,7 @@ class TestSpinOps(unittest.TestCase):
 
     def test_invalid_input(self):
         with self.assertRaises(ValueError):
-            createIx(0, [])  # Empty spinsTimesTwo list should raise an error
+            createIx(0, [])  # Empty i_times_2 list should raise an error
 
 if __name__ == "__main__":
     unittest.main()

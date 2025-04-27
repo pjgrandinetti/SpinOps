@@ -21,7 +21,7 @@ except ModuleNotFoundError as err:
     clebsch,
     tlm,
     unit_tlm,
-    numberOfStates,
+    number_of_states,
     createIx,
     createIy,
     createIz,
@@ -44,7 +44,7 @@ except ModuleNotFoundError as err:
     _spinops.clebsch,
     _spinops.tlm,
     _spinops.unit_tlm,
-    _spinops.numberOfStates,
+    _spinops.number_of_states,
     _spinops.createIx,
     _spinops.createIy,
     _spinops.createIz,
@@ -70,7 +70,7 @@ for func in (
     clebsch,
     tlm,
     unit_tlm,
-    numberOfStates,
+    number_of_states,
     createIx,
     createIy,
     createIz,
@@ -93,7 +93,7 @@ for func in (
     func.__module__ = __name__
 
 __all__ = [
-    "numberOfStates",
+    "number_of_states",
     "createIx",
     "createIy",
     "createIz",
@@ -117,5 +117,5 @@ __all__ = [
     "Rotate",
 ]
 
-__version__ = "0.1.0"
+__version__ = "0.1.1"
 

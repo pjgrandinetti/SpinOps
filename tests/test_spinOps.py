@@ -1,19 +1,19 @@
 import unittest
 import numpy as np
-from spinOps import createIx
-import unittest
-from spinOps import clebsch
+from sympy.physics.wigner import clebsch_gordan as sympy_cg
+from sympy.physics.wigner import wigner_d_small as sympy_wigner_d
+from spinOps import createIx, clebsch, wigner_d
 
 
 class TestClebsch(unittest.TestCase):
     def test_valid_clebsch(self):
         # Test valid Clebsch-Gordan coefficients
         result = clebsch(j1=1, m1=1, j2=1, m2=-1, j=1, m=0)
-        expected = 1 / np.sqrt(2)  # Known result for these quantum numbers
+        expected = float(sympy_cg(1, 1, 1, 1, -1, 0))  # Sympy reference
         self.assertAlmostEqual(result, expected, places=6)
 
         result = clebsch(j1=1, m1=0, j2=1, m2=0, j=1, m=0)
-        expected = 0.0  # Known result for these quantum numbers
+        expected = float(sympy_cg(1, 1, 1, 0, 0, 0))  # Sympy reference
         self.assertAlmostEqual(result, expected, places=6)
 
     def test_invalid_magnetic_quantum_numbers(self):
@@ -29,12 +29,40 @@ class TestClebsch(unittest.TestCase):
     def test_edge_cases(self):
         # Test edge cases
         result = clebsch(j1=0.5, m1=0.5, j2=0.5, m2=-0.5, j=1, m=0)
-        expected = 1 / np.sqrt(2)  # Known result for these quantum numbers
+        expected = float(sympy_cg(0.5, 0.5, 1, 0.5, -0.5, 0))  # Sympy reference
         self.assertAlmostEqual(result, expected, places=6)
 
         result = clebsch(j1=0.5, m1=-0.5, j2=0.5, m2=0.5, j=1, m=0)
-        expected = 1 / np.sqrt(2)  # Known result for these quantum numbers
+        expected = float(sympy_cg(0.5, 0.5, 1, -0.5, 0.5, 0))  # Sympy reference
         self.assertAlmostEqual(result, expected, places=6)
+
+
+
+class TestWignerD(unittest.TestCase):
+    # Test valid reduced Wigner d-matrix elements
+    def test_identity_at_zero_angle(self):
+        # d^l_{m1,m2}(0) should equal delta_{m1,m2}
+        for l in [0, 1, 2, 3]:
+            for m1 in range(-l, l+1):
+                for m2 in range(-l, l+1):
+                    result = wigner_d(l=l, m1=m1, m2=m2, beta=0.0)
+                    expected = 1.0 if m1 == m2 else 0.0
+                    self.assertAlmostEqual(result, expected, places=6)
+
+    def test_against_sympy(self):
+        # Compare to sympy.physics.wigner.wigner_d for random beta
+        import math
+        angles = [math.pi/6, math.pi/4, math.pi/3]
+        for l in [1, 2]:
+            for m1 in range(-l, l+1):
+                for m2 in range(-l, l+1):
+                    for beta in angles:
+                        result = wigner_d(l=l, m1=m1, m2=m2, beta=beta)
+                        reference = float(sympy_wigner_d(l, beta)[l + m1, l + m2].evalf())
+                        self.assertTrue(
+                            math.isclose(result, reference, rel_tol=1e-6, abs_tol=1e-8),
+                            f"Mismatch for l={l}, m1={m1}, m2={m2}, beta={beta}: {result} vs {reference}"
+                        )
 
 
 class TestSpinOps(unittest.TestCase):
@@ -51,6 +79,7 @@ class TestSpinOps(unittest.TestCase):
     def test_invalid_input(self):
         with self.assertRaises(ValueError):
             createIx(0, [])  # Empty i_times_2 list should raise an error
+
 
 
 if __name__ == "__main__":

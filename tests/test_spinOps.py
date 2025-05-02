@@ -2,7 +2,7 @@ import unittest
 import numpy as np
 from sympy.physics.wigner import clebsch_gordan as sympy_cg
 from sympy.physics.wigner import wigner_d_small as sympy_wigner_d
-from spinOps import createIx, clebsch, wigner_d
+from spinOps import create_single_spin_Ix, clebsch, wigner_d
 
 
 class TestClebsch(unittest.TestCase):
@@ -66,10 +66,10 @@ class TestWignerD(unittest.TestCase):
 
 
 class TestSpinOps(unittest.TestCase):
-    def test_createIx(self):
+    def test_create_single_spin_Ix(self):
         # Example input
         i_times_2 = [2, 2]  # Spin-1 system
-        result = createIx(0, i_times_2)
+        result = create_single_spin_Ix(0, i_times_2)
 
         # Expected output (manually computed or verified)
         expected_shape = (9, 9)  # For a spin-1 system
@@ -78,7 +78,7 @@ class TestSpinOps(unittest.TestCase):
 
     def test_invalid_input(self):
         with self.assertRaises(ValueError):
-            createIx(0, [])  # Empty i_times_2 list should raise an error
+            create_single_spin_Ix(0, [])  # Empty i_times_2 list should raise an error
 
 
 

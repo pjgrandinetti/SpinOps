@@ -75,7 +75,7 @@ double unit_tlm_(const double l,const double m,const double j1,const double m1,c
 int number_of_states_(int spin_count, int *i_times_2);
 
 /*!
- @function getIx_
+ @function get_single_spin_Ix_
  @abstract Creates the complex square matrix representation of the Ix operator for a single spin in a spin system.
  @discussion This function generates the matrix representation of the Ix operator for the spin specified by `spin_index` 
               in a spin system. The matrix is constructed in the basis of quantum states for the system, and the 
@@ -90,7 +90,7 @@ int number_of_states_(int spin_count, int *i_times_2);
  */
 
 /*!
- @function getIx_
+ @function get_single_spin_Ix_
  @abstract Creates the complex square matrix representation of the Ix operator for a single spin in a spin system.
  @discussion This function generates the matrix representation of the Ix operator for the spin specified by `spin_index` 
               in a spin system. The matrix is constructed in the basis of quantum states for the system, and the 
@@ -103,10 +103,10 @@ int number_of_states_(int spin_count, int *i_times_2);
  @return This function does not return a value. The resulting matrix is stored in the `operator` array.
  @note If `spin_index` is out of bounds, the function returns without performing any calculations.
  */
-void getIx_(double complex *operator, int spin_index, int *i_times_2, int spin_count);
+void get_single_spin_Ix_(double complex *operator, int spin_index, int *i_times_2, int spin_count);
 
 /*!
- @function getIy_
+ @function get_single_spin_Iy_
  @abstract Creates the complex square matrix representation of the Iy operator for a single spin in a spin system.
  @discussion This function generates the matrix representation of the Iy operator for the spin specified by `spin_index` 
               in a spin system. The matrix is constructed in the basis of quantum states for the system, and the 
@@ -119,10 +119,10 @@ void getIx_(double complex *operator, int spin_index, int *i_times_2, int spin_c
  @return This function does not return a value. The resulting matrix is stored in the `operator` array.
  @note If `spin_index` is out of bounds, the function returns without performing any calculations.
  */
-void getIy_(double complex *operator, int spin_index, int *i_times_2, int spin_count);
+void get_single_spin_Iy_(double complex *operator, int spin_index, int *i_times_2, int spin_count);
 
 /*!
- @function getIz_
+ @function get_single_spin_Iz_
  @abstract Creates the complex square matrix representation of the Iz operator for a single spin in a spin system.
  @discussion This function generates the matrix representation of the Iz operator for the spin specified by `spin_index` 
               in a spin system. The matrix is constructed in the basis of quantum states for the system, and the 
@@ -135,10 +135,10 @@ void getIy_(double complex *operator, int spin_index, int *i_times_2, int spin_c
  @return This function does not return a value. The resulting matrix is stored in the `operator` array.
  @note If `spin_index` is out of bounds, the function returns without performing any calculations.
  */
-void getIz_(double complex *operator, int spin_index, int *i_times_2, int spin_count);
+void get_single_spin_Iz_(double complex *operator, int spin_index, int *i_times_2, int spin_count);
 
 /*!
- @function getIp_
+ @function get_single_spin_Ip_
  @abstract Creates the complex square matrix representation of the Ip (I+) operator for a single spin in a spin system.
  @discussion This function generates the matrix representation of the Ip operator for the spin specified by `spin_index` 
               in a spin system. The matrix is constructed in the basis of quantum states for the system, and the 
@@ -151,10 +151,10 @@ void getIz_(double complex *operator, int spin_index, int *i_times_2, int spin_c
  @return This function does not return a value. The resulting matrix is stored in the `operator` array.
  @note If `spin_index` is out of bounds, the function returns without performing any calculations.
  */
-void getIp_(double complex *operator, int spin_index, int *i_times_2, int spin_count);
+void get_single_spin_Ip_(double complex *operator, int spin_index, int *i_times_2, int spin_count);
 
 /*!
- @function getIm_
+ @function get_single_spin_Im_
  @abstract Creates the complex square matrix representation of the Im (I−) operator for a single spin in a spin system.
  @discussion This function generates the matrix representation of the Im operator for the spin specified by `spin_index` 
               in a spin system. The matrix is constructed in the basis of quantum states for the system, and the 
@@ -167,10 +167,10 @@ void getIp_(double complex *operator, int spin_index, int *i_times_2, int spin_c
  @return This function does not return a value. The resulting matrix is stored in the `operator` array.
  @note If `spin_index` is out of bounds, the function returns without performing any calculations.
  */
-void getIm_(double complex *operator, int spin_index, int *i_times_2, int spin_count);
+void get_single_spin_Im_(double complex *operator, int spin_index, int *i_times_2, int spin_count);
 
 /*!
- @function getTlm_
+ @function get_single_spin_Tlm_
  @abstract Creates the complex square matrix representation of the Tlm operator for a single spin in a spin system.
  @discussion This function generates the matrix representation of the Tlm operator for the spin specified by `spin_index` 
               in a spin system. The matrix is constructed in the basis of quantum states for the system, and the 
@@ -185,9 +185,9 @@ void getIm_(double complex *operator, int spin_index, int *i_times_2, int spin_c
  @return This function does not return a value. The resulting matrix is stored in the `operator` array.
  @note If `spin_index` is out of bounds, the function returns without performing any calculations.
  */
-void getTlm_(double complex *operator, int spin_index, int *i_times_2, int spin_count, int L, int M);
+void get_single_spin_Tlm_(double complex *operator, int spin_index, int *i_times_2, int spin_count, int L, int M);
 /*!
- @function getTlm_unit_
+ @function get_single_spin_Tlm_unit_
  @abstract Creates the complex square matrix representation of the unit Tlm operator for a single spin in a spin system.
  @discussion This function generates the matrix representation of the unit Tlm operator for the spin specified by `spin_index` 
               in a spin system. The matrix is constructed in the basis of quantum states for the system, and the 
@@ -202,7 +202,7 @@ void getTlm_(double complex *operator, int spin_index, int *i_times_2, int spin_
  @return This function does not return a value. The resulting matrix is stored in the `operator` array.
  @note If `spin_index` is out of bounds, the function returns without performing any calculations.
  */
-void getTlm_unit_(double complex *operator, int spin_index, int *i_times_2, int spin_count, int L, int M);
+void get_single_spin_Tlm_unit_(double complex *operator, int spin_index, int *i_times_2, int spin_count, int L, int M);
 
 /*!
  @function getEf_

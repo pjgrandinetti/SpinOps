@@ -11,21 +11,21 @@ from .spinOps cimport tlm_ as _tlm
 from .spinOps cimport unit_tlm_ as _unit_tlm
 from .spinOps cimport number_of_states_ as _number_of_states
 
-from .spinOps cimport getIx_ as _getIx
-from .spinOps cimport getIy_ as _getIy
-from .spinOps cimport getIz_ as _getIz
-from .spinOps cimport getIp_ as _getIp
-from .spinOps cimport getIm_ as _getIm
+from .spinOps cimport get_single_spin_Ix_ as _get_single_spin_Ix
+from .spinOps cimport get_single_spin_Iy_ as _get_single_spin_Iy
+from .spinOps cimport get_single_spin_Iz_ as _get_single_spin_Iz
+from .spinOps cimport get_single_spin_Ip_ as _get_single_spin_Ip
+from .spinOps cimport get_single_spin_Im_ as _get_single_spin_Im
 
-from .spinOps cimport getTlm_ as _getTlm
-from .spinOps cimport getTlm_unit_ as _getTlm_unit
+from .spinOps cimport get_single_spin_Tlm_ as _get_single_spin_Tlm
+from .spinOps cimport get_single_spin_Tlm_unit_ as _get_single_spin_Tlm_unit
 
 from .spinOps cimport getEf_ as _getEf
-from .spinOps cimport getIxf_ as _getIxf
-from .spinOps cimport getIyf_ as _getIyf
-from .spinOps cimport getIzf_ as _getIzf
-from .spinOps cimport getIpf_ as _getIpf
-from .spinOps cimport getImf_ as _getImf
+from .spinOps cimport getIxf_ as _get_Ixf
+from .spinOps cimport getIyf_ as _get_Iyf
+from .spinOps cimport getIzf_ as _get_Izf
+from .spinOps cimport getIpf_ as _get_Ipf
+from .spinOps cimport getImf_ as _get_Imf
 
 from .spinOps cimport mypow, fac
 
@@ -176,7 +176,9 @@ cpdef int number_of_states(list i_times_2):
     cdef ndarray[int] spins = np.array(i_times_2, dtype=np.int32)
 
     return _number_of_states(spin_count, &spins[0])
-cpdef ndarray[double complex, ndim=2] createIx(int spin_index, list i_times_2):
+
+
+cpdef ndarray[double complex, ndim=2] create_single_spin_Ix(int spin_index, list i_times_2):
     """
     Generates the single-spin :math:`\hat{I}_x` operator matrix for the specified spin within a spin system.
 
@@ -210,11 +212,11 @@ cpdef ndarray[double complex, ndim=2] createIx(int spin_index, list i_times_2):
     cdef ndarray[int] spins = np.array(i_times_2, dtype=np.int32)
     cdef ndarray[double complex, ndim=2] myOp = np.zeros((nstates, nstates), dtype=np.complex128)
 
-    _getIx(&myOp[0, 0], spin_index, &spins[0], spin_count)
+    _get_single_spin_Ix(&myOp[0, 0], spin_index, &spins[0], spin_count)
 
     return myOp
 
-cpdef ndarray[double complex, ndim=2] createIy(int spin_index, list i_times_2):
+cpdef ndarray[double complex, ndim=2] create_single_spin_Iy(int spin_index, list i_times_2):
     """
     Generates the single-spin :math:`\hat{I}_y` operator matrix for a specified spin within a spin system.
 
@@ -248,11 +250,11 @@ cpdef ndarray[double complex, ndim=2] createIy(int spin_index, list i_times_2):
     cdef ndarray[int] spins = np.array(i_times_2, dtype=np.int32)
     cdef ndarray[double complex, ndim=2] myOp = np.zeros((nstates, nstates), dtype=np.complex128)
 
-    _getIy(&myOp[0, 0], spin_index, &spins[0], spin_count)
+    _get_single_spin_Iy(&myOp[0, 0], spin_index, &spins[0], spin_count)
 
     return myOp
 
-cpdef ndarray[double complex, ndim=2] createIz(int spin_index, list i_times_2):
+cpdef ndarray[double complex, ndim=2] create_single_spin_Iz(int spin_index, list i_times_2):
     """
     Creates the single-spin :math:`\hat{I}_z` operator matrix for a single spin in a spin system.
 
@@ -281,12 +283,12 @@ cpdef ndarray[double complex, ndim=2] createIz(int spin_index, list i_times_2):
     cdef ndarray[double complex, ndim=2] myOp = np.zeros((nstates, nstates), dtype=np.complex128)
 
     # Call the external C function to populate the operator matrix
-    _getIz(&myOp[0, 0], spin_index, &spins[0], spin_count)
+    _get_single_spin_Iz(&myOp[0, 0], spin_index, &spins[0], spin_count)
 
     return myOp
 
 
-cpdef ndarray[double complex, ndim=2] createIp(int spin_index, list i_times_2):
+cpdef ndarray[double complex, ndim=2] create_single_spin_Ip(int spin_index, list i_times_2):
     """
     Generates the single-spin raising operator (:math:`\hat{I}_+`) matrix for a specified spin within a spin system.
 
@@ -320,11 +322,11 @@ cpdef ndarray[double complex, ndim=2] createIp(int spin_index, list i_times_2):
     cdef ndarray[int] spins = np.array(i_times_2, dtype=np.int32)
     cdef ndarray[double complex, ndim=2] myOp = np.zeros((nstates, nstates), dtype=np.complex128)
 
-    _getIp(&myOp[0, 0], spin_index, &spins[0], spin_count)
+    _get_single_spin_Ip(&myOp[0, 0], spin_index, &spins[0], spin_count)
 
     return myOp
 
-cpdef ndarray[double complex, ndim=2] createIm(int spin_index, list i_times_2):
+cpdef ndarray[double complex, ndim=2] create_single_spin_Im(int spin_index, list i_times_2):
     """
     Generates the single-spin lowering operator (:math:`\hat{I}_-`) matrix for a specified spin within a spin system.
 
@@ -358,12 +360,12 @@ cpdef ndarray[double complex, ndim=2] createIm(int spin_index, list i_times_2):
     cdef ndarray[int] spins = np.array(i_times_2, dtype=np.int32)
     cdef ndarray[double complex, ndim=2] myOp = np.zeros((nstates, nstates), dtype=np.complex128)
 
-    _getIm(&myOp[0, 0], spin_index, &spins[0], spin_count)
+    _get_single_spin_Im(&myOp[0, 0], spin_index, &spins[0], spin_count)
 
     return myOp
 
 
-cpdef ndarray[double complex, ndim=2] createTLM(int L, int M, int spin_index, list i_times_2):
+cpdef ndarray[double complex, ndim=2] create_single_spin_Tlm(int L, int M, int spin_index, list i_times_2):
     """
     Generates the single-spin irreducible spherical tensor operator (:math:`\hat{T}_{L,M}`) matrix for a specified spin within a spin system.
 
@@ -401,12 +403,12 @@ cpdef ndarray[double complex, ndim=2] createTLM(int L, int M, int spin_index, li
     cdef ndarray[int] spins = np.array(i_times_2, dtype=np.int32)
     cdef ndarray[double complex, ndim=2] myOp = np.zeros((nstates, nstates), dtype=np.complex128)
 
-    _getTlm(<double complex *> cnp.PyArray_DATA(myOp), spin_index, &spins[0], spin_count, L, M)
+    _get_single_spin_Tlm(<double complex *> cnp.PyArray_DATA(myOp), spin_index, &spins[0], spin_count, L, M)
 
     return myOp
 
 
-cpdef ndarray[double complex, ndim=2] createTLM_unit(int L, int M, int spin_index, list i_times_2):
+cpdef ndarray[double complex, ndim=2] create_single_spin_Tlm_unit(int L, int M, int spin_index, list i_times_2):
     """
     Generates the single-spin unit-normalized irreducible spherical tensor operator (:math:`\hat{\mathcal{T}}_{L,M}`) matrix for a specified spin within a spin system.
 
@@ -444,7 +446,7 @@ cpdef ndarray[double complex, ndim=2] createTLM_unit(int L, int M, int spin_inde
     cdef ndarray[int] spins = np.array(i_times_2, dtype=np.int32)
     cdef ndarray[double complex, ndim=2] myOp = np.zeros((nstates, nstates), dtype=np.complex128)
 
-    _getTlm_unit(&myOp[0, 0], spin_index, &spins[0], spin_count, L, M)
+    _get_single_spin_Tlm_unit(&myOp[0, 0], spin_index, &spins[0], spin_count, L, M)
 
     return myOp
 
@@ -491,7 +493,7 @@ cpdef ndarray[double complex, ndim=2] createEf(int r, int s, list i_times_2):
     return myOp
 
 
-cpdef ndarray[double complex, ndim=2] createIxf(int r, int s, list i_times_2):
+cpdef ndarray[double complex, ndim=2] create_Ixf(int r, int s, list i_times_2):
     """
     Generates the fictitious spin-1/2 operator matrix :math:`\hat{I}_x^{r-s}` for a transition
     from state :math:`s` to state :math:`r`.
@@ -531,11 +533,11 @@ cpdef ndarray[double complex, ndim=2] createIxf(int r, int s, list i_times_2):
     cdef ndarray[double complex, ndim=2] myOp = np.zeros((nstates, nstates), dtype=np.complex128)
 
     # Call the external C function to populate the operator matrix
-    _getIxf(&myOp[0, 0], r, s, &spins[0], spin_count)
+    _get_Ixf(&myOp[0, 0], r, s, &spins[0], spin_count)
 
     return myOp
 
-cpdef ndarray[double complex, ndim=2] createIyf(int r, int s, list i_times_2):
+cpdef ndarray[double complex, ndim=2] create_Iyf(int r, int s, list i_times_2):
     """
     Generates the fictitious spin-1/2 operator matrix :math:`\hat{I}_y^{r-s}` for a transition
     from state :math:`s` to state :math:`r`.
@@ -575,11 +577,11 @@ cpdef ndarray[double complex, ndim=2] createIyf(int r, int s, list i_times_2):
     cdef ndarray[double complex, ndim=2] myOp = np.zeros((nstates, nstates), dtype=np.complex128)
 
     # Call the external C function to populate the operator matrix
-    _getIyf(&myOp[0, 0], r, s, &spins[0], spin_count)
+    _get_Iyf(&myOp[0, 0], r, s, &spins[0], spin_count)
 
     return myOp
 
-cpdef ndarray[double complex, ndim=2] createIzf(int r, int s, list i_times_2):
+cpdef ndarray[double complex, ndim=2] create_Izf(int r, int s, list i_times_2):
     """
     Generates the fictitious spin-1/2 operator matrix :math:`\hat{I}_z^{r-s}` for a transition
     from state :math:`s` to state :math:`r`.
@@ -619,11 +621,11 @@ cpdef ndarray[double complex, ndim=2] createIzf(int r, int s, list i_times_2):
     cdef ndarray[double complex, ndim=2] myOp = np.zeros((nstates, nstates), dtype=np.complex128)
 
     # Call the external C function to populate the operator matrix
-    _getIzf(&myOp[0, 0], r, s, &spins[0], spin_count)
+    _get_Izf(&myOp[0, 0], r, s, &spins[0], spin_count)
 
     return myOp
 
-cpdef ndarray[double complex, ndim=2] createIpf(int r, int s, list i_times_2):
+cpdef ndarray[double complex, ndim=2] create_Ipf(int r, int s, list i_times_2):
     """
     Generates the fictitious spin-1/2 raising operator matrix :math:`\hat{I}_+^{r-s}` for a transition
     from state :math:`s` to state :math:`r`.
@@ -663,11 +665,11 @@ cpdef ndarray[double complex, ndim=2] createIpf(int r, int s, list i_times_2):
     cdef ndarray[double complex, ndim=2] myOp = np.zeros((nstates, nstates), dtype=np.complex128)
 
     # Call the external C function to populate the operator matrix
-    _getIpf(&myOp[0, 0], r, s, &spins[0], spin_count)
+    _get_Ipf(&myOp[0, 0], r, s, &spins[0], spin_count)
 
     return myOp
 
-cpdef ndarray[double complex, ndim=2] createImf(int r, int s, list i_times_2):
+cpdef ndarray[double complex, ndim=2] create_Imf(int r, int s, list i_times_2):
     """
     Generates the fictitious spin-1/2 lowering operator matrix :math:`\hat{I}_-^{r-s}` for a transition
     from state :math:`s` to state :math:`r`.
@@ -707,7 +709,7 @@ cpdef ndarray[double complex, ndim=2] createImf(int r, int s, list i_times_2):
     cdef ndarray[double complex, ndim=2] myOp = np.zeros((nstates, nstates), dtype=np.complex128)
 
     # Call the external C function to populate the operator matrix
-    _getImf(&myOp[0, 0], r, s, &spins[0], spin_count)
+    _get_Imf(&myOp[0, 0], r, s, &spins[0], spin_count)
 
     return myOp
 

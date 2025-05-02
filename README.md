@@ -38,7 +38,7 @@ import spinOps
 #   - The first argument (0) specifies the operator index (e.g., I_x for the first nucleus).
 #   - The second argument [1, 1] indicates the spin value for each nucleus, where
 #     each entry is twice the actual spin (1 corresponds to 1/2 in this context).
-operator = spinOps.createIx(0, [1, 1])
+operator = spinOps.create_single_spin_Ix(0, [1, 1])
 
 # Print the generated operator matrix to verify its structure and values.
 print(operator)

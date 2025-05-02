@@ -190,9 +190,9 @@ float systemDeltaProduct(float *qnum_data, int spin_count, int nstates, int iski
 }
 
 /*!
- @function getIx_
+ @function get_single_spin_Ix_
  */
-void getIx_(double complex *operator, int spin_index, int *i_times_2, int spin_count)
+void get_single_spin_Ix_(double complex *operator, int spin_index, int *i_times_2, int spin_count)
 {
     if(spin_index<0 || spin_index>spin_count-1) return; 
     int nstates = number_of_states_(spin_count, i_times_2);
@@ -216,9 +216,9 @@ void getIx_(double complex *operator, int spin_index, int *i_times_2, int spin_c
 
 
 /*!
- @function getIy_
+ @function get_single_spin_Iy_
  */
-void getIy_(double complex *operator, int spin_index, int *i_times_2, int spin_count)
+void get_single_spin_Iy_(double complex *operator, int spin_index, int *i_times_2, int spin_count)
 {
     if(spin_index<0 || spin_index>spin_count-1) return; 
     int nstates = number_of_states_(spin_count, i_times_2);
@@ -241,9 +241,9 @@ void getIy_(double complex *operator, int spin_index, int *i_times_2, int spin_c
 }
 
 /*!
- @function getIz_
+ @function get_single_spin_Iz_
  */
-void getIz_(double complex *operator, int spin_index, int *i_times_2, int spin_count)
+void get_single_spin_Iz_(double complex *operator, int spin_index, int *i_times_2, int spin_count)
 {
     if(spin_index<0 || spin_index>spin_count-1) return; 
     int nstates = number_of_states_(spin_count, i_times_2);
@@ -263,9 +263,9 @@ void getIz_(double complex *operator, int spin_index, int *i_times_2, int spin_c
 }
 
 /*!
- @function getIp_
+ @function get_single_spin_Ip_
  */
-void getIp_(double complex *operator, int spin_index, int *i_times_2, int spin_count)
+void get_single_spin_Ip_(double complex *operator, int spin_index, int *i_times_2, int spin_count)
 {
     if(spin_index<0 || spin_index>spin_count-1) return; 
     int nstates = number_of_states_(spin_count, i_times_2);
@@ -285,9 +285,9 @@ void getIp_(double complex *operator, int spin_index, int *i_times_2, int spin_c
 }
 
 /*!
- @function getIm_
+ @function get_single_spin_Im_
  */
-void getIm_(double complex *operator, int spin_index, int *i_times_2, int spin_count)
+void get_single_spin_Im_(double complex *operator, int spin_index, int *i_times_2, int spin_count)
 {
     if(spin_index<0 || spin_index>spin_count-1) return; 
     int nstates = number_of_states_(spin_count, i_times_2);
@@ -308,9 +308,9 @@ void getIm_(double complex *operator, int spin_index, int *i_times_2, int spin_c
 
 
 /*!
- @function getTlm_
+ @function get_single_spin_Tlm_
  */
-void getTlm_(double complex *operator, int spin_index, int *i_times_2, int spin_count, int L, int M)
+void get_single_spin_Tlm_(double complex *operator, int spin_index, int *i_times_2, int spin_count, int L, int M)
 {
     if(spin_index<0 || spin_index>spin_count-1) return; 
     int nstates = number_of_states_(spin_count, i_times_2);
@@ -330,9 +330,9 @@ void getTlm_(double complex *operator, int spin_index, int *i_times_2, int spin_
 }
 
 /*!
- @function getTlm_unit_
+ @function get_single_spin_Tlm_unit_
  */
-void getTlm_unit_(double complex *operator, int spin_index, int *i_times_2, int spin_count, int L, int M)
+void get_single_spin_Tlm_unit_(double complex *operator, int spin_index, int *i_times_2, int spin_count, int L, int M)
 {
     if(spin_index<0 || spin_index>spin_count-1) return; 
     int nstates = number_of_states_(spin_count, i_times_2);

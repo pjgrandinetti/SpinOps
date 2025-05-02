@@ -172,10 +172,10 @@ cpdef int number_of_states(list i_times_2):
     if not i_times_2:
         raise ValueError("The input list 'i_times_2' cannot be empty.")
 
-    cdef int spin_count = len(i_times_2)
+    cdef int total_spin_count = len(i_times_2)
     cdef ndarray[int] spins = np.array(i_times_2, dtype=np.int32)
 
-    return _number_of_states(spin_count, &spins[0])
+    return _number_of_states(total_spin_count, &spins[0])
 
 
 cpdef ndarray[double complex, ndim=2] create_single_spin_Ix(int spin_index, list i_times_2):
@@ -208,11 +208,11 @@ cpdef ndarray[double complex, ndim=2] create_single_spin_Ix(int spin_index, list
         raise IndexError("The spin_index is out of bounds.")
 
     cdef int nstates = number_of_states(i_times_2)
-    cdef int spin_count = len(i_times_2)
+    cdef int total_spin_count = len(i_times_2)
     cdef ndarray[int] spins = np.array(i_times_2, dtype=np.int32)
     cdef ndarray[double complex, ndim=2] myOp = np.zeros((nstates, nstates), dtype=np.complex128)
 
-    _get_single_spin_Ix(&myOp[0, 0], spin_index, &spins[0], spin_count)
+    _get_single_spin_Ix(&myOp[0, 0], spin_index, &spins[0], total_spin_count)
 
     return myOp
 
@@ -246,11 +246,11 @@ cpdef ndarray[double complex, ndim=2] create_single_spin_Iy(int spin_index, list
         raise IndexError("The spin_index is out of bounds.")
 
     cdef int nstates = number_of_states(i_times_2)
-    cdef int spin_count = len(i_times_2)
+    cdef int total_spin_count = len(i_times_2)
     cdef ndarray[int] spins = np.array(i_times_2, dtype=np.int32)
     cdef ndarray[double complex, ndim=2] myOp = np.zeros((nstates, nstates), dtype=np.complex128)
 
-    _get_single_spin_Iy(&myOp[0, 0], spin_index, &spins[0], spin_count)
+    _get_single_spin_Iy(&myOp[0, 0], spin_index, &spins[0], total_spin_count)
 
     return myOp
 
@@ -278,12 +278,12 @@ cpdef ndarray[double complex, ndim=2] create_single_spin_Iz(int spin_index, list
 
     # Compute the number of states and prepare the operator matrix
     cdef int nstates = number_of_states(i_times_2)
-    cdef int spin_count = len(i_times_2)
+    cdef int total_spin_count = len(i_times_2)
     cdef ndarray[int] spins = np.array(i_times_2, dtype=np.int32)
     cdef ndarray[double complex, ndim=2] myOp = np.zeros((nstates, nstates), dtype=np.complex128)
 
     # Call the external C function to populate the operator matrix
-    _get_single_spin_Iz(&myOp[0, 0], spin_index, &spins[0], spin_count)
+    _get_single_spin_Iz(&myOp[0, 0], spin_index, &spins[0], total_spin_count)
 
     return myOp
 
@@ -318,11 +318,11 @@ cpdef ndarray[double complex, ndim=2] create_single_spin_Ip(int spin_index, list
         raise IndexError("The spin_index is out of bounds.")
 
     cdef int nstates = number_of_states(i_times_2)
-    cdef int spin_count = len(i_times_2)
+    cdef int total_spin_count = len(i_times_2)
     cdef ndarray[int] spins = np.array(i_times_2, dtype=np.int32)
     cdef ndarray[double complex, ndim=2] myOp = np.zeros((nstates, nstates), dtype=np.complex128)
 
-    _get_single_spin_Ip(&myOp[0, 0], spin_index, &spins[0], spin_count)
+    _get_single_spin_Ip(&myOp[0, 0], spin_index, &spins[0], total_spin_count)
 
     return myOp
 
@@ -356,11 +356,11 @@ cpdef ndarray[double complex, ndim=2] create_single_spin_Im(int spin_index, list
         raise IndexError("The spin_index is out of bounds.")
 
     cdef int nstates = number_of_states(i_times_2)
-    cdef int spin_count = len(i_times_2)
+    cdef int total_spin_count = len(i_times_2)
     cdef ndarray[int] spins = np.array(i_times_2, dtype=np.int32)
     cdef ndarray[double complex, ndim=2] myOp = np.zeros((nstates, nstates), dtype=np.complex128)
 
-    _get_single_spin_Im(&myOp[0, 0], spin_index, &spins[0], spin_count)
+    _get_single_spin_Im(&myOp[0, 0], spin_index, &spins[0], total_spin_count)
 
     return myOp
 
@@ -399,11 +399,11 @@ cpdef ndarray[double complex, ndim=2] create_single_spin_Tlm(int L, int M, int s
         raise IndexError("The spin_index is out of bounds.")
 
     cdef int nstates = number_of_states(i_times_2)
-    cdef int spin_count = len(i_times_2)
+    cdef int total_spin_count = len(i_times_2)
     cdef ndarray[int] spins = np.array(i_times_2, dtype=np.int32)
     cdef ndarray[double complex, ndim=2] myOp = np.zeros((nstates, nstates), dtype=np.complex128)
 
-    _get_single_spin_Tlm(<double complex *> cnp.PyArray_DATA(myOp), spin_index, &spins[0], spin_count, L, M)
+    _get_single_spin_Tlm(<double complex *> cnp.PyArray_DATA(myOp), spin_index, &spins[0], total_spin_count, L, M)
 
     return myOp
 
@@ -442,11 +442,11 @@ cpdef ndarray[double complex, ndim=2] create_single_spin_Tlm_unit(int L, int M, 
         raise IndexError("The spin_index is out of bounds.")
 
     cdef int nstates = number_of_states(i_times_2)
-    cdef int spin_count = len(i_times_2)
+    cdef int total_spin_count = len(i_times_2)
     cdef ndarray[int] spins = np.array(i_times_2, dtype=np.int32)
     cdef ndarray[double complex, ndim=2] myOp = np.zeros((nstates, nstates), dtype=np.complex128)
 
-    _get_single_spin_Tlm_unit(&myOp[0, 0], spin_index, &spins[0], spin_count, L, M)
+    _get_single_spin_Tlm_unit(&myOp[0, 0], spin_index, &spins[0], total_spin_count, L, M)
 
     return myOp
 
@@ -484,11 +484,11 @@ cpdef ndarray[double complex, ndim=2] createEf(int r, int s, list i_times_2):
         raise IndexError("State indices 'r' and 's' must be non-negative.")
 
     cdef int nstates = number_of_states(i_times_2)
-    cdef int spin_count = len(i_times_2)
+    cdef int total_spin_count = len(i_times_2)
     cdef ndarray[int] spins = np.array(i_times_2, dtype=np.int32)
     cdef ndarray[double complex, ndim=2] myOp = np.zeros((nstates, nstates), dtype=np.complex128)
 
-    _getEf(&myOp[0, 0], r, s, &spins[0], spin_count)
+    _getEf(&myOp[0, 0], r, s, &spins[0], total_spin_count)
 
     return myOp
 
@@ -528,12 +528,12 @@ cpdef ndarray[double complex, ndim=2] create_Ixf(int r, int s, list i_times_2):
 
     # Compute the number of states and prepare the operator matrix
     cdef int nstates = number_of_states(i_times_2)
-    cdef int spin_count = len(i_times_2)
+    cdef int total_spin_count = len(i_times_2)
     cdef ndarray[int] spins = np.array(i_times_2, dtype=np.int32)
     cdef ndarray[double complex, ndim=2] myOp = np.zeros((nstates, nstates), dtype=np.complex128)
 
     # Call the external C function to populate the operator matrix
-    _get_Ixf(&myOp[0, 0], r, s, &spins[0], spin_count)
+    _get_Ixf(&myOp[0, 0], r, s, &spins[0], total_spin_count)
 
     return myOp
 
@@ -572,12 +572,12 @@ cpdef ndarray[double complex, ndim=2] create_Iyf(int r, int s, list i_times_2):
 
     # Compute the number of states and prepare the operator matrix
     cdef int nstates = number_of_states(i_times_2)
-    cdef int spin_count = len(i_times_2)
+    cdef int total_spin_count = len(i_times_2)
     cdef ndarray[int] spins = np.array(i_times_2, dtype=np.int32)
     cdef ndarray[double complex, ndim=2] myOp = np.zeros((nstates, nstates), dtype=np.complex128)
 
     # Call the external C function to populate the operator matrix
-    _get_Iyf(&myOp[0, 0], r, s, &spins[0], spin_count)
+    _get_Iyf(&myOp[0, 0], r, s, &spins[0], total_spin_count)
 
     return myOp
 
@@ -616,12 +616,12 @@ cpdef ndarray[double complex, ndim=2] create_Izf(int r, int s, list i_times_2):
 
     # Compute the number of states and prepare the operator matrix
     cdef int nstates = number_of_states(i_times_2)
-    cdef int spin_count = len(i_times_2)
+    cdef int total_spin_count = len(i_times_2)
     cdef ndarray[int] spins = np.array(i_times_2, dtype=np.int32)
     cdef ndarray[double complex, ndim=2] myOp = np.zeros((nstates, nstates), dtype=np.complex128)
 
     # Call the external C function to populate the operator matrix
-    _get_Izf(&myOp[0, 0], r, s, &spins[0], spin_count)
+    _get_Izf(&myOp[0, 0], r, s, &spins[0], total_spin_count)
 
     return myOp
 
@@ -660,12 +660,12 @@ cpdef ndarray[double complex, ndim=2] create_Ipf(int r, int s, list i_times_2):
 
     # Compute the number of states and prepare the operator matrix
     cdef int nstates = number_of_states(i_times_2)
-    cdef int spin_count = len(i_times_2)
+    cdef int total_spin_count = len(i_times_2)
     cdef ndarray[int] spins = np.array(i_times_2, dtype=np.int32)
     cdef ndarray[double complex, ndim=2] myOp = np.zeros((nstates, nstates), dtype=np.complex128)
 
     # Call the external C function to populate the operator matrix
-    _get_Ipf(&myOp[0, 0], r, s, &spins[0], spin_count)
+    _get_Ipf(&myOp[0, 0], r, s, &spins[0], total_spin_count)
 
     return myOp
 
@@ -704,12 +704,12 @@ cpdef ndarray[double complex, ndim=2] create_Imf(int r, int s, list i_times_2):
 
     # Compute the number of states and prepare the operator matrix
     cdef int nstates = number_of_states(i_times_2)
-    cdef int spin_count = len(i_times_2)
+    cdef int total_spin_count = len(i_times_2)
     cdef ndarray[int] spins = np.array(i_times_2, dtype=np.int32)
     cdef ndarray[double complex, ndim=2] myOp = np.zeros((nstates, nstates), dtype=np.complex128)
 
     # Call the external C function to populate the operator matrix
-    _get_Imf(&myOp[0, 0], r, s, &spins[0], spin_count)
+    _get_Imf(&myOp[0, 0], r, s, &spins[0], total_spin_count)
 
     return myOp
 

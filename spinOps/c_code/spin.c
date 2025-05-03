@@ -124,13 +124,13 @@ double tlm_(const double l, const double m, const double j1, const double m1, co
     if (j1 == j2)
     {
         j = j1;
-        double clebsch = clebsch_(j, m2, l, m, j, m1);
+        double clebsch = clebsch_(j, m2, l, m, j, m1);  // CGC: ⟨j m2 l m | j m1⟩
         if (clebsch != 0.0)
         {
             double rme = fac(l) * fac(l) * fac(2 * j + l + 1);
             rme /= pow(2., l) * fac(2 * l) * fac(2 * j - l);
             rme = sqrt(rme);
-            element = clebsch * rme / sqrt(2 * j + 1);
+            element = clebsch * rme;  //  Removed the sqrt(2*j+1) normalization
         }
     }
     return (element);

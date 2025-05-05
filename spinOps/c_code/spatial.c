@@ -1,21 +1,6 @@
 #include "spatial.h"
-#include "spin.h"
+#include "fact.h"
 
-
-#define MAX_TWO_J 200    /* still used by fac_int() */
-static double _fact_table[MAX_TWO_J+1];
-static bool   _fact_init = false;
-static void _init_fact_table(void) {
-    _fact_table[0] = 1.0;
-    for(int i = 1; i <= MAX_TWO_J; ++i)
-        _fact_table[i] = _fact_table[i-1] * (double)i;
-    _fact_init = true;
-}
-static inline double fac_int(int n) {
-    if(!_fact_init) _init_fact_table();
-    if(n < 0 || n > MAX_TWO_J) return 0.0;
-    return _fact_table[n];
-}
 
 /* General reduced Wigner-d as before */
 double _wigner_d_reduced_general(int two_J,

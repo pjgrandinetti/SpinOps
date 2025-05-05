@@ -1,79 +1,11 @@
 #include "spin.h"
+#include "fact.h"
 
 #define MAX_TWO_I  11    // supports 2I = 1,2,…,11  i.e. I = ½,1,…,11/2
 #define MAX_L       8    // supports l = 0,1,…,8
 
 #define MAX(a, b) (((a) > (b)) ? (a) : (b))
 #define MIN(a, b) (((a) < (b)) ? (a) : (b))
-
-#define MAX_SMALL_FAC 32
-static const double small_fac[MAX_SMALL_FAC + 1] = {
-    1.0, 1.0, 2.0, 6.0, 24.0, 120.0, 720.0, 5040.0, 40320.0,
-    362880.0, 3628800.0, 39916800.0, 479001600.0, 6227020800.0,
-    87178291200.0, 1307674368000.0, 20922789888000.0,
-    355687428096000.0, 6402373705728000.0, 121645100408832000.0,
-    2432902008176640000.0, 51090942171709440000.0,
-    1124000727777607680000.0, 25852016738884976640000.0,
-    620448401733239439360000.0, 15511210043330985984000000.0,
-    403291461126605635584000000.0, 10888869450418352160768000000.0,
-    304888344611713860501504000000.0, 8841761993739701954543616000000.0,
-    265252859812191058636308480000000.0,
-    8222838654177922817725562880000000.0,
-    263130836933693530167218012160000000.0};
-
-#define MAX_LOGFAC 100
-
-static double logfac_table[MAX_LOGFAC + 1];
-static int logfac_initialized = 0;
-
-/**
- * Initialize log(factorial) table up to MAX_LOGFAC.
- */
-void init_logfac_table()
-{
-    logfac_table[0] = 0.0;
-    for (int n = 1; n <= MAX_LOGFAC; ++n)
-        logfac_table[n] = logfac_table[n - 1] + log((double)n);
-    logfac_initialized = 1;
-}
-
-/**
- * Retrieve log(n!) using precomputed table.
- */
-static inline double logfac(int n)
-{
-    if (!logfac_initialized)
-        init_logfac_table();
-    if (n < 0 || n > MAX_LOGFAC)
-    {
-        fprintf(stderr, "Error: logfac(%d) out of bounds.\n", n);
-        return NAN;
-    }
-    return logfac_table[n];
-}
-
-double fac(double x)
-{
-    if (x < 0)
-        return 0;
-    double result = 1.0;
-    for (int i = 2; i <= (int)x; ++i)
-        result *= i;
-    return result;
-}
-
-static inline double fac_int(int n)
-{
-    if (n < 0)
-        return 0.0;
-    if (n <= MAX_SMALL_FAC)
-        return small_fac[n];
-    // fallback for larger n, though this should not occur
-    double result = 1.0;
-    for (int i = 2; i <= n; ++i)
-        result *= i;
-    return result;
-}
 
 double clebsch_(const int two_J1, const int two_M1,
                 const int two_J2, const int two_M2,

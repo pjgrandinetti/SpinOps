@@ -9,8 +9,6 @@
 #include <float.h>
 #include <stdbool.h>
 
-static inline double mypow(double base, int exp) {return pow(base, exp);}
-
 /*!
  @function clebsch_
  @abstract Calculates the Clebsch-Gordon coefficients.
@@ -403,33 +401,5 @@ void getIpf_(double complex *operator, int r, int s, int *i_times_2, int total_s
  */
 void getImf_(double complex *operator, int r, int s, int *i_times_2, int total_spin_count);
 
-
-/*!
- @function mypow
- @abstract Computes the power of a number.
- @discussion This function calculates `x` raised to the power of `n`. 
-              If `n` is 0, the function returns 1. For positive values of `n`, 
-              the function iteratively multiplies `x` by itself `n` times.
- @param x The base value.
- @param n The exponent (non-negative integer).
- @return The result of `x` raised to the power of `n` as a double.
- */
-double mypow(const double x, int n);
-
-/*!
- @function fac
- @abstract Computes the factorial of a non-negative number.
- @discussion This function calculates the factorial of a non-negative number `x`. 
-              If `x` is not an integer, it is truncated to its integer part. 
-              If `x` is negative, an error message is printed, and the function 
-              returns 0. For `x = 0`, the function returns 1 (by definition).
- @param x The input number for which the factorial is to be computed.
- @return The factorial of the input number `x` as a double. Returns 0 if `x` is negative.
- */
-double fac(const double x);
-
-#ifdef __cplusplus
-}
-#endif
 
 #endif // SPIN_H

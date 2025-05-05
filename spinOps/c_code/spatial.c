@@ -1,6 +1,213 @@
 #include "spatial.h"
 #include "spin.h"
 
+
+#define MAX_TWO_J 200    /* still used by fac_int() */
+static double _fact_table[MAX_TWO_J+1];
+static bool   _fact_init = false;
+static void _init_fact_table(void) {
+    _fact_table[0] = 1.0;
+    for(int i = 1; i <= MAX_TWO_J; ++i)
+        _fact_table[i] = _fact_table[i-1] * (double)i;
+    _fact_init = true;
+}
+static inline double fac_int(int n) {
+    if(!_fact_init) _init_fact_table();
+    if(n < 0 || n > MAX_TWO_J) return 0.0;
+    return _fact_table[n];
+}
+
+/* General reduced Wigner-d as before */
+double _wigner_d_reduced_general(int two_J,
+                                 int two_m1,
+                                 int two_m2,
+                                 double theta)
+{
+    double J  = 0.5 * two_J;
+    double m1 = 0.5 * two_m1;
+    double m2 = 0.5 * two_m2;
+
+    double c2 = cos(0.5 * theta);
+    double s2 = sin(0.5 * theta);
+
+    /* summation limits */
+    int kmin = 0;
+    int tmp  = (two_m1 + two_m2)/2;
+    if(tmp < 0) kmin = -tmp;
+    int kmax1 = (two_J - two_m1) / 2;
+    int kmax2 = (two_J - two_m2) / 2;
+    int kmax  = kmax1 < kmax2 ? kmax1 : kmax2;
+
+    double sum = 0.0;
+    for(int k = kmin; k <= kmax; ++k) {
+        int a = k;
+        int b = (two_J - two_m1)/2 - k;
+        int c = (two_J - two_m2)/2 - k;
+        int d = tmp + k;
+        if(b<0||c<0||d<0) continue;
+
+        double sign = (k&1)? -1.0 : 1.0;
+        double p1   = pow(c2, m1 + m2 + 2.0*k);
+        double p2   = pow(s2, 2.0*J - m1 - m2 - 2.0*k);
+        double denom= fac_int(a)*fac_int(b)*fac_int(c)*fac_int(d);
+        sum += sign * (p1 * p2)/denom;
+    }
+
+    int expo = (two_J - two_m2)/2;
+    double phase = (expo&1)? -1.0 : 1.0;
+
+    int jm1    = (two_J + two_m1)/2;
+    int jm1bar = (two_J - two_m1)/2;
+    int jm2    = (two_J + two_m2)/2;
+    int jm2bar = (two_J - two_m2)/2;
+    double norm = sqrt(
+        fac_int(jm1)*fac_int(jm1bar) *
+        fac_int(jm2)*fac_int(jm2bar)
+    );
+
+    return phase * norm * sum;
+}
+
+/* Special-case for J=2 (two_J==4) using your hard-coded expressions: */
+double _wigner_d_reduced_J2(int two_m1, int two_m2, double theta) {
+    double cx = cos(theta);
+    double sx = sin(theta);
+    /* use exactly the same constants you inlined before */
+    if (two_m1 ==  4) {
+        if (two_m2 ==  4) return  0.25 * (1+cx)*(1+cx);
+        if (two_m2 ==  2) return -0.5  * sx*(1+cx);
+        if (two_m2 ==  0) return  0.6123724355 * sx*sx;
+        if (two_m2 == -2) return -0.5  * sx*(1-cx);
+        if (two_m2 == -4) return  0.25 * (1-cx)*(1-cx);
+    }
+    else if (two_m1 == -4) {
+        if (two_m2 ==  4) return  0.25 * (1-cx)*(1-cx);
+        if (two_m2 ==  2) return  0.5  * sx*(1-cx);
+        if (two_m2 ==  0) return  0.6123724355 * sx*sx;
+        if (two_m2 == -2) return  0.5  * sx*(1+cx);
+        if (two_m2 == -4) return  0.25 * (1+cx)*(1+cx);
+    }
+    else if (two_m1 ==  2) {
+        if (two_m2 ==  4) return  0.5  * sx*(1+cx);
+        if (two_m2 ==  2) return  0.5  * (2*cx*cx + cx - 1);
+        if (two_m2 ==  0) return -1.224744871 * sx*cx;
+        if (two_m2 == -2) return -0.5  * (2*cx*cx - cx - 1);
+        if (two_m2 == -4) return -0.5  * sx*(1-cx);
+    }
+    else if (two_m1 ==  0) {
+        if (two_m2 ==  4 || two_m2 == -4) return  0.6123724355 * sx*sx;
+        if (two_m2 ==  2) return  1.224744871 * sx*cx;
+        if (two_m2 ==  0) return  1.5 * cx*cx - 0.5;
+        if (two_m2 == -2) return -1.224744871 * sx*cx;
+    }
+    else if (two_m1 == -2) {
+        if (two_m2 ==  4) return  0.5  * sx*(1-cx);
+        if (two_m2 ==  2) return -0.5  * (2*cx*cx - cx - 1);
+        if (two_m2 ==  0) return  1.224744871 * sx*cx;
+        if (two_m2 == -2) return  0.5  * (2*cx*cx + cx - 1);
+        if (two_m2 == -4) return -0.5  * sx*(1+cx);
+    }
+    /* (should never fall through for valid two_m1,two_m2) */
+    return 0.0;
+}
+
+/**
+ * Top-level entry point: picks the J=2 shortcut if possible,
+ * otherwise falls back to the full summation.
+ */
+double wigner_d_(const int two_J, const int two_m1, const int two_m2, const double theta)
+{
+    if (two_J == 4) {
+        return _wigner_d_reduced_J2(two_m1, two_m2, theta);
+    }
+    else {
+        return _wigner_d_reduced_general(two_J, two_m1, two_m2, theta);
+    }
+}
+
+/**
+ * Computes the Wigner D-matrix element D^l_{m1,m2}(α, β, γ)
+ * using the Euler angle decomposition:
+ *     D^l_{m1,m2}(α, β, γ) = e^{-i m1 α} d^l_{m1,m2}(β) e^{-i m2 γ}
+ *
+ * All quantum numbers are passed as 2× their values.
+ *
+ * @param two_l   Integer: 2 × l
+ * @param two_m1  Integer: 2 × m₁
+ * @param two_m2  Integer: 2 × m₂
+ * @param alpha   Euler angle α (in radians)
+ * @param beta    Euler angle β  (in radians)
+ * @param gamma   Euler angle γ  (in radians)
+ *
+ * @return        Complex D-matrix element D^l_{m1,m2}(α, β, γ)
+ */
+double complex DLM_(const int two_l, const int two_m1, const int two_m2, const double alpha, const double beta, const double gamma)
+{
+    // Compute the phase factor exp(-i(m1*α + m2*γ))
+    double phase_angle = 0.5 * two_m1 * alpha + 0.5 * two_m2 * gamma;
+    double d_element = wigner_d_(two_l, two_m1, two_m2, beta);
+    return d_element * cexp(-I * phase_angle);
+}
+
+/**
+ * Applies a rotation defined by Euler angles (α, β, γ) to a spin state vector
+ * of angular momentum j, using Wigner D-matrix elements.
+ *
+ * All quantum numbers are passed as 2× their values (i.e., integer-doubled).
+ *
+ * @param two_j     Integer: 2 × j
+ * @param initial   Input vector of size (two_j + 1)
+ * @param alpha     Euler angle α (in radians)
+ * @param beta      Euler angle β  (in radians)
+ * @param gamma     Euler angle γ  (in radians)
+ * @param final     Output vector (must be preallocated, size = two_j + 1)
+ */
+void Rot_(const int two_j, const double complex *initial, const double alpha, const double beta, const double gamma, double complex *final)
+{
+    int length = two_j + 1;
+
+    // Identity rotation shortcut
+    if (alpha == 0.0 && beta == 0.0 && gamma == 0.0) {
+        for (int i = 0; i < length; i++) {
+            final[i] = initial[i];
+        }
+        return;
+    }
+
+    // Handle j == 2 (two_j == 4) using hard-coded Wigner d
+    if (two_j == 4) {
+        for (int two_m2 = -two_j; two_m2 <= two_j; two_m2 += 2) {
+            int index2 = (two_j + two_m2) / 2;
+            final[index2] = 0.0 + 0.0 * I;
+            for (int two_m1 = -two_j; two_m1 <= two_j; two_m1 += 2) {
+                int index1 = (two_j + two_m1) / 2;
+                double db = wigner_d_(two_j, two_m1, two_m2, beta);
+                double pha = 0.5 * (two_m1 * alpha + two_m2 * gamma);
+                double complex d = db * cexp(-I * pha);
+                final[index2] += d * initial[index1];
+            }
+        }
+    }
+    else {
+        // General case
+        double complex temp[length];
+        for (int i = 0; i < length; i++) temp[i] = 0.0 + 0.0 * I;
+
+        for (int two_m2 = -two_j; two_m2 <= two_j; two_m2 += 2) {
+            int index2 = (two_j + two_m2) / 2;
+            for (int two_m1 = -two_j; two_m1 <= two_j; two_m1 += 2) {
+                int index1 = (two_j + two_m1) / 2;
+                double complex D = DLM_(two_j, two_m1, two_m2, alpha, beta, gamma);
+                temp[index2] += D * initial[index1];
+            }
+        }
+
+        for (int i = 0; i < length; i++) {
+            final[i] = temp[i];
+        }
+    }
+}
+
 /*!
  @function getrho1_pas_
  */
@@ -35,221 +242,5 @@ void getrho2_pas_(double complex *tensor, const double zeta, const double eta) {
     tensor[2] = SQRT_6_OVER_2 * zeta;         // m = 0
     tensor[3] = 0;                            // m = +1
     tensor[4] = eta * zeta / 2;               // m = +2
-}
-
-/*!
- @function wigner_d_
- */
-double wigner_d_(const double l,const double m1,const double m2,const double beta)
-{
-	if(l==2) {
-		if(m1==2) {
-			if(m2==2) {
-				double cx = cos(beta);
-				return( (1+cx)*(1.+cx)/4.);
-				}
-			else if(m2==1) {
-				double sx = sin(beta);
-				double cx = cos(beta);
-				return( -sx*(1.+cx)/2.);
-				}
-			else if(m2==0) {
-				double sx = sin(beta);
-				return( 0.6123724355*sx*sx);
-				}
-			else if(m2==-1) {
-				double sx = sin(beta);
-				double cx = cos(beta);
-				return( -sx*(1.-cx)/2.);
-				}
-			else if(m2==-2) {
-				double cx = cos(beta);
-				return( (1-cx)*(1.-cx)/4.);
-				}
-			}
-		else if(m1==-2) {
-			if(m2==2) {
-				double cx = cos(beta);
-				return( (1-cx)*(1.-cx)/4.);
-				}
-			else if(m2==1) {
-				double sx = sin(beta);
-				double cx = cos(beta);
-				return(sx*(1.-cx)/2.);
-				}
-			else if(m2==0) {
-				double sx = sin(beta);
-				return( 0.6123724355*sx*sx);
-				}
-			else if(m2==-1) {
-				double sx = sin(beta);
-				double cx = cos(beta);
-				return(sx*(1.+cx)/2.);
-				}
-			else if(m2==-2) {
-				double cx = cos(beta);
-				return( (1+cx)*(1.+cx)/4.);
-				}
-			}
-		else if(m1==1) {
-			if(m2==2) {
-				double sx = sin(beta);
-				double cx = cos(beta);
-				return( sx*(1+cx)/2.);
-				}
-			else if(m2==1) {
-				double cx = cos(beta);
-				return((2*cx*cx+cx-1.)/2.);
-				}
-			else if(m2==0) {
-				double sx = sin(beta);
-				double cx = cos(beta);
-				return(-1.224744871*sx*cx);
-				}
-			else if(m2==-1) {
-				double cx = cos(beta);
-				return(-(2*cx*cx-cx-1.)/2.);
-				}
-			else if(m2==-2) {
-				double sx = sin(beta);
-				double cx = cos(beta);
-				return( -sx*(1-cx)/2.);
-				}
-			}
-		else if(m1==0) {
-			if(m2==2) {
-				double sx = sin(beta);
-				return(0.6123724355*sx*sx);
-				}
-			else if(m2==1) {
-				double sx = sin(beta);
-				double cx = cos(beta);
-				return(1.224744871*sx*cx);
-				}
-			else if(m2==0) {
-				double cx = cos(beta);
-				return(1.5*cx*cx- .5);
-				}
-			else if(m2==-1) {
-				double sx = sin(beta);
-				double cx = cos(beta);
-				return(-1.224744871*sx*cx);
-				}
-			else if(m2==-2) {
-				double sx = sin(beta);
-				return(0.6123724355*sx*sx);
-				}
-			}
-		else if(m1==-1) {
-			if(m2==2) {
-				double sx = sin(beta);
-				double cx = cos(beta);
-				return( sx*(1-cx)/2.);
-				}
-			else if(m2==1) {
-				double cx = cos(beta);
-				return(-(2*cx*cx-cx-1.)/2.);
-				}
-			else if(m2==0) {
-				double sx = sin(beta);
-				double cx = cos(beta);
-				return(1.224744871*sx*cx);
-				}
-			else if(m2==-1) {
-				double cx = cos(beta);
-				return((2*cx*cx+cx-1.)/2.);
-				}
-			else if(m2==-2) {
-				double sx = sin(beta);
-				double cx = cos(beta);
-				return( -sx*(1+cx)/2.);
-				}
-			}
-		}
-	else {
-		double sx = sin(beta/2.);
-		double cx = cos(beta/2.);
-		double sum = 0.;
-		int sign = 1;
-	                          
-		for (int k = 0; k <= l - m2; k++) {
-			double k1 = (int)(l - m2 - k);
-			double k2 = (int)(l + m1 - k);
-			double k3 = (int)(k + m2 - m1);
-
-			if ( k1 >= 0 && k2 >= 0 && k3 >= 0) {   
-			 	int n1 = (int)(2 * l + m1 - m2 - 2 * k);
-				int n2 = (int)(m2 - m1 + 2 * k);
-				double x = mypow(cx, n1);
-				double y = mypow(sx, n2);
-				sum += sign * x * y / (fac((double)k1) * fac((double)k2) * fac((double)k3) * fac((double)k)); 
-				}
-		sign = -sign;
-		}
-		double f = fac(l+m1) * fac(l-m1) * fac(l+m2) * fac(l-m2);
-		f = sqrt(f);
-		return(sum * f);
-		}
-	return(0);
-}
-
-/*!
- @function DLM_
- */
-double complex DLM_(const double l, const double m1, const double m2, const double alpha, const double beta, const double gamma)
-{
-    double pha = m1 * alpha + m2 * gamma;
-    double db = wigner_d_(l, m1, m2, beta);                                   
-    return cos(pha) * db - I * sin(pha) * db;
-}
-
-/*!
- @function Rot_
- */
-void Rot_(const double j, double complex *initial, const double alpha, const double beta, const double gamma, double complex *final)
-{
-	double m1, m2;
-	double complex d;
-	int length = 2*(int)j+1;
-
-	if((alpha==0.)&&(beta==0.)&&(gamma==0.)) {
-		for (int index = 0; index < length; index++) {
-			final[index] = initial[index];
-		}
-		return;
-		} 
-	
-	if(j==2) {
-		double pha, db;
-		for (m2 = -2; m2 <= 2; m2++) {
-			int index2 = (int)j + m2;
-			final[index2] = 0.;
-			for (m1 = -2; m1 <= 2; m1++) {
-				int index1 = (int)j + m1;
-				db = wigner_d_(j, m1, m2, beta);                                   
-				pha = m1 * alpha + m2 * gamma;
-				d = cos(pha) * db - I* sin(pha) * db;
-	        	final[index2] += d * initial[index1];
-				}
-			}
-		}
-	else {
-		double complex tempvector[2*(long unsigned) j +1];
-		double complex *temp = tempvector+(long unsigned) j;
-
-		for (m2 = -j; m2 <= j; m2 = m2+1.) {
-			int index2 = (int)j + m2;
-			for (m1 = -j; m1 <= j; m1=m1+1.) {
-				int index1 = (int)j + m1;
-				d = DLM_(j,m1, m2, alpha, beta, gamma); 
-	        	temp[index2] += d * initial[index1];
-				}
-			}
-
-		for (m2 = -j; m2 <= j; m2=m2+1) {
-			int index2 = (int)j + m2;
-			final[index2] = temp[index2];
-		}
-	}
 }
 

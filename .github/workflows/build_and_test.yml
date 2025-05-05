@@ -40,6 +40,14 @@ jobs:
         run: |
           pip install --upgrade pip setuptools wheel Cython cibuildwheel "numpy>=1.21,<2"
 
+      # Install project and test dependencies then run pytest
+      - name: Install project and test dependencies
+        run: |
+          pip install -e .
+          pip install -r requirements-dev.txt
+      - name: Run tests
+        run: pytest --maxfail=1 --disable-warnings -q
+
       - name: Build wheels
         env:
           CIBW_MANYLINUX_VERSION: "2014"

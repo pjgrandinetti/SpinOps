@@ -124,8 +124,8 @@ jobs:
           # Build Cython extension in-place for Windows/MSYS2
           & "${{ env.pythonLocation }}\python.exe" setup.py build_ext --inplace
           # Install editable package and test deps
-          & "${{ env.pythonLocation }}\python.exe" -m pip install -e .
           & "${{ env.pythonLocation }}\python.exe" -m pip install -r requirements-dev.txt
+          & "${{ env.pythonLocation }}\python.exe" -m pip install -e .
 
       - name: Run tests
         shell: pwsh

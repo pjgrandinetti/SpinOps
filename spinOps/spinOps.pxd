@@ -9,8 +9,8 @@ cdef extern from "spatial.h":
 
 cdef extern from "spin.h":
     double clebsch_(const int two_J1, const int two_M1,const int two_J2, const int two_M2,const int two_J,  const int two_M)
-    double tlm_(const int l, const int m,const int two_j1, const int two_m1, const int two_j2, const int two_m2)
-    double unit_tlm_(const int l, const int m,const int two_j1, const int two_m1, const int two_j2, const int two_m2)
+    double tlm_(const int l, const int m, const int two_I, const int two_m1, const int two_m2)
+    double unit_tlm_(const int l, const int m, const int two_I, const int two_m1, const int two_m2)
     int number_of_states_(int total_spin_count, int *i_times_2)
     void get_single_spin_Ix_(double complex *operator, int spin_index, int *i_times_2, int total_spin_count)
     void get_single_spin_Iy_(double complex *operator, int spin_index, int *i_times_2, int total_spin_count)

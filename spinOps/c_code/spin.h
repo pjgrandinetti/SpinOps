@@ -32,20 +32,22 @@ double clebsch_(const int two_J1, const int two_M1,const int two_J2, const int t
 
 /*!
  @function tlm_
- @abstract Evaluates the matrix element `<j1 m1|T(lm)|j2 m2>`.
- @discussion This function calculates the matrix element `<j1 m1|T(lm)|j2 m2>` 
+ @abstract Evaluates the matrix element `⟨I,m1| T_{l,m} |I,m2⟩`.
+ @discussion This function calculates the matrix element `⟨I,m1| T_{l,m} |I,m2⟩` 
               using the definition from Bowden and Hutchinson, J. Magn. Reson. 67, 403, 1986. 
               The calculation involves Clebsch-Gordon coefficients and reduced matrix elements. 
-              The function assumes that `j1` equals `j2` for the calculation.
- @param l The rank of the tensor operator.
- @param m The order of the tensor operator.
- @param two_j1 The first angular momentum quantum number times 2.
- @param two_m1 The projection quantum number associated with `j1` times 2.
- @param two_j2 The second angular momentum quantum number times 2.
- @param mtwo_m22 The projection quantum number associated with `j2` times 2.
- @return The matrix element `<j1 m1|T(lm)|j2 m2>` as a double. Returns 0 if `j1` is not equal to `j2`.
+ @param l       The rank of the tensor operator.
+ @param m       The order of the tensor operator.
+ @param two_I   2×I
+ @param two_m1  The projection quantum number associated with I.
+ @param two_m2  The projection quantum number associated with I.
+ @return        The matrix element `⟨I,m1| T_{l,m} |I,m2⟩` as a double. 
  */
-double tlm_(const int l, const int m,const int two_j1, const int two_m1, const int two_j2, const int two_m2);
+double tlm_(const int l,
+            const int m,
+            const int two_I,
+            const int two_m1,
+            const int two_m2);
 
 /*!
  @function unit_tlm_
@@ -63,7 +65,11 @@ double tlm_(const int l, const int m,const int two_j1, const int two_m1, const i
  @param two_m2 The projection quantum number associated with `j2` times 2.
  @return The matrix element `<j1 m1|T_hat(lm)|j2 m2>` as a double. Returns 0 if `j1` is not equal to `j2`.
  */
-double unit_tlm_(const int l, const int m,const int two_j1, const int two_m1, const int two_j2, const int two_m2);
+double unit_tlm_(const int l,
+                 const int m,
+                 const int two_I,
+                 const int two_m1,
+                 const int two_m2);
 
 /*!
  @function number_of_states_

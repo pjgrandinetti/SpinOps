@@ -61,13 +61,13 @@ cpdef double clebsch(double j1, double m1, double j2, double m2, double j, doubl
 
     return _clebsch(int(2*j1), int(2*m1), int(2*j2), int(2*m2), int(2*j), int(2*m))
 
-cpdef double tlm(double l, double m, double j1, double m1, double j2, double m2):
+cpdef double tlm(int l, int m, double I, double m1, double m2):
     """
     Computes the matrix element
 
     .. math::
 
-        \langle j_1,m_1|\:\hat{T}_{l,m}\:|j_2,m_2\\rangle
+        \langle I,m_1|\:\hat{T}_{l,m}\:|I,m_2\\rangle
 
     of the irreducible spherical tensor operator :math:`\hat{T}_{l,m}`.
 
@@ -77,24 +77,23 @@ cpdef double tlm(double l, double m, double j1, double m1, double j2, double m2)
         Rank of the irreducible spherical tensor operator.
     m : double
         Order of the irreducible spherical tensor operator.
-    j1 : double
-        Total angular momentum quantum number of the first particle.
+    I : double
+        Total angular momentum quantum number of the spin.
     m1 : double
-        Angular momentum component quantum number of the first particle.
-    j2 : double
-        Total angular momentum quantum number of the second particle.
+        Angular momentum component quantum number of the spin.
     m2 : double
-        Angular momentum component quantum number of the second particle.
+        Angular momentum component quantum number of the spin.
 
     Returns
     -------
     double
-        The matrix element :math:`\langle j_1,m_1|\:\hat{T}_{l,m}\:|j_2,m_2\\rangle`.
+        The matrix element :math:`\langle I,m_1|\:\hat{T}_{l,m}\:|I,m_2\\rangle`.
     """
 
-    return _tlm(int(2*l), int(2*m), int(2*j1), int(2*m1), int(2*j2), int(2*m2))
+    return _tlm(l, m, int(2*I), int(2*m1), int(2*m2))
 
-cpdef double unit_tlm(double l, double m, double j1, double m1, double j2, double m2):
+
+cpdef double unit_tlm(int l, int m, double I, double m1, double m2):
     """
     Computes the matrix element
 
@@ -117,7 +116,7 @@ cpdef double unit_tlm(double l, double m, double j1, double m1, double j2, doubl
         double: The :math:`\langle j_1,m_1|\:\hat{\mathcal{T}}_{l,m}\:|j_2,m_2\\rangle` matrix element.
     """
 
-    return _unit_tlm(int(2*l), int(2*m), int(2*j1), int(2*m1), int(2*j2), int(2*m2))
+    return _unit_tlm(l, m, int(2*I), int(2*m1), int(2*m2))
 
 
 cpdef int number_of_states(list i_times_2):

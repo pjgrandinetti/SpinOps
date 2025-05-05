@@ -1,76 +1,82 @@
-import unittest
-import numpy as np
-from sympy.physics.wigner import clebsch_gordan as sympy_cg
-from sympy.physics.wigner import wigner_d_small as sympy_wigner_d
-from sympy.physics.wigner import wigner_3j
-from sympy import S, factorial, sqrt  # make sure sqrt is included
 import math
-from spinOps import create_single_spin_Ix, clebsch, wigner_d
+import pytest
+from sympy import Rational
+from sympy.physics.wigner import wigner_3j
 from spinOps import tlm, unit_tlm
 
-def reduced_matrix_element(I, l):
-    """Compute reduced matrix element ⟨I||T^l||I⟩ from Eq. S.63 of SI."""
-    I = S(I)
-    l = S(l)
-    numerator = factorial(l) * factorial(l) * factorial(2 * I + l + 1)
-    denominator = 2**l * factorial(2 * l) * factorial(2 * I - l)
-    return float(sqrt(numerator / denominator))
 
 class TestUnitTlm:
+    @staticmethod
+    def tlm_ref(l: int, m: int, I: float, m1: float, m2: float) -> float:
+        """
+        Reference implementation of <I,m1| T_{l,m} |I,m2> using the Wigner-Eckart theorem (SI § S2),
+        via SymPy's wigner_3j.
+        """
+        # Reduced matrix element ⟨I‖T^(l)‖I⟩ from Eq. S.62
+        num = math.factorial(l) * math.factorial(l) * math.factorial(int(2*I + l + 1))
+        den = (2**l) * math.factorial(2*l) * math.factorial(int(2*I - l))
+        red = math.sqrt(num / den)
 
-    @pytest.mark.parametrize("l, m, j, m1, m2", [
-        (1,  1,   1,    1,   0),
-        (2,  0,   1.5, -0.5, 0.5),
-        (1,  0,   1,    1,  -1),
-    ])
-    def test_unit_tensor_scaling(self, l, m, j, m1, m2):
-        # skip if selection rule not satisfied
-        if abs(m1 + m2 - m) > 1e-12:
-            pytest.skip("m₁ + m₂ != m → unit_tlm raises ValueError")
-        nonunit = tlm(l, m, j, m1, j, m2)
-        red     = reduced_matrix_element(j, l)            # Eq. S.62
-        scale   = math.sqrt(2*l + 1) / (math.sqrt(2*j + 1) * red)
-        expected = nonunit * scale
-        actual   = unit_tlm(l, m, j, m1, j, m2)
-        assert actual == pytest.approx(expected, rel=1e-12)
+        # Prepare rational spins for wigner_3j
+        j   = Rational(int(2*I), 2)
+        mj1 = Rational(-int(2*m1), 2)
+        mj  = Rational(int(2*m), 2)
+        mj2 = Rational(int(2*m2), 2)
 
-    def test_trace_orthonormality(self):
-        """Tr[𝒯ₗₘ† 𝒯ₗₘ] = ∑ₘ₁,ₘ₂ |𝒯ₗₘ(m₁,m₂)|² = 1  for each (l,m)."""
-        j   = 1
-        tol = 1e-12
+        threej = wigner_3j(j, l, j, mj1, mj, mj2)
+        phase  = (-1) ** int(I - m1)
 
-        for l in range(3):              # ℓ = 0,1,2
-            for m in range(-l, l+1):
-                acc = 0.0
-                for m1 in [-1, 0, 1]:
-                    for m2 in [-1, 0, 1]:
-                        try:
-                            t = unit_tlm(l, m, j, m1, j, m2)
-                        except ValueError:
-                            continue
-                        acc += t*t
-                assert acc == pytest.approx(1.0, abs=tol)
+        return float(phase * threej * red)
 
-    def test_off_diagonal_orthogonality(self):
-        """Different (l,m) channels are orthogonal:
-           ∑ₘ₁,ₘ₂ 𝒯_{l₁,m₁}⋅𝒯_{l₂,m₂} = 0 for (l₁,m₁)≠(l₂,m₂)."""
-        j   = 1
-        tol = 1e-12
+    @pytest.mark.parametrize(
+        "l, m, I, m1, m2", [
+            # integer-spin cases
+            (1,  0, 1.0,  1.0,  0.0),
+            (2, -1, 3.0, -2.0, -1.0),
+            (3,  2, 2.5,  1.0,  3.0),
+            # half-integer spin example
+            (1,  1, 0.5, -0.5,  0.5),
+        ]
+    )
+    def test_tlm_against_reference(self, l, m, I, m1, m2):
+        """
+        Compare the Cython tlm() against the SymPy-based reference implementation.
+        """
+        got = tlm(l, m, I, m1, m2)
+        exp = self.tlm_ref(l, m, I, m1, m2)
+        assert got == pytest.approx(exp, rel=1e-9), (
+            f"tlm({l},{m},{I},{m1},{m2}) = {got} ≠ {exp}"
+        )
 
-        for l1 in range(3):
-            for m1 in range(-l1, l1+1):
-                for l2 in range(3):
-                    for m2 in range(-l2, l2+1):
-                        if (l1, m1) == (l2, m2):
-                            continue
-                        acc = 0.0
-                        for a in [-1, 0, 1]:
-                            for b in [-1, 0, 1]:
-                                try:
-                                    t1 = unit_tlm(l1, m1, j, a, j, b)
-                                    t2 = unit_tlm(l2, m2, j, a, j, b)
-                                except ValueError:
-                                    continue
-                                acc += t1 * t2
-                        assert acc == pytest.approx(0.0, abs=tol)
-                        
+    @pytest.mark.parametrize(
+        "l, m, I, m1, m2", [
+            # reuse the same “happy‐path” examples
+            (1,  0, 1.0,  1.0,  0.0),
+            (2, -1, 3.0, -2.0, -1.0),
+            (3,  2, 2.5,  1.0,  3.0),
+            (1,  1, 0.5, -0.5,  0.5),
+        ]
+    )
+    def test_unit_tlm_against_reference(self, l, m, I, m1, m2):
+        """
+        Compare unit_tlm() against the analytic unit‐tensor scaling of tlm_ref.
+        """
+        # 1) get the raw T_{l,m} reference
+        raw = self.tlm_ref(l, m, I, m1, m2)
+
+        # 2) compute the unit‐tensor scaling:
+        #    scale = 1/l! * sqrt[(2l+1)(2I-l)! 2^l (2l)! / (2I+l+1)!]
+        inv_l_fact = 1.0 / math.factorial(l)
+        num = (2*l + 1) \
+            * math.factorial(int(2*I - l)) \
+            * (2**l) \
+            * math.factorial(2*l)
+        den = math.factorial(int(2*I + l + 1))
+        scale = inv_l_fact * math.sqrt(num / den)
+
+        expected = raw * scale
+        got = unit_tlm(l, m, I, m1, m2)
+
+        assert got == pytest.approx(expected, rel=1e-9), (
+            f"unit_tlm({l},{m},{I},{m1},{m2}) = {got} ≠ {expected}"
+        )

@@ -1,7 +1,10 @@
 #include "spin.h"
 
-#define MAX(a,b) (((a) > (b)) ? (a) : (b))
-#define MIN(a,b) (((a) < (b)) ? (a) : (b))
+#define MAX_TWO_I  11    // supports 2I = 1,2,…,11  i.e. I = ½,1,…,11/2
+#define MAX_L       8    // supports l = 0,1,…,8
+
+#define MAX(a, b) (((a) > (b)) ? (a) : (b))
+#define MIN(a, b) (((a) < (b)) ? (a) : (b))
 
 #define MAX_SMALL_FAC 32
 static const double small_fac[MAX_SMALL_FAC + 1] = {
@@ -16,8 +19,7 @@ static const double small_fac[MAX_SMALL_FAC + 1] = {
     304888344611713860501504000000.0, 8841761993739701954543616000000.0,
     265252859812191058636308480000000.0,
     8222838654177922817725562880000000.0,
-    263130836933693530167218012160000000.0
-};
+    263130836933693530167218012160000000.0};
 
 #define MAX_LOGFAC 100
 
@@ -50,16 +52,20 @@ static inline double logfac(int n)
     return logfac_table[n];
 }
 
-double fac(double x) {
-    if (x < 0) return 0;
+double fac(double x)
+{
+    if (x < 0)
+        return 0;
     double result = 1.0;
     for (int i = 2; i <= (int)x; ++i)
         result *= i;
     return result;
 }
 
-static inline double fac_int(int n) {
-    if (n < 0) return 0.0;
+static inline double fac_int(int n)
+{
+    if (n < 0)
+        return 0.0;
     if (n <= MAX_SMALL_FAC)
         return small_fac[n];
     // fallback for larger n, though this should not occur
@@ -71,7 +77,7 @@ static inline double fac_int(int n) {
 
 double clebsch_(const int two_J1, const int two_M1,
                 const int two_J2, const int two_M2,
-                const int two_J,  const int two_M)
+                const int two_J, const int two_M)
 {
     // Selection rules (integer version)
     if (two_M1 + two_M2 != two_M ||
@@ -94,7 +100,8 @@ double clebsch_(const int two_J1, const int two_M1,
 
     // C1 summation
     double C1 = 0.0;
-    for (int k = kmin; k <= kmax; ++k) {
+    for (int k = kmin; k <= kmax; ++k)
+    {
         int a = A - k;
         int b = B - k;
         int c = C - k;
@@ -126,79 +133,110 @@ double clebsch_(const int two_J1, const int two_M1,
     return C1 * sqrt(C2 * C3);
 }
 
-/**
- * Computes ⟨j2 m2 | T^{(l)}_m | j1 m1⟩ using Clebsch–Gordan × RME.
- *
- * @param l        Tensor rank (integer)
- * @param m        Tensor component (integer)
- * @param two_j1   2*j1
- * @param two_m1   2*m1
- * @param two_j2   2*j2
- * @param two_m2   2*m2
- */
-double tlm_(const int l, const int m, const int two_j1, const int two_m1, const int two_j2, const int two_m2)
+/* rme_table[two_I][l] = ⟨I‖T^(l)‖I⟩ for l≤two_I, else 0 */
+static double rme_table[MAX_TWO_I+1][MAX_L+1];
+/* inv_sqrt2I1[two_I] = 1.0 / √(2I+1) = 1.0 / √(two_I+1) */
+static double inv_sqrt2I1[MAX_TWO_I+1];
+static int    tables_initialized = 0;
+
+#include <math.h>
+#include "spin.h"   // brings in small_fac[] and MAX_SMALL_FAC
+
+static void init_tlm_tables(void)
 {
-    // Check domain validity
-    if (two_j1 != two_j2 ||
-        abs(two_m1) > two_j1 || abs(two_m2) > two_j2 ||
-        abs(m) > l || l < 0 || l > two_j1)
-        return 0.0;
-
-    // Clebsch–Gordan coefficient: ⟨j2 m2 l m | j1 m1⟩
-    double cgc = clebsch_(two_j2, two_m2, 2 * l, 2 * m, two_j1, two_m1);
-    if (cgc == 0.0 || isnan(cgc))
-        return 0.0;
-
-    // Reduced matrix element
-    int j = two_j1; // = two_j2
-
-    double log_rme;
-    if (l <= MAX_SMALL_FAC &&
-        j + l + 1 <= MAX_LOGFAC &&
-        2 * l <= MAX_LOGFAC &&
-        j - l >= 0 && j - l <= MAX_LOGFAC)
-    {
-        log_rme = 2.0 * log(small_fac[l]) +
-                  logfac_table[j + l + 1] -
-                  l * log(2.0) -
-                  logfac_table[2 * l] -
-                  logfac_table[j - l];
+    if (tables_initialized) return;
+    for (int two_I = 1; two_I <= MAX_TWO_I; ++two_I) {
+        inv_sqrt2I1[two_I] = 1.0 / sqrt((double)(two_I + 1));
+        for (int l = 0; l <= MAX_L; ++l) {
+            if (l > two_I) {
+                rme_table[two_I][l] = 0.0;
+            } else {
+                /* numerator = l!·l!·(2I+l+1)! */
+                double num = small_fac[l] * small_fac[l]
+                           * small_fac[two_I + l + 1];
+                /* denominator = 2^l·(2l)!·(2I–l)! */
+                double den = ldexp(1.0, l)           /* 2^l */
+                           * small_fac[2*l]
+                           * small_fac[two_I - l];
+                rme_table[two_I][l] = sqrt(num/den);
+            }
+        }
     }
-    else
-    {
-        log_rme = 2.0 * logfac(l) +
-                  logfac(j + l + 1) -
-                  l * log(2.0) -
-                  logfac(2 * l) -
-                  logfac(j - l);
-    }
-
-    double rme = exp(0.5 * log_rme);
-    return cgc * rme;
+    tables_initialized = 1;
 }
 
-/**
- * Compute ⟨j2 m2 | T̂_{l,m} | j1 m1⟩
- * using orthonormal unit irreducible spherical tensor operators.
- *
- * All angular momentum arguments (j1, j2, m1, m2) must be passed as 2× their values (integers).
- * Arguments l and m are passed as standard integers.
- */
-double unit_tlm_(const int l, const int m, const int two_j1, const int two_m1, const int two_j2, const int two_m2)
+double tlm_(const int l,
+            const int m,
+            const int two_I,
+            const int two_m1,
+            const int two_m2)
 {
-    if (two_j1 != two_j2 ||
-        abs(two_m1) > two_j1 || abs(two_m2) > two_j2 ||
-        abs(m) > l || l < 0)
+    /* 1) ensure we only ever support our pre-chosen range */
+    if (two_I < 1 || two_I > MAX_TWO_I ||
+        l     < 0 || l     > MAX_L      ||
+        l     > two_I      ||
+        abs(m) > l                  ||
+        two_m2 + 2*m != two_m1)
+    {
+        return 0.0;
+    }
+    /* trivial scalar */
+    if (l == 0 && m == 0)
+        return 1.0;
+
+    /* 2) init tables on first use */
+    init_tlm_tables();
+
+    /* 3) get CG ⟨I,m2;l,m|I,m1⟩ */
+    double cg = clebsch_( two_I, two_m2,
+                          2*l,   2*m,
+                          two_I, two_m1 );
+    if (cg == 0.0) return 0.0;
+
+    /* 4) Wigner–Eckart assembly */
+    return cg
+         * inv_sqrt2I1[two_I]
+         * rme_table[two_I][l];
+}
+
+/*!
+ @brief Compute ⟨I,m1| 𝒯_{l,m} |I,m2⟩, the *unit* irreducible spherical tensor element,
+        given the non-unit matrix element tlm_().
+ @param l        tensor rank ℓ  (0 ≤ ℓ ≤ 2I)
+ @param m        component m     (|m| ≤ ℓ)
+ @param two_I    2×I
+ @param two_m1   2×m1
+ @param two_m2   2×m2
+ @return         the unit-tensor matrix element ⟨I,m1|𝒯_{ℓ,m}|I,m2⟩
+*/
+double unit_tlm_(const int l,
+                 const int m,
+                 const int two_I,
+                 const int two_m1,
+                 const int two_m2)
+{
+    /* 1) get the non-unit element (will be zero if selection rules fail) */
+    double raw = tlm_(l, m, two_I, two_m1, two_m2);
+    if (raw == 0.0)
         return 0.0;
 
-    // Clebsch–Gordan coefficient ⟨j2 m2 l m | j1 m1⟩
-    double cg = clebsch_(two_j2, two_m2, 2 * l, 2 * m, two_j1, two_m1);
+    /* 2) compute the scaling factor:
+         scale = (1/ℓ!) * sqrt[ (2ℓ+1)*(2I-ℓ)!*2^ℓ*(2ℓ)! / (2I+ℓ+1)! ]
+    */
+    double inv_l_fact = 1.0 / fac_int(l);
 
-    if (cg == 0.0 || isnan(cg))
-        return 0.0;
+    /* all factorial arguments here are <= 2I+ℓ+1,
+       which for I≤11/2 and ℓ≤8 stays within small_fac[] */
+    double num = (2*l + 1)
+               * fac_int(two_I - l)
+               * ldexp(1.0, l)        /* 2^ℓ */
+               * fac_int(2*l);
+    double den = fac_int(two_I + l + 1);
 
-    // Normalization factor from unit tensor definition
-    return cg / sqrt((double)(two_j1 + 1));
+    double scale = inv_l_fact * sqrt(num / den);
+
+    /* 3) assemble unit tensor element */
+    return raw * scale;
 }
 
 /**
@@ -328,8 +366,8 @@ void get_single_spin_Ix_(double complex *operator, int spin_index, int *i_times_
                 matrix[bra][ket] = 0;
             else
             {
-                matrix[bra][ket] = 1 / sqrt(2) * tlm_(1., -1., i_times_2[spin_index], qnum[spin_index][bra], i_times_2[spin_index], qnum[spin_index][ket]) * del;
-                matrix[bra][ket] -= 1 / sqrt(2) * tlm_(1., 1., i_times_2[spin_index], qnum[spin_index][bra], i_times_2[spin_index], qnum[spin_index][ket]) * del;
+                matrix[bra][ket] = 1 / sqrt(2) * tlm_(i_times_2[spin_index], 1., -1., qnum[spin_index][bra], qnum[spin_index][ket]) * del;
+                matrix[bra][ket] -= 1 / sqrt(2) * tlm_(i_times_2[spin_index], 1., 1., qnum[spin_index][bra], qnum[spin_index][ket]) * del;
             }
         }
     }
@@ -359,8 +397,8 @@ void get_Ix_(double complex *operator, int *spin_indexes, int spin_count, int *i
             {
                 int spin_index = spin_indexes[i];
                 int del = systemDeltaProduct(qnum_data, total_spin_count, nstates, spin_index, bra, ket);
-                matrix[bra][ket] += 1 / sqrt(2) * tlm_(1., -1., i_times_2[spin_index], qnum[spin_index][bra], i_times_2[spin_index], qnum[spin_index][ket]) * del;
-                matrix[bra][ket] -= 1 / sqrt(2) * tlm_(1., 1., i_times_2[spin_index], qnum[spin_index][bra], i_times_2[spin_index], qnum[spin_index][ket]) * del;
+                matrix[bra][ket] += 1 / sqrt(2) * tlm_(i_times_2[spin_index], 1., -1., qnum[spin_index][bra], qnum[spin_index][ket]) * del;
+                matrix[bra][ket] -= 1 / sqrt(2) * tlm_(i_times_2[spin_index], 1., 1., qnum[spin_index][bra], qnum[spin_index][ket]) * del;
             }
         }
     }
@@ -388,8 +426,8 @@ void get_single_spin_Iy_(double complex *operator, int spin_index, int *i_times_
                 matrix[bra][ket] = 0;
             else
             {
-                matrix[bra][ket] = I / sqrt(2) * tlm_(1., -1., i_times_2[spin_index], qnum[spin_index][bra], i_times_2[spin_index], qnum[spin_index][ket]) * del;
-                matrix[bra][ket] += I / sqrt(2) * tlm_(1., 1., i_times_2[spin_index], qnum[spin_index][bra], i_times_2[spin_index], qnum[spin_index][ket]) * del;
+                matrix[bra][ket] = I / sqrt(2) * tlm_(i_times_2[spin_index], 1., -1., qnum[spin_index][bra], qnum[spin_index][ket]) * del;
+                matrix[bra][ket] += I / sqrt(2) * tlm_(i_times_2[spin_index], 1., 1., qnum[spin_index][bra], qnum[spin_index][ket]) * del;
             }
         }
     }
@@ -419,8 +457,8 @@ void get_Iy_(double complex *operator, int *spin_indexes, int spin_count, int *i
             {
                 int spin_index = spin_indexes[i];
                 int del = systemDeltaProduct(qnum_data, total_spin_count, nstates, spin_index, bra, ket);
-                matrix[bra][ket] += I / sqrt(2) * tlm_(1., -1., i_times_2[spin_index], qnum[spin_index][bra], i_times_2[spin_index], qnum[spin_index][ket]) * del;
-                matrix[bra][ket] += I / sqrt(2) * tlm_(1., 1., i_times_2[spin_index], qnum[spin_index][bra], i_times_2[spin_index], qnum[spin_index][ket]) * del;
+                matrix[bra][ket] += I / sqrt(2) * tlm_(i_times_2[spin_index], 1., -1., qnum[spin_index][bra], qnum[spin_index][ket]) * del;
+                matrix[bra][ket] += I / sqrt(2) * tlm_(i_times_2[spin_index], 1., 1., qnum[spin_index][bra], qnum[spin_index][ket]) * del;
             }
         }
     }
@@ -444,7 +482,7 @@ void get_single_spin_Iz_(double complex *operator, int spin_index, int *i_times_
         for (int ket = 0; ket < nstates; ket++)
         {
             int del = systemDeltaProduct(qnum_data, total_spin_count, nstates, spin_index, bra, ket);
-            matrix[bra][ket] += tlm_(1., 0., i_times_2[spin_index], qnum[spin_index][bra], i_times_2[spin_index], qnum[spin_index][ket]) * del;
+            matrix[bra][ket] += tlm_(i_times_2[spin_index], 1., 0., qnum[spin_index][bra], qnum[spin_index][ket]) * del;
         }
     }
     free(qnum_data);
@@ -473,8 +511,8 @@ void get_Iz_(double complex *operator, int *spin_indexes, int spin_count, int *i
             {
                 int spin_index = spin_indexes[i];
                 int del = systemDeltaProduct(qnum_data, total_spin_count, nstates, spin_index, bra, ket);
-                matrix[bra][ket] += I / sqrt(2) * tlm_(1., -1., i_times_2[spin_index], qnum[spin_index][bra], i_times_2[spin_index], qnum[spin_index][ket]) * del;
-                matrix[bra][ket] += I / sqrt(2) * tlm_(1., 1., i_times_2[spin_index], qnum[spin_index][bra], i_times_2[spin_index], qnum[spin_index][ket]) * del;
+                matrix[bra][ket] += I / sqrt(2) * tlm_(i_times_2[spin_index], 1., -1., qnum[spin_index][bra], qnum[spin_index][ket]) * del;
+                matrix[bra][ket] += I / sqrt(2) * tlm_(i_times_2[spin_index], 1., 1., qnum[spin_index][bra], qnum[spin_index][ket]) * del;
             }
         }
     }
@@ -501,7 +539,7 @@ void get_single_spin_Ip_(double complex *operator, int spin_index, int *i_times_
             if (del == 0)
                 matrix[bra][ket] = 0;
             else
-                matrix[bra][ket] = -sqrt(2) * tlm_(1., 1., i_times_2[spin_index], qnum[spin_index][bra], i_times_2[spin_index], qnum[spin_index][ket]) * del;
+                matrix[bra][ket] = -sqrt(2) * tlm_(i_times_2[spin_index], 1., 1., qnum[spin_index][bra], qnum[spin_index][ket]) * del;
         }
     }
     free(qnum_data);
@@ -530,7 +568,7 @@ void get_Ip_(double complex *operator, int *spin_indexes, int spin_count, int *i
             {
                 int spin_index = spin_indexes[i];
                 int del = systemDeltaProduct(qnum_data, total_spin_count, nstates, spin_index, bra, ket);
-                matrix[bra][ket] = -sqrt(2) * tlm_(1., 1., i_times_2[spin_index], qnum[spin_index][bra], i_times_2[spin_index], qnum[spin_index][ket]) * del;
+                matrix[bra][ket] = -sqrt(2) * tlm_(i_times_2[spin_index], 1., 1., qnum[spin_index][bra], qnum[spin_index][ket]) * del;
             }
         }
     }
@@ -557,7 +595,7 @@ void get_single_spin_Im_(double complex *operator, int spin_index, int *i_times_
             if (del == 0)
                 matrix[bra][ket] = 0;
             else
-                matrix[bra][ket] = sqrt(2) * tlm_(1., -1., i_times_2[spin_index], qnum[spin_index][bra], i_times_2[spin_index], qnum[spin_index][ket]) * del;
+                matrix[bra][ket] = sqrt(2) * tlm_(i_times_2[spin_index], 1., -1., qnum[spin_index][bra], qnum[spin_index][ket]) * del;
         }
     }
     free(qnum_data);
@@ -586,7 +624,7 @@ void get_Im_(double complex *operator, int *spin_indexes, int spin_count, int *i
             {
                 int spin_index = spin_indexes[i];
                 int del = systemDeltaProduct(qnum_data, total_spin_count, nstates, spin_index, bra, ket);
-                matrix[bra][ket] = sqrt(2) * tlm_(1., -1., i_times_2[spin_index], qnum[spin_index][bra], i_times_2[spin_index], qnum[spin_index][ket]) * del;
+                matrix[bra][ket] = sqrt(2) * tlm_(i_times_2[spin_index], 1., -1., qnum[spin_index][bra], qnum[spin_index][ket]) * del;
             }
         }
     }
@@ -613,7 +651,7 @@ void get_single_spin_Tlm_(double complex *operator, int spin_index, int *i_times
             if (del == 0)
                 matrix[bra][ket] = 0;
             else
-                matrix[bra][ket] = tlm_(L, M, i_times_2[spin_index], qnum[spin_index][bra], i_times_2[spin_index], qnum[spin_index][ket]) * del;
+                matrix[bra][ket] = tlm_(i_times_2[spin_index], L, M, qnum[spin_index][bra], qnum[spin_index][ket]) * del;
         }
     }
     free(qnum_data);
@@ -639,7 +677,7 @@ void get_single_spin_Tlm_unit_(double complex *operator, int spin_index, int *i_
             if (del == 0)
                 matrix[bra][ket] = 0;
             else
-                matrix[bra][ket] = unit_tlm_(L, M, i_times_2[spin_index], qnum[spin_index][bra], i_times_2[spin_index], qnum[spin_index][ket]) * del;
+                matrix[bra][ket] = unit_tlm_(i_times_2[spin_index], L, M, qnum[spin_index][bra], qnum[spin_index][ket]) * del;
         }
     }
     free(qnum_data);

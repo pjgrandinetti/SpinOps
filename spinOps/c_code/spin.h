@@ -5,44 +5,49 @@
 #include <math.h>
 #include <complex.h>
 #include <stdlib.h>
-#include <string.h>  // for memset
+#include <string.h> 
+#include <float.h>
+#include <stdbool.h>
+
+static inline double mypow(double base, int exp) {return pow(base, exp);}
 
 /*!
  @function clebsch_
  @abstract Calculates the Clebsch-Gordon coefficients.
  @discussion This function computes the Clebsch-Gordon coefficients 
-              `< j, m | j1, j2, m1, m2 >` using a routine adapted from the 
-              Mathematica textbook (page 519). The Clebsch-Gordon coefficients 
+              `< j, m | j1, j2, m1, m2 >`. The Clebsch-Gordon coefficients 
               are used in quantum mechanics to describe the coupling of angular 
               momenta. The function ensures that the input values satisfy the 
               necessary conditions for valid coefficients.
- @param j1 The first angular momentum quantum number.
- @param m1 The magnetic quantum number associated with `j1`.
- @param j2 The second angular momentum quantum number.
- @param m2 The magnetic quantum number associated with `j2`.
- @param j The total angular momentum quantum number.
- @param m The total magnetic quantum number.
+ @param two_J1 The first angular momentum quantum number, j1 times 2.
+ @param two_M1 The projection quantum number associated with `j1` times 2.
+ @param two_J2 The second angular momentum quantum number times 2.
+ @param two_M2 The projection quantum number associated with `j2` times 2.
+ @param two_J The total angular momentum quantum number, `j` times 2.
+ @param two_M The total projection quantum number times 2.
  @return The Clebsch-Gordon coefficient `< j, m | j1, j2, m1, m2 >` as a double. 
          Returns 0 if the input values do not satisfy the necessary conditions.
  */
-double clebsch_(const double j1,const double m1,const double j2,const double m2,const double j,const double m);
+double clebsch_(const int two_J1, const int two_M1,const int two_J2, const int two_M2,const int two_J,  const int two_M);
 
 /*!
  @function tlm_
- @abstract Evaluates the matrix element `<j1 m1|T(lm)|j2 m2>`.
- @discussion This function calculates the matrix element `<j1 m1|T(lm)|j2 m2>` 
+ @abstract Evaluates the matrix element `⟨I,m1| T_{l,m} |I,m2⟩`.
+ @discussion This function calculates the matrix element `⟨I,m1| T_{l,m} |I,m2⟩` 
               using the definition from Bowden and Hutchinson, J. Magn. Reson. 67, 403, 1986. 
               The calculation involves Clebsch-Gordon coefficients and reduced matrix elements. 
-              The function assumes that `j1` equals `j2` for the calculation.
- @param l The rank of the tensor operator.
- @param m The order of the tensor operator.
- @param j1 The first angular momentum quantum number.
- @param m1 The magnetic quantum number associated with `j1`.
- @param j2 The second angular momentum quantum number.
- @param m2 The magnetic quantum number associated with `j2`.
- @return The matrix element `<j1 m1|T(lm)|j2 m2>` as a double. Returns 0 if `j1` is not equal to `j2`.
+ @param l       The rank of the tensor operator.
+ @param m       The order of the tensor operator.
+ @param two_I   2×I
+ @param two_m1  The projection quantum number associated with I.
+ @param two_m2  The projection quantum number associated with I.
+ @return        The matrix element `⟨I,m1| T_{l,m} |I,m2⟩` as a double. 
  */
-double tlm_(double l,double m,double j1,double m1,double j2,double m2);
+double tlm_(const int l,
+            const int m,
+            const int two_I,
+            const int two_m1,
+            const int two_m2);
 
 /*!
  @function unit_tlm_
@@ -54,13 +59,17 @@ double tlm_(double l,double m,double j1,double m1,double j2,double m2);
               `j1` equals `j2` for the calculation.
  @param l The rank of the tensor operator.
  @param m The order of the tensor operator.
- @param j1 The first angular momentum quantum number.
- @param m1 The magnetic quantum number associated with `j1`.
- @param j2 The second angular momentum quantum number.
- @param m2 The magnetic quantum number associated with `j2`.
+ @param two_j1 The first angular momentum quantum number times 2.
+ @param two_m1 The projection quantum number associated with `j1` times 2.
+ @param two_j2 The second angular momentum quantum number times 2.
+ @param two_m2 The projection quantum number associated with `j2` times 2.
  @return The matrix element `<j1 m1|T_hat(lm)|j2 m2>` as a double. Returns 0 if `j1` is not equal to `j2`.
  */
-double unit_tlm_(const double l,const double m,const double j1,const double m1,const double j2,const double m2);
+double unit_tlm_(const int l,
+                 const int m,
+                 const int two_I,
+                 const int two_m1,
+                 const int two_m2);
 
 /*!
  @function number_of_states_
@@ -73,7 +82,7 @@ double unit_tlm_(const double l,const double m,const double j1,const double m1,c
  @param i_times_2 An array containing `2 * I` values for each spin, where `I` is the spin quantum number.
  @return The total number of quantum states in the spin system as an integer.
  */
-int number_of_states_(int total_spin_count, int *i_times_2);
+int number_of_states_(int total_spin_count, const int *i_times_2);
 
 /*!
  @function get_single_spin_Ix_

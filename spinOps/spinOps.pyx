@@ -27,8 +27,6 @@ from .spinOps cimport getIzf_ as _get_Izf
 from .spinOps cimport getIpf_ as _get_Ipf
 from .spinOps cimport getImf_ as _get_Imf
 
-from .spinOps cimport mypow, fac
-
 from .spinOps cimport getrho1_pas_ as _getrho1_pas
 from .spinOps cimport getrho2_pas_ as _getrho2_pas
 from .spinOps cimport wigner_d_ as _wigner_d
@@ -59,26 +57,17 @@ cpdef double clebsch(double j1, double m1, double j2, double m2, double j, doubl
     double
         The Clebsch-Gordan coefficient for the specified quantum numbers.
 
-    Raises
-    ------
-    ValueError
-        If the input quantum numbers do not satisfy the required selection rules.
     """
-    if m1 + m2 != m:
-        raise ValueError("The magnetic quantum numbers m1 and m2 must sum to m.")
-    if abs(j1 - j2) > j or j > j1 + j2:
-        raise ValueError("The total angular momentum j must satisfy |j1 - j2| <= j <= j1 + j2.")
 
-    return _clebsch(j1, m1, j2, m2, j, m)
+    return _clebsch(int(2*j1), int(2*m1), int(2*j2), int(2*m2), int(2*j), int(2*m))
 
-
-cpdef double tlm(double l, double m, double j1, double m1, double j2, double m2):
+cpdef double tlm(int l, int m, double I, double m1, double m2):
     """
     Computes the matrix element
 
     .. math::
 
-        \langle j_1,m_1|\:\hat{T}_{l,m}\:|j_2,m_2\\rangle
+        \langle I,m_1|\:\hat{T}_{l,m}\:|I,m_2\\rangle
 
     of the irreducible spherical tensor operator :math:`\hat{T}_{l,m}`.
 
@@ -88,33 +77,23 @@ cpdef double tlm(double l, double m, double j1, double m1, double j2, double m2)
         Rank of the irreducible spherical tensor operator.
     m : double
         Order of the irreducible spherical tensor operator.
-    j1 : double
-        Total angular momentum quantum number of the first particle.
+    I : double
+        Total angular momentum quantum number of the spin.
     m1 : double
-        Angular momentum component quantum number of the first particle.
-    j2 : double
-        Total angular momentum quantum number of the second particle.
+        Angular momentum component quantum number of the spin.
     m2 : double
-        Angular momentum component quantum number of the second particle.
+        Angular momentum component quantum number of the spin.
 
     Returns
     -------
     double
-        The matrix element :math:`\langle j_1,m_1|\:\hat{T}_{l,m}\:|j_2,m_2\\rangle`.
-
-    Raises
-    ------
-    ValueError
-        If the quantum numbers do not satisfy selection rules.
+        The matrix element :math:`\langle I,m_1|\:\hat{T}_{l,m}\:|I,m_2\\rangle`.
     """
-    if m1 + m2 != m:
-        raise ValueError("Quantum numbers m1 and m2 must sum to m.")
-    if abs(j1 - j2) > l or l > j1 + j2:
-        raise ValueError("Rank l must satisfy |j1 - j2| <= l <= j1 + j2.")
 
-    return _tlm(l, m, j1, m1, j2, m2)
+    return _tlm(l, m, int(2*I), int(2*m1), int(2*m2))
 
-cpdef double unit_tlm(double l, double m, double j1, double m1, double j2, double m2):
+
+cpdef double unit_tlm(int l, int m, double I, double m1, double m2):
     """
     Computes the matrix element
 
@@ -126,27 +105,18 @@ cpdef double unit_tlm(double l, double m, double j1, double m1, double j2, doubl
     :math:`\hat{\mathcal{T}}_{l,m}` between the specified quantum states.
 
     Parameters:
-        l (double): The rank of the irreducible spherical tensor operator operator.
-        m (double): The order of the irreducible spherical tensor operator operator.
+        l (double): Rank of the irreducible spherical tensor operator.
+        m (double): Order of the irreducible spherical tensor operator.
         j1 (double): Total angular momentum quantum number of the first particle.
-        m1 (double): Angular momentum component quantum number of the first particle.
+        m1 (double): Angular momentum component of the first particle.
         j2 (double): Total angular momentum quantum number of the second particle.
         m2 (double): Angular momentum component of the second particle.
 
     Returns:
         double: The :math:`\langle j_1,m_1|\:\hat{\mathcal{T}}_{l,m}\:|j_2,m_2\\rangle` matrix element.
-
-    Raises:
-        ValueError: If the input quantum numbers do not satisfy the selection rules.
     """
-    # Optional validation for quantum number selection rules
-    if m1 + m2 != m:
-        raise ValueError("The magnetic quantum numbers m1 and m2 must sum to m.")
-    if abs(j1 - j2) > l or l > j1 + j2:
-        raise ValueError("The rank l must satisfy |j1 - j2| <= l <= j1 + j2.")
 
-    # Call the external C function
-    return _unit_tlm(l, m, j1, m1, j2, m2)
+    return _unit_tlm(l, m, int(2*I), int(2*m1), int(2*m2))
 
 
 cpdef int number_of_states(list i_times_2):
@@ -713,64 +683,6 @@ cpdef ndarray[double complex, ndim=2] create_Imf(int r, int s, list i_times_2):
 
     return myOp
 
-cpdef cnp.ndarray[double complex, ndim=1] createRho1(double zeta):
-    """
-    Constructs the rank-1 irreducible spherical tensor :math:`\\rho_{1,m}` in the principal axis system (PAS)
-    according to the Haeberlen convention.
-
-    Parameters
-    ----------
-    zeta : double
-        The anisotropy parameter :math:`\zeta` for the tensor.
-
-    Returns
-    -------
-    cnp.ndarray[double complex, ndim=1]
-        A 1D NumPy array containing the components of the rank-1 irreducible tensor.
-
-    Raises
-    ------
-    ValueError
-        If the input parameter `zeta` is invalid (validation not currently enforced).
-    """
-    # Allocate memory for the tensor
-    cdef cnp.ndarray[double complex, ndim=1] myOp = np.zeros(3, dtype=np.complex128)
-
-    # Call the external C function to populate the tensor
-    _getrho1_pas(<double complex *> cnp.PyArray_DATA(myOp), zeta)
-
-    return myOp
-
-cpdef cnp.ndarray[double complex, ndim=1] createRho2(double zeta, double eta):
-    """
-    Constructs the rank-2 irreducible spherical tensor :math:`\\rho_{2,m}` in the principal axis system (PAS)
-    according to the Haeberlen convention.
-
-    Parameters
-    ----------
-    zeta : double
-        The anisotropy parameter :math:`\zeta` for the tensor.
-    eta : double
-        The asymmetry parameter :math:`\eta` for the tensor.
-
-    Returns
-    -------
-    cnp.ndarray[double complex, ndim=1]
-        A 1D NumPy array containing the components of the rank-2 irreducible tensor.
-
-    Raises
-    ------
-    ValueError
-        If the input parameters `zeta` or `eta` are invalid (validation not currently enforced).
-    """
-    # Allocate memory for the tensor
-    cdef cnp.ndarray[double complex, ndim=1] myOp = np.zeros(5, dtype=np.complex128)
-
-    # Call the external C function to populate the tensor
-    _getrho2_pas(<double complex *> cnp.PyArray_DATA(myOp), zeta, eta)
-
-    return myOp
-
 cpdef double wigner_d(double l, double m1, double m2, double beta):
     """
     Computes the reduced Wigner d-matrix element :math:`d^{(l)}_{m_1,m_2}[\\beta]` for the given quantum numbers
@@ -791,14 +703,8 @@ cpdef double wigner_d(double l, double m1, double m2, double beta):
     -------
     double
         The reduced Wigner d-matrix element :math:`d^{(l)}_{m_1,m_2}[\\beta]`.
-
-    Raises
-    ------
-    ValueError
-        If the input quantum numbers do not satisfy the required selection rules (validation not currently enforced).
     """
-    # Call the external C function to compute the Wigner d-matrix element
-    return _wigner_d(l, m1, m2, beta)
+    return _wigner_d(int(2*l), int(2*m1), int(2*m2), beta)
 
 cpdef double complex DLM(double l, double m1, double m2, double alpha, double beta, double gamma):
     """
@@ -830,10 +736,12 @@ cpdef double complex DLM(double l, double m1, double m2, double alpha, double be
     ValueError
         If the input quantum numbers do not satisfy the required selection rules (validation not enforced).
     """
-    return _DLM(l, m1, m2, alpha, beta, gamma)
+
+    return _DLM(int(2*l), int(2*m1), int(2*m2), alpha, beta, gamma)
 
 
-cpdef cnp.ndarray[double complex, ndim=1] Rotate(cnp.ndarray[double complex, ndim=1] initial, double alpha, double beta, double gamma):
+cpdef cnp.ndarray[double complex, ndim=1] Rotate(cnp.ndarray[double complex, ndim=1] initial,
+                                                 double alpha, double beta, double gamma):
     """
     Rotates a spherical tensor :math:`\\rho_{l,m}` using the Wigner D-matrix and specified Euler angles.
 
@@ -862,13 +770,75 @@ cpdef cnp.ndarray[double complex, ndim=1] Rotate(cnp.ndarray[double complex, ndi
     if len(initial) == 0:
         raise ValueError("The input array 'initial' cannot be empty.")
 
+    # Determine rank L from array length: len(initial) = 2*l + 1
+    cdef int two_l = len(initial) - 1
+
     # Allocate memory for the rotated state
     cdef cnp.ndarray[double complex, ndim=1] myOp = np.zeros(len(initial), dtype=np.complex128)
 
-    # Call the external C function to perform the rotation
-    _Rot((len(initial) - 1) / 2, 
-         <double complex *> cnp.PyArray_DATA(initial), 
-         alpha, beta, gamma, 
-         <double complex *> cnp.PyArray_DATA(myOp))
+    # Call the external C function with spin j
+    _Rot(two_l,
+             <double complex *> cnp.PyArray_DATA(initial),
+             alpha, beta, gamma,
+             <double complex *> cnp.PyArray_DATA(myOp))
 
     return myOp
+
+cpdef cnp.ndarray[double complex, ndim=1] create_rho1(double zeta):
+    """
+    Constructs the rank-1 irreducible spherical tensor :math:`\\rho_{1,m}` in the principal axis system (PAS)
+    according to the Haeberlen convention.
+
+    Parameters
+    ----------
+    zeta : double
+        The anisotropy parameter :math:`\zeta` for the tensor.
+
+    Returns
+    -------
+    cnp.ndarray[double complex, ndim=1]
+        A 1D NumPy array containing the components of the rank-1 irreducible tensor.
+
+    Raises
+    ------
+    ValueError
+        If the input parameter `zeta` is invalid (validation not currently enforced).
+    """
+    # Allocate memory for the tensor
+    cdef cnp.ndarray[double complex, ndim=1] myOp = np.zeros(3, dtype=np.complex128)
+
+    # Call the external C function to populate the tensor
+    _getrho1_pas(<double complex *> cnp.PyArray_DATA(myOp), zeta)
+
+    return myOp
+
+cpdef cnp.ndarray[double complex, ndim=1] create_rho2(double zeta, double eta):
+    """
+    Constructs the rank-2 irreducible spherical tensor :math:`\\rho_{2,m}` in the principal axis system (PAS)
+    according to the Haeberlen convention.
+
+    Parameters
+    ----------
+    zeta : double
+        The anisotropy parameter :math:`\zeta` for the tensor.
+    eta : double
+        The asymmetry parameter :math:`\eta` for the tensor.
+
+    Returns
+    -------
+    cnp.ndarray[double complex, ndim=1]
+        A 1D NumPy array containing the components of the rank-2 irreducible tensor.
+
+    Raises
+    ------
+    ValueError
+        If the input parameters `zeta` or `eta` are invalid (validation not currently enforced).
+    """
+    # Allocate memory for the tensor
+    cdef cnp.ndarray[double complex, ndim=1] myOp = np.zeros(5, dtype=np.complex128)
+
+    # Call the external C function to populate the tensor
+    _getrho2_pas(<double complex *> cnp.PyArray_DATA(myOp), zeta, eta)
+
+    return myOp
+

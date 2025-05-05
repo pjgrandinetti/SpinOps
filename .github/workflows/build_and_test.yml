@@ -49,9 +49,14 @@ jobs:
       - name: Run tests
         run: pytest --maxfail=1 --disable-warnings -q
 
+      # Pre-install virtualenv to avoid download rate limits in cibuildwheel
+      - name: Pre-install virtualenv
+        run: pip install virtualenv==20.30.0
+
       - name: Build wheels
         env:
           CIBW_MANYLINUX_VERSION: "2014"
+          CIBW_BEFORE_ALL: "pip install virtualenv==20.30.0"
         run: cibuildwheel --output-dir wheelhouse
 
       - name: Upload wheels
@@ -113,16 +118,16 @@ jobs:
           & "${{ env.pythonLocation }}\python.exe" -m pip install --upgrade pip setuptools wheel Cython "numpy>=1.21,<2"
 
       # Install project and test dependencies, then run pytest
-      # - name: Install project and test dependencies
-      #   shell: pwsh
-      #   run: |
-      #     & "${{ env.pythonLocation }}\python.exe" -m pip install -e .
-      #     & "${{ env.pythonLocation }}\python.exe" -m pip install -r requirements-dev.txt
+      - name: Install project and test dependencies
+        shell: pwsh
+        run: |
+          & "${{ env.pythonLocation }}\python.exe" -m pip install -e .
+          & "${{ env.pythonLocation }}\python.exe" -m pip install -r requirements-dev.txt
 
-      # - name: Run tests
-      #   shell: pwsh
-      #   run: |
-      #     & "${{ env.pythonLocation }}\python.exe" -m pytest --maxfail=1 --disable-warnings -q
+      - name: Run tests
+        shell: pwsh
+        run: |
+          & "${{ env.pythonLocation }}\python.exe" -m pytest --maxfail=1 --disable-warnings -q
 
       - name: Build wheel via pip
         shell: pwsh

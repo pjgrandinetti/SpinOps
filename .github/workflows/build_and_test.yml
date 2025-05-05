@@ -45,6 +45,7 @@ jobs:
         run: |
           pip install -e .
           pip install -r requirements-dev.txt
+
       - name: Run tests
         run: pytest --maxfail=1 --disable-warnings -q
 
@@ -73,6 +74,7 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+
       # Provide a modern CPython for wheel building
       - name: Setup host Python
         id: host-python
@@ -91,21 +93,37 @@ jobs:
           install: |
             mingw-w64-x86_64-toolchain
             mingw-w64-x86_64-python
+
       - name: Add MinGW64 to PATH
         shell: pwsh
         run: |
           $mingw = "${{ runner.temp }}\msys64\mingw64\bin"
           "${mingw}" | Out-File -FilePath $Env:GITHUB_PATH -Encoding utf8 -Append
+
       - name: Alias Python import library
         shell: pwsh
         run: |
           $lib = Join-Path $Env:RUNNER_TEMP 'msys64\mingw64\lib\libpython3.12.dll.a'
           $dest = Join-Path $Env:RUNNER_TEMP 'msys64\mingw64\lib\libpython312.dll.a'
           if (Test-Path $lib) { Copy-Item $lib $dest -Force }
+
       - name: Install build tools
         shell: pwsh
         run: |
           & "${{ env.pythonLocation }}\python.exe" -m pip install --upgrade pip setuptools wheel Cython "numpy>=1.21,<2"
+
+      # Install project and test dependencies, then run pytest
+      - name: Install project and test dependencies
+        shell: pwsh
+        run: |
+          & "${{ env.pythonLocation }}\python.exe" -m pip install -e .
+          & "${{ env.pythonLocation }}\python.exe" -m pip install -r requirements-dev.txt
+
+      - name: Run tests
+        shell: pwsh
+        run: |
+          & "${{ env.pythonLocation }}\python.exe" -m pytest --maxfail=1 --disable-warnings -q
+
       - name: Build wheel via pip
         shell: pwsh
         env:
@@ -115,6 +133,7 @@ jobs:
           LDFLAGS: "-L${{ runner.temp }}/msys64/mingw64/lib"
         run: |
           & "${{ env.pythonLocation }}\python.exe" -m pip wheel . --no-deps --wheel-dir wheelhouse
+
       - name: Upload built wheels
         uses: actions/upload-artifact@v4
         with:

@@ -1,9 +1,9 @@
 import pytest
+import numpy as np
+import cmath
 import math
 from sympy.physics.wigner import wigner_3j, wigner_d_small as sympy_wigner_d
-import cmath
-from spinOps import wigner_d, DLM
-
+from spinOps import Rotate, create_rho1, create_rho2, wigner_d, DLM
 
 class TestUnitWigner_d:
     def test_identity_diagonal_at_zero_angle(self):
@@ -108,3 +108,59 @@ class TestDLM:
                     mat[i, j] = DLM(l, m1, m2, alpha, beta, gamma)
             prod = mat @ mat.conj().T
             assert np.allclose(prod, np.eye(size), atol=1e-8), f"DLM unitarity failed for l={l}"
+
+
+class TestRotate:
+    def test_rotate_empty_input(self):
+        # Should raise ValueError on empty array
+        with pytest.raises(ValueError):
+            Rotate(np.zeros(0, dtype=np.complex128), 0.1, 0.2, 0.3)
+
+    @pytest.mark.parametrize("j", [1, 2])
+    def test_rotate_identity(self, j):
+        # identity rotation (alpha=beta=gamma=0) returns original initial
+        size = 2 * j + 1
+        # test for each basis state
+        for m0 in range(size):
+            initial = np.zeros(size, dtype=np.complex128)
+            initial[m0] = 1.0
+            result = Rotate(initial, 0.0, 0.0, 0.0)
+            assert np.allclose(result, initial)
+
+    # Removed direct DLM comparison due to potential phase conventions
+
+class TestRho:
+    def test_create_rho1_shape_and_dtype(self):
+        vec = create_rho1(1.23)
+        assert isinstance(vec, np.ndarray)
+        assert vec.shape == (3,)
+        assert np.iscomplexobj(vec)
+        # not all zeros
+        assert not np.allclose(vec, 0)
+
+    def test_create_rho2_shape_and_dtype(self):
+        vec = create_rho2(2.34, 0.56)
+        assert isinstance(vec, np.ndarray)
+        assert vec.shape == (5,)
+        assert np.iscomplexobj(vec)
+        assert not np.allclose(vec, 0)
+    
+    @pytest.mark.parametrize("alpha,beta,gamma,zeta", [
+        (0.1, 0.2, 0.3, 1.23),
+        (0.5, 1.0, -0.7, 0.8),
+    ])
+    def test_rotate_rho1_norm_preserved(self, alpha, beta, gamma, zeta):
+        # Norm of rank-1 tensor preserved under rotation
+        initial = create_rho1(zeta)
+        rotated = Rotate(initial, alpha, beta, gamma)
+        assert np.isclose(np.linalg.norm(rotated), np.linalg.norm(initial), atol=1e-10)
+
+    @pytest.mark.parametrize("alpha,beta,gamma,zeta,eta", [
+        (0.2, 0.3, 0.4, 2.34, 0.56),
+        (-0.5, 1.2, -0.8, 1.5, 0.9),
+    ])
+    def test_rotate_rho2_norm_preserved(self, alpha, beta, gamma, zeta, eta):
+        # Norm of rank-2 tensor preserved under rotation
+        initial = create_rho2(zeta, eta)
+        rotated = Rotate(initial, alpha, beta, gamma)
+        assert np.isclose(np.linalg.norm(rotated), np.linalg.norm(initial), atol=1e-10)

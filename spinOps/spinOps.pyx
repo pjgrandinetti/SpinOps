@@ -683,64 +683,6 @@ cpdef ndarray[double complex, ndim=2] create_Imf(int r, int s, list i_times_2):
 
     return myOp
 
-cpdef cnp.ndarray[double complex, ndim=1] createRho1(double zeta):
-    """
-    Constructs the rank-1 irreducible spherical tensor :math:`\\rho_{1,m}` in the principal axis system (PAS)
-    according to the Haeberlen convention.
-
-    Parameters
-    ----------
-    zeta : double
-        The anisotropy parameter :math:`\zeta` for the tensor.
-
-    Returns
-    -------
-    cnp.ndarray[double complex, ndim=1]
-        A 1D NumPy array containing the components of the rank-1 irreducible tensor.
-
-    Raises
-    ------
-    ValueError
-        If the input parameter `zeta` is invalid (validation not currently enforced).
-    """
-    # Allocate memory for the tensor
-    cdef cnp.ndarray[double complex, ndim=1] myOp = np.zeros(3, dtype=np.complex128)
-
-    # Call the external C function to populate the tensor
-    _getrho1_pas(<double complex *> cnp.PyArray_DATA(myOp), zeta)
-
-    return myOp
-
-cpdef cnp.ndarray[double complex, ndim=1] createRho2(double zeta, double eta):
-    """
-    Constructs the rank-2 irreducible spherical tensor :math:`\\rho_{2,m}` in the principal axis system (PAS)
-    according to the Haeberlen convention.
-
-    Parameters
-    ----------
-    zeta : double
-        The anisotropy parameter :math:`\zeta` for the tensor.
-    eta : double
-        The asymmetry parameter :math:`\eta` for the tensor.
-
-    Returns
-    -------
-    cnp.ndarray[double complex, ndim=1]
-        A 1D NumPy array containing the components of the rank-2 irreducible tensor.
-
-    Raises
-    ------
-    ValueError
-        If the input parameters `zeta` or `eta` are invalid (validation not currently enforced).
-    """
-    # Allocate memory for the tensor
-    cdef cnp.ndarray[double complex, ndim=1] myOp = np.zeros(5, dtype=np.complex128)
-
-    # Call the external C function to populate the tensor
-    _getrho2_pas(<double complex *> cnp.PyArray_DATA(myOp), zeta, eta)
-
-    return myOp
-
 cpdef double wigner_d(double l, double m1, double m2, double beta):
     """
     Computes the reduced Wigner d-matrix element :math:`d^{(l)}_{m_1,m_2}[\\beta]` for the given quantum numbers
@@ -828,15 +770,75 @@ cpdef cnp.ndarray[double complex, ndim=1] Rotate(cnp.ndarray[double complex, ndi
     if len(initial) == 0:
         raise ValueError("The input array 'initial' cannot be empty.")
 
-    cdef int two_j = len(initial) - 1  # 2j = size - 1
+    # Determine rank L from array length: len(initial) = 2*l + 1
+    cdef int two_l = len(initial) - 1
 
     # Allocate memory for the rotated state
     cdef cnp.ndarray[double complex, ndim=1] myOp = np.zeros(len(initial), dtype=np.complex128)
 
-    # Call the external C function with integer 2j
-    _Rot(two_j,
+    # Call the external C function with spin j
+    _Rot(two_l,
              <double complex *> cnp.PyArray_DATA(initial),
              alpha, beta, gamma,
              <double complex *> cnp.PyArray_DATA(myOp))
 
     return myOp
+
+cpdef cnp.ndarray[double complex, ndim=1] create_rho1(double zeta):
+    """
+    Constructs the rank-1 irreducible spherical tensor :math:`\\rho_{1,m}` in the principal axis system (PAS)
+    according to the Haeberlen convention.
+
+    Parameters
+    ----------
+    zeta : double
+        The anisotropy parameter :math:`\zeta` for the tensor.
+
+    Returns
+    -------
+    cnp.ndarray[double complex, ndim=1]
+        A 1D NumPy array containing the components of the rank-1 irreducible tensor.
+
+    Raises
+    ------
+    ValueError
+        If the input parameter `zeta` is invalid (validation not currently enforced).
+    """
+    # Allocate memory for the tensor
+    cdef cnp.ndarray[double complex, ndim=1] myOp = np.zeros(3, dtype=np.complex128)
+
+    # Call the external C function to populate the tensor
+    _getrho1_pas(<double complex *> cnp.PyArray_DATA(myOp), zeta)
+
+    return myOp
+
+cpdef cnp.ndarray[double complex, ndim=1] create_rho2(double zeta, double eta):
+    """
+    Constructs the rank-2 irreducible spherical tensor :math:`\\rho_{2,m}` in the principal axis system (PAS)
+    according to the Haeberlen convention.
+
+    Parameters
+    ----------
+    zeta : double
+        The anisotropy parameter :math:`\zeta` for the tensor.
+    eta : double
+        The asymmetry parameter :math:`\eta` for the tensor.
+
+    Returns
+    -------
+    cnp.ndarray[double complex, ndim=1]
+        A 1D NumPy array containing the components of the rank-2 irreducible tensor.
+
+    Raises
+    ------
+    ValueError
+        If the input parameters `zeta` or `eta` are invalid (validation not currently enforced).
+    """
+    # Allocate memory for the tensor
+    cdef cnp.ndarray[double complex, ndim=1] myOp = np.zeros(5, dtype=np.complex128)
+
+    # Call the external C function to populate the tensor
+    _getrho2_pas(<double complex *> cnp.PyArray_DATA(myOp), zeta, eta)
+
+    return myOp
+

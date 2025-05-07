@@ -140,7 +140,7 @@ jobs:
       - name: Run tests
         shell: pwsh
         run: |
-          python -m pytest --maxfail=1 --disable-warnings -q
+          & "${{ env.pythonLocation }}\python.exe" -m pytest --maxfail=1 --disable-warnings -q
 
       - name: Build wheel via pip
         shell: pwsh

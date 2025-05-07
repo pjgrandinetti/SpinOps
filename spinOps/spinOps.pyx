@@ -17,6 +17,9 @@ from .spinOps cimport get_single_spin_Iy_ as _get_single_spin_Iy
 from .spinOps cimport get_single_spin_Iz_ as _get_single_spin_Iz
 from .spinOps cimport get_single_spin_Tlm_ as _get_single_spin_Tlm
 from .spinOps cimport get_single_spin_Tlm_unit_ as _get_single_spin_Tlm_unit
+from .spinOps cimport get_single_spin_C0_ as _get_single_spin_C0
+from .spinOps cimport get_single_spin_C2_ as _get_single_spin_C2
+from .spinOps cimport get_single_spin_C4_ as _get_single_spin_C4
 from .spinOps cimport getEf_ as _getEf
 from .spinOps cimport getImf_ as _get_Imf
 from .spinOps cimport getIpf_ as _get_Ipf
@@ -415,6 +418,122 @@ cpdef ndarray[double complex, ndim=2] create_single_spin_Tlm_unit(int L, int M, 
     cdef ndarray[double complex, ndim=2] myOp = np.zeros((nstates, nstates), dtype=np.complex128)
 
     _get_single_spin_Tlm_unit(&myOp[0, 0], spin_index, &spins[0], total_spin_count, L, M)
+
+    return myOp
+
+
+cpdef ndarray[double complex, ndim=2] create_single_C0(int spin_index, list i_times_2):
+    """
+    Generates the single-spin C0 operator (:math:`\hat{C}_0`) matrix for a specified spin within a spin system.
+
+    Parameters
+    ----------
+    spin_index : int
+        Index of the spin for which the unit-normalized :math:`\hat{C}_{0}` operator is constructed.
+    i_times_2 : list of int
+        List of integers representing :math:`2I` values for each spin in the system,
+        where :math:`I` is the spin quantum number.
+
+    Returns
+    -------
+    ndarray[double complex, ndim=2]
+        A 2D NumPy array representing the unit-normalized :math:`\hat{C}_{0}` operator matrix.
+
+    Raises
+    ------
+    ValueError
+        If the input list `i_times_2` is empty.
+    IndexError
+        If `spin_index` is out of the valid range.
+    """
+    if not i_times_2:
+        raise ValueError("The input list 'i_times_2' cannot be empty.")
+    if spin_index < 0 or spin_index >= len(i_times_2):
+        raise IndexError("The spin_index is out of bounds.")
+
+    cdef int nstates = number_of_states(i_times_2)
+    cdef int total_spin_count = len(i_times_2)
+    cdef ndarray[int] spins = np.array(i_times_2, dtype=np.int32)
+    cdef ndarray[double complex, ndim=2] myOp = np.zeros((nstates, nstates), dtype=np.complex128)
+
+    _get_single_spin_C0(&myOp[0, 0], spin_index, &spins[0], total_spin_count)
+
+    return myOp
+
+cpdef ndarray[double complex, ndim=2] create_single_C2(int spin_index, list i_times_2):
+    """
+    Generates the single-spin C2 operator (:math:`\hat{C}_2`) matrix for a specified spin within a spin system.
+
+    Parameters
+    ----------
+    spin_index : int
+        Index of the spin for which the unit-normalized :math:`\hat{C}_{2}` operator is constructed.
+    i_times_2 : list of int
+        List of integers representing :math:`2I` values for each spin in the system,
+        where :math:`I` is the spin quantum number.
+
+    Returns
+    -------
+    ndarray[double complex, ndim=2]
+        A 2D NumPy array representing the unit-normalized :math:`\hat{C}_{0}` operator matrix.
+
+    Raises
+    ------
+    ValueError
+        If the input list `i_times_2` is empty.
+    IndexError
+        If `spin_index` is out of the valid range.
+    """
+    if not i_times_2:
+        raise ValueError("The input list 'i_times_2' cannot be empty.")
+    if spin_index < 0 or spin_index >= len(i_times_2):
+        raise IndexError("The spin_index is out of bounds.")
+
+    cdef int nstates = number_of_states(i_times_2)
+    cdef int total_spin_count = len(i_times_2)
+    cdef ndarray[int] spins = np.array(i_times_2, dtype=np.int32)
+    cdef ndarray[double complex, ndim=2] myOp = np.zeros((nstates, nstates), dtype=np.complex128)
+
+    _get_single_spin_C2(&myOp[0, 0], spin_index, &spins[0], total_spin_count)
+
+    return myOp
+
+
+cpdef ndarray[double complex, ndim=2] create_single_C4(int spin_index, list i_times_2):
+    """
+    Generates the single-spin C4 operator (:math:`\hat{C}_4`) matrix for a specified spin within a spin system.
+
+    Parameters
+    ----------
+    spin_index : int
+        Index of the spin for which the unit-normalized :math:`\hat{C}_{4}` operator is constructed.
+    i_times_2 : list of int
+        List of integers representing :math:`2I` values for each spin in the system,
+        where :math:`I` is the spin quantum number.
+
+    Returns
+    -------
+    ndarray[double complex, ndim=2]
+        A 2D NumPy array representing the unit-normalized :math:`\hat{C}_{0}` operator matrix.
+
+    Raises
+    ------
+    ValueError
+        If the input list `i_times_2` is empty.
+    IndexError
+        If `spin_index` is out of the valid range.
+    """
+    if not i_times_2:
+        raise ValueError("The input list 'i_times_2' cannot be empty.")
+    if spin_index < 0 or spin_index >= len(i_times_2):
+        raise IndexError("The spin_index is out of bounds.")
+
+    cdef int nstates = number_of_states(i_times_2)
+    cdef int total_spin_count = len(i_times_2)
+    cdef ndarray[int] spins = np.array(i_times_2, dtype=np.int32)
+    cdef ndarray[double complex, ndim=2] myOp = np.zeros((nstates, nstates), dtype=np.complex128)
+
+    _get_single_spin_C4(&myOp[0, 0], spin_index, &spins[0], total_spin_count)
 
     return myOp
 

@@ -306,6 +306,24 @@ void get_single_spin_Tlm_(double complex *operator, int spin_index, int *i_times
  */
 void get_single_spin_Tlm_unit_(double complex *operator, int spin_index, int *i_times_2, int total_spin_count, int L, int M);
 
+
+
+/*!
+ @function get_single_spin_C0_
+ */
+void get_single_spin_C0_(double complex *operator, int spin_index, int *i_times_2, int total_spin_count);
+
+/*!
+ @function get_single_spin_C2_
+ */
+void get_single_spin_C2_(double complex *operator, int spin_index, int *i_times_2, int total_spin_count);
+
+/*!
+ @function get_single_spin_C4_
+ */
+void get_single_spin_C4_(double complex *operator, int spin_index, int *i_times_2, int total_spin_count);
+
+
 /*!
  @function getEf_
  @abstract Creates the complex square matrix representation of the identity operator for a fictitious spin-1/2 system.

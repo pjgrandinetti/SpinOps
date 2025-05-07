@@ -137,10 +137,10 @@ jobs:
           & "${{ env.pythonLocation }}\python.exe" -m pip install -e .
           & "${{ env.pythonLocation }}\python.exe" -m pip install -r requirements-dev.txt
 
-      # - name: Run tests
-      #   shell: pwsh
-      #   run: |
-      #     & "${{ env.pythonLocation }}\python.exe" -m pytest --maxfail=1 --disable-warnings -q
+      - name: Run tests
+        shell: pwsh
+        run: |
+          python -m pytest --maxfail=1 --disable-warnings -q
 
       - name: Build wheel via pip
         shell: pwsh

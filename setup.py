@@ -31,6 +31,10 @@ if sys.platform == "win32":
 # Compile all sources as C99
 ext_language = "c"
 ext_args = ["-std=gnu99"]
+# Link against static MinGW runtime on Windows to avoid missing DLL dependencies when importing
+ext_link_args = []
+if sys.platform == "win32":
+    ext_link_args = ["-static-libgcc", "-static-libstdc++"]
 
 # configure define macros
 define_macros = [
@@ -45,6 +49,7 @@ ext_modules = cythonize(
         include_dirs=[np.get_include(), "spinOps/c_code", get_python_inc()],
         define_macros=define_macros,
         extra_compile_args=ext_args,
+        extra_link_args=ext_link_args,
         language=ext_language,
     ),
     language_level="3",

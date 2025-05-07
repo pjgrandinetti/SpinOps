@@ -1,3 +1,4 @@
+Cython>=0.29
 sympy>=1.10
 pytest
 black

@@ -1,13 +1,14 @@
-from pathlib import Path
-from setuptools import setup, Extension, find_packages
-from Cython.Build import cythonize
-import numpy as np
 import glob
-import platform
 import os
+import platform
 import sys
-from distutils.sysconfig import get_python_inc
 from distutils import ccompiler  # ensure this import before build_ext
+from distutils.sysconfig import get_python_inc
+from pathlib import Path
+
+import numpy as np
+from Cython.Build import cythonize
+from setuptools import Extension, find_packages, setup
 
 # ---- C & Cython sources -------------------------------------------------
 c_sources = glob.glob("spinOps/c_code/*.c")
@@ -50,10 +51,11 @@ ext_modules = cythonize(
     force=True,
 )
 
-# Custom build_ext: on Windows use MinGW-w64, else default
-from setuptools.command.build_ext import build_ext as _build_ext
 from distutils.ccompiler import new_compiler
 from distutils.sysconfig import customize_compiler
+
+# Custom build_ext: on Windows use MinGW-w64, else default
+from setuptools.command.build_ext import build_ext as _build_ext
 
 
 class CustomBuildExt(_build_ext):

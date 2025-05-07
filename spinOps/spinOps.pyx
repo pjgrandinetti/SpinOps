@@ -2,36 +2,34 @@
 # cython: language_level=3
 #define NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION
 
-from numpy cimport ndarray
 cimport numpy as cnp
+from numpy cimport ndarray
+
 import numpy as np
 
+from .spinOps cimport DLM_ as _DLM
+from .spinOps cimport Rot_ as _Rot
 from .spinOps cimport clebsch_ as _clebsch
-from .spinOps cimport tlm_ as _tlm
-from .spinOps cimport unit_tlm_ as _unit_tlm
-from .spinOps cimport number_of_states_ as _number_of_states
-
+from .spinOps cimport get_single_spin_Im_ as _get_single_spin_Im
+from .spinOps cimport get_single_spin_Ip_ as _get_single_spin_Ip
 from .spinOps cimport get_single_spin_Ix_ as _get_single_spin_Ix
 from .spinOps cimport get_single_spin_Iy_ as _get_single_spin_Iy
 from .spinOps cimport get_single_spin_Iz_ as _get_single_spin_Iz
-from .spinOps cimport get_single_spin_Ip_ as _get_single_spin_Ip
-from .spinOps cimport get_single_spin_Im_ as _get_single_spin_Im
-
 from .spinOps cimport get_single_spin_Tlm_ as _get_single_spin_Tlm
 from .spinOps cimport get_single_spin_Tlm_unit_ as _get_single_spin_Tlm_unit
-
 from .spinOps cimport getEf_ as _getEf
+from .spinOps cimport getImf_ as _get_Imf
+from .spinOps cimport getIpf_ as _get_Ipf
 from .spinOps cimport getIxf_ as _get_Ixf
 from .spinOps cimport getIyf_ as _get_Iyf
 from .spinOps cimport getIzf_ as _get_Izf
-from .spinOps cimport getIpf_ as _get_Ipf
-from .spinOps cimport getImf_ as _get_Imf
-
 from .spinOps cimport getrho1_pas_ as _getrho1_pas
 from .spinOps cimport getrho2_pas_ as _getrho2_pas
+from .spinOps cimport number_of_states_ as _number_of_states
+from .spinOps cimport tlm_ as _tlm
+from .spinOps cimport unit_tlm_ as _unit_tlm
 from .spinOps cimport wigner_d_ as _wigner_d
-from .spinOps cimport DLM_ as _DLM
-from .spinOps cimport Rot_ as _Rot
+
 
 cpdef double clebsch(double j1, double m1, double j2, double m2, double j, double m):
     """

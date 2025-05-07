@@ -298,8 +298,8 @@ void get_single_spin_Ix_(double complex *operator, int spin_index, int *i_times_
                 matrix[bra][ket] = 0;
             else
             {
-                matrix[bra][ket] = 1 / sqrt(2) * tlm_(i_times_2[spin_index], 1., -1., qnum[spin_index][bra], qnum[spin_index][ket]) * del;
-                matrix[bra][ket] -= 1 / sqrt(2) * tlm_(i_times_2[spin_index], 1., 1., qnum[spin_index][bra], qnum[spin_index][ket]) * del;
+                matrix[bra][ket] = 1. / sqrt(2) * tlm_(1., -1., i_times_2[spin_index], qnum[spin_index][bra], qnum[spin_index][ket]) * del;
+                matrix[bra][ket] -= 1 / sqrt(2) * tlm_(1., 1., i_times_2[spin_index], qnum[spin_index][bra], qnum[spin_index][ket]) * del;
             }
         }
     }
@@ -329,8 +329,8 @@ void get_Ix_(double complex *operator, int *spin_indexes, int spin_count, int *i
             {
                 int spin_index = spin_indexes[i];
                 int del = systemDeltaProduct(qnum_data, total_spin_count, nstates, spin_index, bra, ket);
-                matrix[bra][ket] += 1 / sqrt(2) * tlm_(i_times_2[spin_index], 1., -1., qnum[spin_index][bra], qnum[spin_index][ket]) * del;
-                matrix[bra][ket] -= 1 / sqrt(2) * tlm_(i_times_2[spin_index], 1., 1., qnum[spin_index][bra], qnum[spin_index][ket]) * del;
+                matrix[bra][ket] += 1 / sqrt(2) * tlm_(1., -1., i_times_2[spin_index], qnum[spin_index][bra], qnum[spin_index][ket]) * del;
+                matrix[bra][ket] -= 1 / sqrt(2) * tlm_(1., 1., i_times_2[spin_index], qnum[spin_index][bra], qnum[spin_index][ket]) * del;
             }
         }
     }
@@ -358,8 +358,8 @@ void get_single_spin_Iy_(double complex *operator, int spin_index, int *i_times_
                 matrix[bra][ket] = 0;
             else
             {
-                matrix[bra][ket] = I / sqrt(2) * tlm_(i_times_2[spin_index], 1., -1., qnum[spin_index][bra], qnum[spin_index][ket]) * del;
-                matrix[bra][ket] += I / sqrt(2) * tlm_(i_times_2[spin_index], 1., 1., qnum[spin_index][bra], qnum[spin_index][ket]) * del;
+                matrix[bra][ket] = I / sqrt(2) * tlm_(1., -1., i_times_2[spin_index], qnum[spin_index][bra], qnum[spin_index][ket]) * del;
+                matrix[bra][ket] += I / sqrt(2) * tlm_(1., 1., i_times_2[spin_index], qnum[spin_index][bra], qnum[spin_index][ket]) * del;
             }
         }
     }
@@ -389,8 +389,8 @@ void get_Iy_(double complex *operator, int *spin_indexes, int spin_count, int *i
             {
                 int spin_index = spin_indexes[i];
                 int del = systemDeltaProduct(qnum_data, total_spin_count, nstates, spin_index, bra, ket);
-                matrix[bra][ket] += I / sqrt(2) * tlm_(i_times_2[spin_index], 1., -1., qnum[spin_index][bra], qnum[spin_index][ket]) * del;
-                matrix[bra][ket] += I / sqrt(2) * tlm_(i_times_2[spin_index], 1., 1., qnum[spin_index][bra], qnum[spin_index][ket]) * del;
+                matrix[bra][ket] += I / sqrt(2) * tlm_(1., -1., i_times_2[spin_index], qnum[spin_index][bra], qnum[spin_index][ket]) * del;
+                matrix[bra][ket] += I / sqrt(2) * tlm_(1., 1., i_times_2[spin_index], qnum[spin_index][bra], qnum[spin_index][ket]) * del;
             }
         }
     }
@@ -414,7 +414,7 @@ void get_single_spin_Iz_(double complex *operator, int spin_index, int *i_times_
         for (int ket = 0; ket < nstates; ket++)
         {
             int del = systemDeltaProduct(qnum_data, total_spin_count, nstates, spin_index, bra, ket);
-            matrix[bra][ket] += tlm_(i_times_2[spin_index], 1., 0., qnum[spin_index][bra], qnum[spin_index][ket]) * del;
+            matrix[bra][ket] += tlm_(1., 0., i_times_2[spin_index], qnum[spin_index][bra], qnum[spin_index][ket]) * del;
         }
     }
     free(qnum_data);
@@ -443,8 +443,8 @@ void get_Iz_(double complex *operator, int *spin_indexes, int spin_count, int *i
             {
                 int spin_index = spin_indexes[i];
                 int del = systemDeltaProduct(qnum_data, total_spin_count, nstates, spin_index, bra, ket);
-                matrix[bra][ket] += I / sqrt(2) * tlm_(i_times_2[spin_index], 1., -1., qnum[spin_index][bra], qnum[spin_index][ket]) * del;
-                matrix[bra][ket] += I / sqrt(2) * tlm_(i_times_2[spin_index], 1., 1., qnum[spin_index][bra], qnum[spin_index][ket]) * del;
+                matrix[bra][ket] += I / sqrt(2) * tlm_(1., -1., i_times_2[spin_index], qnum[spin_index][bra], qnum[spin_index][ket]) * del;
+                matrix[bra][ket] += I / sqrt(2) * tlm_(1., 1., i_times_2[spin_index], qnum[spin_index][bra], qnum[spin_index][ket]) * del;
             }
         }
     }
@@ -471,7 +471,7 @@ void get_single_spin_Ip_(double complex *operator, int spin_index, int *i_times_
             if (del == 0)
                 matrix[bra][ket] = 0;
             else
-                matrix[bra][ket] = -sqrt(2) * tlm_(i_times_2[spin_index], 1., 1., qnum[spin_index][bra], qnum[spin_index][ket]) * del;
+                matrix[bra][ket] = -sqrt(2) * tlm_(1., 1., i_times_2[spin_index], qnum[spin_index][bra], qnum[spin_index][ket]) * del;
         }
     }
     free(qnum_data);
@@ -500,7 +500,7 @@ void get_Ip_(double complex *operator, int *spin_indexes, int spin_count, int *i
             {
                 int spin_index = spin_indexes[i];
                 int del = systemDeltaProduct(qnum_data, total_spin_count, nstates, spin_index, bra, ket);
-                matrix[bra][ket] = -sqrt(2) * tlm_(i_times_2[spin_index], 1., 1., qnum[spin_index][bra], qnum[spin_index][ket]) * del;
+                matrix[bra][ket] = -sqrt(2) * tlm_(1., 1., i_times_2[spin_index], qnum[spin_index][bra], qnum[spin_index][ket]) * del;
             }
         }
     }
@@ -527,7 +527,7 @@ void get_single_spin_Im_(double complex *operator, int spin_index, int *i_times_
             if (del == 0)
                 matrix[bra][ket] = 0;
             else
-                matrix[bra][ket] = sqrt(2) * tlm_(i_times_2[spin_index], 1., -1., qnum[spin_index][bra], qnum[spin_index][ket]) * del;
+                matrix[bra][ket] = sqrt(2) * tlm_(1., -1., i_times_2[spin_index], qnum[spin_index][bra], qnum[spin_index][ket]) * del;
         }
     }
     free(qnum_data);
@@ -556,7 +556,7 @@ void get_Im_(double complex *operator, int *spin_indexes, int spin_count, int *i
             {
                 int spin_index = spin_indexes[i];
                 int del = systemDeltaProduct(qnum_data, total_spin_count, nstates, spin_index, bra, ket);
-                matrix[bra][ket] = sqrt(2) * tlm_(i_times_2[spin_index], 1., -1., qnum[spin_index][bra], qnum[spin_index][ket]) * del;
+                matrix[bra][ket] = sqrt(2) * tlm_(1., -1., i_times_2[spin_index], qnum[spin_index][bra], qnum[spin_index][ket]) * del;
             }
         }
     }
@@ -583,7 +583,7 @@ void get_single_spin_Tlm_(double complex *operator, int spin_index, int *i_times
             if (del == 0)
                 matrix[bra][ket] = 0;
             else
-                matrix[bra][ket] = tlm_(i_times_2[spin_index], L, M, qnum[spin_index][bra], qnum[spin_index][ket]) * del;
+                matrix[bra][ket] = tlm_(L, M, i_times_2[spin_index], qnum[spin_index][bra], qnum[spin_index][ket]) * del;
         }
     }
     free(qnum_data);
@@ -609,7 +609,7 @@ void get_single_spin_Tlm_unit_(double complex *operator, int spin_index, int *i_
             if (del == 0)
                 matrix[bra][ket] = 0;
             else
-                matrix[bra][ket] = unit_tlm_(i_times_2[spin_index], L, M, qnum[spin_index][bra], qnum[spin_index][ket]) * del;
+                matrix[bra][ket] = unit_tlm_(L, M, i_times_2[spin_index], qnum[spin_index][bra], qnum[spin_index][ket]) * del;
         }
     }
     free(qnum_data);

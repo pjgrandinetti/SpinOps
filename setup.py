@@ -9,6 +9,8 @@ from pathlib import Path
 import numpy as np
 from Cython.Build import cythonize
 from setuptools import Extension, find_packages, setup
+from setuptools.command.install import install as _install
+import shutil, glob
 
 # ---- C & Cython sources -------------------------------------------------
 c_sources = glob.glob("spinOps/c_code/*.c")
@@ -31,10 +33,8 @@ if sys.platform == "win32":
 # Compile all sources as C99
 ext_language = "c"
 ext_args = ["-std=gnu99"]
-# Link against static MinGW runtime on Windows to avoid missing DLL dependencies when importing
-ext_link_args = []
-if sys.platform == "win32":
-    ext_link_args = ["-static-libgcc", "-static-libstdc++"]
+# Always use MinGW on Windows, keep dynamic linking for MinGW runtimes
+ext_link_args = ["-static", "-static-libgcc", "-static-libstdc++"] if sys.platform == "win32" else []
 
 # configure define macros
 define_macros = [
@@ -72,6 +72,17 @@ class CustomBuildExt(_build_ext):
         super().build_extensions()
 
 
+class CustomInstall(_install):
+    def run(self):
+        super().run()
+        if sys.platform == "win32":
+            gcc_bin = os.path.dirname(shutil.which("gcc"))
+            dlls = glob.glob(os.path.join(gcc_bin, "libgcc_s_*.dll")) + glob.glob(os.path.join(gcc_bin, "libstdc++-6.dll"))
+            pkg_dir = os.path.join(self.install_lib, "spinOps")
+            for dll in dlls:
+                shutil.copy(dll, pkg_dir)
+
+
 # ---- Package metadata ---------------------------------------------------
 setup(
     name="SpinOps",
@@ -83,7 +94,7 @@ setup(
     install_requires=["numpy>=1.21,<2", "matplotlib>=3.3.4"],
     packages=find_packages(include=["spinOps*"]),
     ext_modules=ext_modules,
-    cmdclass={"build_ext": CustomBuildExt},
+    cmdclass={"build_ext": CustomBuildExt, "install": CustomInstall},
     include_package_data=True,
     zip_safe=False,
 )

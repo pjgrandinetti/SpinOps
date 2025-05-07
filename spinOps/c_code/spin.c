@@ -218,7 +218,6 @@ int *createQuantumNumbers(int total_spin_count, const int *i_times_2)
         for (int i = 0; i < total_spin_count; i++)
         {
             int two_I = i_times_2[i];
-            int n_levels = two_I + 1;
             int two_m = -two_I + 2 * current_state[i];
             qnum_data[i * nstates + s] = two_m;
         }

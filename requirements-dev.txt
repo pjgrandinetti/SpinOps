@@ -1,3 +1,5 @@
+numpy>=1.21,<2
+matplotlib>=3.3.4
 Cython>=0.29
 sympy>=1.10
 pytest

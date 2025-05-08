@@ -146,11 +146,13 @@ jobs:
           CC: x86_64-w64-mingw32-gcc
           CXX: x86_64-w64-mingw32-g++
           LIBRARY_PATH: ${{ runner.temp }}\msys64\mingw64\lib
-          LDFLAGS: "-L${{ runner.temp }}\msys64\mingw64\lib"
+          LDFLAGS: -L${{ runner.temp }}\msys64\mingw64\lib
         run: |
           # ensure mingw is first on PATH
           $mingw = "${{ runner.temp }}\msys64\mingw64\bin"
           $Env:PATH = "$mingw;$Env:PATH"
+
+          # run the tests
           pytest --maxfail=1 --disable-warnings -q
 
       - name: Build wheel

@@ -70,8 +70,12 @@ jobs:
 # It seems that only the 3.12 CPython build is available in the MSYS2 repository
 # so we are not building for 3.11 or 3.10
 
-  build:
-    runs-on: windows-latest   # ← use windows-latest here
+
+  build-windows:
+    runs-on: windows-latest    # ← use windows-latest here
+    strategy:
+      matrix:
+        python-version: ['3.12']
 
     steps:
       - name: Checkout code
@@ -80,7 +84,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: 3.12
+          python-version: ${{ matrix.python-version }}
 
       - name: Set up MSYS2 + MinGW64
         uses: msys2/setup-msys2@v2
@@ -91,22 +95,14 @@ jobs:
             mingw-w64-x86_64-toolchain
             mingw-w64-x86_64-python
 
-      # (Optional) Cache MSYS2 packages between runs
-      - name: Cache MSYS2 pacman packages
-        uses: actions/cache@v3
-        with:
-          path: C:\msys64\var\cache\pacman\pkg
-          key: ${{ runner.os }}-pacman-${{ hashFiles('**/spinOps/c_code/**') }}
-
       - name: Install Python build deps
         run: pip install --upgrade pip setuptools wheel Cython "numpy>=1.21,<2"
 
-      - name: Build Cython extension
+      - name: Build C extension in-place
         shell: bash -l {0}
-        run: |
-          python setup.py build_ext --inplace
+        run: python setup.py build_ext --inplace
 
-      - name: Install package & dev requirements
+      - name: Install project & test dependencies
         run: |
           pip install -e .
           pip install -r requirements-dev.txt
@@ -114,6 +110,16 @@ jobs:
       - name: Run tests
         shell: bash -l {0}
         run: pytest --maxfail=1 --disable-warnings -q
+
+      - name: Build wheel
+        run: pip wheel . --no-deps --wheel-dir wheelhouse
+
+      - name: Upload built wheels
+        uses: actions/upload-artifact@v4
+        with:
+          name: spinops-windows-${{ matrix.python-version }}
+          path: wheelhouse/*.whl
+
 
   publish:
     needs: [build_wheels_unix, build-windows]

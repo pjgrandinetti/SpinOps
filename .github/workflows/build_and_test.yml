@@ -161,10 +161,10 @@ jobs:
         env:
           CC: x86_64-w64-mingw32-gcc
           CXX: x86_64-w64-mingw32-g++
-          LIBRARY_PATH: ${{ runner.temp }}\msys64\mingw64\lib
-          LDFLAGS: "-L${{ runner.temp }}\msys64\mingw64\lib"
+          LIBRARY_PATH: '${{ runner.temp }}\msys64\mingw64\lib'
+          LDFLAGS: '-L${{ runner.temp }}\msys64\mingw64\lib'
         run: |
-          pip wheel . --no-deps --wheel-dir wheelhouse
+          & "${{ env.pythonLocation }}\python.exe" -m pip wheel . --no-deps --wheel-dir wheelhouse
 
       - name: Upload wheels
         uses: actions/upload-artifact@v4

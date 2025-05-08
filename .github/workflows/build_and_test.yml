@@ -142,19 +142,29 @@ jobs:
       - name: Run tests under MSYS2 Python (with venv)
         shell: pwsh
         run: |
-          # 1) Locate the MSYS2-MinGW Python
+          # 1) Point at the MSYS2-MinGW Python bin dir
           $mingw = "${{ runner.temp }}\msys64\mingw64\bin"
           $Env:PATH = "$mingw;$Env:PATH"
 
-          # 2) Create a venv in the workspace
+          # 2) Create a virtual environment using that interpreter
           & "$mingw\python.exe" -m venv .venv
 
-          # 3) Install into that venv (venv will have its own pip)
-          & ".venv\Scripts\python.exe" -m pip install --upgrade pip
-          & ".venv\Scripts\python.exe" -m pip install -r requirements-dev.txt pytest
+          # 3) Figure out where the venv put python.exe
+          if (Test-Path ".\.venv\Scripts\python.exe") {
+            $py = ".\.venv\Scripts\python.exe"
+          } elseif (Test-Path ".\.venv\bin\python.exe") {
+            $py = ".\.venv\bin\python.exe"
+          } else {
+            throw "Unable to locate the venv interpreter"
+          }
 
-          # 4) Run pytest from the venv
-          & ".venv\Scripts\python.exe" -m pytest --maxfail=1 --disable-warnings -q
+          # 4) Upgrade pip and install your test tools into the venv
+          & $py -m pip install --upgrade pip
+          & $py -m pip install -r requirements-dev.txt pytest
+
+          # 5) Finally, run pytest under the same MSYS2 Python environment
+          & $py -m pytest --maxfail=1 --disable-warnings -q
+
 
       - name: Build wheel via pip
         shell: pwsh

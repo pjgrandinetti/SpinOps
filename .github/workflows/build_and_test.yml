@@ -138,7 +138,7 @@ jobs:
           & "${{ env.pythonLocation }}\python.exe" -m pip install -r requirements-dev.txt
 
 
-      - name: Run tests in a Windows venv with MSYS2 compiler (no activation)
+      - name: Run tests without activating
         shell: pwsh
         env:
           CC: x86_64-w64-mingw32-gcc
@@ -150,13 +150,15 @@ jobs:
           $Env:PATH = "$mingw;$Env:PATH"
 
           python -m venv .venv
-          $py = ".\.venv\Scripts\python.exe"
 
-          & $py -m pip install --upgrade pip setuptools wheel cython numpy
-          & $py setup.py build_ext --inplace
-          & $py -m pip install -r requirements-dev.txt pytest
-          & $py -m pytest --maxfail=1 --disable-warnings -q
+          # build an absolute path
+          $py = Join-Path $PWD ".venv\Scripts\python.exe"
 
+          # now call it explicitly
+          & "$py" -m pip install --upgrade pip setuptools wheel cython numpy
+          & "$py" setup.py build_ext --inplace
+          & "$py" -m pip install -r requirements-dev.txt pytest
+          & "$py" -m pytest --maxfail=1 --disable-warnings -q
 
       - name: Build wheel via pip
         shell: pwsh

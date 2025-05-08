@@ -137,19 +137,21 @@ jobs:
           & "${{ env.pythonLocation }}\python.exe" -m pip install -e .
           & "${{ env.pythonLocation }}\python.exe" -m pip install -r requirements-dev.txt
 
-      - name: Run tests
+      - name: Run tests under MSYS2 Python
         shell: pwsh
         run: |
-          # where MinGW's runtime DLLs live
+          # Path to the MSYS2-MinGW bin dir
           $mingw = "${{ runner.temp }}\msys64\mingw64\bin"
-          # where you copied any extra DLLs (if you did)
-          $pkg   = Join-Path $PWD 'spinOps'
 
-          # make sure Windows can find libgcc_s_seh-1.dll, libstdc++-6.dll, etc.
-          $Env:PATH = "$mingw;$pkg;$Env:PATH"
+          # Prepend so this python sees its own DLLs (libgcc, libstdc++, etc.)
+          $Env:PATH = "$mingw;$Env:PATH"
 
-          # now run tests with the host Python (which already has pytest)
-          & "$Env:pythonLocation\python.exe" -m pytest --maxfail=1 --disable-warnings -q
+          # Install your test dependencies into the MSYS2 Python
+          & "$mingw\python.exe" -m pip install --upgrade pip
+          & "$mingw\python.exe" -m pip install -r requirements-dev.txt pytest
+
+          # Run pytest under the same interpreter that built your extension
+          & "$mingw\python.exe" -m pytest --maxfail=1 --disable-warnings -q
 
       - name: Build wheel via pip
         shell: pwsh

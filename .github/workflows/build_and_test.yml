@@ -70,24 +70,19 @@ jobs:
 # It seems that only the 3.12 CPython build is available in the MSYS2 repository
 # so we are not building for 3.11 or 3.10
 
-  build-windows:
-    runs-on: windows-latest
-    strategy:
-      matrix:
-        python-version: ['3.12']
+  build:
+    runs-on: windows-latest   # ← use windows-latest here
 
     steps:
-      - name: Checkout repository
+      - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Setup host Python
+      - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: ${{ matrix.python-version }}
-          check-latest: true
-          update-environment: true
+          python-version: 3.12
 
-      - name: Setup MSYS2 + MinGW
+      - name: Set up MSYS2 + MinGW64
         uses: msys2/setup-msys2@v2
         with:
           update: true
@@ -96,73 +91,29 @@ jobs:
             mingw-w64-x86_64-toolchain
             mingw-w64-x86_64-python
 
-      - name: Add MinGW to PATH
-        shell: pwsh
-        run: |
-          $mingw = "${{ runner.temp }}/msys64/mingw64/bin"
-          Write-Output $mingw | Out-File $Env:GITHUB_PATH -Encoding utf8 -Append
-
-      - name: Install build tools into host Python
-        shell: pwsh
-        run: |
-          & "${{ env.pythonLocation }}\python.exe" -m pip install --upgrade pip setuptools wheel Cython "numpy>=1.21,<2"
-
-      - name: Alias Python import library
-        shell: pwsh
-        run: |
-          $lib  = Join-Path $Env:RUNNER_TEMP 'msys64/mingw64/lib/libpython3.12.dll.a'
-          $dest = Join-Path $Env:RUNNER_TEMP 'msys64/mingw64/lib/libpython312.dll.a'
-          if (Test-Path $lib) { Copy-Item $lib $dest -Force }
-
-      - name: Build C extension in-place
-        shell: pwsh
-        env:
-          CC: x86_64-w64-mingw32-gcc
-          CXX: x86_64-w64-mingw32-g++
-          LIBRARY_PATH: ${{ runner.temp }}/msys64/mingw64/lib
-          LDFLAGS: "-L${{ runner.temp }}/msys64/mingw64/lib"
-        run: |
-          & "${{ env.pythonLocation }}\python.exe" setup.py build_ext --inplace
-
-      - name: Copy MinGW runtime DLLs
-        shell: pwsh
-        run: |
-          $mingw = "${{ runner.temp }}/msys64/mingw64/bin"
-          Copy-Item "$mingw/libgcc_s_seh-1.dll"        spinOps/ -Force
-          Copy-Item "$mingw/libwinpthread-1.dll"       spinOps/ -Force
-          Copy-Item "$mingw/libstdc++-6.dll"           spinOps/ -Force
-
-      - name: Install project & test dependencies
-        shell: pwsh
-        run: |
-          & "${{ env.pythonLocation }}\python.exe" -m pip install -e .
-          & "${{ env.pythonLocation }}\python.exe" -m pip install -r requirements-dev.txt
-
-      - name: Test with MinGW
-        shell: pwsh
-        env:
-          CC: x86_64-w64-mingw32-gcc
-          CXX: x86_64-w64-mingw32-g++
-          LIBRARY_PATH: ${{ runner.temp }}/msys64/mingw64/lib
-          LDFLAGS: "-L${{ runner.temp }}/msys64/mingw64/lib"
-        run: |
-          & "${{ env.pythonLocation }}\python.exe" -m pytest --maxfail=1 --disable-warnings -q
-
-      - name: Build wheel
-        shell: pwsh
-        env:
-          CC: x86_64-w64-mingw32-gcc
-          CXX: x86_64-w64-mingw32-g++
-          LIBRARY_PATH: ${{ runner.temp }}/msys64/mingw64/lib
-          LDFLAGS: "-L${{ runner.temp }}/msys64/mingw64/lib"
-        run: |
-          & "${{ env.pythonLocation }}\python.exe" -m pip wheel . --no-deps --wheel-dir wheelhouse
-
-      - name: Upload built wheels
-        uses: actions/upload-artifact@v4
+      # (Optional) Cache MSYS2 packages between runs
+      - name: Cache MSYS2 pacman packages
+        uses: actions/cache@v3
         with:
-          name: spinops-windows-${{ matrix.python-version }}
-          path: wheelhouse/*.whl
+          path: C:\msys64\var\cache\pacman\pkg
+          key: ${{ runner.os }}-pacman-${{ hashFiles('**/spinOps/c_code/**') }}
+
+      - name: Install Python build deps
+        run: pip install --upgrade pip setuptools wheel Cython "numpy>=1.21,<2"
+
+      - name: Build Cython extension
+        shell: bash -l {0}
+        run: |
+          python setup.py build_ext --inplace
+
+      - name: Install package & dev requirements
+        run: |
+          pip install -e .
+          pip install -r requirements-dev.txt
+
+      - name: Run tests
+        shell: bash -l {0}
+        run: pytest --maxfail=1 --disable-warnings -q
 
   publish:
     needs: [build_wheels_unix, build-windows]

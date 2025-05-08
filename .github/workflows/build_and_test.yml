@@ -140,14 +140,16 @@ jobs:
       - name: Run tests
         shell: pwsh
         run: |
-          # Point at the MSYS2-MinGW Python install
+          # where MinGW's runtime DLLs live
           $mingw = "${{ runner.temp }}\msys64\mingw64\bin"
+          # where you copied any extra DLLs (if you did)
+          $pkg   = Join-Path $PWD 'spinOps'
 
-          # Prepend the MSYS2 runtime DLL dir so Python can find libgcc, libstdc++, etc.
-          $Env:PATH = "$mingw;$Env:PATH"
+          # make sure Windows can find libgcc_s_seh-1.dll, libstdc++-6.dll, etc.
+          $Env:PATH = "$mingw;$pkg;$Env:PATH"
 
-          # Now invoke *that* python, not the host pythonLocation, to run pytest
-          & "$mingw\python.exe" -m pytest --maxfail=1 --disable-warnings -q
+          # now run tests with the host Python (which already has pytest)
+          & "$Env:pythonLocation\python.exe" -m pytest --maxfail=1 --disable-warnings -q
 
       - name: Build wheel via pip
         shell: pwsh

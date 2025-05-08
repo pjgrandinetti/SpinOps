@@ -194,9 +194,9 @@ void Rot_(const int two_j, const double complex *initial, const double alpha, co
 }
 
 /*!
- @function getrho1_pas_
+ @function get_rho1_pas_
  */
-void getrho1_pas_(double complex *tensor, const double zeta) {
+void get_rho1_pas_(double complex *tensor, const double zeta) {
     if (tensor == NULL) {
         fprintf(stderr, "Error: tensor pointer is NULL.\n");
         return;
@@ -209,9 +209,9 @@ void getrho1_pas_(double complex *tensor, const double zeta) {
 }
 
 /*!
- @function getrho2_pas_
+ @function get_rho2_pas_
  */
-void getrho2_pas_(double complex *tensor, const double zeta, const double eta) {
+void get_rho2_pas_(double complex *tensor, const double zeta, const double eta) {
     // Validate input
     if (tensor == NULL) {
         fprintf(stderr, "Error: tensor pointer is NULL.\n");

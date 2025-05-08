@@ -20,14 +20,14 @@ from .spinOps cimport get_single_spin_Tlm_unit_ as _get_single_spin_Tlm_unit
 from .spinOps cimport get_single_spin_C0_ as _get_single_spin_C0
 from .spinOps cimport get_single_spin_C2_ as _get_single_spin_C2
 from .spinOps cimport get_single_spin_C4_ as _get_single_spin_C4
-from .spinOps cimport getEf_ as _getEf
-from .spinOps cimport getImf_ as _get_Imf
-from .spinOps cimport getIpf_ as _get_Ipf
-from .spinOps cimport getIxf_ as _get_Ixf
-from .spinOps cimport getIyf_ as _get_Iyf
-from .spinOps cimport getIzf_ as _get_Izf
-from .spinOps cimport getrho1_pas_ as _getrho1_pas
-from .spinOps cimport getrho2_pas_ as _getrho2_pas
+from .spinOps cimport get_Ef_ as _getEf
+from .spinOps cimport get_Imf_ as _get_Imf
+from .spinOps cimport get_Ipf_ as _get_Ipf
+from .spinOps cimport get_Ixf_ as _get_Ixf
+from .spinOps cimport get_Iyf_ as _get_Iyf
+from .spinOps cimport get_Izf_ as _get_Izf
+from .spinOps cimport get_rho1_pas_ as _get_rho1_pas
+from .spinOps cimport get_rho2_pas_ as _get_rho2_pas
 from .spinOps cimport number_of_states_ as _number_of_states
 from .spinOps cimport tlm_ as _tlm
 from .spinOps cimport unit_tlm_ as _unit_tlm
@@ -925,7 +925,7 @@ cpdef cnp.ndarray[double complex, ndim=1] create_rho1(double zeta):
     cdef cnp.ndarray[double complex, ndim=1] myOp = np.zeros(3, dtype=np.complex128)
 
     # Call the external C function to populate the tensor
-    _getrho1_pas(<double complex *> cnp.PyArray_DATA(myOp), zeta)
+    _get_rho1_pas(<double complex *> cnp.PyArray_DATA(myOp), zeta)
 
     return myOp
 
@@ -955,7 +955,7 @@ cpdef cnp.ndarray[double complex, ndim=1] create_rho2(double zeta, double eta):
     cdef cnp.ndarray[double complex, ndim=1] myOp = np.zeros(5, dtype=np.complex128)
 
     # Call the external C function to populate the tensor
-    _getrho2_pas(<double complex *> cnp.PyArray_DATA(myOp), zeta, eta)
+    _get_rho2_pas(<double complex *> cnp.PyArray_DATA(myOp), zeta, eta)
 
     return myOp
 

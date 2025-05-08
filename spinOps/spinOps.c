@@ -10839,7 +10839,7 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_createEf(int __pyx_v_r, int __p
     __Pyx_RaiseBufferIndexError(__pyx_t_4);
     __PYX_ERR(0, 578, __pyx_L1_error)
   }
-  getEf_((&(*__Pyx_BufPtrStrided2d(__pyx_t_double_complex *, __pyx_pybuffernd_myOp.rcbuffer->pybuffer.buf, __pyx_t_12, __pyx_pybuffernd_myOp.diminfo[0].strides, __pyx_t_13, __pyx_pybuffernd_myOp.diminfo[1].strides))), __pyx_v_r, __pyx_v_s, (&(*__Pyx_BufPtrStrided1d(int *, __pyx_pybuffernd_spins.rcbuffer->pybuffer.buf, __pyx_t_14, __pyx_pybuffernd_spins.diminfo[0].strides))), __pyx_v_total_spin_count);
+  get_Ef_((&(*__Pyx_BufPtrStrided2d(__pyx_t_double_complex *, __pyx_pybuffernd_myOp.rcbuffer->pybuffer.buf, __pyx_t_12, __pyx_pybuffernd_myOp.diminfo[0].strides, __pyx_t_13, __pyx_pybuffernd_myOp.diminfo[1].strides))), __pyx_v_r, __pyx_v_s, (&(*__Pyx_BufPtrStrided1d(int *, __pyx_pybuffernd_spins.rcbuffer->pybuffer.buf, __pyx_t_14, __pyx_pybuffernd_spins.diminfo[0].strides))), __pyx_v_total_spin_count);
 
   /* "spinOps/spinOps.pyx":580
  *     _getEf(&myOp[0, 0], r, s, &spins[0], total_spin_count)
@@ -11331,7 +11331,7 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_Ixf(int __pyx_v_r, int _
     __Pyx_RaiseBufferIndexError(__pyx_t_4);
     __PYX_ERR(0, 623, __pyx_L1_error)
   }
-  getIxf_((&(*__Pyx_BufPtrStrided2d(__pyx_t_double_complex *, __pyx_pybuffernd_myOp.rcbuffer->pybuffer.buf, __pyx_t_12, __pyx_pybuffernd_myOp.diminfo[0].strides, __pyx_t_13, __pyx_pybuffernd_myOp.diminfo[1].strides))), __pyx_v_r, __pyx_v_s, (&(*__Pyx_BufPtrStrided1d(int *, __pyx_pybuffernd_spins.rcbuffer->pybuffer.buf, __pyx_t_14, __pyx_pybuffernd_spins.diminfo[0].strides))), __pyx_v_total_spin_count);
+  get_Ixf_((&(*__Pyx_BufPtrStrided2d(__pyx_t_double_complex *, __pyx_pybuffernd_myOp.rcbuffer->pybuffer.buf, __pyx_t_12, __pyx_pybuffernd_myOp.diminfo[0].strides, __pyx_t_13, __pyx_pybuffernd_myOp.diminfo[1].strides))), __pyx_v_r, __pyx_v_s, (&(*__Pyx_BufPtrStrided1d(int *, __pyx_pybuffernd_spins.rcbuffer->pybuffer.buf, __pyx_t_14, __pyx_pybuffernd_spins.diminfo[0].strides))), __pyx_v_total_spin_count);
 
   /* "spinOps/spinOps.pyx":625
  *     _get_Ixf(&myOp[0, 0], r, s, &spins[0], total_spin_count)
@@ -11823,7 +11823,7 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_Iyf(int __pyx_v_r, int _
     __Pyx_RaiseBufferIndexError(__pyx_t_4);
     __PYX_ERR(0, 667, __pyx_L1_error)
   }
-  getIyf_((&(*__Pyx_BufPtrStrided2d(__pyx_t_double_complex *, __pyx_pybuffernd_myOp.rcbuffer->pybuffer.buf, __pyx_t_12, __pyx_pybuffernd_myOp.diminfo[0].strides, __pyx_t_13, __pyx_pybuffernd_myOp.diminfo[1].strides))), __pyx_v_r, __pyx_v_s, (&(*__Pyx_BufPtrStrided1d(int *, __pyx_pybuffernd_spins.rcbuffer->pybuffer.buf, __pyx_t_14, __pyx_pybuffernd_spins.diminfo[0].strides))), __pyx_v_total_spin_count);
+  get_Iyf_((&(*__Pyx_BufPtrStrided2d(__pyx_t_double_complex *, __pyx_pybuffernd_myOp.rcbuffer->pybuffer.buf, __pyx_t_12, __pyx_pybuffernd_myOp.diminfo[0].strides, __pyx_t_13, __pyx_pybuffernd_myOp.diminfo[1].strides))), __pyx_v_r, __pyx_v_s, (&(*__Pyx_BufPtrStrided1d(int *, __pyx_pybuffernd_spins.rcbuffer->pybuffer.buf, __pyx_t_14, __pyx_pybuffernd_spins.diminfo[0].strides))), __pyx_v_total_spin_count);
 
   /* "spinOps/spinOps.pyx":669
  *     _get_Iyf(&myOp[0, 0], r, s, &spins[0], total_spin_count)
@@ -12315,7 +12315,7 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_Izf(int __pyx_v_r, int _
     __Pyx_RaiseBufferIndexError(__pyx_t_4);
     __PYX_ERR(0, 711, __pyx_L1_error)
   }
-  getIzf_((&(*__Pyx_BufPtrStrided2d(__pyx_t_double_complex *, __pyx_pybuffernd_myOp.rcbuffer->pybuffer.buf, __pyx_t_12, __pyx_pybuffernd_myOp.diminfo[0].strides, __pyx_t_13, __pyx_pybuffernd_myOp.diminfo[1].strides))), __pyx_v_r, __pyx_v_s, (&(*__Pyx_BufPtrStrided1d(int *, __pyx_pybuffernd_spins.rcbuffer->pybuffer.buf, __pyx_t_14, __pyx_pybuffernd_spins.diminfo[0].strides))), __pyx_v_total_spin_count);
+  get_Izf_((&(*__Pyx_BufPtrStrided2d(__pyx_t_double_complex *, __pyx_pybuffernd_myOp.rcbuffer->pybuffer.buf, __pyx_t_12, __pyx_pybuffernd_myOp.diminfo[0].strides, __pyx_t_13, __pyx_pybuffernd_myOp.diminfo[1].strides))), __pyx_v_r, __pyx_v_s, (&(*__Pyx_BufPtrStrided1d(int *, __pyx_pybuffernd_spins.rcbuffer->pybuffer.buf, __pyx_t_14, __pyx_pybuffernd_spins.diminfo[0].strides))), __pyx_v_total_spin_count);
 
   /* "spinOps/spinOps.pyx":713
  *     _get_Izf(&myOp[0, 0], r, s, &spins[0], total_spin_count)
@@ -12807,7 +12807,7 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_Ipf(int __pyx_v_r, int _
     __Pyx_RaiseBufferIndexError(__pyx_t_4);
     __PYX_ERR(0, 755, __pyx_L1_error)
   }
-  getIpf_((&(*__Pyx_BufPtrStrided2d(__pyx_t_double_complex *, __pyx_pybuffernd_myOp.rcbuffer->pybuffer.buf, __pyx_t_12, __pyx_pybuffernd_myOp.diminfo[0].strides, __pyx_t_13, __pyx_pybuffernd_myOp.diminfo[1].strides))), __pyx_v_r, __pyx_v_s, (&(*__Pyx_BufPtrStrided1d(int *, __pyx_pybuffernd_spins.rcbuffer->pybuffer.buf, __pyx_t_14, __pyx_pybuffernd_spins.diminfo[0].strides))), __pyx_v_total_spin_count);
+  get_Ipf_((&(*__Pyx_BufPtrStrided2d(__pyx_t_double_complex *, __pyx_pybuffernd_myOp.rcbuffer->pybuffer.buf, __pyx_t_12, __pyx_pybuffernd_myOp.diminfo[0].strides, __pyx_t_13, __pyx_pybuffernd_myOp.diminfo[1].strides))), __pyx_v_r, __pyx_v_s, (&(*__Pyx_BufPtrStrided1d(int *, __pyx_pybuffernd_spins.rcbuffer->pybuffer.buf, __pyx_t_14, __pyx_pybuffernd_spins.diminfo[0].strides))), __pyx_v_total_spin_count);
 
   /* "spinOps/spinOps.pyx":757
  *     _get_Ipf(&myOp[0, 0], r, s, &spins[0], total_spin_count)
@@ -13299,7 +13299,7 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_Imf(int __pyx_v_r, int _
     __Pyx_RaiseBufferIndexError(__pyx_t_4);
     __PYX_ERR(0, 799, __pyx_L1_error)
   }
-  getImf_((&(*__Pyx_BufPtrStrided2d(__pyx_t_double_complex *, __pyx_pybuffernd_myOp.rcbuffer->pybuffer.buf, __pyx_t_12, __pyx_pybuffernd_myOp.diminfo[0].strides, __pyx_t_13, __pyx_pybuffernd_myOp.diminfo[1].strides))), __pyx_v_r, __pyx_v_s, (&(*__Pyx_BufPtrStrided1d(int *, __pyx_pybuffernd_spins.rcbuffer->pybuffer.buf, __pyx_t_14, __pyx_pybuffernd_spins.diminfo[0].strides))), __pyx_v_total_spin_count);
+  get_Imf_((&(*__Pyx_BufPtrStrided2d(__pyx_t_double_complex *, __pyx_pybuffernd_myOp.rcbuffer->pybuffer.buf, __pyx_t_12, __pyx_pybuffernd_myOp.diminfo[0].strides, __pyx_t_13, __pyx_pybuffernd_myOp.diminfo[1].strides))), __pyx_v_r, __pyx_v_s, (&(*__Pyx_BufPtrStrided1d(int *, __pyx_pybuffernd_spins.rcbuffer->pybuffer.buf, __pyx_t_14, __pyx_pybuffernd_spins.diminfo[0].strides))), __pyx_v_total_spin_count);
 
   /* "spinOps/spinOps.pyx":801
  *     _get_Imf(&myOp[0, 0], r, s, &spins[0], total_spin_count)
@@ -14426,14 +14426,14 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_rho1(double __pyx_v_zeta
   /* "spinOps/spinOps.pyx":928
  * 
  *     # Call the external C function to populate the tensor
- *     _getrho1_pas(<double complex *> cnp.PyArray_DATA(myOp), zeta)             # <<<<<<<<<<<<<<
+ *     _get_rho1_pas(<double complex *> cnp.PyArray_DATA(myOp), zeta)             # <<<<<<<<<<<<<<
  * 
  *     return myOp
  */
-  getrho1_pas_(((__pyx_t_double_complex *)PyArray_DATA(((PyArrayObject *)__pyx_v_myOp))), __pyx_v_zeta);
+  get_rho1_pas_(((__pyx_t_double_complex *)PyArray_DATA(((PyArrayObject *)__pyx_v_myOp))), __pyx_v_zeta);
 
   /* "spinOps/spinOps.pyx":930
- *     _getrho1_pas(<double complex *> cnp.PyArray_DATA(myOp), zeta)
+ *     _get_rho1_pas(<double complex *> cnp.PyArray_DATA(myOp), zeta)
  * 
  *     return myOp             # <<<<<<<<<<<<<<
  * 
@@ -14676,14 +14676,14 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_rho2(double __pyx_v_zeta
   /* "spinOps/spinOps.pyx":958
  * 
  *     # Call the external C function to populate the tensor
- *     _getrho2_pas(<double complex *> cnp.PyArray_DATA(myOp), zeta, eta)             # <<<<<<<<<<<<<<
+ *     _get_rho2_pas(<double complex *> cnp.PyArray_DATA(myOp), zeta, eta)             # <<<<<<<<<<<<<<
  * 
  *     return myOp
  */
-  getrho2_pas_(((__pyx_t_double_complex *)PyArray_DATA(((PyArrayObject *)__pyx_v_myOp))), __pyx_v_zeta, __pyx_v_eta);
+  get_rho2_pas_(((__pyx_t_double_complex *)PyArray_DATA(((PyArrayObject *)__pyx_v_myOp))), __pyx_v_zeta, __pyx_v_eta);
 
   /* "spinOps/spinOps.pyx":960
- *     _getrho2_pas(<double complex *> cnp.PyArray_DATA(myOp), zeta, eta)
+ *     _get_rho2_pas(<double complex *> cnp.PyArray_DATA(myOp), zeta, eta)
  * 
  *     return myOp             # <<<<<<<<<<<<<<
  * 

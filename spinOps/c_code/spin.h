@@ -325,7 +325,7 @@ void get_single_spin_C4_(double complex *operator, int spin_index, int *i_times_
 
 
 /*!
- @function getEf_
+ @function get_Ef_
  @abstract Creates the complex square matrix representation of the identity operator for a fictitious spin-1/2 system.
  @discussion This function generates the matrix representation of the identity operator for a fictitious spin-1/2 system. 
               The operator acts on the specified states `r` and `s` in the spin system. The resulting matrix is stored 
@@ -337,10 +337,10 @@ void get_single_spin_C4_(double complex *operator, int spin_index, int *i_times_
  @param total_spin_count The total number of spins in the system.
  @return This function does not return a value. The resulting matrix is stored in the `operator` array.
  */
-void getEf_(double complex *operator, int r, int s, int *i_times_2, int total_spin_count);
+void get_Ef_(double complex *operator, int r, int s, int *i_times_2, int total_spin_count);
 
 /*!
- @function getIxf_
+ @function get_Ixf_
  @abstract Creates the complex square matrix representation of the Ix operator for a fictitious spin-1/2 system.
  @discussion This function generates the matrix representation of the Ix operator for a fictitious spin-1/2 system. 
               The operator acts on the specified states `r` and `s` in the spin system. The resulting matrix is stored 
@@ -353,10 +353,10 @@ void getEf_(double complex *operator, int r, int s, int *i_times_2, int total_sp
  @param total_spin_count The total number of spins in the system.
  @return This function does not return a value. The resulting matrix is stored in the `operator` array.
  */
-void getIxf_(double complex *operator, int r, int s, int *i_times_2, int total_spin_count);
+void get_Ixf_(double complex *operator, int r, int s, int *i_times_2, int total_spin_count);
 
 /*!
- @function getIyf_
+ @function get_Iyf_
  @abstract Creates the complex square matrix representation of the Iy operator for a fictitious spin-1/2 system.
  @discussion This function generates the matrix representation of the Iy operator for a fictitious spin-1/2 system. 
               The operator acts on the specified states `r` and `s` in the spin system. The resulting matrix is stored 
@@ -369,10 +369,10 @@ void getIxf_(double complex *operator, int r, int s, int *i_times_2, int total_s
  @param total_spin_count The total number of spins in the system.
  @return This function does not return a value. The resulting matrix is stored in the `operator` array.
  */
-void getIyf_(double complex *operator, int r, int s, int *i_times_2, int total_spin_count);
+void get_Iyf_(double complex *operator, int r, int s, int *i_times_2, int total_spin_count);
 
 /*!
- @function getIzf_
+ @function get_Izf_
  @abstract Creates the complex square matrix representation of the Iz operator for a fictitious spin-1/2 system.
  @discussion This function generates the matrix representation of the Iz operator for a fictitious spin-1/2 system. 
               The operator acts on the specified states `r` and `s` in the spin system. The resulting matrix is stored 
@@ -385,10 +385,10 @@ void getIyf_(double complex *operator, int r, int s, int *i_times_2, int total_s
  @param total_spin_count The total number of spins in the system.
  @return This function does not return a value. The resulting matrix is stored in the `operator` array.
  */
-void getIzf_(double complex *operator, int r, int s, int *i_times_2, int total_spin_count);
+void get_Izf_(double complex *operator, int r, int s, int *i_times_2, int total_spin_count);
 
 /*!
- @function getIpf_
+ @function get_Ipf_
  @abstract Creates the complex square matrix representation of the I+ (Iplus) operator for a fictitious spin-1/2 system.
  @discussion This function generates the matrix representation of the I+ operator for a fictitious spin-1/2 system. 
               The operator acts on the specified states `r` and `s` in the spin system. The resulting matrix is stored 
@@ -401,10 +401,10 @@ void getIzf_(double complex *operator, int r, int s, int *i_times_2, int total_s
  @param total_spin_count The total number of spins in the system.
  @return This function does not return a value. The resulting matrix is stored in the `operator` array.
  */
-void getIpf_(double complex *operator, int r, int s, int *i_times_2, int total_spin_count);
+void get_Ipf_(double complex *operator, int r, int s, int *i_times_2, int total_spin_count);
 
 /*!
- @function getImf_
+ @function get_Imf_
  @abstract Creates the complex square matrix representation of the I− (Iminus) operator for a fictitious spin-1/2 system.
  @discussion This function generates the matrix representation of the I− operator for a fictitious spin-1/2 system. 
               The operator acts on the specified states `r` and `s` in the spin system. The resulting matrix is stored 
@@ -417,7 +417,7 @@ void getIpf_(double complex *operator, int r, int s, int *i_times_2, int total_s
  @param total_spin_count The total number of spins in the system.
  @return This function does not return a value. The resulting matrix is stored in the `operator` array.
  */
-void getImf_(double complex *operator, int r, int s, int *i_times_2, int total_spin_count);
+void get_Imf_(double complex *operator, int r, int s, int *i_times_2, int total_spin_count);
 
 
 #endif // SPIN_H

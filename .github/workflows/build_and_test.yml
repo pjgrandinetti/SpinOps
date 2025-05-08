@@ -137,35 +137,29 @@ jobs:
           & "${{ env.pythonLocation }}\python.exe" -m pip install -e .
           & "${{ env.pythonLocation }}\python.exe" -m pip install -r requirements-dev.txt
 
-
-      - name: Run tests in a Windows venv with MSYS2 compiler
+      - name: Build & Test with MinGW + CPython
         shell: pwsh
         env:
+          # point setuptools at your cross‐compiler
           CC: x86_64-w64-mingw32-gcc
           CXX: x86_64-w64-mingw32-g++
           LIBRARY_PATH: ${{ runner.temp }}/msys64/mingw64/lib
           LDFLAGS: "-L${{ runner.temp }}/msys64/mingw64/lib"
         run: |
-          # 1) Put MinGW’s gcc/g++ on PATH
+          # 1) Add the MinGW toolchain to PATH
           $mingw = "${{ runner.temp }}\msys64\mingw64\bin"
           $Env:PATH = "$mingw;$Env:PATH"
 
-          # 2) Create your venv
-          python -m venv .venv
-
-          # 3) **Dot-source** the Activate.ps1 (note the leading “.” + space)
-          . .\.venv\Scripts\Activate.ps1
-
-          # 4) Now `python` is the venv’s python
+          # 2) Upgrade pip & core build deps
           pip install --upgrade pip setuptools wheel cython numpy
 
-          # 5) Build your C extension
+          # 3) Build your C extension in-place
           python setup.py build_ext --inplace
 
-          # 6) Install test deps
+          # 4) Install dev/test deps
           pip install -r requirements-dev.txt pytest
 
-          # 7) Run pytest
+          # 5) Run your tests
           pytest --maxfail=1 --disable-warnings -q
 
       - name: Build wheel via pip

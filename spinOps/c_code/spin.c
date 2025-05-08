@@ -665,9 +665,9 @@ void get_single_spin_C4_(double complex *operator, int spin_index, int *i_times_
 }
 
 /*!
- @function getEf_
+ @function get_Ef_
  */
-void getEf_(double complex *operator, int r, int s, int *i_times_2, int total_spin_count)
+void get_Ef_(double complex *operator, int r, int s, int *i_times_2, int total_spin_count)
 {
     int nstates = number_of_states_(total_spin_count, i_times_2);
     double complex(*matrix)[nstates] = (double complex(*)[nstates])operator;
@@ -686,9 +686,9 @@ void getEf_(double complex *operator, int r, int s, int *i_times_2, int total_sp
 }
 
 /*!
- @function getIxf_
+ @function get_Ixf_
  */
-void getIxf_(double complex *operator, int r, int s, int *i_times_2, int total_spin_count)
+void get_Ixf_(double complex *operator, int r, int s, int *i_times_2, int total_spin_count)
 {
     int nstates = number_of_states_(total_spin_count, i_times_2);
     double complex(*matrix)[nstates] = (double complex(*)[nstates])operator;
@@ -707,9 +707,9 @@ void getIxf_(double complex *operator, int r, int s, int *i_times_2, int total_s
 }
 
 /*!
- @function getIyf_
+ @function get_Iyf_
  */
-void getIyf_(double complex *operator, int r, int s, int *i_times_2, int total_spin_count)
+void get_Iyf_(double complex *operator, int r, int s, int *i_times_2, int total_spin_count)
 {
     int nstates = number_of_states_(total_spin_count, i_times_2);
     double complex(*matrix)[nstates] = (double complex(*)[nstates])operator;
@@ -728,9 +728,9 @@ void getIyf_(double complex *operator, int r, int s, int *i_times_2, int total_s
 }
 
 /*!
- @function getIzf_
+ @function get_Izf_
  */
-void getIzf_(double complex *operator, int r, int s, int *i_times_2, int total_spin_count)
+void get_Izf_(double complex *operator, int r, int s, int *i_times_2, int total_spin_count)
 {
     int nstates = number_of_states_(total_spin_count, i_times_2);
     double complex(*matrix)[nstates] = (double complex(*)[nstates])operator;
@@ -749,9 +749,9 @@ void getIzf_(double complex *operator, int r, int s, int *i_times_2, int total_s
 }
 
 /*!
- @function getIpf_
+ @function get_Ipf_
  */
-void getIpf_(double complex *operator, int r, int s, int *i_times_2, int total_spin_count)
+void get_Ipf_(double complex *operator, int r, int s, int *i_times_2, int total_spin_count)
 {
     int nstates = number_of_states_(total_spin_count, i_times_2);
     double complex(*matrix)[nstates] = (double complex(*)[nstates])operator;
@@ -768,9 +768,9 @@ void getIpf_(double complex *operator, int r, int s, int *i_times_2, int total_s
 }
 
 /*!
- @function getImf_
+ @function get_Imf_
  */
-void getImf_(double complex *operator, int r, int s, int *i_times_2, int total_spin_count)
+void get_Imf_(double complex *operator, int r, int s, int *i_times_2, int total_spin_count)
 {
     int nstates = number_of_states_(total_spin_count, i_times_2);
     double complex(*matrix)[nstates] = (double complex(*)[nstates])operator;
@@ -787,7 +787,7 @@ void getImf_(double complex *operator, int r, int s, int *i_times_2, int total_s
 }
 
 
-void getH_(double complex *operator,
+void get_hamiltonian_(double complex *operator,
     site_struct *sites,          // Pointer to a list of sites within a spin system.
     coupling_struct *couplings,  // Pointer to a list of couplings within a spin system.
     unsigned char *freq_contrib  // A list of freq_contrib booleans.

@@ -6,8 +6,8 @@ cdef extern from "spatial.h":
     double wigner_d_(const int two_l, const int two_m1, const int two_m2, const double beta)
     double complex DLM_(const int two_l, const int two_m1, const int two_m2, const double alpha, const double beta, const double gamma)
     void Rot_(const int two_j, const double complex *initial,const double alpha, const double beta, const double gamma,double complex *final)
-    void getrho2_pas_(double complex *tensor, double zeta, double eta)
-    void getrho1_pas_(double complex *tensor, double zeta)
+    void get_rho2_pas_(double complex *tensor, double zeta, double eta)
+    void get_rho1_pas_(double complex *tensor, double zeta)
 
 cdef extern from "spin.h":
     double clebsch_(const int two_J1, const int two_M1,const int two_J2, const int two_M2,const int two_J,  const int two_M)
@@ -24,10 +24,10 @@ cdef extern from "spin.h":
     void get_single_spin_C0_(double complex *operator, int spin_index, int *i_times_2, int total_spin_count)
     void get_single_spin_C2_(double complex *operator, int spin_index, int *i_times_2, int total_spin_count)
     void get_single_spin_C4_(double complex *operator, int spin_index, int *i_times_2, int total_spin_count)
-    void getEf_(double complex *operator, int r, int s, int *i_times_2, int total_spin_count)
-    void getIxf_(double complex *operator, int r, int s, int *i_times_2, int total_spin_count)
-    void getIyf_(double complex *operator, int r, int s, int *i_times_2, int total_spin_count)
-    void getIzf_(double complex *operator, int r, int s, int *i_times_2, int total_spin_count)
-    void getIpf_(double complex *operator, int r, int s, int *i_times_2, int total_spin_count)
-    void getImf_(double complex *operator, int r, int s, int *i_times_2, int total_spin_count)
+    void get_Ef_(double complex *operator, int r, int s, int *i_times_2, int total_spin_count)
+    void get_Ixf_(double complex *operator, int r, int s, int *i_times_2, int total_spin_count)
+    void get_Iyf_(double complex *operator, int r, int s, int *i_times_2, int total_spin_count)
+    void get_Izf_(double complex *operator, int r, int s, int *i_times_2, int total_spin_count)
+    void get_Ipf_(double complex *operator, int r, int s, int *i_times_2, int total_spin_count)
+    void get_Imf_(double complex *operator, int r, int s, int *i_times_2, int total_spin_count)
 

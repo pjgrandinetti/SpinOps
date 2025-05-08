@@ -66,7 +66,7 @@ void Rot_(const int two_j, const double complex *initial,const double alpha, con
 
 
 /*!
- @function getrho2_pas_
+ @function get_rho2_pas_
  @abstract Creates the complex vector for the spherical tensor of rank 2.
  @discussion The spherical tensor of rank 2 has five components corresponding to 
               the orders m = -2, -1, 0, +1, +2. These components 
@@ -77,9 +77,9 @@ void Rot_(const int two_j, const double complex *initial,const double alpha, con
  @param zeta The traceless 2nd-rank symmetric tensor anisotropy.
  @param eta The traceless 2nd-rank symmetric tensor asymmetry parameter.
  */
-void getrho2_pas_(double complex *tensor, const double zeta, const double eta);
+void get_rho2_pas_(double complex *tensor, const double zeta, const double eta);
 /*!
- @function getrho1_pas_
+ @function get_rho1_pas_
  @abstract Creates the complex vector for the spherical tensor of rank 1.
  @discussion The spherical tensor of rank 1 has three components corresponding to 
               the orders m = -1, 0, +1. These components are mapped 
@@ -88,7 +88,7 @@ void getrho2_pas_(double complex *tensor, const double zeta, const double eta);
  @param tensor A pointer to the array representing the spherical tensor components.
  @param zeta The traceless 1st-rank symmetric tensor anisotropy.
  */
-void getrho1_pas_(double complex *tensor, const double zeta);
+void get_rho1_pas_(double complex *tensor, const double zeta);
 
 
 

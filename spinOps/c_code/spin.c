@@ -804,3 +804,17 @@ void get_hamiltonian_(double complex *operator,
     memset(operator, 0, nstates * nstates * sizeof(double complex)); 
 
 }
+
+void add_zeeman_hamiltonian_(double complex *operator,site_struct *sites)
+{
+    int total_spin_count = sites->number_of_sites;
+    int i_times_2[total_spin_count];
+    for(int i = 0; i < total_spin_count; i++)
+    {
+        i_times_2[i] = (int) sites->spin[i] * 2;
+    }
+    int nstates = number_of_states_(total_spin_count, i_times_2);
+
+    memset(operator, 0, nstates * nstates * sizeof(double complex)); 
+
+}

@@ -81,7 +81,6 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Setup host Python
-        id: host-python
         uses: actions/setup-python@v4
         with:
           python-version: ${{ matrix.python-version }}
@@ -97,49 +96,55 @@ jobs:
             mingw-w64-x86_64-toolchain
             mingw-w64-x86_64-python
 
-      - name: Install build tools into host Python
-        shell: pwsh
-        run: |
-          & "${{ env.pythonLocation }}\python.exe" -m pip install --upgrade \
-              pip setuptools wheel Cython "numpy>=1.21,<2"
-
-      - name: Build Cython extension in-place
-        shell: pwsh
-        env:
-          CC: x86_64-w64-mingw32-gcc
-          CXX: x86_64-w64-mingw32-g++
-          LIBRARY_PATH: ${{ runner.temp }}/msys64/mingw64/lib
-          LDFLAGS: -L${{ runner.temp }}/msys64/mingw64/lib
-        run: |
-          & "${{ env.pythonLocation }}\python.exe" setup.py build_ext --inplace
-
       - name: Add MinGW to PATH
         shell: pwsh
         run: |
           $mingw = "${{ runner.temp }}/msys64/mingw64/bin"
           Write-Output $mingw | Out-File $Env:GITHUB_PATH -Encoding utf8 -Append
 
-      - name: Copy MinGW runtime DLLs
+      - name: Install build tools into host Python
         shell: pwsh
         run: |
-          $mingw = "${{ runner.temp }}/msys64/mingw64/bin"
-          Copy-Item "$mingw/libgcc_s_seh-1.dll" spinOps/ -Force
-          Copy-Item "$mingw/libwinpthread-1.dll" spinOps/ -Force
-          Copy-Item "$mingw/libstdc++-6.dll" spinOps/ -Force
+          & "${{ env.pythonLocation }}\python.exe" -m pip install --upgrade pip setuptools wheel Cython "numpy>=1.21,<2"
 
-      - name: Install project & test deps
+      - name: Alias Python import library
         shell: pwsh
         run: |
-          & "${{ env.pythonLocation }}\python.exe" -m pip install -e .
-          & "${{ env.pythonLocation }}\python.exe" -m pip install -r requirements-dev.txt
+          $lib  = Join-Path $Env:RUNNER_TEMP 'msys64/mingw64/lib/libpython3.12.dll.a'
+          $dest = Join-Path $Env:RUNNER_TEMP 'msys64/mingw64/lib/libpython312.dll.a'
+          if (Test-Path $lib) { Copy-Item $lib $dest -Force }
 
-      - name: Build & Test with MinGW
+      - name: Build C extension in-place
         shell: pwsh
         env:
           CC: x86_64-w64-mingw32-gcc
           CXX: x86_64-w64-mingw32-g++
           LIBRARY_PATH: ${{ runner.temp }}/msys64/mingw64/lib
-          LDFLAGS: -L${{ runner.temp }}/msys64/mingw64/lib
+          LDFLAGS: "-L${{ runner.temp }}/msys64/mingw64/lib"
+        run: |
+          & "${{ env.pythonLocation }}\python.exe" setup.py build_ext --inplace
+
+      - name: Copy MinGW runtime DLLs
+        shell: pwsh
+        run: |
+          $mingw = "${{ runner.temp }}/msys64/mingw64/bin"
+          Copy-Item "$mingw/libgcc_s_seh-1.dll"        spinOps/ -Force
+          Copy-Item "$mingw/libwinpthread-1.dll"       spinOps/ -Force
+          Copy-Item "$mingw/libstdc++-6.dll"           spinOps/ -Force
+
+      - name: Install project & test dependencies
+        shell: pwsh
+        run: |
+          & "${{ env.pythonLocation }}\python.exe" -m pip install -e .
+          & "${{ env.pythonLocation }}\python.exe" -m pip install -r requirements-dev.txt
+
+      - name: Test with MinGW
+        shell: pwsh
+        env:
+          CC: x86_64-w64-mingw32-gcc
+          CXX: x86_64-w64-mingw32-g++
+          LIBRARY_PATH: ${{ runner.temp }}/msys64/mingw64/lib
+          LDFLAGS: "-L${{ runner.temp }}/msys64/mingw64/lib"
         run: |
           & "${{ env.pythonLocation }}\python.exe" -m pytest --maxfail=1 --disable-warnings -q
 
@@ -149,7 +154,7 @@ jobs:
           CC: x86_64-w64-mingw32-gcc
           CXX: x86_64-w64-mingw32-g++
           LIBRARY_PATH: ${{ runner.temp }}/msys64/mingw64/lib
-          LDFLAGS: -L${{ runner.temp }}/msys64/mingw64/lib
+          LDFLAGS: "-L${{ runner.temp }}/msys64/mingw64/lib"
         run: |
           & "${{ env.pythonLocation }}\python.exe" -m pip wheel . --no-deps --wheel-dir wheelhouse
 

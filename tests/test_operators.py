@@ -9,13 +9,13 @@ from spinOps import (create_single_spin_Im, create_single_spin_Ip,
                      create_single_spin_Tlm_unit, number_of_states)
 
 
-def spin_basis(i_times_2):
+def spin_basis(two_I):
     """
     Return for each spin the tuple (Ix, Iy, Iz, Ip, Im, E),
     constructed via the usual ladder formulas.
     """
     ops = []
-    for it2 in i_times_2:
+    for it2 in two_I:
         dim = it2 + 1
         I = it2 / 2.0
         m = np.array([-I + k for k in range(dim)], dtype=float)
@@ -41,12 +41,12 @@ def spin_basis(i_times_2):
     return ops
 
 
-def expected_single_spin(op_name, spin_index, i_times_2):
+def expected_single_spin(op_name, spin_index, two_I):
     """
     Build the full-system operator named op_name via Kronecker products.
     op_name in {"Ix","Iy","Iz","Ip","Im"}
     """
-    basis = spin_basis(i_times_2)
+    basis = spin_basis(two_I)
     mats = []
     for idx, (Ix, Iy, Iz, Ip, Im, E) in enumerate(basis):
         mats.append(
@@ -93,7 +93,7 @@ class TestSpinSystem(unittest.TestCase):
                 with self.assertRaises(IndexError):
                     fn(1, [1])
 
-        # Tlm constructors: signature (L, M, spin_index, i_times_2)
+        # Tlm constructors: signature (L, M, spin_index, two_I)
         tensor_fns = [create_single_spin_Tlm, create_single_spin_Tlm_unit]
         for fn in tensor_fns:
             with self.subTest(fn=fn.__name__):

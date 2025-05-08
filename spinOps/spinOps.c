@@ -11,11 +11,11 @@
         ],
         "depends": [
             "/Users/philip/anaconda3/envs/mrsimulator/include/python3.12/Python.h",
-            "/private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-dndx0z3b/overlay/lib/python3.12/site-packages/numpy/core/include/numpy/arrayobject.h",
-            "/private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-dndx0z3b/overlay/lib/python3.12/site-packages/numpy/core/include/numpy/arrayscalars.h",
-            "/private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-dndx0z3b/overlay/lib/python3.12/site-packages/numpy/core/include/numpy/ndarrayobject.h",
-            "/private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-dndx0z3b/overlay/lib/python3.12/site-packages/numpy/core/include/numpy/ndarraytypes.h",
-            "/private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-dndx0z3b/overlay/lib/python3.12/site-packages/numpy/core/include/numpy/ufuncobject.h",
+            "/private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-hase58t8/overlay/lib/python3.12/site-packages/numpy/core/include/numpy/arrayobject.h",
+            "/private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-hase58t8/overlay/lib/python3.12/site-packages/numpy/core/include/numpy/arrayscalars.h",
+            "/private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-hase58t8/overlay/lib/python3.12/site-packages/numpy/core/include/numpy/ndarrayobject.h",
+            "/private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-hase58t8/overlay/lib/python3.12/site-packages/numpy/core/include/numpy/ndarraytypes.h",
+            "/private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-hase58t8/overlay/lib/python3.12/site-packages/numpy/core/include/numpy/ufuncobject.h",
             "spinOps/c_code/spatial.h",
             "spinOps/c_code/spin.h"
         ],
@@ -23,7 +23,7 @@
             "-std=gnu99"
         ],
         "include_dirs": [
-            "/private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-dndx0z3b/overlay/lib/python3.12/site-packages/numpy/core/include",
+            "/private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-hase58t8/overlay/lib/python3.12/site-packages/numpy/core/include",
             "spinOps/c_code",
             "/Users/philip/anaconda3/envs/mrsimulator/include/python3.12"
         ],
@@ -1588,7 +1588,7 @@ typedef struct {
 
 /* #### Code section: numeric_typedefs ### */
 
-/* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-dndx0z3b/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":730
+/* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-hase58t8/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":730
  * # in Cython to enable them only on the right systems.
  * 
  * ctypedef npy_int8       int8_t             # <<<<<<<<<<<<<<
@@ -1597,7 +1597,7 @@ typedef struct {
  */
 typedef npy_int8 __pyx_t_5numpy_int8_t;
 
-/* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-dndx0z3b/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":731
+/* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-hase58t8/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":731
  * 
  * ctypedef npy_int8       int8_t
  * ctypedef npy_int16      int16_t             # <<<<<<<<<<<<<<
@@ -1606,7 +1606,7 @@ typedef npy_int8 __pyx_t_5numpy_int8_t;
  */
 typedef npy_int16 __pyx_t_5numpy_int16_t;
 
-/* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-dndx0z3b/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":732
+/* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-hase58t8/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":732
  * ctypedef npy_int8       int8_t
  * ctypedef npy_int16      int16_t
  * ctypedef npy_int32      int32_t             # <<<<<<<<<<<<<<
@@ -1615,7 +1615,7 @@ typedef npy_int16 __pyx_t_5numpy_int16_t;
  */
 typedef npy_int32 __pyx_t_5numpy_int32_t;
 
-/* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-dndx0z3b/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":733
+/* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-hase58t8/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":733
  * ctypedef npy_int16      int16_t
  * ctypedef npy_int32      int32_t
  * ctypedef npy_int64      int64_t             # <<<<<<<<<<<<<<
@@ -1624,7 +1624,7 @@ typedef npy_int32 __pyx_t_5numpy_int32_t;
  */
 typedef npy_int64 __pyx_t_5numpy_int64_t;
 
-/* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-dndx0z3b/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":737
+/* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-hase58t8/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":737
  * #ctypedef npy_int128     int128_t
  * 
  * ctypedef npy_uint8      uint8_t             # <<<<<<<<<<<<<<
@@ -1633,7 +1633,7 @@ typedef npy_int64 __pyx_t_5numpy_int64_t;
  */
 typedef npy_uint8 __pyx_t_5numpy_uint8_t;
 
-/* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-dndx0z3b/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":738
+/* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-hase58t8/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":738
  * 
  * ctypedef npy_uint8      uint8_t
  * ctypedef npy_uint16     uint16_t             # <<<<<<<<<<<<<<
@@ -1642,7 +1642,7 @@ typedef npy_uint8 __pyx_t_5numpy_uint8_t;
  */
 typedef npy_uint16 __pyx_t_5numpy_uint16_t;
 
-/* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-dndx0z3b/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":739
+/* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-hase58t8/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":739
  * ctypedef npy_uint8      uint8_t
  * ctypedef npy_uint16     uint16_t
  * ctypedef npy_uint32     uint32_t             # <<<<<<<<<<<<<<
@@ -1651,7 +1651,7 @@ typedef npy_uint16 __pyx_t_5numpy_uint16_t;
  */
 typedef npy_uint32 __pyx_t_5numpy_uint32_t;
 
-/* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-dndx0z3b/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":740
+/* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-hase58t8/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":740
  * ctypedef npy_uint16     uint16_t
  * ctypedef npy_uint32     uint32_t
  * ctypedef npy_uint64     uint64_t             # <<<<<<<<<<<<<<
@@ -1660,7 +1660,7 @@ typedef npy_uint32 __pyx_t_5numpy_uint32_t;
  */
 typedef npy_uint64 __pyx_t_5numpy_uint64_t;
 
-/* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-dndx0z3b/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":744
+/* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-hase58t8/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":744
  * #ctypedef npy_uint128    uint128_t
  * 
  * ctypedef npy_float32    float32_t             # <<<<<<<<<<<<<<
@@ -1669,7 +1669,7 @@ typedef npy_uint64 __pyx_t_5numpy_uint64_t;
  */
 typedef npy_float32 __pyx_t_5numpy_float32_t;
 
-/* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-dndx0z3b/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":745
+/* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-hase58t8/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":745
  * 
  * ctypedef npy_float32    float32_t
  * ctypedef npy_float64    float64_t             # <<<<<<<<<<<<<<
@@ -1678,7 +1678,7 @@ typedef npy_float32 __pyx_t_5numpy_float32_t;
  */
 typedef npy_float64 __pyx_t_5numpy_float64_t;
 
-/* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-dndx0z3b/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":754
+/* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-hase58t8/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":754
  * # The int types are mapped a bit surprising --
  * # numpy.int corresponds to 'l' and numpy.long to 'q'
  * ctypedef npy_long       int_t             # <<<<<<<<<<<<<<
@@ -1687,7 +1687,7 @@ typedef npy_float64 __pyx_t_5numpy_float64_t;
  */
 typedef npy_long __pyx_t_5numpy_int_t;
 
-/* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-dndx0z3b/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":755
+/* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-hase58t8/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":755
  * # numpy.int corresponds to 'l' and numpy.long to 'q'
  * ctypedef npy_long       int_t
  * ctypedef npy_longlong   longlong_t             # <<<<<<<<<<<<<<
@@ -1696,7 +1696,7 @@ typedef npy_long __pyx_t_5numpy_int_t;
  */
 typedef npy_longlong __pyx_t_5numpy_longlong_t;
 
-/* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-dndx0z3b/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":757
+/* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-hase58t8/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":757
  * ctypedef npy_longlong   longlong_t
  * 
  * ctypedef npy_ulong      uint_t             # <<<<<<<<<<<<<<
@@ -1705,7 +1705,7 @@ typedef npy_longlong __pyx_t_5numpy_longlong_t;
  */
 typedef npy_ulong __pyx_t_5numpy_uint_t;
 
-/* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-dndx0z3b/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":758
+/* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-hase58t8/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":758
  * 
  * ctypedef npy_ulong      uint_t
  * ctypedef npy_ulonglong  ulonglong_t             # <<<<<<<<<<<<<<
@@ -1714,7 +1714,7 @@ typedef npy_ulong __pyx_t_5numpy_uint_t;
  */
 typedef npy_ulonglong __pyx_t_5numpy_ulonglong_t;
 
-/* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-dndx0z3b/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":760
+/* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-hase58t8/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":760
  * ctypedef npy_ulonglong  ulonglong_t
  * 
  * ctypedef npy_intp       intp_t             # <<<<<<<<<<<<<<
@@ -1723,7 +1723,7 @@ typedef npy_ulonglong __pyx_t_5numpy_ulonglong_t;
  */
 typedef npy_intp __pyx_t_5numpy_intp_t;
 
-/* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-dndx0z3b/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":761
+/* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-hase58t8/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":761
  * 
  * ctypedef npy_intp       intp_t
  * ctypedef npy_uintp      uintp_t             # <<<<<<<<<<<<<<
@@ -1732,7 +1732,7 @@ typedef npy_intp __pyx_t_5numpy_intp_t;
  */
 typedef npy_uintp __pyx_t_5numpy_uintp_t;
 
-/* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-dndx0z3b/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":763
+/* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-hase58t8/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":763
  * ctypedef npy_uintp      uintp_t
  * 
  * ctypedef npy_double     float_t             # <<<<<<<<<<<<<<
@@ -1741,7 +1741,7 @@ typedef npy_uintp __pyx_t_5numpy_uintp_t;
  */
 typedef npy_double __pyx_t_5numpy_float_t;
 
-/* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-dndx0z3b/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":764
+/* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-hase58t8/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":764
  * 
  * ctypedef npy_double     float_t
  * ctypedef npy_double     double_t             # <<<<<<<<<<<<<<
@@ -1750,7 +1750,7 @@ typedef npy_double __pyx_t_5numpy_float_t;
  */
 typedef npy_double __pyx_t_5numpy_double_t;
 
-/* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-dndx0z3b/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":765
+/* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-hase58t8/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":765
  * ctypedef npy_double     float_t
  * ctypedef npy_double     double_t
  * ctypedef npy_longdouble longdouble_t             # <<<<<<<<<<<<<<
@@ -1787,7 +1787,7 @@ static CYTHON_INLINE __pyx_t_float_complex __pyx_t_float_complex_from_parts(floa
 
 /*--- Type declarations ---*/
 
-/* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-dndx0z3b/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":767
+/* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-hase58t8/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":767
  * ctypedef npy_longdouble longdouble_t
  * 
  * ctypedef npy_cfloat      cfloat_t             # <<<<<<<<<<<<<<
@@ -1796,7 +1796,7 @@ static CYTHON_INLINE __pyx_t_float_complex __pyx_t_float_complex_from_parts(floa
  */
 typedef npy_cfloat __pyx_t_5numpy_cfloat_t;
 
-/* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-dndx0z3b/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":768
+/* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-hase58t8/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":768
  * 
  * ctypedef npy_cfloat      cfloat_t
  * ctypedef npy_cdouble     cdouble_t             # <<<<<<<<<<<<<<
@@ -1805,7 +1805,7 @@ typedef npy_cfloat __pyx_t_5numpy_cfloat_t;
  */
 typedef npy_cdouble __pyx_t_5numpy_cdouble_t;
 
-/* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-dndx0z3b/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":769
+/* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-hase58t8/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":769
  * ctypedef npy_cfloat      cfloat_t
  * ctypedef npy_cdouble     cdouble_t
  * ctypedef npy_clongdouble clongdouble_t             # <<<<<<<<<<<<<<
@@ -1814,7 +1814,7 @@ typedef npy_cdouble __pyx_t_5numpy_cdouble_t;
  */
 typedef npy_clongdouble __pyx_t_5numpy_clongdouble_t;
 
-/* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-dndx0z3b/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":771
+/* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-hase58t8/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":771
  * ctypedef npy_clongdouble clongdouble_t
  * 
  * ctypedef npy_cdouble     complex_t             # <<<<<<<<<<<<<<
@@ -2644,6 +2644,7 @@ static const char __pyx_k_dtype[] = "dtype";
 static const char __pyx_k_gamma[] = "gamma";
 static const char __pyx_k_int32[] = "int32";
 static const char __pyx_k_numpy[] = "numpy";
+static const char __pyx_k_two_I[] = "two_I";
 static const char __pyx_k_zeros[] = "zeros";
 static const char __pyx_k_Rotate[] = "Rotate";
 static const char __pyx_k_import[] = "__import__";
@@ -2652,7 +2653,6 @@ static const char __pyx_k_initial[] = "initial";
 static const char __pyx_k_createEf[] = "createEf";
 static const char __pyx_k_unit_tlm[] = "unit_tlm";
 static const char __pyx_k_wigner_d[] = "wigner_d";
-static const char __pyx_k_i_times_2[] = "i_times_2";
 static const char __pyx_k_IndexError[] = "IndexError";
 static const char __pyx_k_ValueError[] = "ValueError";
 static const char __pyx_k_complex128[] = "complex128";
@@ -2682,33 +2682,33 @@ static const char __pyx_k_create_single_spin_Iy[] = "create_single_spin_Iy";
 static const char __pyx_k_create_single_spin_Iz[] = "create_single_spin_Iz";
 static const char __pyx_k_create_single_spin_Tlm[] = "create_single_spin_Tlm";
 static const char __pyx_k_create_single_spin_Tlm_unit[] = "create_single_spin_Tlm_unit";
-static const char __pyx_k_The_input_list_i_times_2_cannot[] = "The input list 'i_times_2' cannot be empty.";
 static const char __pyx_k_The_spin_index_is_out_of_bounds[] = "The spin_index is out of bounds.";
 static const char __pyx_k_numpy_core_multiarray_failed_to[] = "numpy.core.multiarray failed to import";
 static const char __pyx_k_State_indices_r_and_s_must_be_no[] = "State indices 'r' and 's' must be non-negative.";
 static const char __pyx_k_The_input_array_initial_cannot_b[] = "The input array 'initial' cannot be empty.";
+static const char __pyx_k_The_input_list_two_I_cannot_be_e[] = "The input list 'two_I' cannot be empty.";
 static const char __pyx_k_numpy_core_umath_failed_to_impor[] = "numpy.core.umath failed to import";
 /* #### Code section: decls ### */
 static PyObject *__pyx_pf_7spinOps_8_spinOps_clebsch(CYTHON_UNUSED PyObject *__pyx_self, double __pyx_v_j1, double __pyx_v_m1, double __pyx_v_j2, double __pyx_v_m2, double __pyx_v_j, double __pyx_v_m); /* proto */
 static PyObject *__pyx_pf_7spinOps_8_spinOps_2tlm(CYTHON_UNUSED PyObject *__pyx_self, int __pyx_v_l, int __pyx_v_m, double __pyx_v_I, double __pyx_v_m1, double __pyx_v_m2); /* proto */
 static PyObject *__pyx_pf_7spinOps_8_spinOps_4unit_tlm(CYTHON_UNUSED PyObject *__pyx_self, int __pyx_v_l, int __pyx_v_m, double __pyx_v_I, double __pyx_v_m1, double __pyx_v_m2); /* proto */
-static PyObject *__pyx_pf_7spinOps_8_spinOps_6number_of_states(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_i_times_2); /* proto */
-static PyObject *__pyx_pf_7spinOps_8_spinOps_8create_single_spin_Ix(CYTHON_UNUSED PyObject *__pyx_self, int __pyx_v_spin_index, PyObject *__pyx_v_i_times_2); /* proto */
-static PyObject *__pyx_pf_7spinOps_8_spinOps_10create_single_spin_Iy(CYTHON_UNUSED PyObject *__pyx_self, int __pyx_v_spin_index, PyObject *__pyx_v_i_times_2); /* proto */
-static PyObject *__pyx_pf_7spinOps_8_spinOps_12create_single_spin_Iz(CYTHON_UNUSED PyObject *__pyx_self, int __pyx_v_spin_index, PyObject *__pyx_v_i_times_2); /* proto */
-static PyObject *__pyx_pf_7spinOps_8_spinOps_14create_single_spin_Ip(CYTHON_UNUSED PyObject *__pyx_self, int __pyx_v_spin_index, PyObject *__pyx_v_i_times_2); /* proto */
-static PyObject *__pyx_pf_7spinOps_8_spinOps_16create_single_spin_Im(CYTHON_UNUSED PyObject *__pyx_self, int __pyx_v_spin_index, PyObject *__pyx_v_i_times_2); /* proto */
-static PyObject *__pyx_pf_7spinOps_8_spinOps_18create_single_spin_Tlm(CYTHON_UNUSED PyObject *__pyx_self, int __pyx_v_L, int __pyx_v_M, int __pyx_v_spin_index, PyObject *__pyx_v_i_times_2); /* proto */
-static PyObject *__pyx_pf_7spinOps_8_spinOps_20create_single_spin_Tlm_unit(CYTHON_UNUSED PyObject *__pyx_self, int __pyx_v_L, int __pyx_v_M, int __pyx_v_spin_index, PyObject *__pyx_v_i_times_2); /* proto */
-static PyObject *__pyx_pf_7spinOps_8_spinOps_22create_single_C0(CYTHON_UNUSED PyObject *__pyx_self, int __pyx_v_spin_index, PyObject *__pyx_v_i_times_2); /* proto */
-static PyObject *__pyx_pf_7spinOps_8_spinOps_24create_single_C2(CYTHON_UNUSED PyObject *__pyx_self, int __pyx_v_spin_index, PyObject *__pyx_v_i_times_2); /* proto */
-static PyObject *__pyx_pf_7spinOps_8_spinOps_26create_single_C4(CYTHON_UNUSED PyObject *__pyx_self, int __pyx_v_spin_index, PyObject *__pyx_v_i_times_2); /* proto */
-static PyObject *__pyx_pf_7spinOps_8_spinOps_28createEf(CYTHON_UNUSED PyObject *__pyx_self, int __pyx_v_r, int __pyx_v_s, PyObject *__pyx_v_i_times_2); /* proto */
-static PyObject *__pyx_pf_7spinOps_8_spinOps_30create_Ixf(CYTHON_UNUSED PyObject *__pyx_self, int __pyx_v_r, int __pyx_v_s, PyObject *__pyx_v_i_times_2); /* proto */
-static PyObject *__pyx_pf_7spinOps_8_spinOps_32create_Iyf(CYTHON_UNUSED PyObject *__pyx_self, int __pyx_v_r, int __pyx_v_s, PyObject *__pyx_v_i_times_2); /* proto */
-static PyObject *__pyx_pf_7spinOps_8_spinOps_34create_Izf(CYTHON_UNUSED PyObject *__pyx_self, int __pyx_v_r, int __pyx_v_s, PyObject *__pyx_v_i_times_2); /* proto */
-static PyObject *__pyx_pf_7spinOps_8_spinOps_36create_Ipf(CYTHON_UNUSED PyObject *__pyx_self, int __pyx_v_r, int __pyx_v_s, PyObject *__pyx_v_i_times_2); /* proto */
-static PyObject *__pyx_pf_7spinOps_8_spinOps_38create_Imf(CYTHON_UNUSED PyObject *__pyx_self, int __pyx_v_r, int __pyx_v_s, PyObject *__pyx_v_i_times_2); /* proto */
+static PyObject *__pyx_pf_7spinOps_8_spinOps_6number_of_states(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_two_I); /* proto */
+static PyObject *__pyx_pf_7spinOps_8_spinOps_8create_single_spin_Ix(CYTHON_UNUSED PyObject *__pyx_self, int __pyx_v_spin_index, PyObject *__pyx_v_two_I); /* proto */
+static PyObject *__pyx_pf_7spinOps_8_spinOps_10create_single_spin_Iy(CYTHON_UNUSED PyObject *__pyx_self, int __pyx_v_spin_index, PyObject *__pyx_v_two_I); /* proto */
+static PyObject *__pyx_pf_7spinOps_8_spinOps_12create_single_spin_Iz(CYTHON_UNUSED PyObject *__pyx_self, int __pyx_v_spin_index, PyObject *__pyx_v_two_I); /* proto */
+static PyObject *__pyx_pf_7spinOps_8_spinOps_14create_single_spin_Ip(CYTHON_UNUSED PyObject *__pyx_self, int __pyx_v_spin_index, PyObject *__pyx_v_two_I); /* proto */
+static PyObject *__pyx_pf_7spinOps_8_spinOps_16create_single_spin_Im(CYTHON_UNUSED PyObject *__pyx_self, int __pyx_v_spin_index, PyObject *__pyx_v_two_I); /* proto */
+static PyObject *__pyx_pf_7spinOps_8_spinOps_18create_single_spin_Tlm(CYTHON_UNUSED PyObject *__pyx_self, int __pyx_v_L, int __pyx_v_M, int __pyx_v_spin_index, PyObject *__pyx_v_two_I); /* proto */
+static PyObject *__pyx_pf_7spinOps_8_spinOps_20create_single_spin_Tlm_unit(CYTHON_UNUSED PyObject *__pyx_self, int __pyx_v_L, int __pyx_v_M, int __pyx_v_spin_index, PyObject *__pyx_v_two_I); /* proto */
+static PyObject *__pyx_pf_7spinOps_8_spinOps_22create_single_C0(CYTHON_UNUSED PyObject *__pyx_self, int __pyx_v_spin_index, PyObject *__pyx_v_two_I); /* proto */
+static PyObject *__pyx_pf_7spinOps_8_spinOps_24create_single_C2(CYTHON_UNUSED PyObject *__pyx_self, int __pyx_v_spin_index, PyObject *__pyx_v_two_I); /* proto */
+static PyObject *__pyx_pf_7spinOps_8_spinOps_26create_single_C4(CYTHON_UNUSED PyObject *__pyx_self, int __pyx_v_spin_index, PyObject *__pyx_v_two_I); /* proto */
+static PyObject *__pyx_pf_7spinOps_8_spinOps_28createEf(CYTHON_UNUSED PyObject *__pyx_self, int __pyx_v_r, int __pyx_v_s, PyObject *__pyx_v_two_I); /* proto */
+static PyObject *__pyx_pf_7spinOps_8_spinOps_30create_Ixf(CYTHON_UNUSED PyObject *__pyx_self, int __pyx_v_r, int __pyx_v_s, PyObject *__pyx_v_two_I); /* proto */
+static PyObject *__pyx_pf_7spinOps_8_spinOps_32create_Iyf(CYTHON_UNUSED PyObject *__pyx_self, int __pyx_v_r, int __pyx_v_s, PyObject *__pyx_v_two_I); /* proto */
+static PyObject *__pyx_pf_7spinOps_8_spinOps_34create_Izf(CYTHON_UNUSED PyObject *__pyx_self, int __pyx_v_r, int __pyx_v_s, PyObject *__pyx_v_two_I); /* proto */
+static PyObject *__pyx_pf_7spinOps_8_spinOps_36create_Ipf(CYTHON_UNUSED PyObject *__pyx_self, int __pyx_v_r, int __pyx_v_s, PyObject *__pyx_v_two_I); /* proto */
+static PyObject *__pyx_pf_7spinOps_8_spinOps_38create_Imf(CYTHON_UNUSED PyObject *__pyx_self, int __pyx_v_r, int __pyx_v_s, PyObject *__pyx_v_two_I); /* proto */
 static PyObject *__pyx_pf_7spinOps_8_spinOps_40wigner_d(CYTHON_UNUSED PyObject *__pyx_self, double __pyx_v_l, double __pyx_v_m1, double __pyx_v_m2, double __pyx_v_beta); /* proto */
 static PyObject *__pyx_pf_7spinOps_8_spinOps_42DLM(CYTHON_UNUSED PyObject *__pyx_self, double __pyx_v_l, double __pyx_v_m1, double __pyx_v_m2, double __pyx_v_alpha, double __pyx_v_beta, double __pyx_v_gamma); /* proto */
 static PyObject *__pyx_pf_7spinOps_8_spinOps_44Rotate(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_initial, double __pyx_v_alpha, double __pyx_v_beta, double __pyx_v_gamma); /* proto */
@@ -2788,7 +2788,7 @@ typedef struct {
   PyObject *__pyx_n_s_Rotate;
   PyObject *__pyx_kp_u_State_indices_r_and_s_must_be_no;
   PyObject *__pyx_kp_u_The_input_array_initial_cannot_b;
-  PyObject *__pyx_kp_u_The_input_list_i_times_2_cannot;
+  PyObject *__pyx_kp_u_The_input_list_two_I_cannot_be_e;
   PyObject *__pyx_kp_u_The_spin_index_is_out_of_bounds;
   PyObject *__pyx_n_s_ValueError;
   PyObject *__pyx_n_s__46;
@@ -2821,7 +2821,6 @@ typedef struct {
   PyObject *__pyx_n_s_dtype;
   PyObject *__pyx_n_s_eta;
   PyObject *__pyx_n_s_gamma;
-  PyObject *__pyx_n_s_i_times_2;
   PyObject *__pyx_n_s_import;
   PyObject *__pyx_n_s_initial;
   PyObject *__pyx_n_s_initializing;
@@ -2849,6 +2848,7 @@ typedef struct {
   PyObject *__pyx_n_s_spin_index;
   PyObject *__pyx_n_s_test;
   PyObject *__pyx_n_s_tlm;
+  PyObject *__pyx_n_s_two_I;
   PyObject *__pyx_n_s_unit_tlm;
   PyObject *__pyx_n_s_wigner_d;
   PyObject *__pyx_n_s_zeros;
@@ -2966,7 +2966,7 @@ static int __pyx_m_clear(PyObject *m) {
   Py_CLEAR(clear_module_state->__pyx_n_s_Rotate);
   Py_CLEAR(clear_module_state->__pyx_kp_u_State_indices_r_and_s_must_be_no);
   Py_CLEAR(clear_module_state->__pyx_kp_u_The_input_array_initial_cannot_b);
-  Py_CLEAR(clear_module_state->__pyx_kp_u_The_input_list_i_times_2_cannot);
+  Py_CLEAR(clear_module_state->__pyx_kp_u_The_input_list_two_I_cannot_be_e);
   Py_CLEAR(clear_module_state->__pyx_kp_u_The_spin_index_is_out_of_bounds);
   Py_CLEAR(clear_module_state->__pyx_n_s_ValueError);
   Py_CLEAR(clear_module_state->__pyx_n_s__46);
@@ -2999,7 +2999,6 @@ static int __pyx_m_clear(PyObject *m) {
   Py_CLEAR(clear_module_state->__pyx_n_s_dtype);
   Py_CLEAR(clear_module_state->__pyx_n_s_eta);
   Py_CLEAR(clear_module_state->__pyx_n_s_gamma);
-  Py_CLEAR(clear_module_state->__pyx_n_s_i_times_2);
   Py_CLEAR(clear_module_state->__pyx_n_s_import);
   Py_CLEAR(clear_module_state->__pyx_n_s_initial);
   Py_CLEAR(clear_module_state->__pyx_n_s_initializing);
@@ -3027,6 +3026,7 @@ static int __pyx_m_clear(PyObject *m) {
   Py_CLEAR(clear_module_state->__pyx_n_s_spin_index);
   Py_CLEAR(clear_module_state->__pyx_n_s_test);
   Py_CLEAR(clear_module_state->__pyx_n_s_tlm);
+  Py_CLEAR(clear_module_state->__pyx_n_s_two_I);
   Py_CLEAR(clear_module_state->__pyx_n_s_unit_tlm);
   Py_CLEAR(clear_module_state->__pyx_n_s_wigner_d);
   Py_CLEAR(clear_module_state->__pyx_n_s_zeros);
@@ -3122,7 +3122,7 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
   Py_VISIT(traverse_module_state->__pyx_n_s_Rotate);
   Py_VISIT(traverse_module_state->__pyx_kp_u_State_indices_r_and_s_must_be_no);
   Py_VISIT(traverse_module_state->__pyx_kp_u_The_input_array_initial_cannot_b);
-  Py_VISIT(traverse_module_state->__pyx_kp_u_The_input_list_i_times_2_cannot);
+  Py_VISIT(traverse_module_state->__pyx_kp_u_The_input_list_two_I_cannot_be_e);
   Py_VISIT(traverse_module_state->__pyx_kp_u_The_spin_index_is_out_of_bounds);
   Py_VISIT(traverse_module_state->__pyx_n_s_ValueError);
   Py_VISIT(traverse_module_state->__pyx_n_s__46);
@@ -3155,7 +3155,6 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
   Py_VISIT(traverse_module_state->__pyx_n_s_dtype);
   Py_VISIT(traverse_module_state->__pyx_n_s_eta);
   Py_VISIT(traverse_module_state->__pyx_n_s_gamma);
-  Py_VISIT(traverse_module_state->__pyx_n_s_i_times_2);
   Py_VISIT(traverse_module_state->__pyx_n_s_import);
   Py_VISIT(traverse_module_state->__pyx_n_s_initial);
   Py_VISIT(traverse_module_state->__pyx_n_s_initializing);
@@ -3183,6 +3182,7 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
   Py_VISIT(traverse_module_state->__pyx_n_s_spin_index);
   Py_VISIT(traverse_module_state->__pyx_n_s_test);
   Py_VISIT(traverse_module_state->__pyx_n_s_tlm);
+  Py_VISIT(traverse_module_state->__pyx_n_s_two_I);
   Py_VISIT(traverse_module_state->__pyx_n_s_unit_tlm);
   Py_VISIT(traverse_module_state->__pyx_n_s_wigner_d);
   Py_VISIT(traverse_module_state->__pyx_n_s_zeros);
@@ -3308,7 +3308,7 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
 #define __pyx_n_s_Rotate __pyx_mstate_global->__pyx_n_s_Rotate
 #define __pyx_kp_u_State_indices_r_and_s_must_be_no __pyx_mstate_global->__pyx_kp_u_State_indices_r_and_s_must_be_no
 #define __pyx_kp_u_The_input_array_initial_cannot_b __pyx_mstate_global->__pyx_kp_u_The_input_array_initial_cannot_b
-#define __pyx_kp_u_The_input_list_i_times_2_cannot __pyx_mstate_global->__pyx_kp_u_The_input_list_i_times_2_cannot
+#define __pyx_kp_u_The_input_list_two_I_cannot_be_e __pyx_mstate_global->__pyx_kp_u_The_input_list_two_I_cannot_be_e
 #define __pyx_kp_u_The_spin_index_is_out_of_bounds __pyx_mstate_global->__pyx_kp_u_The_spin_index_is_out_of_bounds
 #define __pyx_n_s_ValueError __pyx_mstate_global->__pyx_n_s_ValueError
 #define __pyx_n_s__46 __pyx_mstate_global->__pyx_n_s__46
@@ -3341,7 +3341,6 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
 #define __pyx_n_s_dtype __pyx_mstate_global->__pyx_n_s_dtype
 #define __pyx_n_s_eta __pyx_mstate_global->__pyx_n_s_eta
 #define __pyx_n_s_gamma __pyx_mstate_global->__pyx_n_s_gamma
-#define __pyx_n_s_i_times_2 __pyx_mstate_global->__pyx_n_s_i_times_2
 #define __pyx_n_s_import __pyx_mstate_global->__pyx_n_s_import
 #define __pyx_n_s_initial __pyx_mstate_global->__pyx_n_s_initial
 #define __pyx_n_s_initializing __pyx_mstate_global->__pyx_n_s_initializing
@@ -3369,6 +3368,7 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
 #define __pyx_n_s_spin_index __pyx_mstate_global->__pyx_n_s_spin_index
 #define __pyx_n_s_test __pyx_mstate_global->__pyx_n_s_test
 #define __pyx_n_s_tlm __pyx_mstate_global->__pyx_n_s_tlm
+#define __pyx_n_s_two_I __pyx_mstate_global->__pyx_n_s_two_I
 #define __pyx_n_s_unit_tlm __pyx_mstate_global->__pyx_n_s_unit_tlm
 #define __pyx_n_s_wigner_d __pyx_mstate_global->__pyx_n_s_wigner_d
 #define __pyx_n_s_zeros __pyx_mstate_global->__pyx_n_s_zeros
@@ -3421,7 +3421,7 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
 #define __pyx_codeobj__45 __pyx_mstate_global->__pyx_codeobj__45
 /* #### Code section: module_code ### */
 
-/* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-dndx0z3b/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":245
+/* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-hase58t8/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":245
  * 
  *         @property
  *         cdef inline PyObject* base(self) nogil:             # <<<<<<<<<<<<<<
@@ -3432,7 +3432,7 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
 static CYTHON_INLINE PyObject *__pyx_f_5numpy_7ndarray_4base_base(PyArrayObject *__pyx_v_self) {
   PyObject *__pyx_r;
 
-  /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-dndx0z3b/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":248
+  /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-hase58t8/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":248
  *             """Returns a borrowed reference to the object owning the data/memory.
  *             """
  *             return PyArray_BASE(self)             # <<<<<<<<<<<<<<
@@ -3442,7 +3442,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_7ndarray_4base_base(PyArrayObject 
   __pyx_r = PyArray_BASE(__pyx_v_self);
   goto __pyx_L0;
 
-  /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-dndx0z3b/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":245
+  /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-hase58t8/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":245
  * 
  *         @property
  *         cdef inline PyObject* base(self) nogil:             # <<<<<<<<<<<<<<
@@ -3455,7 +3455,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_7ndarray_4base_base(PyArrayObject 
   return __pyx_r;
 }
 
-/* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-dndx0z3b/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":251
+/* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-hase58t8/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":251
  * 
  *         @property
  *         cdef inline dtype descr(self):             # <<<<<<<<<<<<<<
@@ -3469,7 +3469,7 @@ static CYTHON_INLINE PyArray_Descr *__pyx_f_5numpy_7ndarray_5descr_descr(PyArray
   PyArray_Descr *__pyx_t_1;
   __Pyx_RefNannySetupContext("descr", 1);
 
-  /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-dndx0z3b/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":254
+  /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-hase58t8/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":254
  *             """Returns an owned reference to the dtype of the array.
  *             """
  *             return <dtype>PyArray_DESCR(self)             # <<<<<<<<<<<<<<
@@ -3482,7 +3482,7 @@ static CYTHON_INLINE PyArray_Descr *__pyx_f_5numpy_7ndarray_5descr_descr(PyArray
   __pyx_r = ((PyArray_Descr *)__pyx_t_1);
   goto __pyx_L0;
 
-  /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-dndx0z3b/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":251
+  /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-hase58t8/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":251
  * 
  *         @property
  *         cdef inline dtype descr(self):             # <<<<<<<<<<<<<<
@@ -3497,7 +3497,7 @@ static CYTHON_INLINE PyArray_Descr *__pyx_f_5numpy_7ndarray_5descr_descr(PyArray
   return __pyx_r;
 }
 
-/* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-dndx0z3b/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":257
+/* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-hase58t8/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":257
  * 
  *         @property
  *         cdef inline int ndim(self) nogil:             # <<<<<<<<<<<<<<
@@ -3508,7 +3508,7 @@ static CYTHON_INLINE PyArray_Descr *__pyx_f_5numpy_7ndarray_5descr_descr(PyArray
 static CYTHON_INLINE int __pyx_f_5numpy_7ndarray_4ndim_ndim(PyArrayObject *__pyx_v_self) {
   int __pyx_r;
 
-  /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-dndx0z3b/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":260
+  /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-hase58t8/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":260
  *             """Returns the number of dimensions in the array.
  *             """
  *             return PyArray_NDIM(self)             # <<<<<<<<<<<<<<
@@ -3518,7 +3518,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_7ndarray_4ndim_ndim(PyArrayObject *__pyx
   __pyx_r = PyArray_NDIM(__pyx_v_self);
   goto __pyx_L0;
 
-  /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-dndx0z3b/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":257
+  /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-hase58t8/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":257
  * 
  *         @property
  *         cdef inline int ndim(self) nogil:             # <<<<<<<<<<<<<<
@@ -3531,7 +3531,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_7ndarray_4ndim_ndim(PyArrayObject *__pyx
   return __pyx_r;
 }
 
-/* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-dndx0z3b/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":263
+/* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-hase58t8/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":263
  * 
  *         @property
  *         cdef inline npy_intp *shape(self) nogil:             # <<<<<<<<<<<<<<
@@ -3542,7 +3542,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_7ndarray_4ndim_ndim(PyArrayObject *__pyx
 static CYTHON_INLINE npy_intp *__pyx_f_5numpy_7ndarray_5shape_shape(PyArrayObject *__pyx_v_self) {
   npy_intp *__pyx_r;
 
-  /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-dndx0z3b/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":268
+  /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-hase58t8/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":268
  *             Can return NULL for 0-dimensional arrays.
  *             """
  *             return PyArray_DIMS(self)             # <<<<<<<<<<<<<<
@@ -3552,7 +3552,7 @@ static CYTHON_INLINE npy_intp *__pyx_f_5numpy_7ndarray_5shape_shape(PyArrayObjec
   __pyx_r = PyArray_DIMS(__pyx_v_self);
   goto __pyx_L0;
 
-  /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-dndx0z3b/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":263
+  /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-hase58t8/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":263
  * 
  *         @property
  *         cdef inline npy_intp *shape(self) nogil:             # <<<<<<<<<<<<<<
@@ -3565,7 +3565,7 @@ static CYTHON_INLINE npy_intp *__pyx_f_5numpy_7ndarray_5shape_shape(PyArrayObjec
   return __pyx_r;
 }
 
-/* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-dndx0z3b/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":271
+/* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-hase58t8/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":271
  * 
  *         @property
  *         cdef inline npy_intp *strides(self) nogil:             # <<<<<<<<<<<<<<
@@ -3576,7 +3576,7 @@ static CYTHON_INLINE npy_intp *__pyx_f_5numpy_7ndarray_5shape_shape(PyArrayObjec
 static CYTHON_INLINE npy_intp *__pyx_f_5numpy_7ndarray_7strides_strides(PyArrayObject *__pyx_v_self) {
   npy_intp *__pyx_r;
 
-  /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-dndx0z3b/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":275
+  /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-hase58t8/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":275
  *             The number of elements matches the number of dimensions of the array (ndim).
  *             """
  *             return PyArray_STRIDES(self)             # <<<<<<<<<<<<<<
@@ -3586,7 +3586,7 @@ static CYTHON_INLINE npy_intp *__pyx_f_5numpy_7ndarray_7strides_strides(PyArrayO
   __pyx_r = PyArray_STRIDES(__pyx_v_self);
   goto __pyx_L0;
 
-  /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-dndx0z3b/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":271
+  /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-hase58t8/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":271
  * 
  *         @property
  *         cdef inline npy_intp *strides(self) nogil:             # <<<<<<<<<<<<<<
@@ -3599,7 +3599,7 @@ static CYTHON_INLINE npy_intp *__pyx_f_5numpy_7ndarray_7strides_strides(PyArrayO
   return __pyx_r;
 }
 
-/* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-dndx0z3b/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":278
+/* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-hase58t8/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":278
  * 
  *         @property
  *         cdef inline npy_intp size(self) nogil:             # <<<<<<<<<<<<<<
@@ -3610,7 +3610,7 @@ static CYTHON_INLINE npy_intp *__pyx_f_5numpy_7ndarray_7strides_strides(PyArrayO
 static CYTHON_INLINE npy_intp __pyx_f_5numpy_7ndarray_4size_size(PyArrayObject *__pyx_v_self) {
   npy_intp __pyx_r;
 
-  /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-dndx0z3b/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":281
+  /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-hase58t8/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":281
  *             """Returns the total size (in number of elements) of the array.
  *             """
  *             return PyArray_SIZE(self)             # <<<<<<<<<<<<<<
@@ -3620,7 +3620,7 @@ static CYTHON_INLINE npy_intp __pyx_f_5numpy_7ndarray_4size_size(PyArrayObject *
   __pyx_r = PyArray_SIZE(__pyx_v_self);
   goto __pyx_L0;
 
-  /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-dndx0z3b/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":278
+  /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-hase58t8/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":278
  * 
  *         @property
  *         cdef inline npy_intp size(self) nogil:             # <<<<<<<<<<<<<<
@@ -3633,7 +3633,7 @@ static CYTHON_INLINE npy_intp __pyx_f_5numpy_7ndarray_4size_size(PyArrayObject *
   return __pyx_r;
 }
 
-/* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-dndx0z3b/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":284
+/* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-hase58t8/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":284
  * 
  *         @property
  *         cdef inline char* data(self) nogil:             # <<<<<<<<<<<<<<
@@ -3644,7 +3644,7 @@ static CYTHON_INLINE npy_intp __pyx_f_5numpy_7ndarray_4size_size(PyArrayObject *
 static CYTHON_INLINE char *__pyx_f_5numpy_7ndarray_4data_data(PyArrayObject *__pyx_v_self) {
   char *__pyx_r;
 
-  /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-dndx0z3b/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":290
+  /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-hase58t8/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":290
  *             of `PyArray_DATA()` instead, which returns a 'void*'.
  *             """
  *             return PyArray_BYTES(self)             # <<<<<<<<<<<<<<
@@ -3654,7 +3654,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy_7ndarray_4data_data(PyArrayObject *__p
   __pyx_r = PyArray_BYTES(__pyx_v_self);
   goto __pyx_L0;
 
-  /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-dndx0z3b/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":284
+  /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-hase58t8/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":284
  * 
  *         @property
  *         cdef inline char* data(self) nogil:             # <<<<<<<<<<<<<<
@@ -3667,7 +3667,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy_7ndarray_4data_data(PyArrayObject *__p
   return __pyx_r;
 }
 
-/* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-dndx0z3b/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":773
+/* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-hase58t8/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":773
  * ctypedef npy_cdouble     complex_t
  * 
  * cdef inline object PyArray_MultiIterNew1(a):             # <<<<<<<<<<<<<<
@@ -3684,7 +3684,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew1(PyObject *__
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("PyArray_MultiIterNew1", 1);
 
-  /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-dndx0z3b/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":774
+  /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-hase58t8/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":774
  * 
  * cdef inline object PyArray_MultiIterNew1(a):
  *     return PyArray_MultiIterNew(1, <void*>a)             # <<<<<<<<<<<<<<
@@ -3698,7 +3698,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew1(PyObject *__
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-dndx0z3b/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":773
+  /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-hase58t8/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":773
  * ctypedef npy_cdouble     complex_t
  * 
  * cdef inline object PyArray_MultiIterNew1(a):             # <<<<<<<<<<<<<<
@@ -3717,7 +3717,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew1(PyObject *__
   return __pyx_r;
 }
 
-/* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-dndx0z3b/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":776
+/* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-hase58t8/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":776
  *     return PyArray_MultiIterNew(1, <void*>a)
  * 
  * cdef inline object PyArray_MultiIterNew2(a, b):             # <<<<<<<<<<<<<<
@@ -3734,7 +3734,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew2(PyObject *__
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("PyArray_MultiIterNew2", 1);
 
-  /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-dndx0z3b/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":777
+  /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-hase58t8/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":777
  * 
  * cdef inline object PyArray_MultiIterNew2(a, b):
  *     return PyArray_MultiIterNew(2, <void*>a, <void*>b)             # <<<<<<<<<<<<<<
@@ -3748,7 +3748,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew2(PyObject *__
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-dndx0z3b/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":776
+  /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-hase58t8/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":776
  *     return PyArray_MultiIterNew(1, <void*>a)
  * 
  * cdef inline object PyArray_MultiIterNew2(a, b):             # <<<<<<<<<<<<<<
@@ -3767,7 +3767,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew2(PyObject *__
   return __pyx_r;
 }
 
-/* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-dndx0z3b/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":779
+/* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-hase58t8/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":779
  *     return PyArray_MultiIterNew(2, <void*>a, <void*>b)
  * 
  * cdef inline object PyArray_MultiIterNew3(a, b, c):             # <<<<<<<<<<<<<<
@@ -3784,7 +3784,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew3(PyObject *__
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("PyArray_MultiIterNew3", 1);
 
-  /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-dndx0z3b/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":780
+  /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-hase58t8/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":780
  * 
  * cdef inline object PyArray_MultiIterNew3(a, b, c):
  *     return PyArray_MultiIterNew(3, <void*>a, <void*>b, <void*> c)             # <<<<<<<<<<<<<<
@@ -3798,7 +3798,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew3(PyObject *__
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-dndx0z3b/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":779
+  /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-hase58t8/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":779
  *     return PyArray_MultiIterNew(2, <void*>a, <void*>b)
  * 
  * cdef inline object PyArray_MultiIterNew3(a, b, c):             # <<<<<<<<<<<<<<
@@ -3817,7 +3817,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew3(PyObject *__
   return __pyx_r;
 }
 
-/* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-dndx0z3b/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":782
+/* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-hase58t8/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":782
  *     return PyArray_MultiIterNew(3, <void*>a, <void*>b, <void*> c)
  * 
  * cdef inline object PyArray_MultiIterNew4(a, b, c, d):             # <<<<<<<<<<<<<<
@@ -3834,7 +3834,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew4(PyObject *__
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("PyArray_MultiIterNew4", 1);
 
-  /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-dndx0z3b/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":783
+  /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-hase58t8/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":783
  * 
  * cdef inline object PyArray_MultiIterNew4(a, b, c, d):
  *     return PyArray_MultiIterNew(4, <void*>a, <void*>b, <void*>c, <void*> d)             # <<<<<<<<<<<<<<
@@ -3848,7 +3848,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew4(PyObject *__
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-dndx0z3b/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":782
+  /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-hase58t8/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":782
  *     return PyArray_MultiIterNew(3, <void*>a, <void*>b, <void*> c)
  * 
  * cdef inline object PyArray_MultiIterNew4(a, b, c, d):             # <<<<<<<<<<<<<<
@@ -3867,7 +3867,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew4(PyObject *__
   return __pyx_r;
 }
 
-/* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-dndx0z3b/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":785
+/* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-hase58t8/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":785
  *     return PyArray_MultiIterNew(4, <void*>a, <void*>b, <void*>c, <void*> d)
  * 
  * cdef inline object PyArray_MultiIterNew5(a, b, c, d, e):             # <<<<<<<<<<<<<<
@@ -3884,7 +3884,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew5(PyObject *__
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("PyArray_MultiIterNew5", 1);
 
-  /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-dndx0z3b/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":786
+  /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-hase58t8/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":786
  * 
  * cdef inline object PyArray_MultiIterNew5(a, b, c, d, e):
  *     return PyArray_MultiIterNew(5, <void*>a, <void*>b, <void*>c, <void*> d, <void*> e)             # <<<<<<<<<<<<<<
@@ -3898,7 +3898,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew5(PyObject *__
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-dndx0z3b/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":785
+  /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-hase58t8/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":785
  *     return PyArray_MultiIterNew(4, <void*>a, <void*>b, <void*>c, <void*> d)
  * 
  * cdef inline object PyArray_MultiIterNew5(a, b, c, d, e):             # <<<<<<<<<<<<<<
@@ -3917,7 +3917,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew5(PyObject *__
   return __pyx_r;
 }
 
-/* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-dndx0z3b/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":788
+/* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-hase58t8/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":788
  *     return PyArray_MultiIterNew(5, <void*>a, <void*>b, <void*>c, <void*> d, <void*> e)
  * 
  * cdef inline tuple PyDataType_SHAPE(dtype d):             # <<<<<<<<<<<<<<
@@ -3931,7 +3931,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyDataType_SHAPE(PyArray_Descr *__
   int __pyx_t_1;
   __Pyx_RefNannySetupContext("PyDataType_SHAPE", 1);
 
-  /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-dndx0z3b/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":789
+  /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-hase58t8/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":789
  * 
  * cdef inline tuple PyDataType_SHAPE(dtype d):
  *     if PyDataType_HASSUBARRAY(d):             # <<<<<<<<<<<<<<
@@ -3941,7 +3941,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyDataType_SHAPE(PyArray_Descr *__
   __pyx_t_1 = PyDataType_HASSUBARRAY(__pyx_v_d);
   if (__pyx_t_1) {
 
-    /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-dndx0z3b/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":790
+    /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-hase58t8/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":790
  * cdef inline tuple PyDataType_SHAPE(dtype d):
  *     if PyDataType_HASSUBARRAY(d):
  *         return <tuple>d.subarray.shape             # <<<<<<<<<<<<<<
@@ -3953,7 +3953,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyDataType_SHAPE(PyArray_Descr *__
     __pyx_r = ((PyObject*)__pyx_v_d->subarray->shape);
     goto __pyx_L0;
 
-    /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-dndx0z3b/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":789
+    /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-hase58t8/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":789
  * 
  * cdef inline tuple PyDataType_SHAPE(dtype d):
  *     if PyDataType_HASSUBARRAY(d):             # <<<<<<<<<<<<<<
@@ -3962,7 +3962,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyDataType_SHAPE(PyArray_Descr *__
  */
   }
 
-  /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-dndx0z3b/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":792
+  /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-hase58t8/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":792
  *         return <tuple>d.subarray.shape
  *     else:
  *         return ()             # <<<<<<<<<<<<<<
@@ -3976,7 +3976,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyDataType_SHAPE(PyArray_Descr *__
     goto __pyx_L0;
   }
 
-  /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-dndx0z3b/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":788
+  /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-hase58t8/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":788
  *     return PyArray_MultiIterNew(5, <void*>a, <void*>b, <void*>c, <void*> d, <void*> e)
  * 
  * cdef inline tuple PyDataType_SHAPE(dtype d):             # <<<<<<<<<<<<<<
@@ -3991,7 +3991,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyDataType_SHAPE(PyArray_Descr *__
   return __pyx_r;
 }
 
-/* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-dndx0z3b/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":968
+/* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-hase58t8/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":968
  *     int _import_umath() except -1
  * 
  * cdef inline void set_array_base(ndarray arr, object base):             # <<<<<<<<<<<<<<
@@ -4005,7 +4005,7 @@ static CYTHON_INLINE void __pyx_f_5numpy_set_array_base(PyArrayObject *__pyx_v_a
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
 
-  /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-dndx0z3b/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":969
+  /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-hase58t8/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":969
  * 
  * cdef inline void set_array_base(ndarray arr, object base):
  *     Py_INCREF(base) # important to do this before stealing the reference below!             # <<<<<<<<<<<<<<
@@ -4014,7 +4014,7 @@ static CYTHON_INLINE void __pyx_f_5numpy_set_array_base(PyArrayObject *__pyx_v_a
  */
   Py_INCREF(__pyx_v_base);
 
-  /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-dndx0z3b/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":970
+  /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-hase58t8/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":970
  * cdef inline void set_array_base(ndarray arr, object base):
  *     Py_INCREF(base) # important to do this before stealing the reference below!
  *     PyArray_SetBaseObject(arr, base)             # <<<<<<<<<<<<<<
@@ -4023,7 +4023,7 @@ static CYTHON_INLINE void __pyx_f_5numpy_set_array_base(PyArrayObject *__pyx_v_a
  */
   __pyx_t_1 = PyArray_SetBaseObject(__pyx_v_arr, __pyx_v_base); if (unlikely(__pyx_t_1 == ((int)-1))) __PYX_ERR(1, 970, __pyx_L1_error)
 
-  /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-dndx0z3b/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":968
+  /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-hase58t8/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":968
  *     int _import_umath() except -1
  * 
  * cdef inline void set_array_base(ndarray arr, object base):             # <<<<<<<<<<<<<<
@@ -4038,7 +4038,7 @@ static CYTHON_INLINE void __pyx_f_5numpy_set_array_base(PyArrayObject *__pyx_v_a
   __pyx_L0:;
 }
 
-/* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-dndx0z3b/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":972
+/* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-hase58t8/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":972
  *     PyArray_SetBaseObject(arr, base)
  * 
  * cdef inline object get_array_base(ndarray arr):             # <<<<<<<<<<<<<<
@@ -4053,7 +4053,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_get_array_base(PyArrayObject *__py
   int __pyx_t_1;
   __Pyx_RefNannySetupContext("get_array_base", 1);
 
-  /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-dndx0z3b/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":973
+  /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-hase58t8/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":973
  * 
  * cdef inline object get_array_base(ndarray arr):
  *     base = PyArray_BASE(arr)             # <<<<<<<<<<<<<<
@@ -4062,7 +4062,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_get_array_base(PyArrayObject *__py
  */
   __pyx_v_base = PyArray_BASE(__pyx_v_arr);
 
-  /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-dndx0z3b/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":974
+  /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-hase58t8/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":974
  * cdef inline object get_array_base(ndarray arr):
  *     base = PyArray_BASE(arr)
  *     if base is NULL:             # <<<<<<<<<<<<<<
@@ -4072,7 +4072,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_get_array_base(PyArrayObject *__py
   __pyx_t_1 = (__pyx_v_base == NULL);
   if (__pyx_t_1) {
 
-    /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-dndx0z3b/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":975
+    /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-hase58t8/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":975
  *     base = PyArray_BASE(arr)
  *     if base is NULL:
  *         return None             # <<<<<<<<<<<<<<
@@ -4083,7 +4083,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_get_array_base(PyArrayObject *__py
     __pyx_r = Py_None; __Pyx_INCREF(Py_None);
     goto __pyx_L0;
 
-    /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-dndx0z3b/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":974
+    /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-hase58t8/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":974
  * cdef inline object get_array_base(ndarray arr):
  *     base = PyArray_BASE(arr)
  *     if base is NULL:             # <<<<<<<<<<<<<<
@@ -4092,7 +4092,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_get_array_base(PyArrayObject *__py
  */
   }
 
-  /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-dndx0z3b/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":976
+  /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-hase58t8/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":976
  *     if base is NULL:
  *         return None
  *     return <object>base             # <<<<<<<<<<<<<<
@@ -4104,7 +4104,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_get_array_base(PyArrayObject *__py
   __pyx_r = ((PyObject *)__pyx_v_base);
   goto __pyx_L0;
 
-  /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-dndx0z3b/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":972
+  /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-hase58t8/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":972
  *     PyArray_SetBaseObject(arr, base)
  * 
  * cdef inline object get_array_base(ndarray arr):             # <<<<<<<<<<<<<<
@@ -4119,7 +4119,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_get_array_base(PyArrayObject *__py
   return __pyx_r;
 }
 
-/* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-dndx0z3b/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":980
+/* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-hase58t8/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":980
  * # Versions of the import_* functions which are more suitable for
  * # Cython code.
  * cdef inline int import_array() except -1:             # <<<<<<<<<<<<<<
@@ -4143,7 +4143,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_array(void) {
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("import_array", 1);
 
-  /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-dndx0z3b/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":981
+  /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-hase58t8/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":981
  * # Cython code.
  * cdef inline int import_array() except -1:
  *     try:             # <<<<<<<<<<<<<<
@@ -4159,7 +4159,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_array(void) {
     __Pyx_XGOTREF(__pyx_t_3);
     /*try:*/ {
 
-      /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-dndx0z3b/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":982
+      /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-hase58t8/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":982
  * cdef inline int import_array() except -1:
  *     try:
  *         __pyx_import_array()             # <<<<<<<<<<<<<<
@@ -4168,7 +4168,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_array(void) {
  */
       __pyx_t_4 = _import_array(); if (unlikely(__pyx_t_4 == ((int)-1))) __PYX_ERR(1, 982, __pyx_L3_error)
 
-      /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-dndx0z3b/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":981
+      /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-hase58t8/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":981
  * # Cython code.
  * cdef inline int import_array() except -1:
  *     try:             # <<<<<<<<<<<<<<
@@ -4182,7 +4182,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_array(void) {
     goto __pyx_L8_try_end;
     __pyx_L3_error:;
 
-    /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-dndx0z3b/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":983
+    /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-hase58t8/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":983
  *     try:
  *         __pyx_import_array()
  *     except Exception:             # <<<<<<<<<<<<<<
@@ -4197,7 +4197,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_array(void) {
       __Pyx_XGOTREF(__pyx_t_6);
       __Pyx_XGOTREF(__pyx_t_7);
 
-      /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-dndx0z3b/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":984
+      /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-hase58t8/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":984
  *         __pyx_import_array()
  *     except Exception:
  *         raise ImportError("numpy.core.multiarray failed to import")             # <<<<<<<<<<<<<<
@@ -4212,7 +4212,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_array(void) {
     }
     goto __pyx_L5_except_error;
 
-    /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-dndx0z3b/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":981
+    /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-hase58t8/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":981
  * # Cython code.
  * cdef inline int import_array() except -1:
  *     try:             # <<<<<<<<<<<<<<
@@ -4228,7 +4228,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_array(void) {
     __pyx_L8_try_end:;
   }
 
-  /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-dndx0z3b/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":980
+  /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-hase58t8/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":980
  * # Versions of the import_* functions which are more suitable for
  * # Cython code.
  * cdef inline int import_array() except -1:             # <<<<<<<<<<<<<<
@@ -4251,7 +4251,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_array(void) {
   return __pyx_r;
 }
 
-/* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-dndx0z3b/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":986
+/* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-hase58t8/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":986
  *         raise ImportError("numpy.core.multiarray failed to import")
  * 
  * cdef inline int import_umath() except -1:             # <<<<<<<<<<<<<<
@@ -4275,7 +4275,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_umath(void) {
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("import_umath", 1);
 
-  /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-dndx0z3b/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":987
+  /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-hase58t8/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":987
  * 
  * cdef inline int import_umath() except -1:
  *     try:             # <<<<<<<<<<<<<<
@@ -4291,7 +4291,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_umath(void) {
     __Pyx_XGOTREF(__pyx_t_3);
     /*try:*/ {
 
-      /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-dndx0z3b/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":988
+      /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-hase58t8/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":988
  * cdef inline int import_umath() except -1:
  *     try:
  *         _import_umath()             # <<<<<<<<<<<<<<
@@ -4300,7 +4300,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_umath(void) {
  */
       __pyx_t_4 = _import_umath(); if (unlikely(__pyx_t_4 == ((int)-1))) __PYX_ERR(1, 988, __pyx_L3_error)
 
-      /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-dndx0z3b/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":987
+      /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-hase58t8/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":987
  * 
  * cdef inline int import_umath() except -1:
  *     try:             # <<<<<<<<<<<<<<
@@ -4314,7 +4314,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_umath(void) {
     goto __pyx_L8_try_end;
     __pyx_L3_error:;
 
-    /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-dndx0z3b/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":989
+    /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-hase58t8/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":989
  *     try:
  *         _import_umath()
  *     except Exception:             # <<<<<<<<<<<<<<
@@ -4329,7 +4329,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_umath(void) {
       __Pyx_XGOTREF(__pyx_t_6);
       __Pyx_XGOTREF(__pyx_t_7);
 
-      /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-dndx0z3b/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":990
+      /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-hase58t8/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":990
  *         _import_umath()
  *     except Exception:
  *         raise ImportError("numpy.core.umath failed to import")             # <<<<<<<<<<<<<<
@@ -4344,7 +4344,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_umath(void) {
     }
     goto __pyx_L5_except_error;
 
-    /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-dndx0z3b/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":987
+    /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-hase58t8/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":987
  * 
  * cdef inline int import_umath() except -1:
  *     try:             # <<<<<<<<<<<<<<
@@ -4360,7 +4360,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_umath(void) {
     __pyx_L8_try_end:;
   }
 
-  /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-dndx0z3b/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":986
+  /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-hase58t8/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":986
  *         raise ImportError("numpy.core.multiarray failed to import")
  * 
  * cdef inline int import_umath() except -1:             # <<<<<<<<<<<<<<
@@ -4383,7 +4383,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_umath(void) {
   return __pyx_r;
 }
 
-/* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-dndx0z3b/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":992
+/* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-hase58t8/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":992
  *         raise ImportError("numpy.core.umath failed to import")
  * 
  * cdef inline int import_ufunc() except -1:             # <<<<<<<<<<<<<<
@@ -4407,7 +4407,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_ufunc(void) {
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("import_ufunc", 1);
 
-  /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-dndx0z3b/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":993
+  /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-hase58t8/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":993
  * 
  * cdef inline int import_ufunc() except -1:
  *     try:             # <<<<<<<<<<<<<<
@@ -4423,7 +4423,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_ufunc(void) {
     __Pyx_XGOTREF(__pyx_t_3);
     /*try:*/ {
 
-      /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-dndx0z3b/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":994
+      /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-hase58t8/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":994
  * cdef inline int import_ufunc() except -1:
  *     try:
  *         _import_umath()             # <<<<<<<<<<<<<<
@@ -4432,7 +4432,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_ufunc(void) {
  */
       __pyx_t_4 = _import_umath(); if (unlikely(__pyx_t_4 == ((int)-1))) __PYX_ERR(1, 994, __pyx_L3_error)
 
-      /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-dndx0z3b/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":993
+      /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-hase58t8/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":993
  * 
  * cdef inline int import_ufunc() except -1:
  *     try:             # <<<<<<<<<<<<<<
@@ -4446,7 +4446,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_ufunc(void) {
     goto __pyx_L8_try_end;
     __pyx_L3_error:;
 
-    /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-dndx0z3b/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":995
+    /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-hase58t8/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":995
  *     try:
  *         _import_umath()
  *     except Exception:             # <<<<<<<<<<<<<<
@@ -4461,7 +4461,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_ufunc(void) {
       __Pyx_XGOTREF(__pyx_t_6);
       __Pyx_XGOTREF(__pyx_t_7);
 
-      /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-dndx0z3b/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":996
+      /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-hase58t8/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":996
  *         _import_umath()
  *     except Exception:
  *         raise ImportError("numpy.core.umath failed to import")             # <<<<<<<<<<<<<<
@@ -4476,7 +4476,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_ufunc(void) {
     }
     goto __pyx_L5_except_error;
 
-    /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-dndx0z3b/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":993
+    /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-hase58t8/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":993
  * 
  * cdef inline int import_ufunc() except -1:
  *     try:             # <<<<<<<<<<<<<<
@@ -4492,7 +4492,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_ufunc(void) {
     __pyx_L8_try_end:;
   }
 
-  /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-dndx0z3b/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":992
+  /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-hase58t8/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":992
  *         raise ImportError("numpy.core.umath failed to import")
  * 
  * cdef inline int import_ufunc() except -1:             # <<<<<<<<<<<<<<
@@ -4515,7 +4515,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_ufunc(void) {
   return __pyx_r;
 }
 
-/* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-dndx0z3b/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":999
+/* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-hase58t8/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":999
  * 
  * 
  * cdef inline bint is_timedelta64_object(object obj):             # <<<<<<<<<<<<<<
@@ -4526,7 +4526,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_ufunc(void) {
 static CYTHON_INLINE int __pyx_f_5numpy_is_timedelta64_object(PyObject *__pyx_v_obj) {
   int __pyx_r;
 
-  /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-dndx0z3b/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":1011
+  /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-hase58t8/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":1011
  *     bool
  *     """
  *     return PyObject_TypeCheck(obj, &PyTimedeltaArrType_Type)             # <<<<<<<<<<<<<<
@@ -4536,7 +4536,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_is_timedelta64_object(PyObject *__pyx_v_
   __pyx_r = PyObject_TypeCheck(__pyx_v_obj, (&PyTimedeltaArrType_Type));
   goto __pyx_L0;
 
-  /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-dndx0z3b/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":999
+  /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-hase58t8/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":999
  * 
  * 
  * cdef inline bint is_timedelta64_object(object obj):             # <<<<<<<<<<<<<<
@@ -4549,7 +4549,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_is_timedelta64_object(PyObject *__pyx_v_
   return __pyx_r;
 }
 
-/* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-dndx0z3b/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":1014
+/* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-hase58t8/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":1014
  * 
  * 
  * cdef inline bint is_datetime64_object(object obj):             # <<<<<<<<<<<<<<
@@ -4560,7 +4560,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_is_timedelta64_object(PyObject *__pyx_v_
 static CYTHON_INLINE int __pyx_f_5numpy_is_datetime64_object(PyObject *__pyx_v_obj) {
   int __pyx_r;
 
-  /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-dndx0z3b/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":1026
+  /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-hase58t8/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":1026
  *     bool
  *     """
  *     return PyObject_TypeCheck(obj, &PyDatetimeArrType_Type)             # <<<<<<<<<<<<<<
@@ -4570,7 +4570,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_is_datetime64_object(PyObject *__pyx_v_o
   __pyx_r = PyObject_TypeCheck(__pyx_v_obj, (&PyDatetimeArrType_Type));
   goto __pyx_L0;
 
-  /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-dndx0z3b/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":1014
+  /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-hase58t8/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":1014
  * 
  * 
  * cdef inline bint is_datetime64_object(object obj):             # <<<<<<<<<<<<<<
@@ -4583,7 +4583,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_is_datetime64_object(PyObject *__pyx_v_o
   return __pyx_r;
 }
 
-/* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-dndx0z3b/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":1029
+/* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-hase58t8/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":1029
  * 
  * 
  * cdef inline npy_datetime get_datetime64_value(object obj) nogil:             # <<<<<<<<<<<<<<
@@ -4594,7 +4594,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_is_datetime64_object(PyObject *__pyx_v_o
 static CYTHON_INLINE npy_datetime __pyx_f_5numpy_get_datetime64_value(PyObject *__pyx_v_obj) {
   npy_datetime __pyx_r;
 
-  /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-dndx0z3b/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":1036
+  /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-hase58t8/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":1036
  *     also needed.  That can be found using `get_datetime64_unit`.
  *     """
  *     return (<PyDatetimeScalarObject*>obj).obval             # <<<<<<<<<<<<<<
@@ -4604,7 +4604,7 @@ static CYTHON_INLINE npy_datetime __pyx_f_5numpy_get_datetime64_value(PyObject *
   __pyx_r = ((PyDatetimeScalarObject *)__pyx_v_obj)->obval;
   goto __pyx_L0;
 
-  /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-dndx0z3b/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":1029
+  /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-hase58t8/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":1029
  * 
  * 
  * cdef inline npy_datetime get_datetime64_value(object obj) nogil:             # <<<<<<<<<<<<<<
@@ -4617,7 +4617,7 @@ static CYTHON_INLINE npy_datetime __pyx_f_5numpy_get_datetime64_value(PyObject *
   return __pyx_r;
 }
 
-/* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-dndx0z3b/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":1039
+/* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-hase58t8/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":1039
  * 
  * 
  * cdef inline npy_timedelta get_timedelta64_value(object obj) nogil:             # <<<<<<<<<<<<<<
@@ -4628,7 +4628,7 @@ static CYTHON_INLINE npy_datetime __pyx_f_5numpy_get_datetime64_value(PyObject *
 static CYTHON_INLINE npy_timedelta __pyx_f_5numpy_get_timedelta64_value(PyObject *__pyx_v_obj) {
   npy_timedelta __pyx_r;
 
-  /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-dndx0z3b/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":1043
+  /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-hase58t8/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":1043
  *     returns the int64 value underlying scalar numpy timedelta64 object
  *     """
  *     return (<PyTimedeltaScalarObject*>obj).obval             # <<<<<<<<<<<<<<
@@ -4638,7 +4638,7 @@ static CYTHON_INLINE npy_timedelta __pyx_f_5numpy_get_timedelta64_value(PyObject
   __pyx_r = ((PyTimedeltaScalarObject *)__pyx_v_obj)->obval;
   goto __pyx_L0;
 
-  /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-dndx0z3b/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":1039
+  /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-hase58t8/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":1039
  * 
  * 
  * cdef inline npy_timedelta get_timedelta64_value(object obj) nogil:             # <<<<<<<<<<<<<<
@@ -4651,7 +4651,7 @@ static CYTHON_INLINE npy_timedelta __pyx_f_5numpy_get_timedelta64_value(PyObject
   return __pyx_r;
 }
 
-/* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-dndx0z3b/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":1046
+/* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-hase58t8/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":1046
  * 
  * 
  * cdef inline NPY_DATETIMEUNIT get_datetime64_unit(object obj) nogil:             # <<<<<<<<<<<<<<
@@ -4662,7 +4662,7 @@ static CYTHON_INLINE npy_timedelta __pyx_f_5numpy_get_timedelta64_value(PyObject
 static CYTHON_INLINE NPY_DATETIMEUNIT __pyx_f_5numpy_get_datetime64_unit(PyObject *__pyx_v_obj) {
   NPY_DATETIMEUNIT __pyx_r;
 
-  /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-dndx0z3b/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":1050
+  /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-hase58t8/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":1050
  *     returns the unit part of the dtype for a numpy datetime64 object.
  *     """
  *     return <NPY_DATETIMEUNIT>(<PyDatetimeScalarObject*>obj).obmeta.base             # <<<<<<<<<<<<<<
@@ -4670,7 +4670,7 @@ static CYTHON_INLINE NPY_DATETIMEUNIT __pyx_f_5numpy_get_datetime64_unit(PyObjec
   __pyx_r = ((NPY_DATETIMEUNIT)((PyDatetimeScalarObject *)__pyx_v_obj)->obmeta.base);
   goto __pyx_L0;
 
-  /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-dndx0z3b/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":1046
+  /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-hase58t8/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":1046
  * 
  * 
  * cdef inline NPY_DATETIMEUNIT get_datetime64_unit(object obj) nogil:             # <<<<<<<<<<<<<<
@@ -5379,7 +5379,7 @@ static PyObject *__pyx_pf_7spinOps_8_spinOps_4unit_tlm(CYTHON_UNUSED PyObject *_
 /* "spinOps/spinOps.pyx":123
  * 
  * 
- * cpdef int number_of_states(list i_times_2):             # <<<<<<<<<<<<<<
+ * cpdef int number_of_states(list two_I):             # <<<<<<<<<<<<<<
  *     """
  *     Computes the total number of quantum states for a given spin system.
  */
@@ -5391,7 +5391,7 @@ PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static int __pyx_f_7spinOps_8_spinOps_number_of_states(PyObject *__pyx_v_i_times_2, CYTHON_UNUSED int __pyx_skip_dispatch) {
+static int __pyx_f_7spinOps_8_spinOps_number_of_states(PyObject *__pyx_v_two_I, CYTHON_UNUSED int __pyx_skip_dispatch) {
   int __pyx_v_total_spin_count;
   PyArrayObject *__pyx_v_spins = 0;
   __Pyx_LocalBuf_ND __pyx_pybuffernd_spins;
@@ -5419,22 +5419,22 @@ static int __pyx_f_7spinOps_8_spinOps_number_of_states(PyObject *__pyx_v_i_times
   __pyx_pybuffernd_spins.rcbuffer = &__pyx_pybuffer_spins;
 
   /* "spinOps/spinOps.pyx":143
- *         If the input list `i_times_2` is empty.
+ *         If the input list `two_I` is empty.
  *     """
- *     if not i_times_2:             # <<<<<<<<<<<<<<
- *         raise ValueError("The input list 'i_times_2' cannot be empty.")
+ *     if not two_I:             # <<<<<<<<<<<<<<
+ *         raise ValueError("The input list 'two_I' cannot be empty.")
  * 
  */
-  __pyx_t_1 = (__pyx_v_i_times_2 != Py_None)&&(PyList_GET_SIZE(__pyx_v_i_times_2) != 0);
+  __pyx_t_1 = (__pyx_v_two_I != Py_None)&&(PyList_GET_SIZE(__pyx_v_two_I) != 0);
   __pyx_t_2 = (!__pyx_t_1);
   if (unlikely(__pyx_t_2)) {
 
     /* "spinOps/spinOps.pyx":144
  *     """
- *     if not i_times_2:
- *         raise ValueError("The input list 'i_times_2' cannot be empty.")             # <<<<<<<<<<<<<<
+ *     if not two_I:
+ *         raise ValueError("The input list 'two_I' cannot be empty.")             # <<<<<<<<<<<<<<
  * 
- *     cdef int total_spin_count = len(i_times_2)
+ *     cdef int total_spin_count = len(two_I)
  */
     __pyx_t_3 = __Pyx_PyObject_Call(__pyx_builtin_ValueError, __pyx_tuple__3, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 144, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
@@ -5443,32 +5443,32 @@ static int __pyx_f_7spinOps_8_spinOps_number_of_states(PyObject *__pyx_v_i_times
     __PYX_ERR(0, 144, __pyx_L1_error)
 
     /* "spinOps/spinOps.pyx":143
- *         If the input list `i_times_2` is empty.
+ *         If the input list `two_I` is empty.
  *     """
- *     if not i_times_2:             # <<<<<<<<<<<<<<
- *         raise ValueError("The input list 'i_times_2' cannot be empty.")
+ *     if not two_I:             # <<<<<<<<<<<<<<
+ *         raise ValueError("The input list 'two_I' cannot be empty.")
  * 
  */
   }
 
   /* "spinOps/spinOps.pyx":146
- *         raise ValueError("The input list 'i_times_2' cannot be empty.")
+ *         raise ValueError("The input list 'two_I' cannot be empty.")
  * 
- *     cdef int total_spin_count = len(i_times_2)             # <<<<<<<<<<<<<<
- *     cdef ndarray[int] spins = np.array(i_times_2, dtype=np.int32)
+ *     cdef int total_spin_count = len(two_I)             # <<<<<<<<<<<<<<
+ *     cdef ndarray[int] spins = np.array(two_I, dtype=np.int32)
  * 
  */
-  if (unlikely(__pyx_v_i_times_2 == Py_None)) {
+  if (unlikely(__pyx_v_two_I == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "object of type 'NoneType' has no len()");
     __PYX_ERR(0, 146, __pyx_L1_error)
   }
-  __pyx_t_4 = __Pyx_PyList_GET_SIZE(__pyx_v_i_times_2); if (unlikely(__pyx_t_4 == ((Py_ssize_t)-1))) __PYX_ERR(0, 146, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyList_GET_SIZE(__pyx_v_two_I); if (unlikely(__pyx_t_4 == ((Py_ssize_t)-1))) __PYX_ERR(0, 146, __pyx_L1_error)
   __pyx_v_total_spin_count = __pyx_t_4;
 
   /* "spinOps/spinOps.pyx":147
  * 
- *     cdef int total_spin_count = len(i_times_2)
- *     cdef ndarray[int] spins = np.array(i_times_2, dtype=np.int32)             # <<<<<<<<<<<<<<
+ *     cdef int total_spin_count = len(two_I)
+ *     cdef ndarray[int] spins = np.array(two_I, dtype=np.int32)             # <<<<<<<<<<<<<<
  * 
  *     return _number_of_states(total_spin_count, &spins[0])
  */
@@ -5479,9 +5479,9 @@ static int __pyx_f_7spinOps_8_spinOps_number_of_states(PyObject *__pyx_v_i_times
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 147, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __Pyx_INCREF(__pyx_v_i_times_2);
-  __Pyx_GIVEREF(__pyx_v_i_times_2);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_v_i_times_2)) __PYX_ERR(0, 147, __pyx_L1_error);
+  __Pyx_INCREF(__pyx_v_two_I);
+  __Pyx_GIVEREF(__pyx_v_two_I);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_v_two_I)) __PYX_ERR(0, 147, __pyx_L1_error);
   __pyx_t_6 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 147, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
   __Pyx_GetModuleGlobalName(__pyx_t_7, __pyx_n_s_np); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 147, __pyx_L1_error)
@@ -5511,7 +5511,7 @@ static int __pyx_f_7spinOps_8_spinOps_number_of_states(PyObject *__pyx_v_i_times
   __pyx_t_8 = 0;
 
   /* "spinOps/spinOps.pyx":149
- *     cdef ndarray[int] spins = np.array(i_times_2, dtype=np.int32)
+ *     cdef ndarray[int] spins = np.array(two_I, dtype=np.int32)
  * 
  *     return _number_of_states(total_spin_count, &spins[0])             # <<<<<<<<<<<<<<
  * 
@@ -5533,7 +5533,7 @@ static int __pyx_f_7spinOps_8_spinOps_number_of_states(PyObject *__pyx_v_i_times
   /* "spinOps/spinOps.pyx":123
  * 
  * 
- * cpdef int number_of_states(list i_times_2):             # <<<<<<<<<<<<<<
+ * cpdef int number_of_states(list two_I):             # <<<<<<<<<<<<<<
  *     """
  *     Computes the total number of quantum states for a given spin system.
  */
@@ -5570,7 +5570,7 @@ PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-PyDoc_STRVAR(__pyx_doc_7spinOps_8_spinOps_6number_of_states, "\n    Computes the total number of quantum states for a given spin system.\n\n    Parameters\n    ----------\n    i_times_2 : list of int\n        List of integers representing :math:`2I` values for each spin in the system,\n        where :math:`I` is the spin quantum number.\n\n    Returns\n    -------\n    int\n        Total number of quantum states in the spin system.\n\n    Raises\n    ------\n    ValueError\n        If the input list `i_times_2` is empty.\n    ");
+PyDoc_STRVAR(__pyx_doc_7spinOps_8_spinOps_6number_of_states, "\n    Computes the total number of quantum states for a given spin system.\n\n    Parameters\n    ----------\n    two_I : list of int\n        List of integers representing :math:`2I` values for each spin in the system,\n        where :math:`I` is the spin quantum number.\n\n    Returns\n    -------\n    int\n        Total number of quantum states in the spin system.\n\n    Raises\n    ------\n    ValueError\n        If the input list `two_I` is empty.\n    ");
 static PyMethodDef __pyx_mdef_7spinOps_8_spinOps_7number_of_states = {"number_of_states", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_7spinOps_8_spinOps_7number_of_states, __Pyx_METH_FASTCALL|METH_KEYWORDS, __pyx_doc_7spinOps_8_spinOps_6number_of_states};
 static PyObject *__pyx_pw_7spinOps_8_spinOps_7number_of_states(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
@@ -5579,7 +5579,7 @@ PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ) {
-  PyObject *__pyx_v_i_times_2 = 0;
+  PyObject *__pyx_v_two_I = 0;
   #if !CYTHON_METH_FASTCALL
   CYTHON_UNUSED Py_ssize_t __pyx_nargs;
   #endif
@@ -5600,7 +5600,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   #endif
   __pyx_kwvalues = __Pyx_KwValues_FASTCALL(__pyx_args, __pyx_nargs);
   {
-    PyObject **__pyx_pyargnames[] = {&__pyx_n_s_i_times_2,0};
+    PyObject **__pyx_pyargnames[] = {&__pyx_n_s_two_I,0};
     if (__pyx_kwds) {
       Py_ssize_t kw_args;
       switch (__pyx_nargs) {
@@ -5612,7 +5612,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
       kw_args = __Pyx_NumKwargs_FASTCALL(__pyx_kwds);
       switch (__pyx_nargs) {
         case  0:
-        if (likely((values[0] = __Pyx_GetKwValue_FASTCALL(__pyx_kwds, __pyx_kwvalues, __pyx_n_s_i_times_2)) != 0)) {
+        if (likely((values[0] = __Pyx_GetKwValue_FASTCALL(__pyx_kwds, __pyx_kwvalues, __pyx_n_s_two_I)) != 0)) {
           (void)__Pyx_Arg_NewRef_FASTCALL(values[0]);
           kw_args--;
         }
@@ -5628,7 +5628,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
     } else {
       values[0] = __Pyx_Arg_FASTCALL(__pyx_args, 0);
     }
-    __pyx_v_i_times_2 = ((PyObject*)values[0]);
+    __pyx_v_two_I = ((PyObject*)values[0]);
   }
   goto __pyx_L6_skip;
   __pyx_L5_argtuple_error:;
@@ -5646,8 +5646,8 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_i_times_2), (&PyList_Type), 1, "i_times_2", 1))) __PYX_ERR(0, 123, __pyx_L1_error)
-  __pyx_r = __pyx_pf_7spinOps_8_spinOps_6number_of_states(__pyx_self, __pyx_v_i_times_2);
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_two_I), (&PyList_Type), 1, "two_I", 1))) __PYX_ERR(0, 123, __pyx_L1_error)
+  __pyx_r = __pyx_pf_7spinOps_8_spinOps_6number_of_states(__pyx_self, __pyx_v_two_I);
 
   /* function exit code */
   goto __pyx_L0;
@@ -5664,7 +5664,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_7spinOps_8_spinOps_6number_of_states(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_i_times_2) {
+static PyObject *__pyx_pf_7spinOps_8_spinOps_6number_of_states(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_two_I) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   int __pyx_t_1;
@@ -5674,7 +5674,7 @@ static PyObject *__pyx_pf_7spinOps_8_spinOps_6number_of_states(CYTHON_UNUSED PyO
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("number_of_states", 1);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_7spinOps_8_spinOps_number_of_states(__pyx_v_i_times_2, 0); if (unlikely(__pyx_t_1 == ((int)-1) && PyErr_Occurred())) __PYX_ERR(0, 123, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_7spinOps_8_spinOps_number_of_states(__pyx_v_two_I, 0); if (unlikely(__pyx_t_1 == ((int)-1) && PyErr_Occurred())) __PYX_ERR(0, 123, __pyx_L1_error)
   __pyx_t_2 = __Pyx_PyInt_From_int(__pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 123, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_r = __pyx_t_2;
@@ -5695,7 +5695,7 @@ static PyObject *__pyx_pf_7spinOps_8_spinOps_6number_of_states(CYTHON_UNUSED PyO
 /* "spinOps/spinOps.pyx":152
  * 
  * 
- * cpdef ndarray[double complex, ndim=2] create_single_spin_Ix(int spin_index, list i_times_2):             # <<<<<<<<<<<<<<
+ * cpdef ndarray[double complex, ndim=2] create_single_spin_Ix(int spin_index, list two_I):             # <<<<<<<<<<<<<<
  *     """
  *     Generates the single-spin :math:`\hat{I}_x` operator matrix for the specified spin within a spin system.
  */
@@ -5707,7 +5707,7 @@ PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_single_spin_Ix(int __pyx_v_spin_index, PyObject *__pyx_v_i_times_2, CYTHON_UNUSED int __pyx_skip_dispatch) {
+static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_single_spin_Ix(int __pyx_v_spin_index, PyObject *__pyx_v_two_I, CYTHON_UNUSED int __pyx_skip_dispatch) {
   int __pyx_v_nstates;
   int __pyx_v_total_spin_count;
   PyArrayObject *__pyx_v_spins = 0;
@@ -5748,19 +5748,19 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_single_spin_Ix(int __pyx
   /* "spinOps/spinOps.pyx":176
  *         If `spin_index` is out of the valid range.
  *     """
- *     if not i_times_2:             # <<<<<<<<<<<<<<
- *         raise ValueError("The input list 'i_times_2' cannot be empty.")
- *     if spin_index < 0 or spin_index >= len(i_times_2):
+ *     if not two_I:             # <<<<<<<<<<<<<<
+ *         raise ValueError("The input list 'two_I' cannot be empty.")
+ *     if spin_index < 0 or spin_index >= len(two_I):
  */
-  __pyx_t_1 = (__pyx_v_i_times_2 != Py_None)&&(PyList_GET_SIZE(__pyx_v_i_times_2) != 0);
+  __pyx_t_1 = (__pyx_v_two_I != Py_None)&&(PyList_GET_SIZE(__pyx_v_two_I) != 0);
   __pyx_t_2 = (!__pyx_t_1);
   if (unlikely(__pyx_t_2)) {
 
     /* "spinOps/spinOps.pyx":177
  *     """
- *     if not i_times_2:
- *         raise ValueError("The input list 'i_times_2' cannot be empty.")             # <<<<<<<<<<<<<<
- *     if spin_index < 0 or spin_index >= len(i_times_2):
+ *     if not two_I:
+ *         raise ValueError("The input list 'two_I' cannot be empty.")             # <<<<<<<<<<<<<<
+ *     if spin_index < 0 or spin_index >= len(two_I):
  *         raise IndexError("The spin_index is out of bounds.")
  */
     __pyx_t_3 = __Pyx_PyObject_Call(__pyx_builtin_ValueError, __pyx_tuple__3, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 177, __pyx_L1_error)
@@ -5772,16 +5772,16 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_single_spin_Ix(int __pyx
     /* "spinOps/spinOps.pyx":176
  *         If `spin_index` is out of the valid range.
  *     """
- *     if not i_times_2:             # <<<<<<<<<<<<<<
- *         raise ValueError("The input list 'i_times_2' cannot be empty.")
- *     if spin_index < 0 or spin_index >= len(i_times_2):
+ *     if not two_I:             # <<<<<<<<<<<<<<
+ *         raise ValueError("The input list 'two_I' cannot be empty.")
+ *     if spin_index < 0 or spin_index >= len(two_I):
  */
   }
 
   /* "spinOps/spinOps.pyx":178
- *     if not i_times_2:
- *         raise ValueError("The input list 'i_times_2' cannot be empty.")
- *     if spin_index < 0 or spin_index >= len(i_times_2):             # <<<<<<<<<<<<<<
+ *     if not two_I:
+ *         raise ValueError("The input list 'two_I' cannot be empty.")
+ *     if spin_index < 0 or spin_index >= len(two_I):             # <<<<<<<<<<<<<<
  *         raise IndexError("The spin_index is out of bounds.")
  * 
  */
@@ -5791,22 +5791,22 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_single_spin_Ix(int __pyx
     __pyx_t_2 = __pyx_t_1;
     goto __pyx_L5_bool_binop_done;
   }
-  if (unlikely(__pyx_v_i_times_2 == Py_None)) {
+  if (unlikely(__pyx_v_two_I == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "object of type 'NoneType' has no len()");
     __PYX_ERR(0, 178, __pyx_L1_error)
   }
-  __pyx_t_4 = __Pyx_PyList_GET_SIZE(__pyx_v_i_times_2); if (unlikely(__pyx_t_4 == ((Py_ssize_t)-1))) __PYX_ERR(0, 178, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyList_GET_SIZE(__pyx_v_two_I); if (unlikely(__pyx_t_4 == ((Py_ssize_t)-1))) __PYX_ERR(0, 178, __pyx_L1_error)
   __pyx_t_1 = (__pyx_v_spin_index >= __pyx_t_4);
   __pyx_t_2 = __pyx_t_1;
   __pyx_L5_bool_binop_done:;
   if (unlikely(__pyx_t_2)) {
 
     /* "spinOps/spinOps.pyx":179
- *         raise ValueError("The input list 'i_times_2' cannot be empty.")
- *     if spin_index < 0 or spin_index >= len(i_times_2):
+ *         raise ValueError("The input list 'two_I' cannot be empty.")
+ *     if spin_index < 0 or spin_index >= len(two_I):
  *         raise IndexError("The spin_index is out of bounds.")             # <<<<<<<<<<<<<<
  * 
- *     cdef int nstates = number_of_states(i_times_2)
+ *     cdef int nstates = number_of_states(two_I)
  */
     __pyx_t_3 = __Pyx_PyObject_Call(__pyx_builtin_IndexError, __pyx_tuple__4, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 179, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
@@ -5815,9 +5815,9 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_single_spin_Ix(int __pyx
     __PYX_ERR(0, 179, __pyx_L1_error)
 
     /* "spinOps/spinOps.pyx":178
- *     if not i_times_2:
- *         raise ValueError("The input list 'i_times_2' cannot be empty.")
- *     if spin_index < 0 or spin_index >= len(i_times_2):             # <<<<<<<<<<<<<<
+ *     if not two_I:
+ *         raise ValueError("The input list 'two_I' cannot be empty.")
+ *     if spin_index < 0 or spin_index >= len(two_I):             # <<<<<<<<<<<<<<
  *         raise IndexError("The spin_index is out of bounds.")
  * 
  */
@@ -5826,31 +5826,31 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_single_spin_Ix(int __pyx
   /* "spinOps/spinOps.pyx":181
  *         raise IndexError("The spin_index is out of bounds.")
  * 
- *     cdef int nstates = number_of_states(i_times_2)             # <<<<<<<<<<<<<<
- *     cdef int total_spin_count = len(i_times_2)
- *     cdef ndarray[int] spins = np.array(i_times_2, dtype=np.int32)
+ *     cdef int nstates = number_of_states(two_I)             # <<<<<<<<<<<<<<
+ *     cdef int total_spin_count = len(two_I)
+ *     cdef ndarray[int] spins = np.array(two_I, dtype=np.int32)
  */
-  __pyx_t_5 = __pyx_f_7spinOps_8_spinOps_number_of_states(__pyx_v_i_times_2, 0); if (unlikely(__pyx_t_5 == ((int)-1) && PyErr_Occurred())) __PYX_ERR(0, 181, __pyx_L1_error)
+  __pyx_t_5 = __pyx_f_7spinOps_8_spinOps_number_of_states(__pyx_v_two_I, 0); if (unlikely(__pyx_t_5 == ((int)-1) && PyErr_Occurred())) __PYX_ERR(0, 181, __pyx_L1_error)
   __pyx_v_nstates = __pyx_t_5;
 
   /* "spinOps/spinOps.pyx":182
  * 
- *     cdef int nstates = number_of_states(i_times_2)
- *     cdef int total_spin_count = len(i_times_2)             # <<<<<<<<<<<<<<
- *     cdef ndarray[int] spins = np.array(i_times_2, dtype=np.int32)
+ *     cdef int nstates = number_of_states(two_I)
+ *     cdef int total_spin_count = len(two_I)             # <<<<<<<<<<<<<<
+ *     cdef ndarray[int] spins = np.array(two_I, dtype=np.int32)
  *     cdef ndarray[double complex, ndim=2] myOp = np.zeros((nstates, nstates), dtype=np.complex128)
  */
-  if (unlikely(__pyx_v_i_times_2 == Py_None)) {
+  if (unlikely(__pyx_v_two_I == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "object of type 'NoneType' has no len()");
     __PYX_ERR(0, 182, __pyx_L1_error)
   }
-  __pyx_t_4 = __Pyx_PyList_GET_SIZE(__pyx_v_i_times_2); if (unlikely(__pyx_t_4 == ((Py_ssize_t)-1))) __PYX_ERR(0, 182, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyList_GET_SIZE(__pyx_v_two_I); if (unlikely(__pyx_t_4 == ((Py_ssize_t)-1))) __PYX_ERR(0, 182, __pyx_L1_error)
   __pyx_v_total_spin_count = __pyx_t_4;
 
   /* "spinOps/spinOps.pyx":183
- *     cdef int nstates = number_of_states(i_times_2)
- *     cdef int total_spin_count = len(i_times_2)
- *     cdef ndarray[int] spins = np.array(i_times_2, dtype=np.int32)             # <<<<<<<<<<<<<<
+ *     cdef int nstates = number_of_states(two_I)
+ *     cdef int total_spin_count = len(two_I)
+ *     cdef ndarray[int] spins = np.array(two_I, dtype=np.int32)             # <<<<<<<<<<<<<<
  *     cdef ndarray[double complex, ndim=2] myOp = np.zeros((nstates, nstates), dtype=np.complex128)
  * 
  */
@@ -5861,9 +5861,9 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_single_spin_Ix(int __pyx
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 183, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __Pyx_INCREF(__pyx_v_i_times_2);
-  __Pyx_GIVEREF(__pyx_v_i_times_2);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_v_i_times_2)) __PYX_ERR(0, 183, __pyx_L1_error);
+  __Pyx_INCREF(__pyx_v_two_I);
+  __Pyx_GIVEREF(__pyx_v_two_I);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_v_two_I)) __PYX_ERR(0, 183, __pyx_L1_error);
   __pyx_t_7 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 183, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
   __Pyx_GetModuleGlobalName(__pyx_t_8, __pyx_n_s_np); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 183, __pyx_L1_error)
@@ -5893,8 +5893,8 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_single_spin_Ix(int __pyx
   __pyx_t_9 = 0;
 
   /* "spinOps/spinOps.pyx":184
- *     cdef int total_spin_count = len(i_times_2)
- *     cdef ndarray[int] spins = np.array(i_times_2, dtype=np.int32)
+ *     cdef int total_spin_count = len(two_I)
+ *     cdef ndarray[int] spins = np.array(two_I, dtype=np.int32)
  *     cdef ndarray[double complex, ndim=2] myOp = np.zeros((nstates, nstates), dtype=np.complex128)             # <<<<<<<<<<<<<<
  * 
  *     _get_single_spin_Ix(&myOp[0, 0], spin_index, &spins[0], total_spin_count)
@@ -5988,7 +5988,7 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_single_spin_Ix(int __pyx
  * 
  *     return myOp             # <<<<<<<<<<<<<<
  * 
- * cpdef ndarray[double complex, ndim=2] create_single_spin_Iy(int spin_index, list i_times_2):
+ * cpdef ndarray[double complex, ndim=2] create_single_spin_Iy(int spin_index, list two_I):
  */
   __Pyx_XDECREF((PyObject *)__pyx_r);
   __Pyx_INCREF((PyObject *)__pyx_v_myOp);
@@ -5998,7 +5998,7 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_single_spin_Ix(int __pyx
   /* "spinOps/spinOps.pyx":152
  * 
  * 
- * cpdef ndarray[double complex, ndim=2] create_single_spin_Ix(int spin_index, list i_times_2):             # <<<<<<<<<<<<<<
+ * cpdef ndarray[double complex, ndim=2] create_single_spin_Ix(int spin_index, list two_I):             # <<<<<<<<<<<<<<
  *     """
  *     Generates the single-spin :math:`\hat{I}_x` operator matrix for the specified spin within a spin system.
  */
@@ -6039,7 +6039,7 @@ PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-PyDoc_STRVAR(__pyx_doc_7spinOps_8_spinOps_8create_single_spin_Ix, "\n    Generates the single-spin :math:`\\hat{I}_x` operator matrix for the specified spin within a spin system.\n\n    Parameters\n    ----------\n    spin_index : int\n        Index of the spin for which the :math:`\\hat{I}_x` operator is constructed.\n    i_times_2 : list of int\n        List of integers representing :math:`2I` values for each spin in the system,\n        where :math:`I` is the spin quantum number.\n\n    Returns\n    -------\n    ndarray[double complex, ndim=2]\n        A 2D NumPy array representing the :math:`\\hat{I}_x` operator matrix.\n\n    Raises\n    ------\n    ValueError\n        If the input list `i_times_2` is empty.\n    IndexError\n        If `spin_index` is out of the valid range.\n    ");
+PyDoc_STRVAR(__pyx_doc_7spinOps_8_spinOps_8create_single_spin_Ix, "\n    Generates the single-spin :math:`\\hat{I}_x` operator matrix for the specified spin within a spin system.\n\n    Parameters\n    ----------\n    spin_index : int\n        Index of the spin for which the :math:`\\hat{I}_x` operator is constructed.\n    two_I : list of int\n        List of integers representing :math:`2I` values for each spin in the system,\n        where :math:`I` is the spin quantum number.\n\n    Returns\n    -------\n    ndarray[double complex, ndim=2]\n        A 2D NumPy array representing the :math:`\\hat{I}_x` operator matrix.\n\n    Raises\n    ------\n    ValueError\n        If the input list `two_I` is empty.\n    IndexError\n        If `spin_index` is out of the valid range.\n    ");
 static PyMethodDef __pyx_mdef_7spinOps_8_spinOps_9create_single_spin_Ix = {"create_single_spin_Ix", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_7spinOps_8_spinOps_9create_single_spin_Ix, __Pyx_METH_FASTCALL|METH_KEYWORDS, __pyx_doc_7spinOps_8_spinOps_8create_single_spin_Ix};
 static PyObject *__pyx_pw_7spinOps_8_spinOps_9create_single_spin_Ix(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
@@ -6049,7 +6049,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ) {
   int __pyx_v_spin_index;
-  PyObject *__pyx_v_i_times_2 = 0;
+  PyObject *__pyx_v_two_I = 0;
   #if !CYTHON_METH_FASTCALL
   CYTHON_UNUSED Py_ssize_t __pyx_nargs;
   #endif
@@ -6070,7 +6070,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   #endif
   __pyx_kwvalues = __Pyx_KwValues_FASTCALL(__pyx_args, __pyx_nargs);
   {
-    PyObject **__pyx_pyargnames[] = {&__pyx_n_s_spin_index,&__pyx_n_s_i_times_2,0};
+    PyObject **__pyx_pyargnames[] = {&__pyx_n_s_spin_index,&__pyx_n_s_two_I,0};
     if (__pyx_kwds) {
       Py_ssize_t kw_args;
       switch (__pyx_nargs) {
@@ -6092,7 +6092,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
         else goto __pyx_L5_argtuple_error;
         CYTHON_FALLTHROUGH;
         case  1:
-        if (likely((values[1] = __Pyx_GetKwValue_FASTCALL(__pyx_kwds, __pyx_kwvalues, __pyx_n_s_i_times_2)) != 0)) {
+        if (likely((values[1] = __Pyx_GetKwValue_FASTCALL(__pyx_kwds, __pyx_kwvalues, __pyx_n_s_two_I)) != 0)) {
           (void)__Pyx_Arg_NewRef_FASTCALL(values[1]);
           kw_args--;
         }
@@ -6112,7 +6112,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
       values[1] = __Pyx_Arg_FASTCALL(__pyx_args, 1);
     }
     __pyx_v_spin_index = __Pyx_PyInt_As_int(values[0]); if (unlikely((__pyx_v_spin_index == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 152, __pyx_L3_error)
-    __pyx_v_i_times_2 = ((PyObject*)values[1]);
+    __pyx_v_two_I = ((PyObject*)values[1]);
   }
   goto __pyx_L6_skip;
   __pyx_L5_argtuple_error:;
@@ -6130,8 +6130,8 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_i_times_2), (&PyList_Type), 1, "i_times_2", 1))) __PYX_ERR(0, 152, __pyx_L1_error)
-  __pyx_r = __pyx_pf_7spinOps_8_spinOps_8create_single_spin_Ix(__pyx_self, __pyx_v_spin_index, __pyx_v_i_times_2);
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_two_I), (&PyList_Type), 1, "two_I", 1))) __PYX_ERR(0, 152, __pyx_L1_error)
+  __pyx_r = __pyx_pf_7spinOps_8_spinOps_8create_single_spin_Ix(__pyx_self, __pyx_v_spin_index, __pyx_v_two_I);
 
   /* function exit code */
   goto __pyx_L0;
@@ -6148,7 +6148,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_7spinOps_8_spinOps_8create_single_spin_Ix(CYTHON_UNUSED PyObject *__pyx_self, int __pyx_v_spin_index, PyObject *__pyx_v_i_times_2) {
+static PyObject *__pyx_pf_7spinOps_8_spinOps_8create_single_spin_Ix(CYTHON_UNUSED PyObject *__pyx_self, int __pyx_v_spin_index, PyObject *__pyx_v_two_I) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -6157,7 +6157,7 @@ static PyObject *__pyx_pf_7spinOps_8_spinOps_8create_single_spin_Ix(CYTHON_UNUSE
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("create_single_spin_Ix", 1);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = ((PyObject *)__pyx_f_7spinOps_8_spinOps_create_single_spin_Ix(__pyx_v_spin_index, __pyx_v_i_times_2, 0)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 152, __pyx_L1_error)
+  __pyx_t_1 = ((PyObject *)__pyx_f_7spinOps_8_spinOps_create_single_spin_Ix(__pyx_v_spin_index, __pyx_v_two_I, 0)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 152, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -6177,7 +6177,7 @@ static PyObject *__pyx_pf_7spinOps_8_spinOps_8create_single_spin_Ix(CYTHON_UNUSE
 /* "spinOps/spinOps.pyx":190
  *     return myOp
  * 
- * cpdef ndarray[double complex, ndim=2] create_single_spin_Iy(int spin_index, list i_times_2):             # <<<<<<<<<<<<<<
+ * cpdef ndarray[double complex, ndim=2] create_single_spin_Iy(int spin_index, list two_I):             # <<<<<<<<<<<<<<
  *     """
  *     Generates the single-spin :math:`\hat{I}_y` operator matrix for a specified spin within a spin system.
  */
@@ -6189,7 +6189,7 @@ PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_single_spin_Iy(int __pyx_v_spin_index, PyObject *__pyx_v_i_times_2, CYTHON_UNUSED int __pyx_skip_dispatch) {
+static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_single_spin_Iy(int __pyx_v_spin_index, PyObject *__pyx_v_two_I, CYTHON_UNUSED int __pyx_skip_dispatch) {
   int __pyx_v_nstates;
   int __pyx_v_total_spin_count;
   PyArrayObject *__pyx_v_spins = 0;
@@ -6230,19 +6230,19 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_single_spin_Iy(int __pyx
   /* "spinOps/spinOps.pyx":214
  *         If `spin_index` is out of the valid range.
  *     """
- *     if not i_times_2:             # <<<<<<<<<<<<<<
- *         raise ValueError("The input list 'i_times_2' cannot be empty.")
- *     if spin_index < 0 or spin_index >= len(i_times_2):
+ *     if not two_I:             # <<<<<<<<<<<<<<
+ *         raise ValueError("The input list 'two_I' cannot be empty.")
+ *     if spin_index < 0 or spin_index >= len(two_I):
  */
-  __pyx_t_1 = (__pyx_v_i_times_2 != Py_None)&&(PyList_GET_SIZE(__pyx_v_i_times_2) != 0);
+  __pyx_t_1 = (__pyx_v_two_I != Py_None)&&(PyList_GET_SIZE(__pyx_v_two_I) != 0);
   __pyx_t_2 = (!__pyx_t_1);
   if (unlikely(__pyx_t_2)) {
 
     /* "spinOps/spinOps.pyx":215
  *     """
- *     if not i_times_2:
- *         raise ValueError("The input list 'i_times_2' cannot be empty.")             # <<<<<<<<<<<<<<
- *     if spin_index < 0 or spin_index >= len(i_times_2):
+ *     if not two_I:
+ *         raise ValueError("The input list 'two_I' cannot be empty.")             # <<<<<<<<<<<<<<
+ *     if spin_index < 0 or spin_index >= len(two_I):
  *         raise IndexError("The spin_index is out of bounds.")
  */
     __pyx_t_3 = __Pyx_PyObject_Call(__pyx_builtin_ValueError, __pyx_tuple__3, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 215, __pyx_L1_error)
@@ -6254,16 +6254,16 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_single_spin_Iy(int __pyx
     /* "spinOps/spinOps.pyx":214
  *         If `spin_index` is out of the valid range.
  *     """
- *     if not i_times_2:             # <<<<<<<<<<<<<<
- *         raise ValueError("The input list 'i_times_2' cannot be empty.")
- *     if spin_index < 0 or spin_index >= len(i_times_2):
+ *     if not two_I:             # <<<<<<<<<<<<<<
+ *         raise ValueError("The input list 'two_I' cannot be empty.")
+ *     if spin_index < 0 or spin_index >= len(two_I):
  */
   }
 
   /* "spinOps/spinOps.pyx":216
- *     if not i_times_2:
- *         raise ValueError("The input list 'i_times_2' cannot be empty.")
- *     if spin_index < 0 or spin_index >= len(i_times_2):             # <<<<<<<<<<<<<<
+ *     if not two_I:
+ *         raise ValueError("The input list 'two_I' cannot be empty.")
+ *     if spin_index < 0 or spin_index >= len(two_I):             # <<<<<<<<<<<<<<
  *         raise IndexError("The spin_index is out of bounds.")
  * 
  */
@@ -6273,22 +6273,22 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_single_spin_Iy(int __pyx
     __pyx_t_2 = __pyx_t_1;
     goto __pyx_L5_bool_binop_done;
   }
-  if (unlikely(__pyx_v_i_times_2 == Py_None)) {
+  if (unlikely(__pyx_v_two_I == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "object of type 'NoneType' has no len()");
     __PYX_ERR(0, 216, __pyx_L1_error)
   }
-  __pyx_t_4 = __Pyx_PyList_GET_SIZE(__pyx_v_i_times_2); if (unlikely(__pyx_t_4 == ((Py_ssize_t)-1))) __PYX_ERR(0, 216, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyList_GET_SIZE(__pyx_v_two_I); if (unlikely(__pyx_t_4 == ((Py_ssize_t)-1))) __PYX_ERR(0, 216, __pyx_L1_error)
   __pyx_t_1 = (__pyx_v_spin_index >= __pyx_t_4);
   __pyx_t_2 = __pyx_t_1;
   __pyx_L5_bool_binop_done:;
   if (unlikely(__pyx_t_2)) {
 
     /* "spinOps/spinOps.pyx":217
- *         raise ValueError("The input list 'i_times_2' cannot be empty.")
- *     if spin_index < 0 or spin_index >= len(i_times_2):
+ *         raise ValueError("The input list 'two_I' cannot be empty.")
+ *     if spin_index < 0 or spin_index >= len(two_I):
  *         raise IndexError("The spin_index is out of bounds.")             # <<<<<<<<<<<<<<
  * 
- *     cdef int nstates = number_of_states(i_times_2)
+ *     cdef int nstates = number_of_states(two_I)
  */
     __pyx_t_3 = __Pyx_PyObject_Call(__pyx_builtin_IndexError, __pyx_tuple__4, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 217, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
@@ -6297,9 +6297,9 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_single_spin_Iy(int __pyx
     __PYX_ERR(0, 217, __pyx_L1_error)
 
     /* "spinOps/spinOps.pyx":216
- *     if not i_times_2:
- *         raise ValueError("The input list 'i_times_2' cannot be empty.")
- *     if spin_index < 0 or spin_index >= len(i_times_2):             # <<<<<<<<<<<<<<
+ *     if not two_I:
+ *         raise ValueError("The input list 'two_I' cannot be empty.")
+ *     if spin_index < 0 or spin_index >= len(two_I):             # <<<<<<<<<<<<<<
  *         raise IndexError("The spin_index is out of bounds.")
  * 
  */
@@ -6308,31 +6308,31 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_single_spin_Iy(int __pyx
   /* "spinOps/spinOps.pyx":219
  *         raise IndexError("The spin_index is out of bounds.")
  * 
- *     cdef int nstates = number_of_states(i_times_2)             # <<<<<<<<<<<<<<
- *     cdef int total_spin_count = len(i_times_2)
- *     cdef ndarray[int] spins = np.array(i_times_2, dtype=np.int32)
+ *     cdef int nstates = number_of_states(two_I)             # <<<<<<<<<<<<<<
+ *     cdef int total_spin_count = len(two_I)
+ *     cdef ndarray[int] spins = np.array(two_I, dtype=np.int32)
  */
-  __pyx_t_5 = __pyx_f_7spinOps_8_spinOps_number_of_states(__pyx_v_i_times_2, 0); if (unlikely(__pyx_t_5 == ((int)-1) && PyErr_Occurred())) __PYX_ERR(0, 219, __pyx_L1_error)
+  __pyx_t_5 = __pyx_f_7spinOps_8_spinOps_number_of_states(__pyx_v_two_I, 0); if (unlikely(__pyx_t_5 == ((int)-1) && PyErr_Occurred())) __PYX_ERR(0, 219, __pyx_L1_error)
   __pyx_v_nstates = __pyx_t_5;
 
   /* "spinOps/spinOps.pyx":220
  * 
- *     cdef int nstates = number_of_states(i_times_2)
- *     cdef int total_spin_count = len(i_times_2)             # <<<<<<<<<<<<<<
- *     cdef ndarray[int] spins = np.array(i_times_2, dtype=np.int32)
+ *     cdef int nstates = number_of_states(two_I)
+ *     cdef int total_spin_count = len(two_I)             # <<<<<<<<<<<<<<
+ *     cdef ndarray[int] spins = np.array(two_I, dtype=np.int32)
  *     cdef ndarray[double complex, ndim=2] myOp = np.zeros((nstates, nstates), dtype=np.complex128)
  */
-  if (unlikely(__pyx_v_i_times_2 == Py_None)) {
+  if (unlikely(__pyx_v_two_I == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "object of type 'NoneType' has no len()");
     __PYX_ERR(0, 220, __pyx_L1_error)
   }
-  __pyx_t_4 = __Pyx_PyList_GET_SIZE(__pyx_v_i_times_2); if (unlikely(__pyx_t_4 == ((Py_ssize_t)-1))) __PYX_ERR(0, 220, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyList_GET_SIZE(__pyx_v_two_I); if (unlikely(__pyx_t_4 == ((Py_ssize_t)-1))) __PYX_ERR(0, 220, __pyx_L1_error)
   __pyx_v_total_spin_count = __pyx_t_4;
 
   /* "spinOps/spinOps.pyx":221
- *     cdef int nstates = number_of_states(i_times_2)
- *     cdef int total_spin_count = len(i_times_2)
- *     cdef ndarray[int] spins = np.array(i_times_2, dtype=np.int32)             # <<<<<<<<<<<<<<
+ *     cdef int nstates = number_of_states(two_I)
+ *     cdef int total_spin_count = len(two_I)
+ *     cdef ndarray[int] spins = np.array(two_I, dtype=np.int32)             # <<<<<<<<<<<<<<
  *     cdef ndarray[double complex, ndim=2] myOp = np.zeros((nstates, nstates), dtype=np.complex128)
  * 
  */
@@ -6343,9 +6343,9 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_single_spin_Iy(int __pyx
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 221, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __Pyx_INCREF(__pyx_v_i_times_2);
-  __Pyx_GIVEREF(__pyx_v_i_times_2);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_v_i_times_2)) __PYX_ERR(0, 221, __pyx_L1_error);
+  __Pyx_INCREF(__pyx_v_two_I);
+  __Pyx_GIVEREF(__pyx_v_two_I);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_v_two_I)) __PYX_ERR(0, 221, __pyx_L1_error);
   __pyx_t_7 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 221, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
   __Pyx_GetModuleGlobalName(__pyx_t_8, __pyx_n_s_np); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 221, __pyx_L1_error)
@@ -6375,8 +6375,8 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_single_spin_Iy(int __pyx
   __pyx_t_9 = 0;
 
   /* "spinOps/spinOps.pyx":222
- *     cdef int total_spin_count = len(i_times_2)
- *     cdef ndarray[int] spins = np.array(i_times_2, dtype=np.int32)
+ *     cdef int total_spin_count = len(two_I)
+ *     cdef ndarray[int] spins = np.array(two_I, dtype=np.int32)
  *     cdef ndarray[double complex, ndim=2] myOp = np.zeros((nstates, nstates), dtype=np.complex128)             # <<<<<<<<<<<<<<
  * 
  *     _get_single_spin_Iy(&myOp[0, 0], spin_index, &spins[0], total_spin_count)
@@ -6470,7 +6470,7 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_single_spin_Iy(int __pyx
  * 
  *     return myOp             # <<<<<<<<<<<<<<
  * 
- * cpdef ndarray[double complex, ndim=2] create_single_spin_Iz(int spin_index, list i_times_2):
+ * cpdef ndarray[double complex, ndim=2] create_single_spin_Iz(int spin_index, list two_I):
  */
   __Pyx_XDECREF((PyObject *)__pyx_r);
   __Pyx_INCREF((PyObject *)__pyx_v_myOp);
@@ -6480,7 +6480,7 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_single_spin_Iy(int __pyx
   /* "spinOps/spinOps.pyx":190
  *     return myOp
  * 
- * cpdef ndarray[double complex, ndim=2] create_single_spin_Iy(int spin_index, list i_times_2):             # <<<<<<<<<<<<<<
+ * cpdef ndarray[double complex, ndim=2] create_single_spin_Iy(int spin_index, list two_I):             # <<<<<<<<<<<<<<
  *     """
  *     Generates the single-spin :math:`\hat{I}_y` operator matrix for a specified spin within a spin system.
  */
@@ -6521,7 +6521,7 @@ PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-PyDoc_STRVAR(__pyx_doc_7spinOps_8_spinOps_10create_single_spin_Iy, "\n    Generates the single-spin :math:`\\hat{I}_y` operator matrix for a specified spin within a spin system.\n\n    Parameters\n    ----------\n    spin_index : int\n        Index of the spin for which the :math:`\\hat{I}_y` operator is constructed.\n    i_times_2 : list of int\n        List of integers representing :math:`2I` values for each spin in the system,\n        where :math:`I` is the spin quantum number.\n\n    Returns\n    -------\n    ndarray[double complex, ndim=2]\n        A 2D NumPy array representing the :math:`\\hat{I}_y` operator matrix.\n\n    Raises\n    ------\n    ValueError\n        If the input list `i_times_2` is empty.\n    IndexError\n        If `spin_index` is out of the valid range.\n    ");
+PyDoc_STRVAR(__pyx_doc_7spinOps_8_spinOps_10create_single_spin_Iy, "\n    Generates the single-spin :math:`\\hat{I}_y` operator matrix for a specified spin within a spin system.\n\n    Parameters\n    ----------\n    spin_index : int\n        Index of the spin for which the :math:`\\hat{I}_y` operator is constructed.\n    two_I : list of int\n        List of integers representing :math:`2I` values for each spin in the system,\n        where :math:`I` is the spin quantum number.\n\n    Returns\n    -------\n    ndarray[double complex, ndim=2]\n        A 2D NumPy array representing the :math:`\\hat{I}_y` operator matrix.\n\n    Raises\n    ------\n    ValueError\n        If the input list `two_I` is empty.\n    IndexError\n        If `spin_index` is out of the valid range.\n    ");
 static PyMethodDef __pyx_mdef_7spinOps_8_spinOps_11create_single_spin_Iy = {"create_single_spin_Iy", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_7spinOps_8_spinOps_11create_single_spin_Iy, __Pyx_METH_FASTCALL|METH_KEYWORDS, __pyx_doc_7spinOps_8_spinOps_10create_single_spin_Iy};
 static PyObject *__pyx_pw_7spinOps_8_spinOps_11create_single_spin_Iy(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
@@ -6531,7 +6531,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ) {
   int __pyx_v_spin_index;
-  PyObject *__pyx_v_i_times_2 = 0;
+  PyObject *__pyx_v_two_I = 0;
   #if !CYTHON_METH_FASTCALL
   CYTHON_UNUSED Py_ssize_t __pyx_nargs;
   #endif
@@ -6552,7 +6552,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   #endif
   __pyx_kwvalues = __Pyx_KwValues_FASTCALL(__pyx_args, __pyx_nargs);
   {
-    PyObject **__pyx_pyargnames[] = {&__pyx_n_s_spin_index,&__pyx_n_s_i_times_2,0};
+    PyObject **__pyx_pyargnames[] = {&__pyx_n_s_spin_index,&__pyx_n_s_two_I,0};
     if (__pyx_kwds) {
       Py_ssize_t kw_args;
       switch (__pyx_nargs) {
@@ -6574,7 +6574,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
         else goto __pyx_L5_argtuple_error;
         CYTHON_FALLTHROUGH;
         case  1:
-        if (likely((values[1] = __Pyx_GetKwValue_FASTCALL(__pyx_kwds, __pyx_kwvalues, __pyx_n_s_i_times_2)) != 0)) {
+        if (likely((values[1] = __Pyx_GetKwValue_FASTCALL(__pyx_kwds, __pyx_kwvalues, __pyx_n_s_two_I)) != 0)) {
           (void)__Pyx_Arg_NewRef_FASTCALL(values[1]);
           kw_args--;
         }
@@ -6594,7 +6594,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
       values[1] = __Pyx_Arg_FASTCALL(__pyx_args, 1);
     }
     __pyx_v_spin_index = __Pyx_PyInt_As_int(values[0]); if (unlikely((__pyx_v_spin_index == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 190, __pyx_L3_error)
-    __pyx_v_i_times_2 = ((PyObject*)values[1]);
+    __pyx_v_two_I = ((PyObject*)values[1]);
   }
   goto __pyx_L6_skip;
   __pyx_L5_argtuple_error:;
@@ -6612,8 +6612,8 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_i_times_2), (&PyList_Type), 1, "i_times_2", 1))) __PYX_ERR(0, 190, __pyx_L1_error)
-  __pyx_r = __pyx_pf_7spinOps_8_spinOps_10create_single_spin_Iy(__pyx_self, __pyx_v_spin_index, __pyx_v_i_times_2);
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_two_I), (&PyList_Type), 1, "two_I", 1))) __PYX_ERR(0, 190, __pyx_L1_error)
+  __pyx_r = __pyx_pf_7spinOps_8_spinOps_10create_single_spin_Iy(__pyx_self, __pyx_v_spin_index, __pyx_v_two_I);
 
   /* function exit code */
   goto __pyx_L0;
@@ -6630,7 +6630,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_7spinOps_8_spinOps_10create_single_spin_Iy(CYTHON_UNUSED PyObject *__pyx_self, int __pyx_v_spin_index, PyObject *__pyx_v_i_times_2) {
+static PyObject *__pyx_pf_7spinOps_8_spinOps_10create_single_spin_Iy(CYTHON_UNUSED PyObject *__pyx_self, int __pyx_v_spin_index, PyObject *__pyx_v_two_I) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -6639,7 +6639,7 @@ static PyObject *__pyx_pf_7spinOps_8_spinOps_10create_single_spin_Iy(CYTHON_UNUS
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("create_single_spin_Iy", 1);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = ((PyObject *)__pyx_f_7spinOps_8_spinOps_create_single_spin_Iy(__pyx_v_spin_index, __pyx_v_i_times_2, 0)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 190, __pyx_L1_error)
+  __pyx_t_1 = ((PyObject *)__pyx_f_7spinOps_8_spinOps_create_single_spin_Iy(__pyx_v_spin_index, __pyx_v_two_I, 0)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 190, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -6659,7 +6659,7 @@ static PyObject *__pyx_pf_7spinOps_8_spinOps_10create_single_spin_Iy(CYTHON_UNUS
 /* "spinOps/spinOps.pyx":228
  *     return myOp
  * 
- * cpdef ndarray[double complex, ndim=2] create_single_spin_Iz(int spin_index, list i_times_2):             # <<<<<<<<<<<<<<
+ * cpdef ndarray[double complex, ndim=2] create_single_spin_Iz(int spin_index, list two_I):             # <<<<<<<<<<<<<<
  *     """
  *     Creates the single-spin :math:`\hat{I}_z` operator matrix for a single spin in a spin system.
  */
@@ -6671,7 +6671,7 @@ PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_single_spin_Iz(int __pyx_v_spin_index, PyObject *__pyx_v_i_times_2, CYTHON_UNUSED int __pyx_skip_dispatch) {
+static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_single_spin_Iz(int __pyx_v_spin_index, PyObject *__pyx_v_two_I, CYTHON_UNUSED int __pyx_skip_dispatch) {
   int __pyx_v_nstates;
   int __pyx_v_total_spin_count;
   PyArrayObject *__pyx_v_spins = 0;
@@ -6712,19 +6712,19 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_single_spin_Iz(int __pyx
   /* "spinOps/spinOps.pyx":245
  *     """
  *     # Validate input
- *     if not i_times_2:             # <<<<<<<<<<<<<<
- *         raise ValueError("The input list 'i_times_2' cannot be empty.")
- *     if spin_index < 0 or spin_index >= len(i_times_2):
+ *     if not two_I:             # <<<<<<<<<<<<<<
+ *         raise ValueError("The input list 'two_I' cannot be empty.")
+ *     if spin_index < 0 or spin_index >= len(two_I):
  */
-  __pyx_t_1 = (__pyx_v_i_times_2 != Py_None)&&(PyList_GET_SIZE(__pyx_v_i_times_2) != 0);
+  __pyx_t_1 = (__pyx_v_two_I != Py_None)&&(PyList_GET_SIZE(__pyx_v_two_I) != 0);
   __pyx_t_2 = (!__pyx_t_1);
   if (unlikely(__pyx_t_2)) {
 
     /* "spinOps/spinOps.pyx":246
  *     # Validate input
- *     if not i_times_2:
- *         raise ValueError("The input list 'i_times_2' cannot be empty.")             # <<<<<<<<<<<<<<
- *     if spin_index < 0 or spin_index >= len(i_times_2):
+ *     if not two_I:
+ *         raise ValueError("The input list 'two_I' cannot be empty.")             # <<<<<<<<<<<<<<
+ *     if spin_index < 0 or spin_index >= len(two_I):
  *         raise IndexError("The spin_index is out of bounds.")
  */
     __pyx_t_3 = __Pyx_PyObject_Call(__pyx_builtin_ValueError, __pyx_tuple__3, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 246, __pyx_L1_error)
@@ -6736,16 +6736,16 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_single_spin_Iz(int __pyx
     /* "spinOps/spinOps.pyx":245
  *     """
  *     # Validate input
- *     if not i_times_2:             # <<<<<<<<<<<<<<
- *         raise ValueError("The input list 'i_times_2' cannot be empty.")
- *     if spin_index < 0 or spin_index >= len(i_times_2):
+ *     if not two_I:             # <<<<<<<<<<<<<<
+ *         raise ValueError("The input list 'two_I' cannot be empty.")
+ *     if spin_index < 0 or spin_index >= len(two_I):
  */
   }
 
   /* "spinOps/spinOps.pyx":247
- *     if not i_times_2:
- *         raise ValueError("The input list 'i_times_2' cannot be empty.")
- *     if spin_index < 0 or spin_index >= len(i_times_2):             # <<<<<<<<<<<<<<
+ *     if not two_I:
+ *         raise ValueError("The input list 'two_I' cannot be empty.")
+ *     if spin_index < 0 or spin_index >= len(two_I):             # <<<<<<<<<<<<<<
  *         raise IndexError("The spin_index is out of bounds.")
  * 
  */
@@ -6755,19 +6755,19 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_single_spin_Iz(int __pyx
     __pyx_t_2 = __pyx_t_1;
     goto __pyx_L5_bool_binop_done;
   }
-  if (unlikely(__pyx_v_i_times_2 == Py_None)) {
+  if (unlikely(__pyx_v_two_I == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "object of type 'NoneType' has no len()");
     __PYX_ERR(0, 247, __pyx_L1_error)
   }
-  __pyx_t_4 = __Pyx_PyList_GET_SIZE(__pyx_v_i_times_2); if (unlikely(__pyx_t_4 == ((Py_ssize_t)-1))) __PYX_ERR(0, 247, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyList_GET_SIZE(__pyx_v_two_I); if (unlikely(__pyx_t_4 == ((Py_ssize_t)-1))) __PYX_ERR(0, 247, __pyx_L1_error)
   __pyx_t_1 = (__pyx_v_spin_index >= __pyx_t_4);
   __pyx_t_2 = __pyx_t_1;
   __pyx_L5_bool_binop_done:;
   if (unlikely(__pyx_t_2)) {
 
     /* "spinOps/spinOps.pyx":248
- *         raise ValueError("The input list 'i_times_2' cannot be empty.")
- *     if spin_index < 0 or spin_index >= len(i_times_2):
+ *         raise ValueError("The input list 'two_I' cannot be empty.")
+ *     if spin_index < 0 or spin_index >= len(two_I):
  *         raise IndexError("The spin_index is out of bounds.")             # <<<<<<<<<<<<<<
  * 
  *     # Compute the number of states and prepare the operator matrix
@@ -6779,9 +6779,9 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_single_spin_Iz(int __pyx
     __PYX_ERR(0, 248, __pyx_L1_error)
 
     /* "spinOps/spinOps.pyx":247
- *     if not i_times_2:
- *         raise ValueError("The input list 'i_times_2' cannot be empty.")
- *     if spin_index < 0 or spin_index >= len(i_times_2):             # <<<<<<<<<<<<<<
+ *     if not two_I:
+ *         raise ValueError("The input list 'two_I' cannot be empty.")
+ *     if spin_index < 0 or spin_index >= len(two_I):             # <<<<<<<<<<<<<<
  *         raise IndexError("The spin_index is out of bounds.")
  * 
  */
@@ -6790,31 +6790,31 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_single_spin_Iz(int __pyx
   /* "spinOps/spinOps.pyx":251
  * 
  *     # Compute the number of states and prepare the operator matrix
- *     cdef int nstates = number_of_states(i_times_2)             # <<<<<<<<<<<<<<
- *     cdef int total_spin_count = len(i_times_2)
- *     cdef ndarray[int] spins = np.array(i_times_2, dtype=np.int32)
+ *     cdef int nstates = number_of_states(two_I)             # <<<<<<<<<<<<<<
+ *     cdef int total_spin_count = len(two_I)
+ *     cdef ndarray[int] spins = np.array(two_I, dtype=np.int32)
  */
-  __pyx_t_5 = __pyx_f_7spinOps_8_spinOps_number_of_states(__pyx_v_i_times_2, 0); if (unlikely(__pyx_t_5 == ((int)-1) && PyErr_Occurred())) __PYX_ERR(0, 251, __pyx_L1_error)
+  __pyx_t_5 = __pyx_f_7spinOps_8_spinOps_number_of_states(__pyx_v_two_I, 0); if (unlikely(__pyx_t_5 == ((int)-1) && PyErr_Occurred())) __PYX_ERR(0, 251, __pyx_L1_error)
   __pyx_v_nstates = __pyx_t_5;
 
   /* "spinOps/spinOps.pyx":252
  *     # Compute the number of states and prepare the operator matrix
- *     cdef int nstates = number_of_states(i_times_2)
- *     cdef int total_spin_count = len(i_times_2)             # <<<<<<<<<<<<<<
- *     cdef ndarray[int] spins = np.array(i_times_2, dtype=np.int32)
+ *     cdef int nstates = number_of_states(two_I)
+ *     cdef int total_spin_count = len(two_I)             # <<<<<<<<<<<<<<
+ *     cdef ndarray[int] spins = np.array(two_I, dtype=np.int32)
  *     cdef ndarray[double complex, ndim=2] myOp = np.zeros((nstates, nstates), dtype=np.complex128)
  */
-  if (unlikely(__pyx_v_i_times_2 == Py_None)) {
+  if (unlikely(__pyx_v_two_I == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "object of type 'NoneType' has no len()");
     __PYX_ERR(0, 252, __pyx_L1_error)
   }
-  __pyx_t_4 = __Pyx_PyList_GET_SIZE(__pyx_v_i_times_2); if (unlikely(__pyx_t_4 == ((Py_ssize_t)-1))) __PYX_ERR(0, 252, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyList_GET_SIZE(__pyx_v_two_I); if (unlikely(__pyx_t_4 == ((Py_ssize_t)-1))) __PYX_ERR(0, 252, __pyx_L1_error)
   __pyx_v_total_spin_count = __pyx_t_4;
 
   /* "spinOps/spinOps.pyx":253
- *     cdef int nstates = number_of_states(i_times_2)
- *     cdef int total_spin_count = len(i_times_2)
- *     cdef ndarray[int] spins = np.array(i_times_2, dtype=np.int32)             # <<<<<<<<<<<<<<
+ *     cdef int nstates = number_of_states(two_I)
+ *     cdef int total_spin_count = len(two_I)
+ *     cdef ndarray[int] spins = np.array(two_I, dtype=np.int32)             # <<<<<<<<<<<<<<
  *     cdef ndarray[double complex, ndim=2] myOp = np.zeros((nstates, nstates), dtype=np.complex128)
  * 
  */
@@ -6825,9 +6825,9 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_single_spin_Iz(int __pyx
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 253, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __Pyx_INCREF(__pyx_v_i_times_2);
-  __Pyx_GIVEREF(__pyx_v_i_times_2);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_v_i_times_2)) __PYX_ERR(0, 253, __pyx_L1_error);
+  __Pyx_INCREF(__pyx_v_two_I);
+  __Pyx_GIVEREF(__pyx_v_two_I);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_v_two_I)) __PYX_ERR(0, 253, __pyx_L1_error);
   __pyx_t_7 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 253, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
   __Pyx_GetModuleGlobalName(__pyx_t_8, __pyx_n_s_np); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 253, __pyx_L1_error)
@@ -6857,8 +6857,8 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_single_spin_Iz(int __pyx
   __pyx_t_9 = 0;
 
   /* "spinOps/spinOps.pyx":254
- *     cdef int total_spin_count = len(i_times_2)
- *     cdef ndarray[int] spins = np.array(i_times_2, dtype=np.int32)
+ *     cdef int total_spin_count = len(two_I)
+ *     cdef ndarray[int] spins = np.array(two_I, dtype=np.int32)
  *     cdef ndarray[double complex, ndim=2] myOp = np.zeros((nstates, nstates), dtype=np.complex128)             # <<<<<<<<<<<<<<
  * 
  *     # Call the external C function to populate the operator matrix
@@ -6962,7 +6962,7 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_single_spin_Iz(int __pyx
   /* "spinOps/spinOps.pyx":228
  *     return myOp
  * 
- * cpdef ndarray[double complex, ndim=2] create_single_spin_Iz(int spin_index, list i_times_2):             # <<<<<<<<<<<<<<
+ * cpdef ndarray[double complex, ndim=2] create_single_spin_Iz(int spin_index, list two_I):             # <<<<<<<<<<<<<<
  *     """
  *     Creates the single-spin :math:`\hat{I}_z` operator matrix for a single spin in a spin system.
  */
@@ -7003,7 +7003,7 @@ PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-PyDoc_STRVAR(__pyx_doc_7spinOps_8_spinOps_12create_single_spin_Iz, "\n    Creates the single-spin :math:`\\hat{I}_z` operator matrix for a single spin in a spin system.\n\n    Parameters:\n        spin_index (int): The index of the spin for which the :math:`\\hat{I}_z` operator is being created.\n        i_times_2 (list): A list of integers representing :math:`2 I` values for each spin in the system,\n                              where `I` is the spin quantum number.\n\n    Returns:\n        ndarray[double complex, ndim=2]: The :math:`\\hat{I}_z` operator matrix as a 2D NumPy array.\n\n    Raises:\n        ValueError: If the input list `i_times_2` is empty.\n        IndexError: If `spin_index` is out of bounds.\n    ");
+PyDoc_STRVAR(__pyx_doc_7spinOps_8_spinOps_12create_single_spin_Iz, "\n    Creates the single-spin :math:`\\hat{I}_z` operator matrix for a single spin in a spin system.\n\n    Parameters:\n        spin_index (int): The index of the spin for which the :math:`\\hat{I}_z` operator is being created.\n        two_I (list): A list of integers representing :math:`2 I` values for each spin in the system,\n                              where `I` is the spin quantum number.\n\n    Returns:\n        ndarray[double complex, ndim=2]: The :math:`\\hat{I}_z` operator matrix as a 2D NumPy array.\n\n    Raises:\n        ValueError: If the input list `two_I` is empty.\n        IndexError: If `spin_index` is out of bounds.\n    ");
 static PyMethodDef __pyx_mdef_7spinOps_8_spinOps_13create_single_spin_Iz = {"create_single_spin_Iz", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_7spinOps_8_spinOps_13create_single_spin_Iz, __Pyx_METH_FASTCALL|METH_KEYWORDS, __pyx_doc_7spinOps_8_spinOps_12create_single_spin_Iz};
 static PyObject *__pyx_pw_7spinOps_8_spinOps_13create_single_spin_Iz(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
@@ -7013,7 +7013,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ) {
   int __pyx_v_spin_index;
-  PyObject *__pyx_v_i_times_2 = 0;
+  PyObject *__pyx_v_two_I = 0;
   #if !CYTHON_METH_FASTCALL
   CYTHON_UNUSED Py_ssize_t __pyx_nargs;
   #endif
@@ -7034,7 +7034,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   #endif
   __pyx_kwvalues = __Pyx_KwValues_FASTCALL(__pyx_args, __pyx_nargs);
   {
-    PyObject **__pyx_pyargnames[] = {&__pyx_n_s_spin_index,&__pyx_n_s_i_times_2,0};
+    PyObject **__pyx_pyargnames[] = {&__pyx_n_s_spin_index,&__pyx_n_s_two_I,0};
     if (__pyx_kwds) {
       Py_ssize_t kw_args;
       switch (__pyx_nargs) {
@@ -7056,7 +7056,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
         else goto __pyx_L5_argtuple_error;
         CYTHON_FALLTHROUGH;
         case  1:
-        if (likely((values[1] = __Pyx_GetKwValue_FASTCALL(__pyx_kwds, __pyx_kwvalues, __pyx_n_s_i_times_2)) != 0)) {
+        if (likely((values[1] = __Pyx_GetKwValue_FASTCALL(__pyx_kwds, __pyx_kwvalues, __pyx_n_s_two_I)) != 0)) {
           (void)__Pyx_Arg_NewRef_FASTCALL(values[1]);
           kw_args--;
         }
@@ -7076,7 +7076,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
       values[1] = __Pyx_Arg_FASTCALL(__pyx_args, 1);
     }
     __pyx_v_spin_index = __Pyx_PyInt_As_int(values[0]); if (unlikely((__pyx_v_spin_index == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 228, __pyx_L3_error)
-    __pyx_v_i_times_2 = ((PyObject*)values[1]);
+    __pyx_v_two_I = ((PyObject*)values[1]);
   }
   goto __pyx_L6_skip;
   __pyx_L5_argtuple_error:;
@@ -7094,8 +7094,8 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_i_times_2), (&PyList_Type), 1, "i_times_2", 1))) __PYX_ERR(0, 228, __pyx_L1_error)
-  __pyx_r = __pyx_pf_7spinOps_8_spinOps_12create_single_spin_Iz(__pyx_self, __pyx_v_spin_index, __pyx_v_i_times_2);
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_two_I), (&PyList_Type), 1, "two_I", 1))) __PYX_ERR(0, 228, __pyx_L1_error)
+  __pyx_r = __pyx_pf_7spinOps_8_spinOps_12create_single_spin_Iz(__pyx_self, __pyx_v_spin_index, __pyx_v_two_I);
 
   /* function exit code */
   goto __pyx_L0;
@@ -7112,7 +7112,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_7spinOps_8_spinOps_12create_single_spin_Iz(CYTHON_UNUSED PyObject *__pyx_self, int __pyx_v_spin_index, PyObject *__pyx_v_i_times_2) {
+static PyObject *__pyx_pf_7spinOps_8_spinOps_12create_single_spin_Iz(CYTHON_UNUSED PyObject *__pyx_self, int __pyx_v_spin_index, PyObject *__pyx_v_two_I) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -7121,7 +7121,7 @@ static PyObject *__pyx_pf_7spinOps_8_spinOps_12create_single_spin_Iz(CYTHON_UNUS
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("create_single_spin_Iz", 1);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = ((PyObject *)__pyx_f_7spinOps_8_spinOps_create_single_spin_Iz(__pyx_v_spin_index, __pyx_v_i_times_2, 0)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 228, __pyx_L1_error)
+  __pyx_t_1 = ((PyObject *)__pyx_f_7spinOps_8_spinOps_create_single_spin_Iz(__pyx_v_spin_index, __pyx_v_two_I, 0)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 228, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -7141,7 +7141,7 @@ static PyObject *__pyx_pf_7spinOps_8_spinOps_12create_single_spin_Iz(CYTHON_UNUS
 /* "spinOps/spinOps.pyx":262
  * 
  * 
- * cpdef ndarray[double complex, ndim=2] create_single_spin_Ip(int spin_index, list i_times_2):             # <<<<<<<<<<<<<<
+ * cpdef ndarray[double complex, ndim=2] create_single_spin_Ip(int spin_index, list two_I):             # <<<<<<<<<<<<<<
  *     """
  *     Generates the single-spin raising operator (:math:`\hat{I}_+`) matrix for a specified spin within a spin system.
  */
@@ -7153,7 +7153,7 @@ PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_single_spin_Ip(int __pyx_v_spin_index, PyObject *__pyx_v_i_times_2, CYTHON_UNUSED int __pyx_skip_dispatch) {
+static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_single_spin_Ip(int __pyx_v_spin_index, PyObject *__pyx_v_two_I, CYTHON_UNUSED int __pyx_skip_dispatch) {
   int __pyx_v_nstates;
   int __pyx_v_total_spin_count;
   PyArrayObject *__pyx_v_spins = 0;
@@ -7194,19 +7194,19 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_single_spin_Ip(int __pyx
   /* "spinOps/spinOps.pyx":286
  *         If `spin_index` is out of the valid range.
  *     """
- *     if not i_times_2:             # <<<<<<<<<<<<<<
- *         raise ValueError("The input list 'i_times_2' cannot be empty.")
- *     if spin_index < 0 or spin_index >= len(i_times_2):
+ *     if not two_I:             # <<<<<<<<<<<<<<
+ *         raise ValueError("The input list 'two_I' cannot be empty.")
+ *     if spin_index < 0 or spin_index >= len(two_I):
  */
-  __pyx_t_1 = (__pyx_v_i_times_2 != Py_None)&&(PyList_GET_SIZE(__pyx_v_i_times_2) != 0);
+  __pyx_t_1 = (__pyx_v_two_I != Py_None)&&(PyList_GET_SIZE(__pyx_v_two_I) != 0);
   __pyx_t_2 = (!__pyx_t_1);
   if (unlikely(__pyx_t_2)) {
 
     /* "spinOps/spinOps.pyx":287
  *     """
- *     if not i_times_2:
- *         raise ValueError("The input list 'i_times_2' cannot be empty.")             # <<<<<<<<<<<<<<
- *     if spin_index < 0 or spin_index >= len(i_times_2):
+ *     if not two_I:
+ *         raise ValueError("The input list 'two_I' cannot be empty.")             # <<<<<<<<<<<<<<
+ *     if spin_index < 0 or spin_index >= len(two_I):
  *         raise IndexError("The spin_index is out of bounds.")
  */
     __pyx_t_3 = __Pyx_PyObject_Call(__pyx_builtin_ValueError, __pyx_tuple__3, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 287, __pyx_L1_error)
@@ -7218,16 +7218,16 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_single_spin_Ip(int __pyx
     /* "spinOps/spinOps.pyx":286
  *         If `spin_index` is out of the valid range.
  *     """
- *     if not i_times_2:             # <<<<<<<<<<<<<<
- *         raise ValueError("The input list 'i_times_2' cannot be empty.")
- *     if spin_index < 0 or spin_index >= len(i_times_2):
+ *     if not two_I:             # <<<<<<<<<<<<<<
+ *         raise ValueError("The input list 'two_I' cannot be empty.")
+ *     if spin_index < 0 or spin_index >= len(two_I):
  */
   }
 
   /* "spinOps/spinOps.pyx":288
- *     if not i_times_2:
- *         raise ValueError("The input list 'i_times_2' cannot be empty.")
- *     if spin_index < 0 or spin_index >= len(i_times_2):             # <<<<<<<<<<<<<<
+ *     if not two_I:
+ *         raise ValueError("The input list 'two_I' cannot be empty.")
+ *     if spin_index < 0 or spin_index >= len(two_I):             # <<<<<<<<<<<<<<
  *         raise IndexError("The spin_index is out of bounds.")
  * 
  */
@@ -7237,22 +7237,22 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_single_spin_Ip(int __pyx
     __pyx_t_2 = __pyx_t_1;
     goto __pyx_L5_bool_binop_done;
   }
-  if (unlikely(__pyx_v_i_times_2 == Py_None)) {
+  if (unlikely(__pyx_v_two_I == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "object of type 'NoneType' has no len()");
     __PYX_ERR(0, 288, __pyx_L1_error)
   }
-  __pyx_t_4 = __Pyx_PyList_GET_SIZE(__pyx_v_i_times_2); if (unlikely(__pyx_t_4 == ((Py_ssize_t)-1))) __PYX_ERR(0, 288, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyList_GET_SIZE(__pyx_v_two_I); if (unlikely(__pyx_t_4 == ((Py_ssize_t)-1))) __PYX_ERR(0, 288, __pyx_L1_error)
   __pyx_t_1 = (__pyx_v_spin_index >= __pyx_t_4);
   __pyx_t_2 = __pyx_t_1;
   __pyx_L5_bool_binop_done:;
   if (unlikely(__pyx_t_2)) {
 
     /* "spinOps/spinOps.pyx":289
- *         raise ValueError("The input list 'i_times_2' cannot be empty.")
- *     if spin_index < 0 or spin_index >= len(i_times_2):
+ *         raise ValueError("The input list 'two_I' cannot be empty.")
+ *     if spin_index < 0 or spin_index >= len(two_I):
  *         raise IndexError("The spin_index is out of bounds.")             # <<<<<<<<<<<<<<
  * 
- *     cdef int nstates = number_of_states(i_times_2)
+ *     cdef int nstates = number_of_states(two_I)
  */
     __pyx_t_3 = __Pyx_PyObject_Call(__pyx_builtin_IndexError, __pyx_tuple__4, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 289, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
@@ -7261,9 +7261,9 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_single_spin_Ip(int __pyx
     __PYX_ERR(0, 289, __pyx_L1_error)
 
     /* "spinOps/spinOps.pyx":288
- *     if not i_times_2:
- *         raise ValueError("The input list 'i_times_2' cannot be empty.")
- *     if spin_index < 0 or spin_index >= len(i_times_2):             # <<<<<<<<<<<<<<
+ *     if not two_I:
+ *         raise ValueError("The input list 'two_I' cannot be empty.")
+ *     if spin_index < 0 or spin_index >= len(two_I):             # <<<<<<<<<<<<<<
  *         raise IndexError("The spin_index is out of bounds.")
  * 
  */
@@ -7272,31 +7272,31 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_single_spin_Ip(int __pyx
   /* "spinOps/spinOps.pyx":291
  *         raise IndexError("The spin_index is out of bounds.")
  * 
- *     cdef int nstates = number_of_states(i_times_2)             # <<<<<<<<<<<<<<
- *     cdef int total_spin_count = len(i_times_2)
- *     cdef ndarray[int] spins = np.array(i_times_2, dtype=np.int32)
+ *     cdef int nstates = number_of_states(two_I)             # <<<<<<<<<<<<<<
+ *     cdef int total_spin_count = len(two_I)
+ *     cdef ndarray[int] spins = np.array(two_I, dtype=np.int32)
  */
-  __pyx_t_5 = __pyx_f_7spinOps_8_spinOps_number_of_states(__pyx_v_i_times_2, 0); if (unlikely(__pyx_t_5 == ((int)-1) && PyErr_Occurred())) __PYX_ERR(0, 291, __pyx_L1_error)
+  __pyx_t_5 = __pyx_f_7spinOps_8_spinOps_number_of_states(__pyx_v_two_I, 0); if (unlikely(__pyx_t_5 == ((int)-1) && PyErr_Occurred())) __PYX_ERR(0, 291, __pyx_L1_error)
   __pyx_v_nstates = __pyx_t_5;
 
   /* "spinOps/spinOps.pyx":292
  * 
- *     cdef int nstates = number_of_states(i_times_2)
- *     cdef int total_spin_count = len(i_times_2)             # <<<<<<<<<<<<<<
- *     cdef ndarray[int] spins = np.array(i_times_2, dtype=np.int32)
+ *     cdef int nstates = number_of_states(two_I)
+ *     cdef int total_spin_count = len(two_I)             # <<<<<<<<<<<<<<
+ *     cdef ndarray[int] spins = np.array(two_I, dtype=np.int32)
  *     cdef ndarray[double complex, ndim=2] myOp = np.zeros((nstates, nstates), dtype=np.complex128)
  */
-  if (unlikely(__pyx_v_i_times_2 == Py_None)) {
+  if (unlikely(__pyx_v_two_I == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "object of type 'NoneType' has no len()");
     __PYX_ERR(0, 292, __pyx_L1_error)
   }
-  __pyx_t_4 = __Pyx_PyList_GET_SIZE(__pyx_v_i_times_2); if (unlikely(__pyx_t_4 == ((Py_ssize_t)-1))) __PYX_ERR(0, 292, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyList_GET_SIZE(__pyx_v_two_I); if (unlikely(__pyx_t_4 == ((Py_ssize_t)-1))) __PYX_ERR(0, 292, __pyx_L1_error)
   __pyx_v_total_spin_count = __pyx_t_4;
 
   /* "spinOps/spinOps.pyx":293
- *     cdef int nstates = number_of_states(i_times_2)
- *     cdef int total_spin_count = len(i_times_2)
- *     cdef ndarray[int] spins = np.array(i_times_2, dtype=np.int32)             # <<<<<<<<<<<<<<
+ *     cdef int nstates = number_of_states(two_I)
+ *     cdef int total_spin_count = len(two_I)
+ *     cdef ndarray[int] spins = np.array(two_I, dtype=np.int32)             # <<<<<<<<<<<<<<
  *     cdef ndarray[double complex, ndim=2] myOp = np.zeros((nstates, nstates), dtype=np.complex128)
  * 
  */
@@ -7307,9 +7307,9 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_single_spin_Ip(int __pyx
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 293, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __Pyx_INCREF(__pyx_v_i_times_2);
-  __Pyx_GIVEREF(__pyx_v_i_times_2);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_v_i_times_2)) __PYX_ERR(0, 293, __pyx_L1_error);
+  __Pyx_INCREF(__pyx_v_two_I);
+  __Pyx_GIVEREF(__pyx_v_two_I);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_v_two_I)) __PYX_ERR(0, 293, __pyx_L1_error);
   __pyx_t_7 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 293, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
   __Pyx_GetModuleGlobalName(__pyx_t_8, __pyx_n_s_np); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 293, __pyx_L1_error)
@@ -7339,8 +7339,8 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_single_spin_Ip(int __pyx
   __pyx_t_9 = 0;
 
   /* "spinOps/spinOps.pyx":294
- *     cdef int total_spin_count = len(i_times_2)
- *     cdef ndarray[int] spins = np.array(i_times_2, dtype=np.int32)
+ *     cdef int total_spin_count = len(two_I)
+ *     cdef ndarray[int] spins = np.array(two_I, dtype=np.int32)
  *     cdef ndarray[double complex, ndim=2] myOp = np.zeros((nstates, nstates), dtype=np.complex128)             # <<<<<<<<<<<<<<
  * 
  *     _get_single_spin_Ip(&myOp[0, 0], spin_index, &spins[0], total_spin_count)
@@ -7434,7 +7434,7 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_single_spin_Ip(int __pyx
  * 
  *     return myOp             # <<<<<<<<<<<<<<
  * 
- * cpdef ndarray[double complex, ndim=2] create_single_spin_Im(int spin_index, list i_times_2):
+ * cpdef ndarray[double complex, ndim=2] create_single_spin_Im(int spin_index, list two_I):
  */
   __Pyx_XDECREF((PyObject *)__pyx_r);
   __Pyx_INCREF((PyObject *)__pyx_v_myOp);
@@ -7444,7 +7444,7 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_single_spin_Ip(int __pyx
   /* "spinOps/spinOps.pyx":262
  * 
  * 
- * cpdef ndarray[double complex, ndim=2] create_single_spin_Ip(int spin_index, list i_times_2):             # <<<<<<<<<<<<<<
+ * cpdef ndarray[double complex, ndim=2] create_single_spin_Ip(int spin_index, list two_I):             # <<<<<<<<<<<<<<
  *     """
  *     Generates the single-spin raising operator (:math:`\hat{I}_+`) matrix for a specified spin within a spin system.
  */
@@ -7485,7 +7485,7 @@ PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-PyDoc_STRVAR(__pyx_doc_7spinOps_8_spinOps_14create_single_spin_Ip, "\n    Generates the single-spin raising operator (:math:`\\hat{I}_+`) matrix for a specified spin within a spin system.\n\n    Parameters\n    ----------\n    spin_index : int\n        Index of the spin for which the :math:`\\hat{I}_+` operator is constructed.\n    i_times_2 : list of int\n        List of integers representing :math:`2I` values for each spin in the system,\n        where :math:`I` is the spin quantum number.\n\n    Returns\n    -------\n    ndarray[double complex, ndim=2]\n        A 2D NumPy array representing the raising (:math:`\\hat{I}_+`) operator matrix.\n\n    Raises\n    ------\n    ValueError\n        If the input list `i_times_2` is empty.\n    IndexError\n        If `spin_index` is out of the valid range.\n    ");
+PyDoc_STRVAR(__pyx_doc_7spinOps_8_spinOps_14create_single_spin_Ip, "\n    Generates the single-spin raising operator (:math:`\\hat{I}_+`) matrix for a specified spin within a spin system.\n\n    Parameters\n    ----------\n    spin_index : int\n        Index of the spin for which the :math:`\\hat{I}_+` operator is constructed.\n    two_I : list of int\n        List of integers representing :math:`2I` values for each spin in the system,\n        where :math:`I` is the spin quantum number.\n\n    Returns\n    -------\n    ndarray[double complex, ndim=2]\n        A 2D NumPy array representing the raising (:math:`\\hat{I}_+`) operator matrix.\n\n    Raises\n    ------\n    ValueError\n        If the input list `two_I` is empty.\n    IndexError\n        If `spin_index` is out of the valid range.\n    ");
 static PyMethodDef __pyx_mdef_7spinOps_8_spinOps_15create_single_spin_Ip = {"create_single_spin_Ip", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_7spinOps_8_spinOps_15create_single_spin_Ip, __Pyx_METH_FASTCALL|METH_KEYWORDS, __pyx_doc_7spinOps_8_spinOps_14create_single_spin_Ip};
 static PyObject *__pyx_pw_7spinOps_8_spinOps_15create_single_spin_Ip(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
@@ -7495,7 +7495,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ) {
   int __pyx_v_spin_index;
-  PyObject *__pyx_v_i_times_2 = 0;
+  PyObject *__pyx_v_two_I = 0;
   #if !CYTHON_METH_FASTCALL
   CYTHON_UNUSED Py_ssize_t __pyx_nargs;
   #endif
@@ -7516,7 +7516,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   #endif
   __pyx_kwvalues = __Pyx_KwValues_FASTCALL(__pyx_args, __pyx_nargs);
   {
-    PyObject **__pyx_pyargnames[] = {&__pyx_n_s_spin_index,&__pyx_n_s_i_times_2,0};
+    PyObject **__pyx_pyargnames[] = {&__pyx_n_s_spin_index,&__pyx_n_s_two_I,0};
     if (__pyx_kwds) {
       Py_ssize_t kw_args;
       switch (__pyx_nargs) {
@@ -7538,7 +7538,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
         else goto __pyx_L5_argtuple_error;
         CYTHON_FALLTHROUGH;
         case  1:
-        if (likely((values[1] = __Pyx_GetKwValue_FASTCALL(__pyx_kwds, __pyx_kwvalues, __pyx_n_s_i_times_2)) != 0)) {
+        if (likely((values[1] = __Pyx_GetKwValue_FASTCALL(__pyx_kwds, __pyx_kwvalues, __pyx_n_s_two_I)) != 0)) {
           (void)__Pyx_Arg_NewRef_FASTCALL(values[1]);
           kw_args--;
         }
@@ -7558,7 +7558,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
       values[1] = __Pyx_Arg_FASTCALL(__pyx_args, 1);
     }
     __pyx_v_spin_index = __Pyx_PyInt_As_int(values[0]); if (unlikely((__pyx_v_spin_index == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 262, __pyx_L3_error)
-    __pyx_v_i_times_2 = ((PyObject*)values[1]);
+    __pyx_v_two_I = ((PyObject*)values[1]);
   }
   goto __pyx_L6_skip;
   __pyx_L5_argtuple_error:;
@@ -7576,8 +7576,8 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_i_times_2), (&PyList_Type), 1, "i_times_2", 1))) __PYX_ERR(0, 262, __pyx_L1_error)
-  __pyx_r = __pyx_pf_7spinOps_8_spinOps_14create_single_spin_Ip(__pyx_self, __pyx_v_spin_index, __pyx_v_i_times_2);
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_two_I), (&PyList_Type), 1, "two_I", 1))) __PYX_ERR(0, 262, __pyx_L1_error)
+  __pyx_r = __pyx_pf_7spinOps_8_spinOps_14create_single_spin_Ip(__pyx_self, __pyx_v_spin_index, __pyx_v_two_I);
 
   /* function exit code */
   goto __pyx_L0;
@@ -7594,7 +7594,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_7spinOps_8_spinOps_14create_single_spin_Ip(CYTHON_UNUSED PyObject *__pyx_self, int __pyx_v_spin_index, PyObject *__pyx_v_i_times_2) {
+static PyObject *__pyx_pf_7spinOps_8_spinOps_14create_single_spin_Ip(CYTHON_UNUSED PyObject *__pyx_self, int __pyx_v_spin_index, PyObject *__pyx_v_two_I) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -7603,7 +7603,7 @@ static PyObject *__pyx_pf_7spinOps_8_spinOps_14create_single_spin_Ip(CYTHON_UNUS
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("create_single_spin_Ip", 1);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = ((PyObject *)__pyx_f_7spinOps_8_spinOps_create_single_spin_Ip(__pyx_v_spin_index, __pyx_v_i_times_2, 0)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 262, __pyx_L1_error)
+  __pyx_t_1 = ((PyObject *)__pyx_f_7spinOps_8_spinOps_create_single_spin_Ip(__pyx_v_spin_index, __pyx_v_two_I, 0)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 262, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -7623,7 +7623,7 @@ static PyObject *__pyx_pf_7spinOps_8_spinOps_14create_single_spin_Ip(CYTHON_UNUS
 /* "spinOps/spinOps.pyx":300
  *     return myOp
  * 
- * cpdef ndarray[double complex, ndim=2] create_single_spin_Im(int spin_index, list i_times_2):             # <<<<<<<<<<<<<<
+ * cpdef ndarray[double complex, ndim=2] create_single_spin_Im(int spin_index, list two_I):             # <<<<<<<<<<<<<<
  *     """
  *     Generates the single-spin lowering operator (:math:`\hat{I}_-`) matrix for a specified spin within a spin system.
  */
@@ -7635,7 +7635,7 @@ PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_single_spin_Im(int __pyx_v_spin_index, PyObject *__pyx_v_i_times_2, CYTHON_UNUSED int __pyx_skip_dispatch) {
+static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_single_spin_Im(int __pyx_v_spin_index, PyObject *__pyx_v_two_I, CYTHON_UNUSED int __pyx_skip_dispatch) {
   int __pyx_v_nstates;
   int __pyx_v_total_spin_count;
   PyArrayObject *__pyx_v_spins = 0;
@@ -7676,19 +7676,19 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_single_spin_Im(int __pyx
   /* "spinOps/spinOps.pyx":324
  *         If `spin_index` is out of the valid range.
  *     """
- *     if not i_times_2:             # <<<<<<<<<<<<<<
- *         raise ValueError("The input list 'i_times_2' cannot be empty.")
- *     if spin_index < 0 or spin_index >= len(i_times_2):
+ *     if not two_I:             # <<<<<<<<<<<<<<
+ *         raise ValueError("The input list 'two_I' cannot be empty.")
+ *     if spin_index < 0 or spin_index >= len(two_I):
  */
-  __pyx_t_1 = (__pyx_v_i_times_2 != Py_None)&&(PyList_GET_SIZE(__pyx_v_i_times_2) != 0);
+  __pyx_t_1 = (__pyx_v_two_I != Py_None)&&(PyList_GET_SIZE(__pyx_v_two_I) != 0);
   __pyx_t_2 = (!__pyx_t_1);
   if (unlikely(__pyx_t_2)) {
 
     /* "spinOps/spinOps.pyx":325
  *     """
- *     if not i_times_2:
- *         raise ValueError("The input list 'i_times_2' cannot be empty.")             # <<<<<<<<<<<<<<
- *     if spin_index < 0 or spin_index >= len(i_times_2):
+ *     if not two_I:
+ *         raise ValueError("The input list 'two_I' cannot be empty.")             # <<<<<<<<<<<<<<
+ *     if spin_index < 0 or spin_index >= len(two_I):
  *         raise IndexError("The spin_index is out of bounds.")
  */
     __pyx_t_3 = __Pyx_PyObject_Call(__pyx_builtin_ValueError, __pyx_tuple__3, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 325, __pyx_L1_error)
@@ -7700,16 +7700,16 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_single_spin_Im(int __pyx
     /* "spinOps/spinOps.pyx":324
  *         If `spin_index` is out of the valid range.
  *     """
- *     if not i_times_2:             # <<<<<<<<<<<<<<
- *         raise ValueError("The input list 'i_times_2' cannot be empty.")
- *     if spin_index < 0 or spin_index >= len(i_times_2):
+ *     if not two_I:             # <<<<<<<<<<<<<<
+ *         raise ValueError("The input list 'two_I' cannot be empty.")
+ *     if spin_index < 0 or spin_index >= len(two_I):
  */
   }
 
   /* "spinOps/spinOps.pyx":326
- *     if not i_times_2:
- *         raise ValueError("The input list 'i_times_2' cannot be empty.")
- *     if spin_index < 0 or spin_index >= len(i_times_2):             # <<<<<<<<<<<<<<
+ *     if not two_I:
+ *         raise ValueError("The input list 'two_I' cannot be empty.")
+ *     if spin_index < 0 or spin_index >= len(two_I):             # <<<<<<<<<<<<<<
  *         raise IndexError("The spin_index is out of bounds.")
  * 
  */
@@ -7719,22 +7719,22 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_single_spin_Im(int __pyx
     __pyx_t_2 = __pyx_t_1;
     goto __pyx_L5_bool_binop_done;
   }
-  if (unlikely(__pyx_v_i_times_2 == Py_None)) {
+  if (unlikely(__pyx_v_two_I == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "object of type 'NoneType' has no len()");
     __PYX_ERR(0, 326, __pyx_L1_error)
   }
-  __pyx_t_4 = __Pyx_PyList_GET_SIZE(__pyx_v_i_times_2); if (unlikely(__pyx_t_4 == ((Py_ssize_t)-1))) __PYX_ERR(0, 326, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyList_GET_SIZE(__pyx_v_two_I); if (unlikely(__pyx_t_4 == ((Py_ssize_t)-1))) __PYX_ERR(0, 326, __pyx_L1_error)
   __pyx_t_1 = (__pyx_v_spin_index >= __pyx_t_4);
   __pyx_t_2 = __pyx_t_1;
   __pyx_L5_bool_binop_done:;
   if (unlikely(__pyx_t_2)) {
 
     /* "spinOps/spinOps.pyx":327
- *         raise ValueError("The input list 'i_times_2' cannot be empty.")
- *     if spin_index < 0 or spin_index >= len(i_times_2):
+ *         raise ValueError("The input list 'two_I' cannot be empty.")
+ *     if spin_index < 0 or spin_index >= len(two_I):
  *         raise IndexError("The spin_index is out of bounds.")             # <<<<<<<<<<<<<<
  * 
- *     cdef int nstates = number_of_states(i_times_2)
+ *     cdef int nstates = number_of_states(two_I)
  */
     __pyx_t_3 = __Pyx_PyObject_Call(__pyx_builtin_IndexError, __pyx_tuple__4, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 327, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
@@ -7743,9 +7743,9 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_single_spin_Im(int __pyx
     __PYX_ERR(0, 327, __pyx_L1_error)
 
     /* "spinOps/spinOps.pyx":326
- *     if not i_times_2:
- *         raise ValueError("The input list 'i_times_2' cannot be empty.")
- *     if spin_index < 0 or spin_index >= len(i_times_2):             # <<<<<<<<<<<<<<
+ *     if not two_I:
+ *         raise ValueError("The input list 'two_I' cannot be empty.")
+ *     if spin_index < 0 or spin_index >= len(two_I):             # <<<<<<<<<<<<<<
  *         raise IndexError("The spin_index is out of bounds.")
  * 
  */
@@ -7754,31 +7754,31 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_single_spin_Im(int __pyx
   /* "spinOps/spinOps.pyx":329
  *         raise IndexError("The spin_index is out of bounds.")
  * 
- *     cdef int nstates = number_of_states(i_times_2)             # <<<<<<<<<<<<<<
- *     cdef int total_spin_count = len(i_times_2)
- *     cdef ndarray[int] spins = np.array(i_times_2, dtype=np.int32)
+ *     cdef int nstates = number_of_states(two_I)             # <<<<<<<<<<<<<<
+ *     cdef int total_spin_count = len(two_I)
+ *     cdef ndarray[int] spins = np.array(two_I, dtype=np.int32)
  */
-  __pyx_t_5 = __pyx_f_7spinOps_8_spinOps_number_of_states(__pyx_v_i_times_2, 0); if (unlikely(__pyx_t_5 == ((int)-1) && PyErr_Occurred())) __PYX_ERR(0, 329, __pyx_L1_error)
+  __pyx_t_5 = __pyx_f_7spinOps_8_spinOps_number_of_states(__pyx_v_two_I, 0); if (unlikely(__pyx_t_5 == ((int)-1) && PyErr_Occurred())) __PYX_ERR(0, 329, __pyx_L1_error)
   __pyx_v_nstates = __pyx_t_5;
 
   /* "spinOps/spinOps.pyx":330
  * 
- *     cdef int nstates = number_of_states(i_times_2)
- *     cdef int total_spin_count = len(i_times_2)             # <<<<<<<<<<<<<<
- *     cdef ndarray[int] spins = np.array(i_times_2, dtype=np.int32)
+ *     cdef int nstates = number_of_states(two_I)
+ *     cdef int total_spin_count = len(two_I)             # <<<<<<<<<<<<<<
+ *     cdef ndarray[int] spins = np.array(two_I, dtype=np.int32)
  *     cdef ndarray[double complex, ndim=2] myOp = np.zeros((nstates, nstates), dtype=np.complex128)
  */
-  if (unlikely(__pyx_v_i_times_2 == Py_None)) {
+  if (unlikely(__pyx_v_two_I == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "object of type 'NoneType' has no len()");
     __PYX_ERR(0, 330, __pyx_L1_error)
   }
-  __pyx_t_4 = __Pyx_PyList_GET_SIZE(__pyx_v_i_times_2); if (unlikely(__pyx_t_4 == ((Py_ssize_t)-1))) __PYX_ERR(0, 330, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyList_GET_SIZE(__pyx_v_two_I); if (unlikely(__pyx_t_4 == ((Py_ssize_t)-1))) __PYX_ERR(0, 330, __pyx_L1_error)
   __pyx_v_total_spin_count = __pyx_t_4;
 
   /* "spinOps/spinOps.pyx":331
- *     cdef int nstates = number_of_states(i_times_2)
- *     cdef int total_spin_count = len(i_times_2)
- *     cdef ndarray[int] spins = np.array(i_times_2, dtype=np.int32)             # <<<<<<<<<<<<<<
+ *     cdef int nstates = number_of_states(two_I)
+ *     cdef int total_spin_count = len(two_I)
+ *     cdef ndarray[int] spins = np.array(two_I, dtype=np.int32)             # <<<<<<<<<<<<<<
  *     cdef ndarray[double complex, ndim=2] myOp = np.zeros((nstates, nstates), dtype=np.complex128)
  * 
  */
@@ -7789,9 +7789,9 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_single_spin_Im(int __pyx
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 331, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __Pyx_INCREF(__pyx_v_i_times_2);
-  __Pyx_GIVEREF(__pyx_v_i_times_2);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_v_i_times_2)) __PYX_ERR(0, 331, __pyx_L1_error);
+  __Pyx_INCREF(__pyx_v_two_I);
+  __Pyx_GIVEREF(__pyx_v_two_I);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_v_two_I)) __PYX_ERR(0, 331, __pyx_L1_error);
   __pyx_t_7 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 331, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
   __Pyx_GetModuleGlobalName(__pyx_t_8, __pyx_n_s_np); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 331, __pyx_L1_error)
@@ -7821,8 +7821,8 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_single_spin_Im(int __pyx
   __pyx_t_9 = 0;
 
   /* "spinOps/spinOps.pyx":332
- *     cdef int total_spin_count = len(i_times_2)
- *     cdef ndarray[int] spins = np.array(i_times_2, dtype=np.int32)
+ *     cdef int total_spin_count = len(two_I)
+ *     cdef ndarray[int] spins = np.array(two_I, dtype=np.int32)
  *     cdef ndarray[double complex, ndim=2] myOp = np.zeros((nstates, nstates), dtype=np.complex128)             # <<<<<<<<<<<<<<
  * 
  *     _get_single_spin_Im(&myOp[0, 0], spin_index, &spins[0], total_spin_count)
@@ -7926,7 +7926,7 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_single_spin_Im(int __pyx
   /* "spinOps/spinOps.pyx":300
  *     return myOp
  * 
- * cpdef ndarray[double complex, ndim=2] create_single_spin_Im(int spin_index, list i_times_2):             # <<<<<<<<<<<<<<
+ * cpdef ndarray[double complex, ndim=2] create_single_spin_Im(int spin_index, list two_I):             # <<<<<<<<<<<<<<
  *     """
  *     Generates the single-spin lowering operator (:math:`\hat{I}_-`) matrix for a specified spin within a spin system.
  */
@@ -7967,7 +7967,7 @@ PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-PyDoc_STRVAR(__pyx_doc_7spinOps_8_spinOps_16create_single_spin_Im, "\n    Generates the single-spin lowering operator (:math:`\\hat{I}_-`) matrix for a specified spin within a spin system.\n\n    Parameters\n    ----------\n    spin_index : int\n        Index of the spin for which the :math:`\\hat{I}_-` operator is constructed.\n    i_times_2 : list of int\n        List of integers representing :math:`2I` values for each spin in the system,\n        where :math:`I` is the spin quantum number.\n\n    Returns\n    -------\n    ndarray[double complex, ndim=2]\n        A 2D NumPy array representing the lowering (:math:`\\hat{I}_-`) operator matrix.\n\n    Raises\n    ------\n    ValueError\n        If the input list `i_times_2` is empty.\n    IndexError\n        If `spin_index` is out of the valid range.\n    ");
+PyDoc_STRVAR(__pyx_doc_7spinOps_8_spinOps_16create_single_spin_Im, "\n    Generates the single-spin lowering operator (:math:`\\hat{I}_-`) matrix for a specified spin within a spin system.\n\n    Parameters\n    ----------\n    spin_index : int\n        Index of the spin for which the :math:`\\hat{I}_-` operator is constructed.\n    two_I : list of int\n        List of integers representing :math:`2I` values for each spin in the system,\n        where :math:`I` is the spin quantum number.\n\n    Returns\n    -------\n    ndarray[double complex, ndim=2]\n        A 2D NumPy array representing the lowering (:math:`\\hat{I}_-`) operator matrix.\n\n    Raises\n    ------\n    ValueError\n        If the input list `two_I` is empty.\n    IndexError\n        If `spin_index` is out of the valid range.\n    ");
 static PyMethodDef __pyx_mdef_7spinOps_8_spinOps_17create_single_spin_Im = {"create_single_spin_Im", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_7spinOps_8_spinOps_17create_single_spin_Im, __Pyx_METH_FASTCALL|METH_KEYWORDS, __pyx_doc_7spinOps_8_spinOps_16create_single_spin_Im};
 static PyObject *__pyx_pw_7spinOps_8_spinOps_17create_single_spin_Im(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
@@ -7977,7 +7977,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ) {
   int __pyx_v_spin_index;
-  PyObject *__pyx_v_i_times_2 = 0;
+  PyObject *__pyx_v_two_I = 0;
   #if !CYTHON_METH_FASTCALL
   CYTHON_UNUSED Py_ssize_t __pyx_nargs;
   #endif
@@ -7998,7 +7998,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   #endif
   __pyx_kwvalues = __Pyx_KwValues_FASTCALL(__pyx_args, __pyx_nargs);
   {
-    PyObject **__pyx_pyargnames[] = {&__pyx_n_s_spin_index,&__pyx_n_s_i_times_2,0};
+    PyObject **__pyx_pyargnames[] = {&__pyx_n_s_spin_index,&__pyx_n_s_two_I,0};
     if (__pyx_kwds) {
       Py_ssize_t kw_args;
       switch (__pyx_nargs) {
@@ -8020,7 +8020,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
         else goto __pyx_L5_argtuple_error;
         CYTHON_FALLTHROUGH;
         case  1:
-        if (likely((values[1] = __Pyx_GetKwValue_FASTCALL(__pyx_kwds, __pyx_kwvalues, __pyx_n_s_i_times_2)) != 0)) {
+        if (likely((values[1] = __Pyx_GetKwValue_FASTCALL(__pyx_kwds, __pyx_kwvalues, __pyx_n_s_two_I)) != 0)) {
           (void)__Pyx_Arg_NewRef_FASTCALL(values[1]);
           kw_args--;
         }
@@ -8040,7 +8040,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
       values[1] = __Pyx_Arg_FASTCALL(__pyx_args, 1);
     }
     __pyx_v_spin_index = __Pyx_PyInt_As_int(values[0]); if (unlikely((__pyx_v_spin_index == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 300, __pyx_L3_error)
-    __pyx_v_i_times_2 = ((PyObject*)values[1]);
+    __pyx_v_two_I = ((PyObject*)values[1]);
   }
   goto __pyx_L6_skip;
   __pyx_L5_argtuple_error:;
@@ -8058,8 +8058,8 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_i_times_2), (&PyList_Type), 1, "i_times_2", 1))) __PYX_ERR(0, 300, __pyx_L1_error)
-  __pyx_r = __pyx_pf_7spinOps_8_spinOps_16create_single_spin_Im(__pyx_self, __pyx_v_spin_index, __pyx_v_i_times_2);
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_two_I), (&PyList_Type), 1, "two_I", 1))) __PYX_ERR(0, 300, __pyx_L1_error)
+  __pyx_r = __pyx_pf_7spinOps_8_spinOps_16create_single_spin_Im(__pyx_self, __pyx_v_spin_index, __pyx_v_two_I);
 
   /* function exit code */
   goto __pyx_L0;
@@ -8076,7 +8076,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_7spinOps_8_spinOps_16create_single_spin_Im(CYTHON_UNUSED PyObject *__pyx_self, int __pyx_v_spin_index, PyObject *__pyx_v_i_times_2) {
+static PyObject *__pyx_pf_7spinOps_8_spinOps_16create_single_spin_Im(CYTHON_UNUSED PyObject *__pyx_self, int __pyx_v_spin_index, PyObject *__pyx_v_two_I) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -8085,7 +8085,7 @@ static PyObject *__pyx_pf_7spinOps_8_spinOps_16create_single_spin_Im(CYTHON_UNUS
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("create_single_spin_Im", 1);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = ((PyObject *)__pyx_f_7spinOps_8_spinOps_create_single_spin_Im(__pyx_v_spin_index, __pyx_v_i_times_2, 0)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 300, __pyx_L1_error)
+  __pyx_t_1 = ((PyObject *)__pyx_f_7spinOps_8_spinOps_create_single_spin_Im(__pyx_v_spin_index, __pyx_v_two_I, 0)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 300, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -8105,7 +8105,7 @@ static PyObject *__pyx_pf_7spinOps_8_spinOps_16create_single_spin_Im(CYTHON_UNUS
 /* "spinOps/spinOps.pyx":339
  * 
  * 
- * cpdef ndarray[double complex, ndim=2] create_single_spin_Tlm(int L, int M, int spin_index, list i_times_2):             # <<<<<<<<<<<<<<
+ * cpdef ndarray[double complex, ndim=2] create_single_spin_Tlm(int L, int M, int spin_index, list two_I):             # <<<<<<<<<<<<<<
  *     """
  *     Generates the single-spin irreducible spherical tensor operator (:math:`\hat{T}_{L,M}`) matrix for a specified spin within a spin system.
  */
@@ -8117,7 +8117,7 @@ PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_single_spin_Tlm(int __pyx_v_L, int __pyx_v_M, int __pyx_v_spin_index, PyObject *__pyx_v_i_times_2, CYTHON_UNUSED int __pyx_skip_dispatch) {
+static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_single_spin_Tlm(int __pyx_v_L, int __pyx_v_M, int __pyx_v_spin_index, PyObject *__pyx_v_two_I, CYTHON_UNUSED int __pyx_skip_dispatch) {
   int __pyx_v_nstates;
   int __pyx_v_total_spin_count;
   PyArrayObject *__pyx_v_spins = 0;
@@ -8156,19 +8156,19 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_single_spin_Tlm(int __py
   /* "spinOps/spinOps.pyx":367
  *         If `spin_index` is out of the valid range.
  *     """
- *     if not i_times_2:             # <<<<<<<<<<<<<<
- *         raise ValueError("The input list 'i_times_2' cannot be empty.")
- *     if spin_index < 0 or spin_index >= len(i_times_2):
+ *     if not two_I:             # <<<<<<<<<<<<<<
+ *         raise ValueError("The input list 'two_I' cannot be empty.")
+ *     if spin_index < 0 or spin_index >= len(two_I):
  */
-  __pyx_t_1 = (__pyx_v_i_times_2 != Py_None)&&(PyList_GET_SIZE(__pyx_v_i_times_2) != 0);
+  __pyx_t_1 = (__pyx_v_two_I != Py_None)&&(PyList_GET_SIZE(__pyx_v_two_I) != 0);
   __pyx_t_2 = (!__pyx_t_1);
   if (unlikely(__pyx_t_2)) {
 
     /* "spinOps/spinOps.pyx":368
  *     """
- *     if not i_times_2:
- *         raise ValueError("The input list 'i_times_2' cannot be empty.")             # <<<<<<<<<<<<<<
- *     if spin_index < 0 or spin_index >= len(i_times_2):
+ *     if not two_I:
+ *         raise ValueError("The input list 'two_I' cannot be empty.")             # <<<<<<<<<<<<<<
+ *     if spin_index < 0 or spin_index >= len(two_I):
  *         raise IndexError("The spin_index is out of bounds.")
  */
     __pyx_t_3 = __Pyx_PyObject_Call(__pyx_builtin_ValueError, __pyx_tuple__3, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 368, __pyx_L1_error)
@@ -8180,16 +8180,16 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_single_spin_Tlm(int __py
     /* "spinOps/spinOps.pyx":367
  *         If `spin_index` is out of the valid range.
  *     """
- *     if not i_times_2:             # <<<<<<<<<<<<<<
- *         raise ValueError("The input list 'i_times_2' cannot be empty.")
- *     if spin_index < 0 or spin_index >= len(i_times_2):
+ *     if not two_I:             # <<<<<<<<<<<<<<
+ *         raise ValueError("The input list 'two_I' cannot be empty.")
+ *     if spin_index < 0 or spin_index >= len(two_I):
  */
   }
 
   /* "spinOps/spinOps.pyx":369
- *     if not i_times_2:
- *         raise ValueError("The input list 'i_times_2' cannot be empty.")
- *     if spin_index < 0 or spin_index >= len(i_times_2):             # <<<<<<<<<<<<<<
+ *     if not two_I:
+ *         raise ValueError("The input list 'two_I' cannot be empty.")
+ *     if spin_index < 0 or spin_index >= len(two_I):             # <<<<<<<<<<<<<<
  *         raise IndexError("The spin_index is out of bounds.")
  * 
  */
@@ -8199,22 +8199,22 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_single_spin_Tlm(int __py
     __pyx_t_2 = __pyx_t_1;
     goto __pyx_L5_bool_binop_done;
   }
-  if (unlikely(__pyx_v_i_times_2 == Py_None)) {
+  if (unlikely(__pyx_v_two_I == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "object of type 'NoneType' has no len()");
     __PYX_ERR(0, 369, __pyx_L1_error)
   }
-  __pyx_t_4 = __Pyx_PyList_GET_SIZE(__pyx_v_i_times_2); if (unlikely(__pyx_t_4 == ((Py_ssize_t)-1))) __PYX_ERR(0, 369, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyList_GET_SIZE(__pyx_v_two_I); if (unlikely(__pyx_t_4 == ((Py_ssize_t)-1))) __PYX_ERR(0, 369, __pyx_L1_error)
   __pyx_t_1 = (__pyx_v_spin_index >= __pyx_t_4);
   __pyx_t_2 = __pyx_t_1;
   __pyx_L5_bool_binop_done:;
   if (unlikely(__pyx_t_2)) {
 
     /* "spinOps/spinOps.pyx":370
- *         raise ValueError("The input list 'i_times_2' cannot be empty.")
- *     if spin_index < 0 or spin_index >= len(i_times_2):
+ *         raise ValueError("The input list 'two_I' cannot be empty.")
+ *     if spin_index < 0 or spin_index >= len(two_I):
  *         raise IndexError("The spin_index is out of bounds.")             # <<<<<<<<<<<<<<
  * 
- *     cdef int nstates = number_of_states(i_times_2)
+ *     cdef int nstates = number_of_states(two_I)
  */
     __pyx_t_3 = __Pyx_PyObject_Call(__pyx_builtin_IndexError, __pyx_tuple__4, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 370, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
@@ -8223,9 +8223,9 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_single_spin_Tlm(int __py
     __PYX_ERR(0, 370, __pyx_L1_error)
 
     /* "spinOps/spinOps.pyx":369
- *     if not i_times_2:
- *         raise ValueError("The input list 'i_times_2' cannot be empty.")
- *     if spin_index < 0 or spin_index >= len(i_times_2):             # <<<<<<<<<<<<<<
+ *     if not two_I:
+ *         raise ValueError("The input list 'two_I' cannot be empty.")
+ *     if spin_index < 0 or spin_index >= len(two_I):             # <<<<<<<<<<<<<<
  *         raise IndexError("The spin_index is out of bounds.")
  * 
  */
@@ -8234,31 +8234,31 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_single_spin_Tlm(int __py
   /* "spinOps/spinOps.pyx":372
  *         raise IndexError("The spin_index is out of bounds.")
  * 
- *     cdef int nstates = number_of_states(i_times_2)             # <<<<<<<<<<<<<<
- *     cdef int total_spin_count = len(i_times_2)
- *     cdef ndarray[int] spins = np.array(i_times_2, dtype=np.int32)
+ *     cdef int nstates = number_of_states(two_I)             # <<<<<<<<<<<<<<
+ *     cdef int total_spin_count = len(two_I)
+ *     cdef ndarray[int] spins = np.array(two_I, dtype=np.int32)
  */
-  __pyx_t_5 = __pyx_f_7spinOps_8_spinOps_number_of_states(__pyx_v_i_times_2, 0); if (unlikely(__pyx_t_5 == ((int)-1) && PyErr_Occurred())) __PYX_ERR(0, 372, __pyx_L1_error)
+  __pyx_t_5 = __pyx_f_7spinOps_8_spinOps_number_of_states(__pyx_v_two_I, 0); if (unlikely(__pyx_t_5 == ((int)-1) && PyErr_Occurred())) __PYX_ERR(0, 372, __pyx_L1_error)
   __pyx_v_nstates = __pyx_t_5;
 
   /* "spinOps/spinOps.pyx":373
  * 
- *     cdef int nstates = number_of_states(i_times_2)
- *     cdef int total_spin_count = len(i_times_2)             # <<<<<<<<<<<<<<
- *     cdef ndarray[int] spins = np.array(i_times_2, dtype=np.int32)
+ *     cdef int nstates = number_of_states(two_I)
+ *     cdef int total_spin_count = len(two_I)             # <<<<<<<<<<<<<<
+ *     cdef ndarray[int] spins = np.array(two_I, dtype=np.int32)
  *     cdef ndarray[double complex, ndim=2] myOp = np.zeros((nstates, nstates), dtype=np.complex128)
  */
-  if (unlikely(__pyx_v_i_times_2 == Py_None)) {
+  if (unlikely(__pyx_v_two_I == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "object of type 'NoneType' has no len()");
     __PYX_ERR(0, 373, __pyx_L1_error)
   }
-  __pyx_t_4 = __Pyx_PyList_GET_SIZE(__pyx_v_i_times_2); if (unlikely(__pyx_t_4 == ((Py_ssize_t)-1))) __PYX_ERR(0, 373, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyList_GET_SIZE(__pyx_v_two_I); if (unlikely(__pyx_t_4 == ((Py_ssize_t)-1))) __PYX_ERR(0, 373, __pyx_L1_error)
   __pyx_v_total_spin_count = __pyx_t_4;
 
   /* "spinOps/spinOps.pyx":374
- *     cdef int nstates = number_of_states(i_times_2)
- *     cdef int total_spin_count = len(i_times_2)
- *     cdef ndarray[int] spins = np.array(i_times_2, dtype=np.int32)             # <<<<<<<<<<<<<<
+ *     cdef int nstates = number_of_states(two_I)
+ *     cdef int total_spin_count = len(two_I)
+ *     cdef ndarray[int] spins = np.array(two_I, dtype=np.int32)             # <<<<<<<<<<<<<<
  *     cdef ndarray[double complex, ndim=2] myOp = np.zeros((nstates, nstates), dtype=np.complex128)
  * 
  */
@@ -8269,9 +8269,9 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_single_spin_Tlm(int __py
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 374, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __Pyx_INCREF(__pyx_v_i_times_2);
-  __Pyx_GIVEREF(__pyx_v_i_times_2);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_v_i_times_2)) __PYX_ERR(0, 374, __pyx_L1_error);
+  __Pyx_INCREF(__pyx_v_two_I);
+  __Pyx_GIVEREF(__pyx_v_two_I);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_v_two_I)) __PYX_ERR(0, 374, __pyx_L1_error);
   __pyx_t_7 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 374, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
   __Pyx_GetModuleGlobalName(__pyx_t_8, __pyx_n_s_np); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 374, __pyx_L1_error)
@@ -8301,8 +8301,8 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_single_spin_Tlm(int __py
   __pyx_t_9 = 0;
 
   /* "spinOps/spinOps.pyx":375
- *     cdef int total_spin_count = len(i_times_2)
- *     cdef ndarray[int] spins = np.array(i_times_2, dtype=np.int32)
+ *     cdef int total_spin_count = len(two_I)
+ *     cdef ndarray[int] spins = np.array(two_I, dtype=np.int32)
  *     cdef ndarray[double complex, ndim=2] myOp = np.zeros((nstates, nstates), dtype=np.complex128)             # <<<<<<<<<<<<<<
  * 
  *     _get_single_spin_Tlm(<double complex *> cnp.PyArray_DATA(myOp), spin_index, &spins[0], total_spin_count, L, M)
@@ -8391,7 +8391,7 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_single_spin_Tlm(int __py
   /* "spinOps/spinOps.pyx":339
  * 
  * 
- * cpdef ndarray[double complex, ndim=2] create_single_spin_Tlm(int L, int M, int spin_index, list i_times_2):             # <<<<<<<<<<<<<<
+ * cpdef ndarray[double complex, ndim=2] create_single_spin_Tlm(int L, int M, int spin_index, list two_I):             # <<<<<<<<<<<<<<
  *     """
  *     Generates the single-spin irreducible spherical tensor operator (:math:`\hat{T}_{L,M}`) matrix for a specified spin within a spin system.
  */
@@ -8432,7 +8432,7 @@ PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-PyDoc_STRVAR(__pyx_doc_7spinOps_8_spinOps_18create_single_spin_Tlm, "\n    Generates the single-spin irreducible spherical tensor operator (:math:`\\hat{T}_{L,M}`) matrix for a specified spin within a spin system.\n\n    Parameters\n    ----------\n    L : int\n        Rank of the tensor operator.\n    M : int\n        Order of the tensor operator.\n    spin_index : int\n        Index of the spin for which the :math:`\\hat{T}_{L,M}` operator is constructed.\n    i_times_2 : list of int\n        List of integers representing :math:`2I` values for each spin in the system,\n        where :math:`I` is the spin quantum number.\n\n    Returns\n    -------\n    ndarray[double complex, ndim=2]\n        A 2D NumPy array representing the :math:`\\hat{T}_{L,M}` operator matrix.\n\n    Raises\n    ------\n    ValueError\n        If the input list `i_times_2` is empty.\n    IndexError\n        If `spin_index` is out of the valid range.\n    ");
+PyDoc_STRVAR(__pyx_doc_7spinOps_8_spinOps_18create_single_spin_Tlm, "\n    Generates the single-spin irreducible spherical tensor operator (:math:`\\hat{T}_{L,M}`) matrix for a specified spin within a spin system.\n\n    Parameters\n    ----------\n    L : int\n        Rank of the tensor operator.\n    M : int\n        Order of the tensor operator.\n    spin_index : int\n        Index of the spin for which the :math:`\\hat{T}_{L,M}` operator is constructed.\n    two_I : list of int\n        List of integers representing :math:`2I` values for each spin in the system,\n        where :math:`I` is the spin quantum number.\n\n    Returns\n    -------\n    ndarray[double complex, ndim=2]\n        A 2D NumPy array representing the :math:`\\hat{T}_{L,M}` operator matrix.\n\n    Raises\n    ------\n    ValueError\n        If the input list `two_I` is empty.\n    IndexError\n        If `spin_index` is out of the valid range.\n    ");
 static PyMethodDef __pyx_mdef_7spinOps_8_spinOps_19create_single_spin_Tlm = {"create_single_spin_Tlm", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_7spinOps_8_spinOps_19create_single_spin_Tlm, __Pyx_METH_FASTCALL|METH_KEYWORDS, __pyx_doc_7spinOps_8_spinOps_18create_single_spin_Tlm};
 static PyObject *__pyx_pw_7spinOps_8_spinOps_19create_single_spin_Tlm(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
@@ -8444,7 +8444,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   int __pyx_v_L;
   int __pyx_v_M;
   int __pyx_v_spin_index;
-  PyObject *__pyx_v_i_times_2 = 0;
+  PyObject *__pyx_v_two_I = 0;
   #if !CYTHON_METH_FASTCALL
   CYTHON_UNUSED Py_ssize_t __pyx_nargs;
   #endif
@@ -8465,7 +8465,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   #endif
   __pyx_kwvalues = __Pyx_KwValues_FASTCALL(__pyx_args, __pyx_nargs);
   {
-    PyObject **__pyx_pyargnames[] = {&__pyx_n_s_L,&__pyx_n_s_M,&__pyx_n_s_spin_index,&__pyx_n_s_i_times_2,0};
+    PyObject **__pyx_pyargnames[] = {&__pyx_n_s_L,&__pyx_n_s_M,&__pyx_n_s_spin_index,&__pyx_n_s_two_I,0};
     if (__pyx_kwds) {
       Py_ssize_t kw_args;
       switch (__pyx_nargs) {
@@ -8511,7 +8511,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
         }
         CYTHON_FALLTHROUGH;
         case  3:
-        if (likely((values[3] = __Pyx_GetKwValue_FASTCALL(__pyx_kwds, __pyx_kwvalues, __pyx_n_s_i_times_2)) != 0)) {
+        if (likely((values[3] = __Pyx_GetKwValue_FASTCALL(__pyx_kwds, __pyx_kwvalues, __pyx_n_s_two_I)) != 0)) {
           (void)__Pyx_Arg_NewRef_FASTCALL(values[3]);
           kw_args--;
         }
@@ -8535,7 +8535,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
     __pyx_v_L = __Pyx_PyInt_As_int(values[0]); if (unlikely((__pyx_v_L == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 339, __pyx_L3_error)
     __pyx_v_M = __Pyx_PyInt_As_int(values[1]); if (unlikely((__pyx_v_M == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 339, __pyx_L3_error)
     __pyx_v_spin_index = __Pyx_PyInt_As_int(values[2]); if (unlikely((__pyx_v_spin_index == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 339, __pyx_L3_error)
-    __pyx_v_i_times_2 = ((PyObject*)values[3]);
+    __pyx_v_two_I = ((PyObject*)values[3]);
   }
   goto __pyx_L6_skip;
   __pyx_L5_argtuple_error:;
@@ -8553,8 +8553,8 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_i_times_2), (&PyList_Type), 1, "i_times_2", 1))) __PYX_ERR(0, 339, __pyx_L1_error)
-  __pyx_r = __pyx_pf_7spinOps_8_spinOps_18create_single_spin_Tlm(__pyx_self, __pyx_v_L, __pyx_v_M, __pyx_v_spin_index, __pyx_v_i_times_2);
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_two_I), (&PyList_Type), 1, "two_I", 1))) __PYX_ERR(0, 339, __pyx_L1_error)
+  __pyx_r = __pyx_pf_7spinOps_8_spinOps_18create_single_spin_Tlm(__pyx_self, __pyx_v_L, __pyx_v_M, __pyx_v_spin_index, __pyx_v_two_I);
 
   /* function exit code */
   goto __pyx_L0;
@@ -8571,7 +8571,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_7spinOps_8_spinOps_18create_single_spin_Tlm(CYTHON_UNUSED PyObject *__pyx_self, int __pyx_v_L, int __pyx_v_M, int __pyx_v_spin_index, PyObject *__pyx_v_i_times_2) {
+static PyObject *__pyx_pf_7spinOps_8_spinOps_18create_single_spin_Tlm(CYTHON_UNUSED PyObject *__pyx_self, int __pyx_v_L, int __pyx_v_M, int __pyx_v_spin_index, PyObject *__pyx_v_two_I) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -8580,7 +8580,7 @@ static PyObject *__pyx_pf_7spinOps_8_spinOps_18create_single_spin_Tlm(CYTHON_UNU
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("create_single_spin_Tlm", 1);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = ((PyObject *)__pyx_f_7spinOps_8_spinOps_create_single_spin_Tlm(__pyx_v_L, __pyx_v_M, __pyx_v_spin_index, __pyx_v_i_times_2, 0)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 339, __pyx_L1_error)
+  __pyx_t_1 = ((PyObject *)__pyx_f_7spinOps_8_spinOps_create_single_spin_Tlm(__pyx_v_L, __pyx_v_M, __pyx_v_spin_index, __pyx_v_two_I, 0)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 339, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -8600,7 +8600,7 @@ static PyObject *__pyx_pf_7spinOps_8_spinOps_18create_single_spin_Tlm(CYTHON_UNU
 /* "spinOps/spinOps.pyx":382
  * 
  * 
- * cpdef ndarray[double complex, ndim=2] create_single_spin_Tlm_unit(int L, int M, int spin_index, list i_times_2):             # <<<<<<<<<<<<<<
+ * cpdef ndarray[double complex, ndim=2] create_single_spin_Tlm_unit(int L, int M, int spin_index, list two_I):             # <<<<<<<<<<<<<<
  *     """
  *     Generates the single-spin unit-normalized irreducible spherical tensor operator (:math:`\hat{\mathcal{T}}_{L,M}`) matrix for a specified spin within a spin system.
  */
@@ -8612,7 +8612,7 @@ PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_single_spin_Tlm_unit(int __pyx_v_L, int __pyx_v_M, int __pyx_v_spin_index, PyObject *__pyx_v_i_times_2, CYTHON_UNUSED int __pyx_skip_dispatch) {
+static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_single_spin_Tlm_unit(int __pyx_v_L, int __pyx_v_M, int __pyx_v_spin_index, PyObject *__pyx_v_two_I, CYTHON_UNUSED int __pyx_skip_dispatch) {
   int __pyx_v_nstates;
   int __pyx_v_total_spin_count;
   PyArrayObject *__pyx_v_spins = 0;
@@ -8653,19 +8653,19 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_single_spin_Tlm_unit(int
   /* "spinOps/spinOps.pyx":410
  *         If `spin_index` is out of the valid range.
  *     """
- *     if not i_times_2:             # <<<<<<<<<<<<<<
- *         raise ValueError("The input list 'i_times_2' cannot be empty.")
- *     if spin_index < 0 or spin_index >= len(i_times_2):
+ *     if not two_I:             # <<<<<<<<<<<<<<
+ *         raise ValueError("The input list 'two_I' cannot be empty.")
+ *     if spin_index < 0 or spin_index >= len(two_I):
  */
-  __pyx_t_1 = (__pyx_v_i_times_2 != Py_None)&&(PyList_GET_SIZE(__pyx_v_i_times_2) != 0);
+  __pyx_t_1 = (__pyx_v_two_I != Py_None)&&(PyList_GET_SIZE(__pyx_v_two_I) != 0);
   __pyx_t_2 = (!__pyx_t_1);
   if (unlikely(__pyx_t_2)) {
 
     /* "spinOps/spinOps.pyx":411
  *     """
- *     if not i_times_2:
- *         raise ValueError("The input list 'i_times_2' cannot be empty.")             # <<<<<<<<<<<<<<
- *     if spin_index < 0 or spin_index >= len(i_times_2):
+ *     if not two_I:
+ *         raise ValueError("The input list 'two_I' cannot be empty.")             # <<<<<<<<<<<<<<
+ *     if spin_index < 0 or spin_index >= len(two_I):
  *         raise IndexError("The spin_index is out of bounds.")
  */
     __pyx_t_3 = __Pyx_PyObject_Call(__pyx_builtin_ValueError, __pyx_tuple__3, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 411, __pyx_L1_error)
@@ -8677,16 +8677,16 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_single_spin_Tlm_unit(int
     /* "spinOps/spinOps.pyx":410
  *         If `spin_index` is out of the valid range.
  *     """
- *     if not i_times_2:             # <<<<<<<<<<<<<<
- *         raise ValueError("The input list 'i_times_2' cannot be empty.")
- *     if spin_index < 0 or spin_index >= len(i_times_2):
+ *     if not two_I:             # <<<<<<<<<<<<<<
+ *         raise ValueError("The input list 'two_I' cannot be empty.")
+ *     if spin_index < 0 or spin_index >= len(two_I):
  */
   }
 
   /* "spinOps/spinOps.pyx":412
- *     if not i_times_2:
- *         raise ValueError("The input list 'i_times_2' cannot be empty.")
- *     if spin_index < 0 or spin_index >= len(i_times_2):             # <<<<<<<<<<<<<<
+ *     if not two_I:
+ *         raise ValueError("The input list 'two_I' cannot be empty.")
+ *     if spin_index < 0 or spin_index >= len(two_I):             # <<<<<<<<<<<<<<
  *         raise IndexError("The spin_index is out of bounds.")
  * 
  */
@@ -8696,22 +8696,22 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_single_spin_Tlm_unit(int
     __pyx_t_2 = __pyx_t_1;
     goto __pyx_L5_bool_binop_done;
   }
-  if (unlikely(__pyx_v_i_times_2 == Py_None)) {
+  if (unlikely(__pyx_v_two_I == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "object of type 'NoneType' has no len()");
     __PYX_ERR(0, 412, __pyx_L1_error)
   }
-  __pyx_t_4 = __Pyx_PyList_GET_SIZE(__pyx_v_i_times_2); if (unlikely(__pyx_t_4 == ((Py_ssize_t)-1))) __PYX_ERR(0, 412, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyList_GET_SIZE(__pyx_v_two_I); if (unlikely(__pyx_t_4 == ((Py_ssize_t)-1))) __PYX_ERR(0, 412, __pyx_L1_error)
   __pyx_t_1 = (__pyx_v_spin_index >= __pyx_t_4);
   __pyx_t_2 = __pyx_t_1;
   __pyx_L5_bool_binop_done:;
   if (unlikely(__pyx_t_2)) {
 
     /* "spinOps/spinOps.pyx":413
- *         raise ValueError("The input list 'i_times_2' cannot be empty.")
- *     if spin_index < 0 or spin_index >= len(i_times_2):
+ *         raise ValueError("The input list 'two_I' cannot be empty.")
+ *     if spin_index < 0 or spin_index >= len(two_I):
  *         raise IndexError("The spin_index is out of bounds.")             # <<<<<<<<<<<<<<
  * 
- *     cdef int nstates = number_of_states(i_times_2)
+ *     cdef int nstates = number_of_states(two_I)
  */
     __pyx_t_3 = __Pyx_PyObject_Call(__pyx_builtin_IndexError, __pyx_tuple__4, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 413, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
@@ -8720,9 +8720,9 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_single_spin_Tlm_unit(int
     __PYX_ERR(0, 413, __pyx_L1_error)
 
     /* "spinOps/spinOps.pyx":412
- *     if not i_times_2:
- *         raise ValueError("The input list 'i_times_2' cannot be empty.")
- *     if spin_index < 0 or spin_index >= len(i_times_2):             # <<<<<<<<<<<<<<
+ *     if not two_I:
+ *         raise ValueError("The input list 'two_I' cannot be empty.")
+ *     if spin_index < 0 or spin_index >= len(two_I):             # <<<<<<<<<<<<<<
  *         raise IndexError("The spin_index is out of bounds.")
  * 
  */
@@ -8731,31 +8731,31 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_single_spin_Tlm_unit(int
   /* "spinOps/spinOps.pyx":415
  *         raise IndexError("The spin_index is out of bounds.")
  * 
- *     cdef int nstates = number_of_states(i_times_2)             # <<<<<<<<<<<<<<
- *     cdef int total_spin_count = len(i_times_2)
- *     cdef ndarray[int] spins = np.array(i_times_2, dtype=np.int32)
+ *     cdef int nstates = number_of_states(two_I)             # <<<<<<<<<<<<<<
+ *     cdef int total_spin_count = len(two_I)
+ *     cdef ndarray[int] spins = np.array(two_I, dtype=np.int32)
  */
-  __pyx_t_5 = __pyx_f_7spinOps_8_spinOps_number_of_states(__pyx_v_i_times_2, 0); if (unlikely(__pyx_t_5 == ((int)-1) && PyErr_Occurred())) __PYX_ERR(0, 415, __pyx_L1_error)
+  __pyx_t_5 = __pyx_f_7spinOps_8_spinOps_number_of_states(__pyx_v_two_I, 0); if (unlikely(__pyx_t_5 == ((int)-1) && PyErr_Occurred())) __PYX_ERR(0, 415, __pyx_L1_error)
   __pyx_v_nstates = __pyx_t_5;
 
   /* "spinOps/spinOps.pyx":416
  * 
- *     cdef int nstates = number_of_states(i_times_2)
- *     cdef int total_spin_count = len(i_times_2)             # <<<<<<<<<<<<<<
- *     cdef ndarray[int] spins = np.array(i_times_2, dtype=np.int32)
+ *     cdef int nstates = number_of_states(two_I)
+ *     cdef int total_spin_count = len(two_I)             # <<<<<<<<<<<<<<
+ *     cdef ndarray[int] spins = np.array(two_I, dtype=np.int32)
  *     cdef ndarray[double complex, ndim=2] myOp = np.zeros((nstates, nstates), dtype=np.complex128)
  */
-  if (unlikely(__pyx_v_i_times_2 == Py_None)) {
+  if (unlikely(__pyx_v_two_I == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "object of type 'NoneType' has no len()");
     __PYX_ERR(0, 416, __pyx_L1_error)
   }
-  __pyx_t_4 = __Pyx_PyList_GET_SIZE(__pyx_v_i_times_2); if (unlikely(__pyx_t_4 == ((Py_ssize_t)-1))) __PYX_ERR(0, 416, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyList_GET_SIZE(__pyx_v_two_I); if (unlikely(__pyx_t_4 == ((Py_ssize_t)-1))) __PYX_ERR(0, 416, __pyx_L1_error)
   __pyx_v_total_spin_count = __pyx_t_4;
 
   /* "spinOps/spinOps.pyx":417
- *     cdef int nstates = number_of_states(i_times_2)
- *     cdef int total_spin_count = len(i_times_2)
- *     cdef ndarray[int] spins = np.array(i_times_2, dtype=np.int32)             # <<<<<<<<<<<<<<
+ *     cdef int nstates = number_of_states(two_I)
+ *     cdef int total_spin_count = len(two_I)
+ *     cdef ndarray[int] spins = np.array(two_I, dtype=np.int32)             # <<<<<<<<<<<<<<
  *     cdef ndarray[double complex, ndim=2] myOp = np.zeros((nstates, nstates), dtype=np.complex128)
  * 
  */
@@ -8766,9 +8766,9 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_single_spin_Tlm_unit(int
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 417, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __Pyx_INCREF(__pyx_v_i_times_2);
-  __Pyx_GIVEREF(__pyx_v_i_times_2);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_v_i_times_2)) __PYX_ERR(0, 417, __pyx_L1_error);
+  __Pyx_INCREF(__pyx_v_two_I);
+  __Pyx_GIVEREF(__pyx_v_two_I);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_v_two_I)) __PYX_ERR(0, 417, __pyx_L1_error);
   __pyx_t_7 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 417, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
   __Pyx_GetModuleGlobalName(__pyx_t_8, __pyx_n_s_np); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 417, __pyx_L1_error)
@@ -8798,8 +8798,8 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_single_spin_Tlm_unit(int
   __pyx_t_9 = 0;
 
   /* "spinOps/spinOps.pyx":418
- *     cdef int total_spin_count = len(i_times_2)
- *     cdef ndarray[int] spins = np.array(i_times_2, dtype=np.int32)
+ *     cdef int total_spin_count = len(two_I)
+ *     cdef ndarray[int] spins = np.array(two_I, dtype=np.int32)
  *     cdef ndarray[double complex, ndim=2] myOp = np.zeros((nstates, nstates), dtype=np.complex128)             # <<<<<<<<<<<<<<
  * 
  *     _get_single_spin_Tlm_unit(&myOp[0, 0], spin_index, &spins[0], total_spin_count, L, M)
@@ -8903,7 +8903,7 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_single_spin_Tlm_unit(int
   /* "spinOps/spinOps.pyx":382
  * 
  * 
- * cpdef ndarray[double complex, ndim=2] create_single_spin_Tlm_unit(int L, int M, int spin_index, list i_times_2):             # <<<<<<<<<<<<<<
+ * cpdef ndarray[double complex, ndim=2] create_single_spin_Tlm_unit(int L, int M, int spin_index, list two_I):             # <<<<<<<<<<<<<<
  *     """
  *     Generates the single-spin unit-normalized irreducible spherical tensor operator (:math:`\hat{\mathcal{T}}_{L,M}`) matrix for a specified spin within a spin system.
  */
@@ -8944,7 +8944,7 @@ PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-PyDoc_STRVAR(__pyx_doc_7spinOps_8_spinOps_20create_single_spin_Tlm_unit, "\n    Generates the single-spin unit-normalized irreducible spherical tensor operator (:math:`\\hat{\\mathcal{T}}_{L,M}`) matrix for a specified spin within a spin system.\n\n    Parameters\n    ----------\n    L : int\n        Rank of the tensor operator.\n    M : int\n        Order of the tensor operator.\n    spin_index : int\n        Index of the spin for which the unit-normalized :math:`\\hat{\\mathcal{T}}_{L,M}` operator is constructed.\n    i_times_2 : list of int\n        List of integers representing :math:`2I` values for each spin in the system,\n        where :math:`I` is the spin quantum number.\n\n    Returns\n    -------\n    ndarray[double complex, ndim=2]\n        A 2D NumPy array representing the unit-normalized :math:`\\hat{\\mathcal{T}}_{L,M}` operator matrix.\n\n    Raises\n    ------\n    ValueError\n        If the input list `i_times_2` is empty.\n    IndexError\n        If `spin_index` is out of the valid range.\n    ");
+PyDoc_STRVAR(__pyx_doc_7spinOps_8_spinOps_20create_single_spin_Tlm_unit, "\n    Generates the single-spin unit-normalized irreducible spherical tensor operator (:math:`\\hat{\\mathcal{T}}_{L,M}`) matrix for a specified spin within a spin system.\n\n    Parameters\n    ----------\n    L : int\n        Rank of the tensor operator.\n    M : int\n        Order of the tensor operator.\n    spin_index : int\n        Index of the spin for which the unit-normalized :math:`\\hat{\\mathcal{T}}_{L,M}` operator is constructed.\n    two_I : list of int\n        List of integers representing :math:`2I` values for each spin in the system,\n        where :math:`I` is the spin quantum number.\n\n    Returns\n    -------\n    ndarray[double complex, ndim=2]\n        A 2D NumPy array representing the unit-normalized :math:`\\hat{\\mathcal{T}}_{L,M}` operator matrix.\n\n    Raises\n    ------\n    ValueError\n        If the input list `two_I` is empty.\n    IndexError\n        If `spin_index` is out of the valid range.\n    ");
 static PyMethodDef __pyx_mdef_7spinOps_8_spinOps_21create_single_spin_Tlm_unit = {"create_single_spin_Tlm_unit", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_7spinOps_8_spinOps_21create_single_spin_Tlm_unit, __Pyx_METH_FASTCALL|METH_KEYWORDS, __pyx_doc_7spinOps_8_spinOps_20create_single_spin_Tlm_unit};
 static PyObject *__pyx_pw_7spinOps_8_spinOps_21create_single_spin_Tlm_unit(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
@@ -8956,7 +8956,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   int __pyx_v_L;
   int __pyx_v_M;
   int __pyx_v_spin_index;
-  PyObject *__pyx_v_i_times_2 = 0;
+  PyObject *__pyx_v_two_I = 0;
   #if !CYTHON_METH_FASTCALL
   CYTHON_UNUSED Py_ssize_t __pyx_nargs;
   #endif
@@ -8977,7 +8977,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   #endif
   __pyx_kwvalues = __Pyx_KwValues_FASTCALL(__pyx_args, __pyx_nargs);
   {
-    PyObject **__pyx_pyargnames[] = {&__pyx_n_s_L,&__pyx_n_s_M,&__pyx_n_s_spin_index,&__pyx_n_s_i_times_2,0};
+    PyObject **__pyx_pyargnames[] = {&__pyx_n_s_L,&__pyx_n_s_M,&__pyx_n_s_spin_index,&__pyx_n_s_two_I,0};
     if (__pyx_kwds) {
       Py_ssize_t kw_args;
       switch (__pyx_nargs) {
@@ -9023,7 +9023,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
         }
         CYTHON_FALLTHROUGH;
         case  3:
-        if (likely((values[3] = __Pyx_GetKwValue_FASTCALL(__pyx_kwds, __pyx_kwvalues, __pyx_n_s_i_times_2)) != 0)) {
+        if (likely((values[3] = __Pyx_GetKwValue_FASTCALL(__pyx_kwds, __pyx_kwvalues, __pyx_n_s_two_I)) != 0)) {
           (void)__Pyx_Arg_NewRef_FASTCALL(values[3]);
           kw_args--;
         }
@@ -9047,7 +9047,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
     __pyx_v_L = __Pyx_PyInt_As_int(values[0]); if (unlikely((__pyx_v_L == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 382, __pyx_L3_error)
     __pyx_v_M = __Pyx_PyInt_As_int(values[1]); if (unlikely((__pyx_v_M == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 382, __pyx_L3_error)
     __pyx_v_spin_index = __Pyx_PyInt_As_int(values[2]); if (unlikely((__pyx_v_spin_index == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 382, __pyx_L3_error)
-    __pyx_v_i_times_2 = ((PyObject*)values[3]);
+    __pyx_v_two_I = ((PyObject*)values[3]);
   }
   goto __pyx_L6_skip;
   __pyx_L5_argtuple_error:;
@@ -9065,8 +9065,8 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_i_times_2), (&PyList_Type), 1, "i_times_2", 1))) __PYX_ERR(0, 382, __pyx_L1_error)
-  __pyx_r = __pyx_pf_7spinOps_8_spinOps_20create_single_spin_Tlm_unit(__pyx_self, __pyx_v_L, __pyx_v_M, __pyx_v_spin_index, __pyx_v_i_times_2);
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_two_I), (&PyList_Type), 1, "two_I", 1))) __PYX_ERR(0, 382, __pyx_L1_error)
+  __pyx_r = __pyx_pf_7spinOps_8_spinOps_20create_single_spin_Tlm_unit(__pyx_self, __pyx_v_L, __pyx_v_M, __pyx_v_spin_index, __pyx_v_two_I);
 
   /* function exit code */
   goto __pyx_L0;
@@ -9083,7 +9083,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_7spinOps_8_spinOps_20create_single_spin_Tlm_unit(CYTHON_UNUSED PyObject *__pyx_self, int __pyx_v_L, int __pyx_v_M, int __pyx_v_spin_index, PyObject *__pyx_v_i_times_2) {
+static PyObject *__pyx_pf_7spinOps_8_spinOps_20create_single_spin_Tlm_unit(CYTHON_UNUSED PyObject *__pyx_self, int __pyx_v_L, int __pyx_v_M, int __pyx_v_spin_index, PyObject *__pyx_v_two_I) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -9092,7 +9092,7 @@ static PyObject *__pyx_pf_7spinOps_8_spinOps_20create_single_spin_Tlm_unit(CYTHO
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("create_single_spin_Tlm_unit", 1);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = ((PyObject *)__pyx_f_7spinOps_8_spinOps_create_single_spin_Tlm_unit(__pyx_v_L, __pyx_v_M, __pyx_v_spin_index, __pyx_v_i_times_2, 0)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 382, __pyx_L1_error)
+  __pyx_t_1 = ((PyObject *)__pyx_f_7spinOps_8_spinOps_create_single_spin_Tlm_unit(__pyx_v_L, __pyx_v_M, __pyx_v_spin_index, __pyx_v_two_I, 0)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 382, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -9112,7 +9112,7 @@ static PyObject *__pyx_pf_7spinOps_8_spinOps_20create_single_spin_Tlm_unit(CYTHO
 /* "spinOps/spinOps.pyx":425
  * 
  * 
- * cpdef ndarray[double complex, ndim=2] create_single_C0(int spin_index, list i_times_2):             # <<<<<<<<<<<<<<
+ * cpdef ndarray[double complex, ndim=2] create_single_C0(int spin_index, list two_I):             # <<<<<<<<<<<<<<
  *     """
  *     Generates the single-spin C0 operator (:math:`\hat{C}_0`) matrix for a specified spin within a spin system.
  */
@@ -9124,7 +9124,7 @@ PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_single_C0(int __pyx_v_spin_index, PyObject *__pyx_v_i_times_2, CYTHON_UNUSED int __pyx_skip_dispatch) {
+static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_single_C0(int __pyx_v_spin_index, PyObject *__pyx_v_two_I, CYTHON_UNUSED int __pyx_skip_dispatch) {
   int __pyx_v_nstates;
   int __pyx_v_total_spin_count;
   PyArrayObject *__pyx_v_spins = 0;
@@ -9165,19 +9165,19 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_single_C0(int __pyx_v_sp
   /* "spinOps/spinOps.pyx":449
  *         If `spin_index` is out of the valid range.
  *     """
- *     if not i_times_2:             # <<<<<<<<<<<<<<
- *         raise ValueError("The input list 'i_times_2' cannot be empty.")
- *     if spin_index < 0 or spin_index >= len(i_times_2):
+ *     if not two_I:             # <<<<<<<<<<<<<<
+ *         raise ValueError("The input list 'two_I' cannot be empty.")
+ *     if spin_index < 0 or spin_index >= len(two_I):
  */
-  __pyx_t_1 = (__pyx_v_i_times_2 != Py_None)&&(PyList_GET_SIZE(__pyx_v_i_times_2) != 0);
+  __pyx_t_1 = (__pyx_v_two_I != Py_None)&&(PyList_GET_SIZE(__pyx_v_two_I) != 0);
   __pyx_t_2 = (!__pyx_t_1);
   if (unlikely(__pyx_t_2)) {
 
     /* "spinOps/spinOps.pyx":450
  *     """
- *     if not i_times_2:
- *         raise ValueError("The input list 'i_times_2' cannot be empty.")             # <<<<<<<<<<<<<<
- *     if spin_index < 0 or spin_index >= len(i_times_2):
+ *     if not two_I:
+ *         raise ValueError("The input list 'two_I' cannot be empty.")             # <<<<<<<<<<<<<<
+ *     if spin_index < 0 or spin_index >= len(two_I):
  *         raise IndexError("The spin_index is out of bounds.")
  */
     __pyx_t_3 = __Pyx_PyObject_Call(__pyx_builtin_ValueError, __pyx_tuple__3, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 450, __pyx_L1_error)
@@ -9189,16 +9189,16 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_single_C0(int __pyx_v_sp
     /* "spinOps/spinOps.pyx":449
  *         If `spin_index` is out of the valid range.
  *     """
- *     if not i_times_2:             # <<<<<<<<<<<<<<
- *         raise ValueError("The input list 'i_times_2' cannot be empty.")
- *     if spin_index < 0 or spin_index >= len(i_times_2):
+ *     if not two_I:             # <<<<<<<<<<<<<<
+ *         raise ValueError("The input list 'two_I' cannot be empty.")
+ *     if spin_index < 0 or spin_index >= len(two_I):
  */
   }
 
   /* "spinOps/spinOps.pyx":451
- *     if not i_times_2:
- *         raise ValueError("The input list 'i_times_2' cannot be empty.")
- *     if spin_index < 0 or spin_index >= len(i_times_2):             # <<<<<<<<<<<<<<
+ *     if not two_I:
+ *         raise ValueError("The input list 'two_I' cannot be empty.")
+ *     if spin_index < 0 or spin_index >= len(two_I):             # <<<<<<<<<<<<<<
  *         raise IndexError("The spin_index is out of bounds.")
  * 
  */
@@ -9208,22 +9208,22 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_single_C0(int __pyx_v_sp
     __pyx_t_2 = __pyx_t_1;
     goto __pyx_L5_bool_binop_done;
   }
-  if (unlikely(__pyx_v_i_times_2 == Py_None)) {
+  if (unlikely(__pyx_v_two_I == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "object of type 'NoneType' has no len()");
     __PYX_ERR(0, 451, __pyx_L1_error)
   }
-  __pyx_t_4 = __Pyx_PyList_GET_SIZE(__pyx_v_i_times_2); if (unlikely(__pyx_t_4 == ((Py_ssize_t)-1))) __PYX_ERR(0, 451, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyList_GET_SIZE(__pyx_v_two_I); if (unlikely(__pyx_t_4 == ((Py_ssize_t)-1))) __PYX_ERR(0, 451, __pyx_L1_error)
   __pyx_t_1 = (__pyx_v_spin_index >= __pyx_t_4);
   __pyx_t_2 = __pyx_t_1;
   __pyx_L5_bool_binop_done:;
   if (unlikely(__pyx_t_2)) {
 
     /* "spinOps/spinOps.pyx":452
- *         raise ValueError("The input list 'i_times_2' cannot be empty.")
- *     if spin_index < 0 or spin_index >= len(i_times_2):
+ *         raise ValueError("The input list 'two_I' cannot be empty.")
+ *     if spin_index < 0 or spin_index >= len(two_I):
  *         raise IndexError("The spin_index is out of bounds.")             # <<<<<<<<<<<<<<
  * 
- *     cdef int nstates = number_of_states(i_times_2)
+ *     cdef int nstates = number_of_states(two_I)
  */
     __pyx_t_3 = __Pyx_PyObject_Call(__pyx_builtin_IndexError, __pyx_tuple__4, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 452, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
@@ -9232,9 +9232,9 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_single_C0(int __pyx_v_sp
     __PYX_ERR(0, 452, __pyx_L1_error)
 
     /* "spinOps/spinOps.pyx":451
- *     if not i_times_2:
- *         raise ValueError("The input list 'i_times_2' cannot be empty.")
- *     if spin_index < 0 or spin_index >= len(i_times_2):             # <<<<<<<<<<<<<<
+ *     if not two_I:
+ *         raise ValueError("The input list 'two_I' cannot be empty.")
+ *     if spin_index < 0 or spin_index >= len(two_I):             # <<<<<<<<<<<<<<
  *         raise IndexError("The spin_index is out of bounds.")
  * 
  */
@@ -9243,31 +9243,31 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_single_C0(int __pyx_v_sp
   /* "spinOps/spinOps.pyx":454
  *         raise IndexError("The spin_index is out of bounds.")
  * 
- *     cdef int nstates = number_of_states(i_times_2)             # <<<<<<<<<<<<<<
- *     cdef int total_spin_count = len(i_times_2)
- *     cdef ndarray[int] spins = np.array(i_times_2, dtype=np.int32)
+ *     cdef int nstates = number_of_states(two_I)             # <<<<<<<<<<<<<<
+ *     cdef int total_spin_count = len(two_I)
+ *     cdef ndarray[int] spins = np.array(two_I, dtype=np.int32)
  */
-  __pyx_t_5 = __pyx_f_7spinOps_8_spinOps_number_of_states(__pyx_v_i_times_2, 0); if (unlikely(__pyx_t_5 == ((int)-1) && PyErr_Occurred())) __PYX_ERR(0, 454, __pyx_L1_error)
+  __pyx_t_5 = __pyx_f_7spinOps_8_spinOps_number_of_states(__pyx_v_two_I, 0); if (unlikely(__pyx_t_5 == ((int)-1) && PyErr_Occurred())) __PYX_ERR(0, 454, __pyx_L1_error)
   __pyx_v_nstates = __pyx_t_5;
 
   /* "spinOps/spinOps.pyx":455
  * 
- *     cdef int nstates = number_of_states(i_times_2)
- *     cdef int total_spin_count = len(i_times_2)             # <<<<<<<<<<<<<<
- *     cdef ndarray[int] spins = np.array(i_times_2, dtype=np.int32)
+ *     cdef int nstates = number_of_states(two_I)
+ *     cdef int total_spin_count = len(two_I)             # <<<<<<<<<<<<<<
+ *     cdef ndarray[int] spins = np.array(two_I, dtype=np.int32)
  *     cdef ndarray[double complex, ndim=2] myOp = np.zeros((nstates, nstates), dtype=np.complex128)
  */
-  if (unlikely(__pyx_v_i_times_2 == Py_None)) {
+  if (unlikely(__pyx_v_two_I == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "object of type 'NoneType' has no len()");
     __PYX_ERR(0, 455, __pyx_L1_error)
   }
-  __pyx_t_4 = __Pyx_PyList_GET_SIZE(__pyx_v_i_times_2); if (unlikely(__pyx_t_4 == ((Py_ssize_t)-1))) __PYX_ERR(0, 455, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyList_GET_SIZE(__pyx_v_two_I); if (unlikely(__pyx_t_4 == ((Py_ssize_t)-1))) __PYX_ERR(0, 455, __pyx_L1_error)
   __pyx_v_total_spin_count = __pyx_t_4;
 
   /* "spinOps/spinOps.pyx":456
- *     cdef int nstates = number_of_states(i_times_2)
- *     cdef int total_spin_count = len(i_times_2)
- *     cdef ndarray[int] spins = np.array(i_times_2, dtype=np.int32)             # <<<<<<<<<<<<<<
+ *     cdef int nstates = number_of_states(two_I)
+ *     cdef int total_spin_count = len(two_I)
+ *     cdef ndarray[int] spins = np.array(two_I, dtype=np.int32)             # <<<<<<<<<<<<<<
  *     cdef ndarray[double complex, ndim=2] myOp = np.zeros((nstates, nstates), dtype=np.complex128)
  * 
  */
@@ -9278,9 +9278,9 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_single_C0(int __pyx_v_sp
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 456, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __Pyx_INCREF(__pyx_v_i_times_2);
-  __Pyx_GIVEREF(__pyx_v_i_times_2);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_v_i_times_2)) __PYX_ERR(0, 456, __pyx_L1_error);
+  __Pyx_INCREF(__pyx_v_two_I);
+  __Pyx_GIVEREF(__pyx_v_two_I);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_v_two_I)) __PYX_ERR(0, 456, __pyx_L1_error);
   __pyx_t_7 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 456, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
   __Pyx_GetModuleGlobalName(__pyx_t_8, __pyx_n_s_np); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 456, __pyx_L1_error)
@@ -9310,8 +9310,8 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_single_C0(int __pyx_v_sp
   __pyx_t_9 = 0;
 
   /* "spinOps/spinOps.pyx":457
- *     cdef int total_spin_count = len(i_times_2)
- *     cdef ndarray[int] spins = np.array(i_times_2, dtype=np.int32)
+ *     cdef int total_spin_count = len(two_I)
+ *     cdef ndarray[int] spins = np.array(two_I, dtype=np.int32)
  *     cdef ndarray[double complex, ndim=2] myOp = np.zeros((nstates, nstates), dtype=np.complex128)             # <<<<<<<<<<<<<<
  * 
  *     _get_single_spin_C0(&myOp[0, 0], spin_index, &spins[0], total_spin_count)
@@ -9405,7 +9405,7 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_single_C0(int __pyx_v_sp
  * 
  *     return myOp             # <<<<<<<<<<<<<<
  * 
- * cpdef ndarray[double complex, ndim=2] create_single_C2(int spin_index, list i_times_2):
+ * cpdef ndarray[double complex, ndim=2] create_single_C2(int spin_index, list two_I):
  */
   __Pyx_XDECREF((PyObject *)__pyx_r);
   __Pyx_INCREF((PyObject *)__pyx_v_myOp);
@@ -9415,7 +9415,7 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_single_C0(int __pyx_v_sp
   /* "spinOps/spinOps.pyx":425
  * 
  * 
- * cpdef ndarray[double complex, ndim=2] create_single_C0(int spin_index, list i_times_2):             # <<<<<<<<<<<<<<
+ * cpdef ndarray[double complex, ndim=2] create_single_C0(int spin_index, list two_I):             # <<<<<<<<<<<<<<
  *     """
  *     Generates the single-spin C0 operator (:math:`\hat{C}_0`) matrix for a specified spin within a spin system.
  */
@@ -9456,7 +9456,7 @@ PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-PyDoc_STRVAR(__pyx_doc_7spinOps_8_spinOps_22create_single_C0, "\n    Generates the single-spin C0 operator (:math:`\\hat{C}_0`) matrix for a specified spin within a spin system.\n\n    Parameters\n    ----------\n    spin_index : int\n        Index of the spin for which the unit-normalized :math:`\\hat{C}_{0}` operator is constructed.\n    i_times_2 : list of int\n        List of integers representing :math:`2I` values for each spin in the system,\n        where :math:`I` is the spin quantum number.\n\n    Returns\n    -------\n    ndarray[double complex, ndim=2]\n        A 2D NumPy array representing the unit-normalized :math:`\\hat{C}_{0}` operator matrix.\n\n    Raises\n    ------\n    ValueError\n        If the input list `i_times_2` is empty.\n    IndexError\n        If `spin_index` is out of the valid range.\n    ");
+PyDoc_STRVAR(__pyx_doc_7spinOps_8_spinOps_22create_single_C0, "\n    Generates the single-spin C0 operator (:math:`\\hat{C}_0`) matrix for a specified spin within a spin system.\n\n    Parameters\n    ----------\n    spin_index : int\n        Index of the spin for which the unit-normalized :math:`\\hat{C}_{0}` operator is constructed.\n    two_I : list of int\n        List of integers representing :math:`2I` values for each spin in the system,\n        where :math:`I` is the spin quantum number.\n\n    Returns\n    -------\n    ndarray[double complex, ndim=2]\n        A 2D NumPy array representing the unit-normalized :math:`\\hat{C}_{0}` operator matrix.\n\n    Raises\n    ------\n    ValueError\n        If the input list `two_I` is empty.\n    IndexError\n        If `spin_index` is out of the valid range.\n    ");
 static PyMethodDef __pyx_mdef_7spinOps_8_spinOps_23create_single_C0 = {"create_single_C0", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_7spinOps_8_spinOps_23create_single_C0, __Pyx_METH_FASTCALL|METH_KEYWORDS, __pyx_doc_7spinOps_8_spinOps_22create_single_C0};
 static PyObject *__pyx_pw_7spinOps_8_spinOps_23create_single_C0(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
@@ -9466,7 +9466,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ) {
   int __pyx_v_spin_index;
-  PyObject *__pyx_v_i_times_2 = 0;
+  PyObject *__pyx_v_two_I = 0;
   #if !CYTHON_METH_FASTCALL
   CYTHON_UNUSED Py_ssize_t __pyx_nargs;
   #endif
@@ -9487,7 +9487,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   #endif
   __pyx_kwvalues = __Pyx_KwValues_FASTCALL(__pyx_args, __pyx_nargs);
   {
-    PyObject **__pyx_pyargnames[] = {&__pyx_n_s_spin_index,&__pyx_n_s_i_times_2,0};
+    PyObject **__pyx_pyargnames[] = {&__pyx_n_s_spin_index,&__pyx_n_s_two_I,0};
     if (__pyx_kwds) {
       Py_ssize_t kw_args;
       switch (__pyx_nargs) {
@@ -9509,7 +9509,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
         else goto __pyx_L5_argtuple_error;
         CYTHON_FALLTHROUGH;
         case  1:
-        if (likely((values[1] = __Pyx_GetKwValue_FASTCALL(__pyx_kwds, __pyx_kwvalues, __pyx_n_s_i_times_2)) != 0)) {
+        if (likely((values[1] = __Pyx_GetKwValue_FASTCALL(__pyx_kwds, __pyx_kwvalues, __pyx_n_s_two_I)) != 0)) {
           (void)__Pyx_Arg_NewRef_FASTCALL(values[1]);
           kw_args--;
         }
@@ -9529,7 +9529,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
       values[1] = __Pyx_Arg_FASTCALL(__pyx_args, 1);
     }
     __pyx_v_spin_index = __Pyx_PyInt_As_int(values[0]); if (unlikely((__pyx_v_spin_index == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 425, __pyx_L3_error)
-    __pyx_v_i_times_2 = ((PyObject*)values[1]);
+    __pyx_v_two_I = ((PyObject*)values[1]);
   }
   goto __pyx_L6_skip;
   __pyx_L5_argtuple_error:;
@@ -9547,8 +9547,8 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_i_times_2), (&PyList_Type), 1, "i_times_2", 1))) __PYX_ERR(0, 425, __pyx_L1_error)
-  __pyx_r = __pyx_pf_7spinOps_8_spinOps_22create_single_C0(__pyx_self, __pyx_v_spin_index, __pyx_v_i_times_2);
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_two_I), (&PyList_Type), 1, "two_I", 1))) __PYX_ERR(0, 425, __pyx_L1_error)
+  __pyx_r = __pyx_pf_7spinOps_8_spinOps_22create_single_C0(__pyx_self, __pyx_v_spin_index, __pyx_v_two_I);
 
   /* function exit code */
   goto __pyx_L0;
@@ -9565,7 +9565,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_7spinOps_8_spinOps_22create_single_C0(CYTHON_UNUSED PyObject *__pyx_self, int __pyx_v_spin_index, PyObject *__pyx_v_i_times_2) {
+static PyObject *__pyx_pf_7spinOps_8_spinOps_22create_single_C0(CYTHON_UNUSED PyObject *__pyx_self, int __pyx_v_spin_index, PyObject *__pyx_v_two_I) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -9574,7 +9574,7 @@ static PyObject *__pyx_pf_7spinOps_8_spinOps_22create_single_C0(CYTHON_UNUSED Py
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("create_single_C0", 1);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = ((PyObject *)__pyx_f_7spinOps_8_spinOps_create_single_C0(__pyx_v_spin_index, __pyx_v_i_times_2, 0)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 425, __pyx_L1_error)
+  __pyx_t_1 = ((PyObject *)__pyx_f_7spinOps_8_spinOps_create_single_C0(__pyx_v_spin_index, __pyx_v_two_I, 0)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 425, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -9594,7 +9594,7 @@ static PyObject *__pyx_pf_7spinOps_8_spinOps_22create_single_C0(CYTHON_UNUSED Py
 /* "spinOps/spinOps.pyx":463
  *     return myOp
  * 
- * cpdef ndarray[double complex, ndim=2] create_single_C2(int spin_index, list i_times_2):             # <<<<<<<<<<<<<<
+ * cpdef ndarray[double complex, ndim=2] create_single_C2(int spin_index, list two_I):             # <<<<<<<<<<<<<<
  *     """
  *     Generates the single-spin C2 operator (:math:`\hat{C}_2`) matrix for a specified spin within a spin system.
  */
@@ -9606,7 +9606,7 @@ PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_single_C2(int __pyx_v_spin_index, PyObject *__pyx_v_i_times_2, CYTHON_UNUSED int __pyx_skip_dispatch) {
+static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_single_C2(int __pyx_v_spin_index, PyObject *__pyx_v_two_I, CYTHON_UNUSED int __pyx_skip_dispatch) {
   int __pyx_v_nstates;
   int __pyx_v_total_spin_count;
   PyArrayObject *__pyx_v_spins = 0;
@@ -9647,19 +9647,19 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_single_C2(int __pyx_v_sp
   /* "spinOps/spinOps.pyx":487
  *         If `spin_index` is out of the valid range.
  *     """
- *     if not i_times_2:             # <<<<<<<<<<<<<<
- *         raise ValueError("The input list 'i_times_2' cannot be empty.")
- *     if spin_index < 0 or spin_index >= len(i_times_2):
+ *     if not two_I:             # <<<<<<<<<<<<<<
+ *         raise ValueError("The input list 'two_I' cannot be empty.")
+ *     if spin_index < 0 or spin_index >= len(two_I):
  */
-  __pyx_t_1 = (__pyx_v_i_times_2 != Py_None)&&(PyList_GET_SIZE(__pyx_v_i_times_2) != 0);
+  __pyx_t_1 = (__pyx_v_two_I != Py_None)&&(PyList_GET_SIZE(__pyx_v_two_I) != 0);
   __pyx_t_2 = (!__pyx_t_1);
   if (unlikely(__pyx_t_2)) {
 
     /* "spinOps/spinOps.pyx":488
  *     """
- *     if not i_times_2:
- *         raise ValueError("The input list 'i_times_2' cannot be empty.")             # <<<<<<<<<<<<<<
- *     if spin_index < 0 or spin_index >= len(i_times_2):
+ *     if not two_I:
+ *         raise ValueError("The input list 'two_I' cannot be empty.")             # <<<<<<<<<<<<<<
+ *     if spin_index < 0 or spin_index >= len(two_I):
  *         raise IndexError("The spin_index is out of bounds.")
  */
     __pyx_t_3 = __Pyx_PyObject_Call(__pyx_builtin_ValueError, __pyx_tuple__3, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 488, __pyx_L1_error)
@@ -9671,16 +9671,16 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_single_C2(int __pyx_v_sp
     /* "spinOps/spinOps.pyx":487
  *         If `spin_index` is out of the valid range.
  *     """
- *     if not i_times_2:             # <<<<<<<<<<<<<<
- *         raise ValueError("The input list 'i_times_2' cannot be empty.")
- *     if spin_index < 0 or spin_index >= len(i_times_2):
+ *     if not two_I:             # <<<<<<<<<<<<<<
+ *         raise ValueError("The input list 'two_I' cannot be empty.")
+ *     if spin_index < 0 or spin_index >= len(two_I):
  */
   }
 
   /* "spinOps/spinOps.pyx":489
- *     if not i_times_2:
- *         raise ValueError("The input list 'i_times_2' cannot be empty.")
- *     if spin_index < 0 or spin_index >= len(i_times_2):             # <<<<<<<<<<<<<<
+ *     if not two_I:
+ *         raise ValueError("The input list 'two_I' cannot be empty.")
+ *     if spin_index < 0 or spin_index >= len(two_I):             # <<<<<<<<<<<<<<
  *         raise IndexError("The spin_index is out of bounds.")
  * 
  */
@@ -9690,22 +9690,22 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_single_C2(int __pyx_v_sp
     __pyx_t_2 = __pyx_t_1;
     goto __pyx_L5_bool_binop_done;
   }
-  if (unlikely(__pyx_v_i_times_2 == Py_None)) {
+  if (unlikely(__pyx_v_two_I == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "object of type 'NoneType' has no len()");
     __PYX_ERR(0, 489, __pyx_L1_error)
   }
-  __pyx_t_4 = __Pyx_PyList_GET_SIZE(__pyx_v_i_times_2); if (unlikely(__pyx_t_4 == ((Py_ssize_t)-1))) __PYX_ERR(0, 489, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyList_GET_SIZE(__pyx_v_two_I); if (unlikely(__pyx_t_4 == ((Py_ssize_t)-1))) __PYX_ERR(0, 489, __pyx_L1_error)
   __pyx_t_1 = (__pyx_v_spin_index >= __pyx_t_4);
   __pyx_t_2 = __pyx_t_1;
   __pyx_L5_bool_binop_done:;
   if (unlikely(__pyx_t_2)) {
 
     /* "spinOps/spinOps.pyx":490
- *         raise ValueError("The input list 'i_times_2' cannot be empty.")
- *     if spin_index < 0 or spin_index >= len(i_times_2):
+ *         raise ValueError("The input list 'two_I' cannot be empty.")
+ *     if spin_index < 0 or spin_index >= len(two_I):
  *         raise IndexError("The spin_index is out of bounds.")             # <<<<<<<<<<<<<<
  * 
- *     cdef int nstates = number_of_states(i_times_2)
+ *     cdef int nstates = number_of_states(two_I)
  */
     __pyx_t_3 = __Pyx_PyObject_Call(__pyx_builtin_IndexError, __pyx_tuple__4, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 490, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
@@ -9714,9 +9714,9 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_single_C2(int __pyx_v_sp
     __PYX_ERR(0, 490, __pyx_L1_error)
 
     /* "spinOps/spinOps.pyx":489
- *     if not i_times_2:
- *         raise ValueError("The input list 'i_times_2' cannot be empty.")
- *     if spin_index < 0 or spin_index >= len(i_times_2):             # <<<<<<<<<<<<<<
+ *     if not two_I:
+ *         raise ValueError("The input list 'two_I' cannot be empty.")
+ *     if spin_index < 0 or spin_index >= len(two_I):             # <<<<<<<<<<<<<<
  *         raise IndexError("The spin_index is out of bounds.")
  * 
  */
@@ -9725,31 +9725,31 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_single_C2(int __pyx_v_sp
   /* "spinOps/spinOps.pyx":492
  *         raise IndexError("The spin_index is out of bounds.")
  * 
- *     cdef int nstates = number_of_states(i_times_2)             # <<<<<<<<<<<<<<
- *     cdef int total_spin_count = len(i_times_2)
- *     cdef ndarray[int] spins = np.array(i_times_2, dtype=np.int32)
+ *     cdef int nstates = number_of_states(two_I)             # <<<<<<<<<<<<<<
+ *     cdef int total_spin_count = len(two_I)
+ *     cdef ndarray[int] spins = np.array(two_I, dtype=np.int32)
  */
-  __pyx_t_5 = __pyx_f_7spinOps_8_spinOps_number_of_states(__pyx_v_i_times_2, 0); if (unlikely(__pyx_t_5 == ((int)-1) && PyErr_Occurred())) __PYX_ERR(0, 492, __pyx_L1_error)
+  __pyx_t_5 = __pyx_f_7spinOps_8_spinOps_number_of_states(__pyx_v_two_I, 0); if (unlikely(__pyx_t_5 == ((int)-1) && PyErr_Occurred())) __PYX_ERR(0, 492, __pyx_L1_error)
   __pyx_v_nstates = __pyx_t_5;
 
   /* "spinOps/spinOps.pyx":493
  * 
- *     cdef int nstates = number_of_states(i_times_2)
- *     cdef int total_spin_count = len(i_times_2)             # <<<<<<<<<<<<<<
- *     cdef ndarray[int] spins = np.array(i_times_2, dtype=np.int32)
+ *     cdef int nstates = number_of_states(two_I)
+ *     cdef int total_spin_count = len(two_I)             # <<<<<<<<<<<<<<
+ *     cdef ndarray[int] spins = np.array(two_I, dtype=np.int32)
  *     cdef ndarray[double complex, ndim=2] myOp = np.zeros((nstates, nstates), dtype=np.complex128)
  */
-  if (unlikely(__pyx_v_i_times_2 == Py_None)) {
+  if (unlikely(__pyx_v_two_I == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "object of type 'NoneType' has no len()");
     __PYX_ERR(0, 493, __pyx_L1_error)
   }
-  __pyx_t_4 = __Pyx_PyList_GET_SIZE(__pyx_v_i_times_2); if (unlikely(__pyx_t_4 == ((Py_ssize_t)-1))) __PYX_ERR(0, 493, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyList_GET_SIZE(__pyx_v_two_I); if (unlikely(__pyx_t_4 == ((Py_ssize_t)-1))) __PYX_ERR(0, 493, __pyx_L1_error)
   __pyx_v_total_spin_count = __pyx_t_4;
 
   /* "spinOps/spinOps.pyx":494
- *     cdef int nstates = number_of_states(i_times_2)
- *     cdef int total_spin_count = len(i_times_2)
- *     cdef ndarray[int] spins = np.array(i_times_2, dtype=np.int32)             # <<<<<<<<<<<<<<
+ *     cdef int nstates = number_of_states(two_I)
+ *     cdef int total_spin_count = len(two_I)
+ *     cdef ndarray[int] spins = np.array(two_I, dtype=np.int32)             # <<<<<<<<<<<<<<
  *     cdef ndarray[double complex, ndim=2] myOp = np.zeros((nstates, nstates), dtype=np.complex128)
  * 
  */
@@ -9760,9 +9760,9 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_single_C2(int __pyx_v_sp
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 494, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __Pyx_INCREF(__pyx_v_i_times_2);
-  __Pyx_GIVEREF(__pyx_v_i_times_2);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_v_i_times_2)) __PYX_ERR(0, 494, __pyx_L1_error);
+  __Pyx_INCREF(__pyx_v_two_I);
+  __Pyx_GIVEREF(__pyx_v_two_I);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_v_two_I)) __PYX_ERR(0, 494, __pyx_L1_error);
   __pyx_t_7 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 494, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
   __Pyx_GetModuleGlobalName(__pyx_t_8, __pyx_n_s_np); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 494, __pyx_L1_error)
@@ -9792,8 +9792,8 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_single_C2(int __pyx_v_sp
   __pyx_t_9 = 0;
 
   /* "spinOps/spinOps.pyx":495
- *     cdef int total_spin_count = len(i_times_2)
- *     cdef ndarray[int] spins = np.array(i_times_2, dtype=np.int32)
+ *     cdef int total_spin_count = len(two_I)
+ *     cdef ndarray[int] spins = np.array(two_I, dtype=np.int32)
  *     cdef ndarray[double complex, ndim=2] myOp = np.zeros((nstates, nstates), dtype=np.complex128)             # <<<<<<<<<<<<<<
  * 
  *     _get_single_spin_C2(&myOp[0, 0], spin_index, &spins[0], total_spin_count)
@@ -9897,7 +9897,7 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_single_C2(int __pyx_v_sp
   /* "spinOps/spinOps.pyx":463
  *     return myOp
  * 
- * cpdef ndarray[double complex, ndim=2] create_single_C2(int spin_index, list i_times_2):             # <<<<<<<<<<<<<<
+ * cpdef ndarray[double complex, ndim=2] create_single_C2(int spin_index, list two_I):             # <<<<<<<<<<<<<<
  *     """
  *     Generates the single-spin C2 operator (:math:`\hat{C}_2`) matrix for a specified spin within a spin system.
  */
@@ -9938,7 +9938,7 @@ PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-PyDoc_STRVAR(__pyx_doc_7spinOps_8_spinOps_24create_single_C2, "\n    Generates the single-spin C2 operator (:math:`\\hat{C}_2`) matrix for a specified spin within a spin system.\n\n    Parameters\n    ----------\n    spin_index : int\n        Index of the spin for which the unit-normalized :math:`\\hat{C}_{2}` operator is constructed.\n    i_times_2 : list of int\n        List of integers representing :math:`2I` values for each spin in the system,\n        where :math:`I` is the spin quantum number.\n\n    Returns\n    -------\n    ndarray[double complex, ndim=2]\n        A 2D NumPy array representing the unit-normalized :math:`\\hat{C}_{0}` operator matrix.\n\n    Raises\n    ------\n    ValueError\n        If the input list `i_times_2` is empty.\n    IndexError\n        If `spin_index` is out of the valid range.\n    ");
+PyDoc_STRVAR(__pyx_doc_7spinOps_8_spinOps_24create_single_C2, "\n    Generates the single-spin C2 operator (:math:`\\hat{C}_2`) matrix for a specified spin within a spin system.\n\n    Parameters\n    ----------\n    spin_index : int\n        Index of the spin for which the unit-normalized :math:`\\hat{C}_{2}` operator is constructed.\n    two_I : list of int\n        List of integers representing :math:`2I` values for each spin in the system,\n        where :math:`I` is the spin quantum number.\n\n    Returns\n    -------\n    ndarray[double complex, ndim=2]\n        A 2D NumPy array representing the unit-normalized :math:`\\hat{C}_{0}` operator matrix.\n\n    Raises\n    ------\n    ValueError\n        If the input list `two_I` is empty.\n    IndexError\n        If `spin_index` is out of the valid range.\n    ");
 static PyMethodDef __pyx_mdef_7spinOps_8_spinOps_25create_single_C2 = {"create_single_C2", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_7spinOps_8_spinOps_25create_single_C2, __Pyx_METH_FASTCALL|METH_KEYWORDS, __pyx_doc_7spinOps_8_spinOps_24create_single_C2};
 static PyObject *__pyx_pw_7spinOps_8_spinOps_25create_single_C2(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
@@ -9948,7 +9948,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ) {
   int __pyx_v_spin_index;
-  PyObject *__pyx_v_i_times_2 = 0;
+  PyObject *__pyx_v_two_I = 0;
   #if !CYTHON_METH_FASTCALL
   CYTHON_UNUSED Py_ssize_t __pyx_nargs;
   #endif
@@ -9969,7 +9969,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   #endif
   __pyx_kwvalues = __Pyx_KwValues_FASTCALL(__pyx_args, __pyx_nargs);
   {
-    PyObject **__pyx_pyargnames[] = {&__pyx_n_s_spin_index,&__pyx_n_s_i_times_2,0};
+    PyObject **__pyx_pyargnames[] = {&__pyx_n_s_spin_index,&__pyx_n_s_two_I,0};
     if (__pyx_kwds) {
       Py_ssize_t kw_args;
       switch (__pyx_nargs) {
@@ -9991,7 +9991,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
         else goto __pyx_L5_argtuple_error;
         CYTHON_FALLTHROUGH;
         case  1:
-        if (likely((values[1] = __Pyx_GetKwValue_FASTCALL(__pyx_kwds, __pyx_kwvalues, __pyx_n_s_i_times_2)) != 0)) {
+        if (likely((values[1] = __Pyx_GetKwValue_FASTCALL(__pyx_kwds, __pyx_kwvalues, __pyx_n_s_two_I)) != 0)) {
           (void)__Pyx_Arg_NewRef_FASTCALL(values[1]);
           kw_args--;
         }
@@ -10011,7 +10011,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
       values[1] = __Pyx_Arg_FASTCALL(__pyx_args, 1);
     }
     __pyx_v_spin_index = __Pyx_PyInt_As_int(values[0]); if (unlikely((__pyx_v_spin_index == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 463, __pyx_L3_error)
-    __pyx_v_i_times_2 = ((PyObject*)values[1]);
+    __pyx_v_two_I = ((PyObject*)values[1]);
   }
   goto __pyx_L6_skip;
   __pyx_L5_argtuple_error:;
@@ -10029,8 +10029,8 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_i_times_2), (&PyList_Type), 1, "i_times_2", 1))) __PYX_ERR(0, 463, __pyx_L1_error)
-  __pyx_r = __pyx_pf_7spinOps_8_spinOps_24create_single_C2(__pyx_self, __pyx_v_spin_index, __pyx_v_i_times_2);
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_two_I), (&PyList_Type), 1, "two_I", 1))) __PYX_ERR(0, 463, __pyx_L1_error)
+  __pyx_r = __pyx_pf_7spinOps_8_spinOps_24create_single_C2(__pyx_self, __pyx_v_spin_index, __pyx_v_two_I);
 
   /* function exit code */
   goto __pyx_L0;
@@ -10047,7 +10047,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_7spinOps_8_spinOps_24create_single_C2(CYTHON_UNUSED PyObject *__pyx_self, int __pyx_v_spin_index, PyObject *__pyx_v_i_times_2) {
+static PyObject *__pyx_pf_7spinOps_8_spinOps_24create_single_C2(CYTHON_UNUSED PyObject *__pyx_self, int __pyx_v_spin_index, PyObject *__pyx_v_two_I) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -10056,7 +10056,7 @@ static PyObject *__pyx_pf_7spinOps_8_spinOps_24create_single_C2(CYTHON_UNUSED Py
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("create_single_C2", 1);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = ((PyObject *)__pyx_f_7spinOps_8_spinOps_create_single_C2(__pyx_v_spin_index, __pyx_v_i_times_2, 0)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 463, __pyx_L1_error)
+  __pyx_t_1 = ((PyObject *)__pyx_f_7spinOps_8_spinOps_create_single_C2(__pyx_v_spin_index, __pyx_v_two_I, 0)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 463, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -10076,7 +10076,7 @@ static PyObject *__pyx_pf_7spinOps_8_spinOps_24create_single_C2(CYTHON_UNUSED Py
 /* "spinOps/spinOps.pyx":502
  * 
  * 
- * cpdef ndarray[double complex, ndim=2] create_single_C4(int spin_index, list i_times_2):             # <<<<<<<<<<<<<<
+ * cpdef ndarray[double complex, ndim=2] create_single_C4(int spin_index, list two_I):             # <<<<<<<<<<<<<<
  *     """
  *     Generates the single-spin C4 operator (:math:`\hat{C}_4`) matrix for a specified spin within a spin system.
  */
@@ -10088,7 +10088,7 @@ PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_single_C4(int __pyx_v_spin_index, PyObject *__pyx_v_i_times_2, CYTHON_UNUSED int __pyx_skip_dispatch) {
+static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_single_C4(int __pyx_v_spin_index, PyObject *__pyx_v_two_I, CYTHON_UNUSED int __pyx_skip_dispatch) {
   int __pyx_v_nstates;
   int __pyx_v_total_spin_count;
   PyArrayObject *__pyx_v_spins = 0;
@@ -10129,19 +10129,19 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_single_C4(int __pyx_v_sp
   /* "spinOps/spinOps.pyx":526
  *         If `spin_index` is out of the valid range.
  *     """
- *     if not i_times_2:             # <<<<<<<<<<<<<<
- *         raise ValueError("The input list 'i_times_2' cannot be empty.")
- *     if spin_index < 0 or spin_index >= len(i_times_2):
+ *     if not two_I:             # <<<<<<<<<<<<<<
+ *         raise ValueError("The input list 'two_I' cannot be empty.")
+ *     if spin_index < 0 or spin_index >= len(two_I):
  */
-  __pyx_t_1 = (__pyx_v_i_times_2 != Py_None)&&(PyList_GET_SIZE(__pyx_v_i_times_2) != 0);
+  __pyx_t_1 = (__pyx_v_two_I != Py_None)&&(PyList_GET_SIZE(__pyx_v_two_I) != 0);
   __pyx_t_2 = (!__pyx_t_1);
   if (unlikely(__pyx_t_2)) {
 
     /* "spinOps/spinOps.pyx":527
  *     """
- *     if not i_times_2:
- *         raise ValueError("The input list 'i_times_2' cannot be empty.")             # <<<<<<<<<<<<<<
- *     if spin_index < 0 or spin_index >= len(i_times_2):
+ *     if not two_I:
+ *         raise ValueError("The input list 'two_I' cannot be empty.")             # <<<<<<<<<<<<<<
+ *     if spin_index < 0 or spin_index >= len(two_I):
  *         raise IndexError("The spin_index is out of bounds.")
  */
     __pyx_t_3 = __Pyx_PyObject_Call(__pyx_builtin_ValueError, __pyx_tuple__3, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 527, __pyx_L1_error)
@@ -10153,16 +10153,16 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_single_C4(int __pyx_v_sp
     /* "spinOps/spinOps.pyx":526
  *         If `spin_index` is out of the valid range.
  *     """
- *     if not i_times_2:             # <<<<<<<<<<<<<<
- *         raise ValueError("The input list 'i_times_2' cannot be empty.")
- *     if spin_index < 0 or spin_index >= len(i_times_2):
+ *     if not two_I:             # <<<<<<<<<<<<<<
+ *         raise ValueError("The input list 'two_I' cannot be empty.")
+ *     if spin_index < 0 or spin_index >= len(two_I):
  */
   }
 
   /* "spinOps/spinOps.pyx":528
- *     if not i_times_2:
- *         raise ValueError("The input list 'i_times_2' cannot be empty.")
- *     if spin_index < 0 or spin_index >= len(i_times_2):             # <<<<<<<<<<<<<<
+ *     if not two_I:
+ *         raise ValueError("The input list 'two_I' cannot be empty.")
+ *     if spin_index < 0 or spin_index >= len(two_I):             # <<<<<<<<<<<<<<
  *         raise IndexError("The spin_index is out of bounds.")
  * 
  */
@@ -10172,22 +10172,22 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_single_C4(int __pyx_v_sp
     __pyx_t_2 = __pyx_t_1;
     goto __pyx_L5_bool_binop_done;
   }
-  if (unlikely(__pyx_v_i_times_2 == Py_None)) {
+  if (unlikely(__pyx_v_two_I == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "object of type 'NoneType' has no len()");
     __PYX_ERR(0, 528, __pyx_L1_error)
   }
-  __pyx_t_4 = __Pyx_PyList_GET_SIZE(__pyx_v_i_times_2); if (unlikely(__pyx_t_4 == ((Py_ssize_t)-1))) __PYX_ERR(0, 528, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyList_GET_SIZE(__pyx_v_two_I); if (unlikely(__pyx_t_4 == ((Py_ssize_t)-1))) __PYX_ERR(0, 528, __pyx_L1_error)
   __pyx_t_1 = (__pyx_v_spin_index >= __pyx_t_4);
   __pyx_t_2 = __pyx_t_1;
   __pyx_L5_bool_binop_done:;
   if (unlikely(__pyx_t_2)) {
 
     /* "spinOps/spinOps.pyx":529
- *         raise ValueError("The input list 'i_times_2' cannot be empty.")
- *     if spin_index < 0 or spin_index >= len(i_times_2):
+ *         raise ValueError("The input list 'two_I' cannot be empty.")
+ *     if spin_index < 0 or spin_index >= len(two_I):
  *         raise IndexError("The spin_index is out of bounds.")             # <<<<<<<<<<<<<<
  * 
- *     cdef int nstates = number_of_states(i_times_2)
+ *     cdef int nstates = number_of_states(two_I)
  */
     __pyx_t_3 = __Pyx_PyObject_Call(__pyx_builtin_IndexError, __pyx_tuple__4, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 529, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
@@ -10196,9 +10196,9 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_single_C4(int __pyx_v_sp
     __PYX_ERR(0, 529, __pyx_L1_error)
 
     /* "spinOps/spinOps.pyx":528
- *     if not i_times_2:
- *         raise ValueError("The input list 'i_times_2' cannot be empty.")
- *     if spin_index < 0 or spin_index >= len(i_times_2):             # <<<<<<<<<<<<<<
+ *     if not two_I:
+ *         raise ValueError("The input list 'two_I' cannot be empty.")
+ *     if spin_index < 0 or spin_index >= len(two_I):             # <<<<<<<<<<<<<<
  *         raise IndexError("The spin_index is out of bounds.")
  * 
  */
@@ -10207,31 +10207,31 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_single_C4(int __pyx_v_sp
   /* "spinOps/spinOps.pyx":531
  *         raise IndexError("The spin_index is out of bounds.")
  * 
- *     cdef int nstates = number_of_states(i_times_2)             # <<<<<<<<<<<<<<
- *     cdef int total_spin_count = len(i_times_2)
- *     cdef ndarray[int] spins = np.array(i_times_2, dtype=np.int32)
+ *     cdef int nstates = number_of_states(two_I)             # <<<<<<<<<<<<<<
+ *     cdef int total_spin_count = len(two_I)
+ *     cdef ndarray[int] spins = np.array(two_I, dtype=np.int32)
  */
-  __pyx_t_5 = __pyx_f_7spinOps_8_spinOps_number_of_states(__pyx_v_i_times_2, 0); if (unlikely(__pyx_t_5 == ((int)-1) && PyErr_Occurred())) __PYX_ERR(0, 531, __pyx_L1_error)
+  __pyx_t_5 = __pyx_f_7spinOps_8_spinOps_number_of_states(__pyx_v_two_I, 0); if (unlikely(__pyx_t_5 == ((int)-1) && PyErr_Occurred())) __PYX_ERR(0, 531, __pyx_L1_error)
   __pyx_v_nstates = __pyx_t_5;
 
   /* "spinOps/spinOps.pyx":532
  * 
- *     cdef int nstates = number_of_states(i_times_2)
- *     cdef int total_spin_count = len(i_times_2)             # <<<<<<<<<<<<<<
- *     cdef ndarray[int] spins = np.array(i_times_2, dtype=np.int32)
+ *     cdef int nstates = number_of_states(two_I)
+ *     cdef int total_spin_count = len(two_I)             # <<<<<<<<<<<<<<
+ *     cdef ndarray[int] spins = np.array(two_I, dtype=np.int32)
  *     cdef ndarray[double complex, ndim=2] myOp = np.zeros((nstates, nstates), dtype=np.complex128)
  */
-  if (unlikely(__pyx_v_i_times_2 == Py_None)) {
+  if (unlikely(__pyx_v_two_I == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "object of type 'NoneType' has no len()");
     __PYX_ERR(0, 532, __pyx_L1_error)
   }
-  __pyx_t_4 = __Pyx_PyList_GET_SIZE(__pyx_v_i_times_2); if (unlikely(__pyx_t_4 == ((Py_ssize_t)-1))) __PYX_ERR(0, 532, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyList_GET_SIZE(__pyx_v_two_I); if (unlikely(__pyx_t_4 == ((Py_ssize_t)-1))) __PYX_ERR(0, 532, __pyx_L1_error)
   __pyx_v_total_spin_count = __pyx_t_4;
 
   /* "spinOps/spinOps.pyx":533
- *     cdef int nstates = number_of_states(i_times_2)
- *     cdef int total_spin_count = len(i_times_2)
- *     cdef ndarray[int] spins = np.array(i_times_2, dtype=np.int32)             # <<<<<<<<<<<<<<
+ *     cdef int nstates = number_of_states(two_I)
+ *     cdef int total_spin_count = len(two_I)
+ *     cdef ndarray[int] spins = np.array(two_I, dtype=np.int32)             # <<<<<<<<<<<<<<
  *     cdef ndarray[double complex, ndim=2] myOp = np.zeros((nstates, nstates), dtype=np.complex128)
  * 
  */
@@ -10242,9 +10242,9 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_single_C4(int __pyx_v_sp
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 533, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __Pyx_INCREF(__pyx_v_i_times_2);
-  __Pyx_GIVEREF(__pyx_v_i_times_2);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_v_i_times_2)) __PYX_ERR(0, 533, __pyx_L1_error);
+  __Pyx_INCREF(__pyx_v_two_I);
+  __Pyx_GIVEREF(__pyx_v_two_I);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_v_two_I)) __PYX_ERR(0, 533, __pyx_L1_error);
   __pyx_t_7 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 533, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
   __Pyx_GetModuleGlobalName(__pyx_t_8, __pyx_n_s_np); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 533, __pyx_L1_error)
@@ -10274,8 +10274,8 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_single_C4(int __pyx_v_sp
   __pyx_t_9 = 0;
 
   /* "spinOps/spinOps.pyx":534
- *     cdef int total_spin_count = len(i_times_2)
- *     cdef ndarray[int] spins = np.array(i_times_2, dtype=np.int32)
+ *     cdef int total_spin_count = len(two_I)
+ *     cdef ndarray[int] spins = np.array(two_I, dtype=np.int32)
  *     cdef ndarray[double complex, ndim=2] myOp = np.zeros((nstates, nstates), dtype=np.complex128)             # <<<<<<<<<<<<<<
  * 
  *     _get_single_spin_C4(&myOp[0, 0], spin_index, &spins[0], total_spin_count)
@@ -10379,7 +10379,7 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_single_C4(int __pyx_v_sp
   /* "spinOps/spinOps.pyx":502
  * 
  * 
- * cpdef ndarray[double complex, ndim=2] create_single_C4(int spin_index, list i_times_2):             # <<<<<<<<<<<<<<
+ * cpdef ndarray[double complex, ndim=2] create_single_C4(int spin_index, list two_I):             # <<<<<<<<<<<<<<
  *     """
  *     Generates the single-spin C4 operator (:math:`\hat{C}_4`) matrix for a specified spin within a spin system.
  */
@@ -10420,7 +10420,7 @@ PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-PyDoc_STRVAR(__pyx_doc_7spinOps_8_spinOps_26create_single_C4, "\n    Generates the single-spin C4 operator (:math:`\\hat{C}_4`) matrix for a specified spin within a spin system.\n\n    Parameters\n    ----------\n    spin_index : int\n        Index of the spin for which the unit-normalized :math:`\\hat{C}_{4}` operator is constructed.\n    i_times_2 : list of int\n        List of integers representing :math:`2I` values for each spin in the system,\n        where :math:`I` is the spin quantum number.\n\n    Returns\n    -------\n    ndarray[double complex, ndim=2]\n        A 2D NumPy array representing the unit-normalized :math:`\\hat{C}_{0}` operator matrix.\n\n    Raises\n    ------\n    ValueError\n        If the input list `i_times_2` is empty.\n    IndexError\n        If `spin_index` is out of the valid range.\n    ");
+PyDoc_STRVAR(__pyx_doc_7spinOps_8_spinOps_26create_single_C4, "\n    Generates the single-spin C4 operator (:math:`\\hat{C}_4`) matrix for a specified spin within a spin system.\n\n    Parameters\n    ----------\n    spin_index : int\n        Index of the spin for which the unit-normalized :math:`\\hat{C}_{4}` operator is constructed.\n    two_I : list of int\n        List of integers representing :math:`2I` values for each spin in the system,\n        where :math:`I` is the spin quantum number.\n\n    Returns\n    -------\n    ndarray[double complex, ndim=2]\n        A 2D NumPy array representing the unit-normalized :math:`\\hat{C}_{0}` operator matrix.\n\n    Raises\n    ------\n    ValueError\n        If the input list `two_I` is empty.\n    IndexError\n        If `spin_index` is out of the valid range.\n    ");
 static PyMethodDef __pyx_mdef_7spinOps_8_spinOps_27create_single_C4 = {"create_single_C4", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_7spinOps_8_spinOps_27create_single_C4, __Pyx_METH_FASTCALL|METH_KEYWORDS, __pyx_doc_7spinOps_8_spinOps_26create_single_C4};
 static PyObject *__pyx_pw_7spinOps_8_spinOps_27create_single_C4(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
@@ -10430,7 +10430,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ) {
   int __pyx_v_spin_index;
-  PyObject *__pyx_v_i_times_2 = 0;
+  PyObject *__pyx_v_two_I = 0;
   #if !CYTHON_METH_FASTCALL
   CYTHON_UNUSED Py_ssize_t __pyx_nargs;
   #endif
@@ -10451,7 +10451,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   #endif
   __pyx_kwvalues = __Pyx_KwValues_FASTCALL(__pyx_args, __pyx_nargs);
   {
-    PyObject **__pyx_pyargnames[] = {&__pyx_n_s_spin_index,&__pyx_n_s_i_times_2,0};
+    PyObject **__pyx_pyargnames[] = {&__pyx_n_s_spin_index,&__pyx_n_s_two_I,0};
     if (__pyx_kwds) {
       Py_ssize_t kw_args;
       switch (__pyx_nargs) {
@@ -10473,7 +10473,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
         else goto __pyx_L5_argtuple_error;
         CYTHON_FALLTHROUGH;
         case  1:
-        if (likely((values[1] = __Pyx_GetKwValue_FASTCALL(__pyx_kwds, __pyx_kwvalues, __pyx_n_s_i_times_2)) != 0)) {
+        if (likely((values[1] = __Pyx_GetKwValue_FASTCALL(__pyx_kwds, __pyx_kwvalues, __pyx_n_s_two_I)) != 0)) {
           (void)__Pyx_Arg_NewRef_FASTCALL(values[1]);
           kw_args--;
         }
@@ -10493,7 +10493,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
       values[1] = __Pyx_Arg_FASTCALL(__pyx_args, 1);
     }
     __pyx_v_spin_index = __Pyx_PyInt_As_int(values[0]); if (unlikely((__pyx_v_spin_index == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 502, __pyx_L3_error)
-    __pyx_v_i_times_2 = ((PyObject*)values[1]);
+    __pyx_v_two_I = ((PyObject*)values[1]);
   }
   goto __pyx_L6_skip;
   __pyx_L5_argtuple_error:;
@@ -10511,8 +10511,8 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_i_times_2), (&PyList_Type), 1, "i_times_2", 1))) __PYX_ERR(0, 502, __pyx_L1_error)
-  __pyx_r = __pyx_pf_7spinOps_8_spinOps_26create_single_C4(__pyx_self, __pyx_v_spin_index, __pyx_v_i_times_2);
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_two_I), (&PyList_Type), 1, "two_I", 1))) __PYX_ERR(0, 502, __pyx_L1_error)
+  __pyx_r = __pyx_pf_7spinOps_8_spinOps_26create_single_C4(__pyx_self, __pyx_v_spin_index, __pyx_v_two_I);
 
   /* function exit code */
   goto __pyx_L0;
@@ -10529,7 +10529,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_7spinOps_8_spinOps_26create_single_C4(CYTHON_UNUSED PyObject *__pyx_self, int __pyx_v_spin_index, PyObject *__pyx_v_i_times_2) {
+static PyObject *__pyx_pf_7spinOps_8_spinOps_26create_single_C4(CYTHON_UNUSED PyObject *__pyx_self, int __pyx_v_spin_index, PyObject *__pyx_v_two_I) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -10538,7 +10538,7 @@ static PyObject *__pyx_pf_7spinOps_8_spinOps_26create_single_C4(CYTHON_UNUSED Py
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("create_single_C4", 1);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = ((PyObject *)__pyx_f_7spinOps_8_spinOps_create_single_C4(__pyx_v_spin_index, __pyx_v_i_times_2, 0)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 502, __pyx_L1_error)
+  __pyx_t_1 = ((PyObject *)__pyx_f_7spinOps_8_spinOps_create_single_C4(__pyx_v_spin_index, __pyx_v_two_I, 0)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 502, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -10558,7 +10558,7 @@ static PyObject *__pyx_pf_7spinOps_8_spinOps_26create_single_C4(CYTHON_UNUSED Py
 /* "spinOps/spinOps.pyx":541
  * 
  * 
- * cpdef ndarray[double complex, ndim=2] createEf(int r, int s, list i_times_2):             # <<<<<<<<<<<<<<
+ * cpdef ndarray[double complex, ndim=2] createEf(int r, int s, list two_I):             # <<<<<<<<<<<<<<
  *     """
  *     Generates the operator matrix :math:`\hat{E}^{r-s}` corresponding to the transition from state :math:`s` to :math:`r`
  */
@@ -10570,7 +10570,7 @@ PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static PyArrayObject *__pyx_f_7spinOps_8_spinOps_createEf(int __pyx_v_r, int __pyx_v_s, PyObject *__pyx_v_i_times_2, CYTHON_UNUSED int __pyx_skip_dispatch) {
+static PyArrayObject *__pyx_f_7spinOps_8_spinOps_createEf(int __pyx_v_r, int __pyx_v_s, PyObject *__pyx_v_two_I, CYTHON_UNUSED int __pyx_skip_dispatch) {
   int __pyx_v_nstates;
   int __pyx_v_total_spin_count;
   PyArrayObject *__pyx_v_spins = 0;
@@ -10611,18 +10611,18 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_createEf(int __pyx_v_r, int __p
   /* "spinOps/spinOps.pyx":568
  *         If `r` or `s` is out of the valid range.
  *     """
- *     if not i_times_2:             # <<<<<<<<<<<<<<
- *         raise ValueError("The input list 'i_times_2' cannot be empty.")
+ *     if not two_I:             # <<<<<<<<<<<<<<
+ *         raise ValueError("The input list 'two_I' cannot be empty.")
  *     if r < 0 or s < 0:
  */
-  __pyx_t_1 = (__pyx_v_i_times_2 != Py_None)&&(PyList_GET_SIZE(__pyx_v_i_times_2) != 0);
+  __pyx_t_1 = (__pyx_v_two_I != Py_None)&&(PyList_GET_SIZE(__pyx_v_two_I) != 0);
   __pyx_t_2 = (!__pyx_t_1);
   if (unlikely(__pyx_t_2)) {
 
     /* "spinOps/spinOps.pyx":569
  *     """
- *     if not i_times_2:
- *         raise ValueError("The input list 'i_times_2' cannot be empty.")             # <<<<<<<<<<<<<<
+ *     if not two_I:
+ *         raise ValueError("The input list 'two_I' cannot be empty.")             # <<<<<<<<<<<<<<
  *     if r < 0 or s < 0:
  *         raise IndexError("State indices 'r' and 's' must be non-negative.")
  */
@@ -10635,15 +10635,15 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_createEf(int __pyx_v_r, int __p
     /* "spinOps/spinOps.pyx":568
  *         If `r` or `s` is out of the valid range.
  *     """
- *     if not i_times_2:             # <<<<<<<<<<<<<<
- *         raise ValueError("The input list 'i_times_2' cannot be empty.")
+ *     if not two_I:             # <<<<<<<<<<<<<<
+ *         raise ValueError("The input list 'two_I' cannot be empty.")
  *     if r < 0 or s < 0:
  */
   }
 
   /* "spinOps/spinOps.pyx":570
- *     if not i_times_2:
- *         raise ValueError("The input list 'i_times_2' cannot be empty.")
+ *     if not two_I:
+ *         raise ValueError("The input list 'two_I' cannot be empty.")
  *     if r < 0 or s < 0:             # <<<<<<<<<<<<<<
  *         raise IndexError("State indices 'r' and 's' must be non-negative.")
  * 
@@ -10660,11 +10660,11 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_createEf(int __pyx_v_r, int __p
   if (unlikely(__pyx_t_2)) {
 
     /* "spinOps/spinOps.pyx":571
- *         raise ValueError("The input list 'i_times_2' cannot be empty.")
+ *         raise ValueError("The input list 'two_I' cannot be empty.")
  *     if r < 0 or s < 0:
  *         raise IndexError("State indices 'r' and 's' must be non-negative.")             # <<<<<<<<<<<<<<
  * 
- *     cdef int nstates = number_of_states(i_times_2)
+ *     cdef int nstates = number_of_states(two_I)
  */
     __pyx_t_3 = __Pyx_PyObject_Call(__pyx_builtin_IndexError, __pyx_tuple__5, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 571, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
@@ -10673,8 +10673,8 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_createEf(int __pyx_v_r, int __p
     __PYX_ERR(0, 571, __pyx_L1_error)
 
     /* "spinOps/spinOps.pyx":570
- *     if not i_times_2:
- *         raise ValueError("The input list 'i_times_2' cannot be empty.")
+ *     if not two_I:
+ *         raise ValueError("The input list 'two_I' cannot be empty.")
  *     if r < 0 or s < 0:             # <<<<<<<<<<<<<<
  *         raise IndexError("State indices 'r' and 's' must be non-negative.")
  * 
@@ -10684,31 +10684,31 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_createEf(int __pyx_v_r, int __p
   /* "spinOps/spinOps.pyx":573
  *         raise IndexError("State indices 'r' and 's' must be non-negative.")
  * 
- *     cdef int nstates = number_of_states(i_times_2)             # <<<<<<<<<<<<<<
- *     cdef int total_spin_count = len(i_times_2)
- *     cdef ndarray[int] spins = np.array(i_times_2, dtype=np.int32)
+ *     cdef int nstates = number_of_states(two_I)             # <<<<<<<<<<<<<<
+ *     cdef int total_spin_count = len(two_I)
+ *     cdef ndarray[int] spins = np.array(two_I, dtype=np.int32)
  */
-  __pyx_t_4 = __pyx_f_7spinOps_8_spinOps_number_of_states(__pyx_v_i_times_2, 0); if (unlikely(__pyx_t_4 == ((int)-1) && PyErr_Occurred())) __PYX_ERR(0, 573, __pyx_L1_error)
+  __pyx_t_4 = __pyx_f_7spinOps_8_spinOps_number_of_states(__pyx_v_two_I, 0); if (unlikely(__pyx_t_4 == ((int)-1) && PyErr_Occurred())) __PYX_ERR(0, 573, __pyx_L1_error)
   __pyx_v_nstates = __pyx_t_4;
 
   /* "spinOps/spinOps.pyx":574
  * 
- *     cdef int nstates = number_of_states(i_times_2)
- *     cdef int total_spin_count = len(i_times_2)             # <<<<<<<<<<<<<<
- *     cdef ndarray[int] spins = np.array(i_times_2, dtype=np.int32)
+ *     cdef int nstates = number_of_states(two_I)
+ *     cdef int total_spin_count = len(two_I)             # <<<<<<<<<<<<<<
+ *     cdef ndarray[int] spins = np.array(two_I, dtype=np.int32)
  *     cdef ndarray[double complex, ndim=2] myOp = np.zeros((nstates, nstates), dtype=np.complex128)
  */
-  if (unlikely(__pyx_v_i_times_2 == Py_None)) {
+  if (unlikely(__pyx_v_two_I == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "object of type 'NoneType' has no len()");
     __PYX_ERR(0, 574, __pyx_L1_error)
   }
-  __pyx_t_5 = __Pyx_PyList_GET_SIZE(__pyx_v_i_times_2); if (unlikely(__pyx_t_5 == ((Py_ssize_t)-1))) __PYX_ERR(0, 574, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyList_GET_SIZE(__pyx_v_two_I); if (unlikely(__pyx_t_5 == ((Py_ssize_t)-1))) __PYX_ERR(0, 574, __pyx_L1_error)
   __pyx_v_total_spin_count = __pyx_t_5;
 
   /* "spinOps/spinOps.pyx":575
- *     cdef int nstates = number_of_states(i_times_2)
- *     cdef int total_spin_count = len(i_times_2)
- *     cdef ndarray[int] spins = np.array(i_times_2, dtype=np.int32)             # <<<<<<<<<<<<<<
+ *     cdef int nstates = number_of_states(two_I)
+ *     cdef int total_spin_count = len(two_I)
+ *     cdef ndarray[int] spins = np.array(two_I, dtype=np.int32)             # <<<<<<<<<<<<<<
  *     cdef ndarray[double complex, ndim=2] myOp = np.zeros((nstates, nstates), dtype=np.complex128)
  * 
  */
@@ -10719,9 +10719,9 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_createEf(int __pyx_v_r, int __p
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 575, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __Pyx_INCREF(__pyx_v_i_times_2);
-  __Pyx_GIVEREF(__pyx_v_i_times_2);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_v_i_times_2)) __PYX_ERR(0, 575, __pyx_L1_error);
+  __Pyx_INCREF(__pyx_v_two_I);
+  __Pyx_GIVEREF(__pyx_v_two_I);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_v_two_I)) __PYX_ERR(0, 575, __pyx_L1_error);
   __pyx_t_7 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 575, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
   __Pyx_GetModuleGlobalName(__pyx_t_8, __pyx_n_s_np); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 575, __pyx_L1_error)
@@ -10751,8 +10751,8 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_createEf(int __pyx_v_r, int __p
   __pyx_t_9 = 0;
 
   /* "spinOps/spinOps.pyx":576
- *     cdef int total_spin_count = len(i_times_2)
- *     cdef ndarray[int] spins = np.array(i_times_2, dtype=np.int32)
+ *     cdef int total_spin_count = len(two_I)
+ *     cdef ndarray[int] spins = np.array(two_I, dtype=np.int32)
  *     cdef ndarray[double complex, ndim=2] myOp = np.zeros((nstates, nstates), dtype=np.complex128)             # <<<<<<<<<<<<<<
  * 
  *     _getEf(&myOp[0, 0], r, s, &spins[0], total_spin_count)
@@ -10856,7 +10856,7 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_createEf(int __pyx_v_r, int __p
   /* "spinOps/spinOps.pyx":541
  * 
  * 
- * cpdef ndarray[double complex, ndim=2] createEf(int r, int s, list i_times_2):             # <<<<<<<<<<<<<<
+ * cpdef ndarray[double complex, ndim=2] createEf(int r, int s, list two_I):             # <<<<<<<<<<<<<<
  *     """
  *     Generates the operator matrix :math:`\hat{E}^{r-s}` corresponding to the transition from state :math:`s` to :math:`r`
  */
@@ -10897,7 +10897,7 @@ PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-PyDoc_STRVAR(__pyx_doc_7spinOps_8_spinOps_28createEf, "\n    Generates the operator matrix :math:`\\hat{E}^{r-s}` corresponding to the transition from state :math:`s` to :math:`r`\n    in a fictitious spin-1/2 system.\n\n    Parameters\n    ----------\n    r : int\n        Index of the first quantum state (row index).\n    s : int\n        Index of the second quantum state (column index).\n    i_times_2 : list of int\n        List of integers representing :math:`2I` values for each spin in the system,\n        where :math:`I` is the spin quantum number.\n\n    Returns\n    -------\n    ndarray[double complex, ndim=2]\n        A 2D NumPy array representing the :math:`\\hat{E}^{r-s}` operator matrix.\n\n    Raises\n    ------\n    ValueError\n        If the input list `i_times_2` is empty.\n    IndexError\n        If `r` or `s` is out of the valid range.\n    ");
+PyDoc_STRVAR(__pyx_doc_7spinOps_8_spinOps_28createEf, "\n    Generates the operator matrix :math:`\\hat{E}^{r-s}` corresponding to the transition from state :math:`s` to :math:`r`\n    in a fictitious spin-1/2 system.\n\n    Parameters\n    ----------\n    r : int\n        Index of the first quantum state (row index).\n    s : int\n        Index of the second quantum state (column index).\n    two_I : list of int\n        List of integers representing :math:`2I` values for each spin in the system,\n        where :math:`I` is the spin quantum number.\n\n    Returns\n    -------\n    ndarray[double complex, ndim=2]\n        A 2D NumPy array representing the :math:`\\hat{E}^{r-s}` operator matrix.\n\n    Raises\n    ------\n    ValueError\n        If the input list `two_I` is empty.\n    IndexError\n        If `r` or `s` is out of the valid range.\n    ");
 static PyMethodDef __pyx_mdef_7spinOps_8_spinOps_29createEf = {"createEf", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_7spinOps_8_spinOps_29createEf, __Pyx_METH_FASTCALL|METH_KEYWORDS, __pyx_doc_7spinOps_8_spinOps_28createEf};
 static PyObject *__pyx_pw_7spinOps_8_spinOps_29createEf(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
@@ -10908,7 +10908,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
 ) {
   int __pyx_v_r;
   int __pyx_v_s;
-  PyObject *__pyx_v_i_times_2 = 0;
+  PyObject *__pyx_v_two_I = 0;
   #if !CYTHON_METH_FASTCALL
   CYTHON_UNUSED Py_ssize_t __pyx_nargs;
   #endif
@@ -10929,7 +10929,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   #endif
   __pyx_kwvalues = __Pyx_KwValues_FASTCALL(__pyx_args, __pyx_nargs);
   {
-    PyObject **__pyx_pyargnames[] = {&__pyx_n_s_r,&__pyx_n_s_s,&__pyx_n_s_i_times_2,0};
+    PyObject **__pyx_pyargnames[] = {&__pyx_n_s_r,&__pyx_n_s_s,&__pyx_n_s_two_I,0};
     if (__pyx_kwds) {
       Py_ssize_t kw_args;
       switch (__pyx_nargs) {
@@ -10963,7 +10963,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
         }
         CYTHON_FALLTHROUGH;
         case  2:
-        if (likely((values[2] = __Pyx_GetKwValue_FASTCALL(__pyx_kwds, __pyx_kwvalues, __pyx_n_s_i_times_2)) != 0)) {
+        if (likely((values[2] = __Pyx_GetKwValue_FASTCALL(__pyx_kwds, __pyx_kwvalues, __pyx_n_s_two_I)) != 0)) {
           (void)__Pyx_Arg_NewRef_FASTCALL(values[2]);
           kw_args--;
         }
@@ -10985,7 +10985,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
     }
     __pyx_v_r = __Pyx_PyInt_As_int(values[0]); if (unlikely((__pyx_v_r == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 541, __pyx_L3_error)
     __pyx_v_s = __Pyx_PyInt_As_int(values[1]); if (unlikely((__pyx_v_s == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 541, __pyx_L3_error)
-    __pyx_v_i_times_2 = ((PyObject*)values[2]);
+    __pyx_v_two_I = ((PyObject*)values[2]);
   }
   goto __pyx_L6_skip;
   __pyx_L5_argtuple_error:;
@@ -11003,8 +11003,8 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_i_times_2), (&PyList_Type), 1, "i_times_2", 1))) __PYX_ERR(0, 541, __pyx_L1_error)
-  __pyx_r = __pyx_pf_7spinOps_8_spinOps_28createEf(__pyx_self, __pyx_v_r, __pyx_v_s, __pyx_v_i_times_2);
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_two_I), (&PyList_Type), 1, "two_I", 1))) __PYX_ERR(0, 541, __pyx_L1_error)
+  __pyx_r = __pyx_pf_7spinOps_8_spinOps_28createEf(__pyx_self, __pyx_v_r, __pyx_v_s, __pyx_v_two_I);
 
   /* function exit code */
   goto __pyx_L0;
@@ -11021,7 +11021,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_7spinOps_8_spinOps_28createEf(CYTHON_UNUSED PyObject *__pyx_self, int __pyx_v_r, int __pyx_v_s, PyObject *__pyx_v_i_times_2) {
+static PyObject *__pyx_pf_7spinOps_8_spinOps_28createEf(CYTHON_UNUSED PyObject *__pyx_self, int __pyx_v_r, int __pyx_v_s, PyObject *__pyx_v_two_I) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -11030,7 +11030,7 @@ static PyObject *__pyx_pf_7spinOps_8_spinOps_28createEf(CYTHON_UNUSED PyObject *
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("createEf", 1);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = ((PyObject *)__pyx_f_7spinOps_8_spinOps_createEf(__pyx_v_r, __pyx_v_s, __pyx_v_i_times_2, 0)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 541, __pyx_L1_error)
+  __pyx_t_1 = ((PyObject *)__pyx_f_7spinOps_8_spinOps_createEf(__pyx_v_r, __pyx_v_s, __pyx_v_two_I, 0)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 541, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -11050,7 +11050,7 @@ static PyObject *__pyx_pf_7spinOps_8_spinOps_28createEf(CYTHON_UNUSED PyObject *
 /* "spinOps/spinOps.pyx":583
  * 
  * 
- * cpdef ndarray[double complex, ndim=2] create_Ixf(int r, int s, list i_times_2):             # <<<<<<<<<<<<<<
+ * cpdef ndarray[double complex, ndim=2] create_Ixf(int r, int s, list two_I):             # <<<<<<<<<<<<<<
  *     """
  *     Generates the fictitious spin-1/2 operator matrix :math:`\hat{I}_x^{r-s}` for a transition
  */
@@ -11062,7 +11062,7 @@ PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_Ixf(int __pyx_v_r, int __pyx_v_s, PyObject *__pyx_v_i_times_2, CYTHON_UNUSED int __pyx_skip_dispatch) {
+static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_Ixf(int __pyx_v_r, int __pyx_v_s, PyObject *__pyx_v_two_I, CYTHON_UNUSED int __pyx_skip_dispatch) {
   int __pyx_v_nstates;
   int __pyx_v_total_spin_count;
   PyArrayObject *__pyx_v_spins = 0;
@@ -11103,18 +11103,18 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_Ixf(int __pyx_v_r, int _
   /* "spinOps/spinOps.pyx":611
  *     """
  *     # Validate input
- *     if not i_times_2:             # <<<<<<<<<<<<<<
- *         raise ValueError("The input list 'i_times_2' cannot be empty.")
+ *     if not two_I:             # <<<<<<<<<<<<<<
+ *         raise ValueError("The input list 'two_I' cannot be empty.")
  *     if r < 0 or s < 0:
  */
-  __pyx_t_1 = (__pyx_v_i_times_2 != Py_None)&&(PyList_GET_SIZE(__pyx_v_i_times_2) != 0);
+  __pyx_t_1 = (__pyx_v_two_I != Py_None)&&(PyList_GET_SIZE(__pyx_v_two_I) != 0);
   __pyx_t_2 = (!__pyx_t_1);
   if (unlikely(__pyx_t_2)) {
 
     /* "spinOps/spinOps.pyx":612
  *     # Validate input
- *     if not i_times_2:
- *         raise ValueError("The input list 'i_times_2' cannot be empty.")             # <<<<<<<<<<<<<<
+ *     if not two_I:
+ *         raise ValueError("The input list 'two_I' cannot be empty.")             # <<<<<<<<<<<<<<
  *     if r < 0 or s < 0:
  *         raise IndexError("State indices 'r' and 's' must be non-negative.")
  */
@@ -11127,15 +11127,15 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_Ixf(int __pyx_v_r, int _
     /* "spinOps/spinOps.pyx":611
  *     """
  *     # Validate input
- *     if not i_times_2:             # <<<<<<<<<<<<<<
- *         raise ValueError("The input list 'i_times_2' cannot be empty.")
+ *     if not two_I:             # <<<<<<<<<<<<<<
+ *         raise ValueError("The input list 'two_I' cannot be empty.")
  *     if r < 0 or s < 0:
  */
   }
 
   /* "spinOps/spinOps.pyx":613
- *     if not i_times_2:
- *         raise ValueError("The input list 'i_times_2' cannot be empty.")
+ *     if not two_I:
+ *         raise ValueError("The input list 'two_I' cannot be empty.")
  *     if r < 0 or s < 0:             # <<<<<<<<<<<<<<
  *         raise IndexError("State indices 'r' and 's' must be non-negative.")
  * 
@@ -11152,7 +11152,7 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_Ixf(int __pyx_v_r, int _
   if (unlikely(__pyx_t_2)) {
 
     /* "spinOps/spinOps.pyx":614
- *         raise ValueError("The input list 'i_times_2' cannot be empty.")
+ *         raise ValueError("The input list 'two_I' cannot be empty.")
  *     if r < 0 or s < 0:
  *         raise IndexError("State indices 'r' and 's' must be non-negative.")             # <<<<<<<<<<<<<<
  * 
@@ -11165,8 +11165,8 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_Ixf(int __pyx_v_r, int _
     __PYX_ERR(0, 614, __pyx_L1_error)
 
     /* "spinOps/spinOps.pyx":613
- *     if not i_times_2:
- *         raise ValueError("The input list 'i_times_2' cannot be empty.")
+ *     if not two_I:
+ *         raise ValueError("The input list 'two_I' cannot be empty.")
  *     if r < 0 or s < 0:             # <<<<<<<<<<<<<<
  *         raise IndexError("State indices 'r' and 's' must be non-negative.")
  * 
@@ -11176,31 +11176,31 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_Ixf(int __pyx_v_r, int _
   /* "spinOps/spinOps.pyx":617
  * 
  *     # Compute the number of states and prepare the operator matrix
- *     cdef int nstates = number_of_states(i_times_2)             # <<<<<<<<<<<<<<
- *     cdef int total_spin_count = len(i_times_2)
- *     cdef ndarray[int] spins = np.array(i_times_2, dtype=np.int32)
+ *     cdef int nstates = number_of_states(two_I)             # <<<<<<<<<<<<<<
+ *     cdef int total_spin_count = len(two_I)
+ *     cdef ndarray[int] spins = np.array(two_I, dtype=np.int32)
  */
-  __pyx_t_4 = __pyx_f_7spinOps_8_spinOps_number_of_states(__pyx_v_i_times_2, 0); if (unlikely(__pyx_t_4 == ((int)-1) && PyErr_Occurred())) __PYX_ERR(0, 617, __pyx_L1_error)
+  __pyx_t_4 = __pyx_f_7spinOps_8_spinOps_number_of_states(__pyx_v_two_I, 0); if (unlikely(__pyx_t_4 == ((int)-1) && PyErr_Occurred())) __PYX_ERR(0, 617, __pyx_L1_error)
   __pyx_v_nstates = __pyx_t_4;
 
   /* "spinOps/spinOps.pyx":618
  *     # Compute the number of states and prepare the operator matrix
- *     cdef int nstates = number_of_states(i_times_2)
- *     cdef int total_spin_count = len(i_times_2)             # <<<<<<<<<<<<<<
- *     cdef ndarray[int] spins = np.array(i_times_2, dtype=np.int32)
+ *     cdef int nstates = number_of_states(two_I)
+ *     cdef int total_spin_count = len(two_I)             # <<<<<<<<<<<<<<
+ *     cdef ndarray[int] spins = np.array(two_I, dtype=np.int32)
  *     cdef ndarray[double complex, ndim=2] myOp = np.zeros((nstates, nstates), dtype=np.complex128)
  */
-  if (unlikely(__pyx_v_i_times_2 == Py_None)) {
+  if (unlikely(__pyx_v_two_I == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "object of type 'NoneType' has no len()");
     __PYX_ERR(0, 618, __pyx_L1_error)
   }
-  __pyx_t_5 = __Pyx_PyList_GET_SIZE(__pyx_v_i_times_2); if (unlikely(__pyx_t_5 == ((Py_ssize_t)-1))) __PYX_ERR(0, 618, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyList_GET_SIZE(__pyx_v_two_I); if (unlikely(__pyx_t_5 == ((Py_ssize_t)-1))) __PYX_ERR(0, 618, __pyx_L1_error)
   __pyx_v_total_spin_count = __pyx_t_5;
 
   /* "spinOps/spinOps.pyx":619
- *     cdef int nstates = number_of_states(i_times_2)
- *     cdef int total_spin_count = len(i_times_2)
- *     cdef ndarray[int] spins = np.array(i_times_2, dtype=np.int32)             # <<<<<<<<<<<<<<
+ *     cdef int nstates = number_of_states(two_I)
+ *     cdef int total_spin_count = len(two_I)
+ *     cdef ndarray[int] spins = np.array(two_I, dtype=np.int32)             # <<<<<<<<<<<<<<
  *     cdef ndarray[double complex, ndim=2] myOp = np.zeros((nstates, nstates), dtype=np.complex128)
  * 
  */
@@ -11211,9 +11211,9 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_Ixf(int __pyx_v_r, int _
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 619, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __Pyx_INCREF(__pyx_v_i_times_2);
-  __Pyx_GIVEREF(__pyx_v_i_times_2);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_v_i_times_2)) __PYX_ERR(0, 619, __pyx_L1_error);
+  __Pyx_INCREF(__pyx_v_two_I);
+  __Pyx_GIVEREF(__pyx_v_two_I);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_v_two_I)) __PYX_ERR(0, 619, __pyx_L1_error);
   __pyx_t_7 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 619, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
   __Pyx_GetModuleGlobalName(__pyx_t_8, __pyx_n_s_np); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 619, __pyx_L1_error)
@@ -11243,8 +11243,8 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_Ixf(int __pyx_v_r, int _
   __pyx_t_9 = 0;
 
   /* "spinOps/spinOps.pyx":620
- *     cdef int total_spin_count = len(i_times_2)
- *     cdef ndarray[int] spins = np.array(i_times_2, dtype=np.int32)
+ *     cdef int total_spin_count = len(two_I)
+ *     cdef ndarray[int] spins = np.array(two_I, dtype=np.int32)
  *     cdef ndarray[double complex, ndim=2] myOp = np.zeros((nstates, nstates), dtype=np.complex128)             # <<<<<<<<<<<<<<
  * 
  *     # Call the external C function to populate the operator matrix
@@ -11338,7 +11338,7 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_Ixf(int __pyx_v_r, int _
  * 
  *     return myOp             # <<<<<<<<<<<<<<
  * 
- * cpdef ndarray[double complex, ndim=2] create_Iyf(int r, int s, list i_times_2):
+ * cpdef ndarray[double complex, ndim=2] create_Iyf(int r, int s, list two_I):
  */
   __Pyx_XDECREF((PyObject *)__pyx_r);
   __Pyx_INCREF((PyObject *)__pyx_v_myOp);
@@ -11348,7 +11348,7 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_Ixf(int __pyx_v_r, int _
   /* "spinOps/spinOps.pyx":583
  * 
  * 
- * cpdef ndarray[double complex, ndim=2] create_Ixf(int r, int s, list i_times_2):             # <<<<<<<<<<<<<<
+ * cpdef ndarray[double complex, ndim=2] create_Ixf(int r, int s, list two_I):             # <<<<<<<<<<<<<<
  *     """
  *     Generates the fictitious spin-1/2 operator matrix :math:`\hat{I}_x^{r-s}` for a transition
  */
@@ -11389,7 +11389,7 @@ PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-PyDoc_STRVAR(__pyx_doc_7spinOps_8_spinOps_30create_Ixf, "\n    Generates the fictitious spin-1/2 operator matrix :math:`\\hat{I}_x^{r-s}` for a transition\n    from state :math:`s` to state :math:`r`.\n\n    Parameters\n    ----------\n    r : int\n        Index of the target quantum state (row index).\n    s : int\n        Index of the source quantum state (column index).\n    i_times_2 : list of int\n        List of integers representing :math:`2I` values for each spin in the system,\n        where :math:`I` is the spin quantum number.\n\n    Returns\n    -------\n    ndarray[double complex, ndim=2]\n        A 2D NumPy array representing the operator :math:`\\hat{I}_x^{r-s}`.\n\n    Raises\n    ------\n    ValueError\n        If the input list `i_times_2` is empty.\n    IndexError\n        If `r` or `s` is negative.\n    ");
+PyDoc_STRVAR(__pyx_doc_7spinOps_8_spinOps_30create_Ixf, "\n    Generates the fictitious spin-1/2 operator matrix :math:`\\hat{I}_x^{r-s}` for a transition\n    from state :math:`s` to state :math:`r`.\n\n    Parameters\n    ----------\n    r : int\n        Index of the target quantum state (row index).\n    s : int\n        Index of the source quantum state (column index).\n    two_I : list of int\n        List of integers representing :math:`2I` values for each spin in the system,\n        where :math:`I` is the spin quantum number.\n\n    Returns\n    -------\n    ndarray[double complex, ndim=2]\n        A 2D NumPy array representing the operator :math:`\\hat{I}_x^{r-s}`.\n\n    Raises\n    ------\n    ValueError\n        If the input list `two_I` is empty.\n    IndexError\n        If `r` or `s` is negative.\n    ");
 static PyMethodDef __pyx_mdef_7spinOps_8_spinOps_31create_Ixf = {"create_Ixf", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_7spinOps_8_spinOps_31create_Ixf, __Pyx_METH_FASTCALL|METH_KEYWORDS, __pyx_doc_7spinOps_8_spinOps_30create_Ixf};
 static PyObject *__pyx_pw_7spinOps_8_spinOps_31create_Ixf(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
@@ -11400,7 +11400,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
 ) {
   int __pyx_v_r;
   int __pyx_v_s;
-  PyObject *__pyx_v_i_times_2 = 0;
+  PyObject *__pyx_v_two_I = 0;
   #if !CYTHON_METH_FASTCALL
   CYTHON_UNUSED Py_ssize_t __pyx_nargs;
   #endif
@@ -11421,7 +11421,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   #endif
   __pyx_kwvalues = __Pyx_KwValues_FASTCALL(__pyx_args, __pyx_nargs);
   {
-    PyObject **__pyx_pyargnames[] = {&__pyx_n_s_r,&__pyx_n_s_s,&__pyx_n_s_i_times_2,0};
+    PyObject **__pyx_pyargnames[] = {&__pyx_n_s_r,&__pyx_n_s_s,&__pyx_n_s_two_I,0};
     if (__pyx_kwds) {
       Py_ssize_t kw_args;
       switch (__pyx_nargs) {
@@ -11455,7 +11455,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
         }
         CYTHON_FALLTHROUGH;
         case  2:
-        if (likely((values[2] = __Pyx_GetKwValue_FASTCALL(__pyx_kwds, __pyx_kwvalues, __pyx_n_s_i_times_2)) != 0)) {
+        if (likely((values[2] = __Pyx_GetKwValue_FASTCALL(__pyx_kwds, __pyx_kwvalues, __pyx_n_s_two_I)) != 0)) {
           (void)__Pyx_Arg_NewRef_FASTCALL(values[2]);
           kw_args--;
         }
@@ -11477,7 +11477,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
     }
     __pyx_v_r = __Pyx_PyInt_As_int(values[0]); if (unlikely((__pyx_v_r == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 583, __pyx_L3_error)
     __pyx_v_s = __Pyx_PyInt_As_int(values[1]); if (unlikely((__pyx_v_s == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 583, __pyx_L3_error)
-    __pyx_v_i_times_2 = ((PyObject*)values[2]);
+    __pyx_v_two_I = ((PyObject*)values[2]);
   }
   goto __pyx_L6_skip;
   __pyx_L5_argtuple_error:;
@@ -11495,8 +11495,8 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_i_times_2), (&PyList_Type), 1, "i_times_2", 1))) __PYX_ERR(0, 583, __pyx_L1_error)
-  __pyx_r = __pyx_pf_7spinOps_8_spinOps_30create_Ixf(__pyx_self, __pyx_v_r, __pyx_v_s, __pyx_v_i_times_2);
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_two_I), (&PyList_Type), 1, "two_I", 1))) __PYX_ERR(0, 583, __pyx_L1_error)
+  __pyx_r = __pyx_pf_7spinOps_8_spinOps_30create_Ixf(__pyx_self, __pyx_v_r, __pyx_v_s, __pyx_v_two_I);
 
   /* function exit code */
   goto __pyx_L0;
@@ -11513,7 +11513,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_7spinOps_8_spinOps_30create_Ixf(CYTHON_UNUSED PyObject *__pyx_self, int __pyx_v_r, int __pyx_v_s, PyObject *__pyx_v_i_times_2) {
+static PyObject *__pyx_pf_7spinOps_8_spinOps_30create_Ixf(CYTHON_UNUSED PyObject *__pyx_self, int __pyx_v_r, int __pyx_v_s, PyObject *__pyx_v_two_I) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -11522,7 +11522,7 @@ static PyObject *__pyx_pf_7spinOps_8_spinOps_30create_Ixf(CYTHON_UNUSED PyObject
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("create_Ixf", 1);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = ((PyObject *)__pyx_f_7spinOps_8_spinOps_create_Ixf(__pyx_v_r, __pyx_v_s, __pyx_v_i_times_2, 0)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 583, __pyx_L1_error)
+  __pyx_t_1 = ((PyObject *)__pyx_f_7spinOps_8_spinOps_create_Ixf(__pyx_v_r, __pyx_v_s, __pyx_v_two_I, 0)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 583, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -11542,7 +11542,7 @@ static PyObject *__pyx_pf_7spinOps_8_spinOps_30create_Ixf(CYTHON_UNUSED PyObject
 /* "spinOps/spinOps.pyx":627
  *     return myOp
  * 
- * cpdef ndarray[double complex, ndim=2] create_Iyf(int r, int s, list i_times_2):             # <<<<<<<<<<<<<<
+ * cpdef ndarray[double complex, ndim=2] create_Iyf(int r, int s, list two_I):             # <<<<<<<<<<<<<<
  *     """
  *     Generates the fictitious spin-1/2 operator matrix :math:`\hat{I}_y^{r-s}` for a transition
  */
@@ -11554,7 +11554,7 @@ PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_Iyf(int __pyx_v_r, int __pyx_v_s, PyObject *__pyx_v_i_times_2, CYTHON_UNUSED int __pyx_skip_dispatch) {
+static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_Iyf(int __pyx_v_r, int __pyx_v_s, PyObject *__pyx_v_two_I, CYTHON_UNUSED int __pyx_skip_dispatch) {
   int __pyx_v_nstates;
   int __pyx_v_total_spin_count;
   PyArrayObject *__pyx_v_spins = 0;
@@ -11595,18 +11595,18 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_Iyf(int __pyx_v_r, int _
   /* "spinOps/spinOps.pyx":655
  *     """
  *     # Validate input
- *     if not i_times_2:             # <<<<<<<<<<<<<<
- *         raise ValueError("The input list 'i_times_2' cannot be empty.")
+ *     if not two_I:             # <<<<<<<<<<<<<<
+ *         raise ValueError("The input list 'two_I' cannot be empty.")
  *     if r < 0 or s < 0:
  */
-  __pyx_t_1 = (__pyx_v_i_times_2 != Py_None)&&(PyList_GET_SIZE(__pyx_v_i_times_2) != 0);
+  __pyx_t_1 = (__pyx_v_two_I != Py_None)&&(PyList_GET_SIZE(__pyx_v_two_I) != 0);
   __pyx_t_2 = (!__pyx_t_1);
   if (unlikely(__pyx_t_2)) {
 
     /* "spinOps/spinOps.pyx":656
  *     # Validate input
- *     if not i_times_2:
- *         raise ValueError("The input list 'i_times_2' cannot be empty.")             # <<<<<<<<<<<<<<
+ *     if not two_I:
+ *         raise ValueError("The input list 'two_I' cannot be empty.")             # <<<<<<<<<<<<<<
  *     if r < 0 or s < 0:
  *         raise IndexError("State indices 'r' and 's' must be non-negative.")
  */
@@ -11619,15 +11619,15 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_Iyf(int __pyx_v_r, int _
     /* "spinOps/spinOps.pyx":655
  *     """
  *     # Validate input
- *     if not i_times_2:             # <<<<<<<<<<<<<<
- *         raise ValueError("The input list 'i_times_2' cannot be empty.")
+ *     if not two_I:             # <<<<<<<<<<<<<<
+ *         raise ValueError("The input list 'two_I' cannot be empty.")
  *     if r < 0 or s < 0:
  */
   }
 
   /* "spinOps/spinOps.pyx":657
- *     if not i_times_2:
- *         raise ValueError("The input list 'i_times_2' cannot be empty.")
+ *     if not two_I:
+ *         raise ValueError("The input list 'two_I' cannot be empty.")
  *     if r < 0 or s < 0:             # <<<<<<<<<<<<<<
  *         raise IndexError("State indices 'r' and 's' must be non-negative.")
  * 
@@ -11644,7 +11644,7 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_Iyf(int __pyx_v_r, int _
   if (unlikely(__pyx_t_2)) {
 
     /* "spinOps/spinOps.pyx":658
- *         raise ValueError("The input list 'i_times_2' cannot be empty.")
+ *         raise ValueError("The input list 'two_I' cannot be empty.")
  *     if r < 0 or s < 0:
  *         raise IndexError("State indices 'r' and 's' must be non-negative.")             # <<<<<<<<<<<<<<
  * 
@@ -11657,8 +11657,8 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_Iyf(int __pyx_v_r, int _
     __PYX_ERR(0, 658, __pyx_L1_error)
 
     /* "spinOps/spinOps.pyx":657
- *     if not i_times_2:
- *         raise ValueError("The input list 'i_times_2' cannot be empty.")
+ *     if not two_I:
+ *         raise ValueError("The input list 'two_I' cannot be empty.")
  *     if r < 0 or s < 0:             # <<<<<<<<<<<<<<
  *         raise IndexError("State indices 'r' and 's' must be non-negative.")
  * 
@@ -11668,31 +11668,31 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_Iyf(int __pyx_v_r, int _
   /* "spinOps/spinOps.pyx":661
  * 
  *     # Compute the number of states and prepare the operator matrix
- *     cdef int nstates = number_of_states(i_times_2)             # <<<<<<<<<<<<<<
- *     cdef int total_spin_count = len(i_times_2)
- *     cdef ndarray[int] spins = np.array(i_times_2, dtype=np.int32)
+ *     cdef int nstates = number_of_states(two_I)             # <<<<<<<<<<<<<<
+ *     cdef int total_spin_count = len(two_I)
+ *     cdef ndarray[int] spins = np.array(two_I, dtype=np.int32)
  */
-  __pyx_t_4 = __pyx_f_7spinOps_8_spinOps_number_of_states(__pyx_v_i_times_2, 0); if (unlikely(__pyx_t_4 == ((int)-1) && PyErr_Occurred())) __PYX_ERR(0, 661, __pyx_L1_error)
+  __pyx_t_4 = __pyx_f_7spinOps_8_spinOps_number_of_states(__pyx_v_two_I, 0); if (unlikely(__pyx_t_4 == ((int)-1) && PyErr_Occurred())) __PYX_ERR(0, 661, __pyx_L1_error)
   __pyx_v_nstates = __pyx_t_4;
 
   /* "spinOps/spinOps.pyx":662
  *     # Compute the number of states and prepare the operator matrix
- *     cdef int nstates = number_of_states(i_times_2)
- *     cdef int total_spin_count = len(i_times_2)             # <<<<<<<<<<<<<<
- *     cdef ndarray[int] spins = np.array(i_times_2, dtype=np.int32)
+ *     cdef int nstates = number_of_states(two_I)
+ *     cdef int total_spin_count = len(two_I)             # <<<<<<<<<<<<<<
+ *     cdef ndarray[int] spins = np.array(two_I, dtype=np.int32)
  *     cdef ndarray[double complex, ndim=2] myOp = np.zeros((nstates, nstates), dtype=np.complex128)
  */
-  if (unlikely(__pyx_v_i_times_2 == Py_None)) {
+  if (unlikely(__pyx_v_two_I == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "object of type 'NoneType' has no len()");
     __PYX_ERR(0, 662, __pyx_L1_error)
   }
-  __pyx_t_5 = __Pyx_PyList_GET_SIZE(__pyx_v_i_times_2); if (unlikely(__pyx_t_5 == ((Py_ssize_t)-1))) __PYX_ERR(0, 662, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyList_GET_SIZE(__pyx_v_two_I); if (unlikely(__pyx_t_5 == ((Py_ssize_t)-1))) __PYX_ERR(0, 662, __pyx_L1_error)
   __pyx_v_total_spin_count = __pyx_t_5;
 
   /* "spinOps/spinOps.pyx":663
- *     cdef int nstates = number_of_states(i_times_2)
- *     cdef int total_spin_count = len(i_times_2)
- *     cdef ndarray[int] spins = np.array(i_times_2, dtype=np.int32)             # <<<<<<<<<<<<<<
+ *     cdef int nstates = number_of_states(two_I)
+ *     cdef int total_spin_count = len(two_I)
+ *     cdef ndarray[int] spins = np.array(two_I, dtype=np.int32)             # <<<<<<<<<<<<<<
  *     cdef ndarray[double complex, ndim=2] myOp = np.zeros((nstates, nstates), dtype=np.complex128)
  * 
  */
@@ -11703,9 +11703,9 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_Iyf(int __pyx_v_r, int _
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 663, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __Pyx_INCREF(__pyx_v_i_times_2);
-  __Pyx_GIVEREF(__pyx_v_i_times_2);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_v_i_times_2)) __PYX_ERR(0, 663, __pyx_L1_error);
+  __Pyx_INCREF(__pyx_v_two_I);
+  __Pyx_GIVEREF(__pyx_v_two_I);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_v_two_I)) __PYX_ERR(0, 663, __pyx_L1_error);
   __pyx_t_7 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 663, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
   __Pyx_GetModuleGlobalName(__pyx_t_8, __pyx_n_s_np); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 663, __pyx_L1_error)
@@ -11735,8 +11735,8 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_Iyf(int __pyx_v_r, int _
   __pyx_t_9 = 0;
 
   /* "spinOps/spinOps.pyx":664
- *     cdef int total_spin_count = len(i_times_2)
- *     cdef ndarray[int] spins = np.array(i_times_2, dtype=np.int32)
+ *     cdef int total_spin_count = len(two_I)
+ *     cdef ndarray[int] spins = np.array(two_I, dtype=np.int32)
  *     cdef ndarray[double complex, ndim=2] myOp = np.zeros((nstates, nstates), dtype=np.complex128)             # <<<<<<<<<<<<<<
  * 
  *     # Call the external C function to populate the operator matrix
@@ -11830,7 +11830,7 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_Iyf(int __pyx_v_r, int _
  * 
  *     return myOp             # <<<<<<<<<<<<<<
  * 
- * cpdef ndarray[double complex, ndim=2] create_Izf(int r, int s, list i_times_2):
+ * cpdef ndarray[double complex, ndim=2] create_Izf(int r, int s, list two_I):
  */
   __Pyx_XDECREF((PyObject *)__pyx_r);
   __Pyx_INCREF((PyObject *)__pyx_v_myOp);
@@ -11840,7 +11840,7 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_Iyf(int __pyx_v_r, int _
   /* "spinOps/spinOps.pyx":627
  *     return myOp
  * 
- * cpdef ndarray[double complex, ndim=2] create_Iyf(int r, int s, list i_times_2):             # <<<<<<<<<<<<<<
+ * cpdef ndarray[double complex, ndim=2] create_Iyf(int r, int s, list two_I):             # <<<<<<<<<<<<<<
  *     """
  *     Generates the fictitious spin-1/2 operator matrix :math:`\hat{I}_y^{r-s}` for a transition
  */
@@ -11881,7 +11881,7 @@ PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-PyDoc_STRVAR(__pyx_doc_7spinOps_8_spinOps_32create_Iyf, "\n    Generates the fictitious spin-1/2 operator matrix :math:`\\hat{I}_y^{r-s}` for a transition\n    from state :math:`s` to state :math:`r`.\n\n    Parameters\n    ----------\n    r : int\n        Index of the target quantum state (row index).\n    s : int\n        Index of the source quantum state (column index).\n    i_times_2 : list of int\n        List of integers representing :math:`2I` values for each spin in the system,\n        where :math:`I` is the spin quantum number.\n\n    Returns\n    -------\n    ndarray[double complex, ndim=2]\n        A 2D NumPy array representing the operator :math:`\\hat{I}_y^{r-s}`.\n\n    Raises\n    ------\n    ValueError\n        If the input list `i_times_2` is empty.\n    IndexError\n        If `r` or `s` is negative.\n    ");
+PyDoc_STRVAR(__pyx_doc_7spinOps_8_spinOps_32create_Iyf, "\n    Generates the fictitious spin-1/2 operator matrix :math:`\\hat{I}_y^{r-s}` for a transition\n    from state :math:`s` to state :math:`r`.\n\n    Parameters\n    ----------\n    r : int\n        Index of the target quantum state (row index).\n    s : int\n        Index of the source quantum state (column index).\n    two_I : list of int\n        List of integers representing :math:`2I` values for each spin in the system,\n        where :math:`I` is the spin quantum number.\n\n    Returns\n    -------\n    ndarray[double complex, ndim=2]\n        A 2D NumPy array representing the operator :math:`\\hat{I}_y^{r-s}`.\n\n    Raises\n    ------\n    ValueError\n        If the input list `two_I` is empty.\n    IndexError\n        If `r` or `s` is negative.\n    ");
 static PyMethodDef __pyx_mdef_7spinOps_8_spinOps_33create_Iyf = {"create_Iyf", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_7spinOps_8_spinOps_33create_Iyf, __Pyx_METH_FASTCALL|METH_KEYWORDS, __pyx_doc_7spinOps_8_spinOps_32create_Iyf};
 static PyObject *__pyx_pw_7spinOps_8_spinOps_33create_Iyf(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
@@ -11892,7 +11892,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
 ) {
   int __pyx_v_r;
   int __pyx_v_s;
-  PyObject *__pyx_v_i_times_2 = 0;
+  PyObject *__pyx_v_two_I = 0;
   #if !CYTHON_METH_FASTCALL
   CYTHON_UNUSED Py_ssize_t __pyx_nargs;
   #endif
@@ -11913,7 +11913,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   #endif
   __pyx_kwvalues = __Pyx_KwValues_FASTCALL(__pyx_args, __pyx_nargs);
   {
-    PyObject **__pyx_pyargnames[] = {&__pyx_n_s_r,&__pyx_n_s_s,&__pyx_n_s_i_times_2,0};
+    PyObject **__pyx_pyargnames[] = {&__pyx_n_s_r,&__pyx_n_s_s,&__pyx_n_s_two_I,0};
     if (__pyx_kwds) {
       Py_ssize_t kw_args;
       switch (__pyx_nargs) {
@@ -11947,7 +11947,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
         }
         CYTHON_FALLTHROUGH;
         case  2:
-        if (likely((values[2] = __Pyx_GetKwValue_FASTCALL(__pyx_kwds, __pyx_kwvalues, __pyx_n_s_i_times_2)) != 0)) {
+        if (likely((values[2] = __Pyx_GetKwValue_FASTCALL(__pyx_kwds, __pyx_kwvalues, __pyx_n_s_two_I)) != 0)) {
           (void)__Pyx_Arg_NewRef_FASTCALL(values[2]);
           kw_args--;
         }
@@ -11969,7 +11969,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
     }
     __pyx_v_r = __Pyx_PyInt_As_int(values[0]); if (unlikely((__pyx_v_r == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 627, __pyx_L3_error)
     __pyx_v_s = __Pyx_PyInt_As_int(values[1]); if (unlikely((__pyx_v_s == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 627, __pyx_L3_error)
-    __pyx_v_i_times_2 = ((PyObject*)values[2]);
+    __pyx_v_two_I = ((PyObject*)values[2]);
   }
   goto __pyx_L6_skip;
   __pyx_L5_argtuple_error:;
@@ -11987,8 +11987,8 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_i_times_2), (&PyList_Type), 1, "i_times_2", 1))) __PYX_ERR(0, 627, __pyx_L1_error)
-  __pyx_r = __pyx_pf_7spinOps_8_spinOps_32create_Iyf(__pyx_self, __pyx_v_r, __pyx_v_s, __pyx_v_i_times_2);
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_two_I), (&PyList_Type), 1, "two_I", 1))) __PYX_ERR(0, 627, __pyx_L1_error)
+  __pyx_r = __pyx_pf_7spinOps_8_spinOps_32create_Iyf(__pyx_self, __pyx_v_r, __pyx_v_s, __pyx_v_two_I);
 
   /* function exit code */
   goto __pyx_L0;
@@ -12005,7 +12005,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_7spinOps_8_spinOps_32create_Iyf(CYTHON_UNUSED PyObject *__pyx_self, int __pyx_v_r, int __pyx_v_s, PyObject *__pyx_v_i_times_2) {
+static PyObject *__pyx_pf_7spinOps_8_spinOps_32create_Iyf(CYTHON_UNUSED PyObject *__pyx_self, int __pyx_v_r, int __pyx_v_s, PyObject *__pyx_v_two_I) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -12014,7 +12014,7 @@ static PyObject *__pyx_pf_7spinOps_8_spinOps_32create_Iyf(CYTHON_UNUSED PyObject
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("create_Iyf", 1);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = ((PyObject *)__pyx_f_7spinOps_8_spinOps_create_Iyf(__pyx_v_r, __pyx_v_s, __pyx_v_i_times_2, 0)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 627, __pyx_L1_error)
+  __pyx_t_1 = ((PyObject *)__pyx_f_7spinOps_8_spinOps_create_Iyf(__pyx_v_r, __pyx_v_s, __pyx_v_two_I, 0)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 627, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -12034,7 +12034,7 @@ static PyObject *__pyx_pf_7spinOps_8_spinOps_32create_Iyf(CYTHON_UNUSED PyObject
 /* "spinOps/spinOps.pyx":671
  *     return myOp
  * 
- * cpdef ndarray[double complex, ndim=2] create_Izf(int r, int s, list i_times_2):             # <<<<<<<<<<<<<<
+ * cpdef ndarray[double complex, ndim=2] create_Izf(int r, int s, list two_I):             # <<<<<<<<<<<<<<
  *     """
  *     Generates the fictitious spin-1/2 operator matrix :math:`\hat{I}_z^{r-s}` for a transition
  */
@@ -12046,7 +12046,7 @@ PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_Izf(int __pyx_v_r, int __pyx_v_s, PyObject *__pyx_v_i_times_2, CYTHON_UNUSED int __pyx_skip_dispatch) {
+static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_Izf(int __pyx_v_r, int __pyx_v_s, PyObject *__pyx_v_two_I, CYTHON_UNUSED int __pyx_skip_dispatch) {
   int __pyx_v_nstates;
   int __pyx_v_total_spin_count;
   PyArrayObject *__pyx_v_spins = 0;
@@ -12087,18 +12087,18 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_Izf(int __pyx_v_r, int _
   /* "spinOps/spinOps.pyx":699
  *     """
  *     # Validate input
- *     if not i_times_2:             # <<<<<<<<<<<<<<
- *         raise ValueError("The input list 'i_times_2' cannot be empty.")
+ *     if not two_I:             # <<<<<<<<<<<<<<
+ *         raise ValueError("The input list 'two_I' cannot be empty.")
  *     if r < 0 or s < 0:
  */
-  __pyx_t_1 = (__pyx_v_i_times_2 != Py_None)&&(PyList_GET_SIZE(__pyx_v_i_times_2) != 0);
+  __pyx_t_1 = (__pyx_v_two_I != Py_None)&&(PyList_GET_SIZE(__pyx_v_two_I) != 0);
   __pyx_t_2 = (!__pyx_t_1);
   if (unlikely(__pyx_t_2)) {
 
     /* "spinOps/spinOps.pyx":700
  *     # Validate input
- *     if not i_times_2:
- *         raise ValueError("The input list 'i_times_2' cannot be empty.")             # <<<<<<<<<<<<<<
+ *     if not two_I:
+ *         raise ValueError("The input list 'two_I' cannot be empty.")             # <<<<<<<<<<<<<<
  *     if r < 0 or s < 0:
  *         raise IndexError("State indices 'r' and 's' must be non-negative.")
  */
@@ -12111,15 +12111,15 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_Izf(int __pyx_v_r, int _
     /* "spinOps/spinOps.pyx":699
  *     """
  *     # Validate input
- *     if not i_times_2:             # <<<<<<<<<<<<<<
- *         raise ValueError("The input list 'i_times_2' cannot be empty.")
+ *     if not two_I:             # <<<<<<<<<<<<<<
+ *         raise ValueError("The input list 'two_I' cannot be empty.")
  *     if r < 0 or s < 0:
  */
   }
 
   /* "spinOps/spinOps.pyx":701
- *     if not i_times_2:
- *         raise ValueError("The input list 'i_times_2' cannot be empty.")
+ *     if not two_I:
+ *         raise ValueError("The input list 'two_I' cannot be empty.")
  *     if r < 0 or s < 0:             # <<<<<<<<<<<<<<
  *         raise IndexError("State indices 'r' and 's' must be non-negative.")
  * 
@@ -12136,7 +12136,7 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_Izf(int __pyx_v_r, int _
   if (unlikely(__pyx_t_2)) {
 
     /* "spinOps/spinOps.pyx":702
- *         raise ValueError("The input list 'i_times_2' cannot be empty.")
+ *         raise ValueError("The input list 'two_I' cannot be empty.")
  *     if r < 0 or s < 0:
  *         raise IndexError("State indices 'r' and 's' must be non-negative.")             # <<<<<<<<<<<<<<
  * 
@@ -12149,8 +12149,8 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_Izf(int __pyx_v_r, int _
     __PYX_ERR(0, 702, __pyx_L1_error)
 
     /* "spinOps/spinOps.pyx":701
- *     if not i_times_2:
- *         raise ValueError("The input list 'i_times_2' cannot be empty.")
+ *     if not two_I:
+ *         raise ValueError("The input list 'two_I' cannot be empty.")
  *     if r < 0 or s < 0:             # <<<<<<<<<<<<<<
  *         raise IndexError("State indices 'r' and 's' must be non-negative.")
  * 
@@ -12160,31 +12160,31 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_Izf(int __pyx_v_r, int _
   /* "spinOps/spinOps.pyx":705
  * 
  *     # Compute the number of states and prepare the operator matrix
- *     cdef int nstates = number_of_states(i_times_2)             # <<<<<<<<<<<<<<
- *     cdef int total_spin_count = len(i_times_2)
- *     cdef ndarray[int] spins = np.array(i_times_2, dtype=np.int32)
+ *     cdef int nstates = number_of_states(two_I)             # <<<<<<<<<<<<<<
+ *     cdef int total_spin_count = len(two_I)
+ *     cdef ndarray[int] spins = np.array(two_I, dtype=np.int32)
  */
-  __pyx_t_4 = __pyx_f_7spinOps_8_spinOps_number_of_states(__pyx_v_i_times_2, 0); if (unlikely(__pyx_t_4 == ((int)-1) && PyErr_Occurred())) __PYX_ERR(0, 705, __pyx_L1_error)
+  __pyx_t_4 = __pyx_f_7spinOps_8_spinOps_number_of_states(__pyx_v_two_I, 0); if (unlikely(__pyx_t_4 == ((int)-1) && PyErr_Occurred())) __PYX_ERR(0, 705, __pyx_L1_error)
   __pyx_v_nstates = __pyx_t_4;
 
   /* "spinOps/spinOps.pyx":706
  *     # Compute the number of states and prepare the operator matrix
- *     cdef int nstates = number_of_states(i_times_2)
- *     cdef int total_spin_count = len(i_times_2)             # <<<<<<<<<<<<<<
- *     cdef ndarray[int] spins = np.array(i_times_2, dtype=np.int32)
+ *     cdef int nstates = number_of_states(two_I)
+ *     cdef int total_spin_count = len(two_I)             # <<<<<<<<<<<<<<
+ *     cdef ndarray[int] spins = np.array(two_I, dtype=np.int32)
  *     cdef ndarray[double complex, ndim=2] myOp = np.zeros((nstates, nstates), dtype=np.complex128)
  */
-  if (unlikely(__pyx_v_i_times_2 == Py_None)) {
+  if (unlikely(__pyx_v_two_I == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "object of type 'NoneType' has no len()");
     __PYX_ERR(0, 706, __pyx_L1_error)
   }
-  __pyx_t_5 = __Pyx_PyList_GET_SIZE(__pyx_v_i_times_2); if (unlikely(__pyx_t_5 == ((Py_ssize_t)-1))) __PYX_ERR(0, 706, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyList_GET_SIZE(__pyx_v_two_I); if (unlikely(__pyx_t_5 == ((Py_ssize_t)-1))) __PYX_ERR(0, 706, __pyx_L1_error)
   __pyx_v_total_spin_count = __pyx_t_5;
 
   /* "spinOps/spinOps.pyx":707
- *     cdef int nstates = number_of_states(i_times_2)
- *     cdef int total_spin_count = len(i_times_2)
- *     cdef ndarray[int] spins = np.array(i_times_2, dtype=np.int32)             # <<<<<<<<<<<<<<
+ *     cdef int nstates = number_of_states(two_I)
+ *     cdef int total_spin_count = len(two_I)
+ *     cdef ndarray[int] spins = np.array(two_I, dtype=np.int32)             # <<<<<<<<<<<<<<
  *     cdef ndarray[double complex, ndim=2] myOp = np.zeros((nstates, nstates), dtype=np.complex128)
  * 
  */
@@ -12195,9 +12195,9 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_Izf(int __pyx_v_r, int _
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 707, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __Pyx_INCREF(__pyx_v_i_times_2);
-  __Pyx_GIVEREF(__pyx_v_i_times_2);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_v_i_times_2)) __PYX_ERR(0, 707, __pyx_L1_error);
+  __Pyx_INCREF(__pyx_v_two_I);
+  __Pyx_GIVEREF(__pyx_v_two_I);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_v_two_I)) __PYX_ERR(0, 707, __pyx_L1_error);
   __pyx_t_7 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 707, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
   __Pyx_GetModuleGlobalName(__pyx_t_8, __pyx_n_s_np); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 707, __pyx_L1_error)
@@ -12227,8 +12227,8 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_Izf(int __pyx_v_r, int _
   __pyx_t_9 = 0;
 
   /* "spinOps/spinOps.pyx":708
- *     cdef int total_spin_count = len(i_times_2)
- *     cdef ndarray[int] spins = np.array(i_times_2, dtype=np.int32)
+ *     cdef int total_spin_count = len(two_I)
+ *     cdef ndarray[int] spins = np.array(two_I, dtype=np.int32)
  *     cdef ndarray[double complex, ndim=2] myOp = np.zeros((nstates, nstates), dtype=np.complex128)             # <<<<<<<<<<<<<<
  * 
  *     # Call the external C function to populate the operator matrix
@@ -12322,7 +12322,7 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_Izf(int __pyx_v_r, int _
  * 
  *     return myOp             # <<<<<<<<<<<<<<
  * 
- * cpdef ndarray[double complex, ndim=2] create_Ipf(int r, int s, list i_times_2):
+ * cpdef ndarray[double complex, ndim=2] create_Ipf(int r, int s, list two_I):
  */
   __Pyx_XDECREF((PyObject *)__pyx_r);
   __Pyx_INCREF((PyObject *)__pyx_v_myOp);
@@ -12332,7 +12332,7 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_Izf(int __pyx_v_r, int _
   /* "spinOps/spinOps.pyx":671
  *     return myOp
  * 
- * cpdef ndarray[double complex, ndim=2] create_Izf(int r, int s, list i_times_2):             # <<<<<<<<<<<<<<
+ * cpdef ndarray[double complex, ndim=2] create_Izf(int r, int s, list two_I):             # <<<<<<<<<<<<<<
  *     """
  *     Generates the fictitious spin-1/2 operator matrix :math:`\hat{I}_z^{r-s}` for a transition
  */
@@ -12373,7 +12373,7 @@ PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-PyDoc_STRVAR(__pyx_doc_7spinOps_8_spinOps_34create_Izf, "\n    Generates the fictitious spin-1/2 operator matrix :math:`\\hat{I}_z^{r-s}` for a transition\n    from state :math:`s` to state :math:`r`.\n\n    Parameters\n    ----------\n    r : int\n        Index of the target quantum state (row index).\n    s : int\n        Index of the source quantum state (column index).\n    i_times_2 : list of int\n        List of integers representing :math:`2I` values for each spin in the system,\n        where :math:`I` is the spin quantum number.\n\n    Returns\n    -------\n    ndarray[double complex, ndim=2]\n        A 2D NumPy array representing the operator :math:`\\hat{I}_z^{r-s}`.\n\n    Raises\n    ------\n    ValueError\n        If the input list `i_times_2` is empty.\n    IndexError\n        If `r` or `s` is negative.\n    ");
+PyDoc_STRVAR(__pyx_doc_7spinOps_8_spinOps_34create_Izf, "\n    Generates the fictitious spin-1/2 operator matrix :math:`\\hat{I}_z^{r-s}` for a transition\n    from state :math:`s` to state :math:`r`.\n\n    Parameters\n    ----------\n    r : int\n        Index of the target quantum state (row index).\n    s : int\n        Index of the source quantum state (column index).\n    two_I : list of int\n        List of integers representing :math:`2I` values for each spin in the system,\n        where :math:`I` is the spin quantum number.\n\n    Returns\n    -------\n    ndarray[double complex, ndim=2]\n        A 2D NumPy array representing the operator :math:`\\hat{I}_z^{r-s}`.\n\n    Raises\n    ------\n    ValueError\n        If the input list `two_I` is empty.\n    IndexError\n        If `r` or `s` is negative.\n    ");
 static PyMethodDef __pyx_mdef_7spinOps_8_spinOps_35create_Izf = {"create_Izf", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_7spinOps_8_spinOps_35create_Izf, __Pyx_METH_FASTCALL|METH_KEYWORDS, __pyx_doc_7spinOps_8_spinOps_34create_Izf};
 static PyObject *__pyx_pw_7spinOps_8_spinOps_35create_Izf(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
@@ -12384,7 +12384,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
 ) {
   int __pyx_v_r;
   int __pyx_v_s;
-  PyObject *__pyx_v_i_times_2 = 0;
+  PyObject *__pyx_v_two_I = 0;
   #if !CYTHON_METH_FASTCALL
   CYTHON_UNUSED Py_ssize_t __pyx_nargs;
   #endif
@@ -12405,7 +12405,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   #endif
   __pyx_kwvalues = __Pyx_KwValues_FASTCALL(__pyx_args, __pyx_nargs);
   {
-    PyObject **__pyx_pyargnames[] = {&__pyx_n_s_r,&__pyx_n_s_s,&__pyx_n_s_i_times_2,0};
+    PyObject **__pyx_pyargnames[] = {&__pyx_n_s_r,&__pyx_n_s_s,&__pyx_n_s_two_I,0};
     if (__pyx_kwds) {
       Py_ssize_t kw_args;
       switch (__pyx_nargs) {
@@ -12439,7 +12439,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
         }
         CYTHON_FALLTHROUGH;
         case  2:
-        if (likely((values[2] = __Pyx_GetKwValue_FASTCALL(__pyx_kwds, __pyx_kwvalues, __pyx_n_s_i_times_2)) != 0)) {
+        if (likely((values[2] = __Pyx_GetKwValue_FASTCALL(__pyx_kwds, __pyx_kwvalues, __pyx_n_s_two_I)) != 0)) {
           (void)__Pyx_Arg_NewRef_FASTCALL(values[2]);
           kw_args--;
         }
@@ -12461,7 +12461,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
     }
     __pyx_v_r = __Pyx_PyInt_As_int(values[0]); if (unlikely((__pyx_v_r == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 671, __pyx_L3_error)
     __pyx_v_s = __Pyx_PyInt_As_int(values[1]); if (unlikely((__pyx_v_s == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 671, __pyx_L3_error)
-    __pyx_v_i_times_2 = ((PyObject*)values[2]);
+    __pyx_v_two_I = ((PyObject*)values[2]);
   }
   goto __pyx_L6_skip;
   __pyx_L5_argtuple_error:;
@@ -12479,8 +12479,8 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_i_times_2), (&PyList_Type), 1, "i_times_2", 1))) __PYX_ERR(0, 671, __pyx_L1_error)
-  __pyx_r = __pyx_pf_7spinOps_8_spinOps_34create_Izf(__pyx_self, __pyx_v_r, __pyx_v_s, __pyx_v_i_times_2);
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_two_I), (&PyList_Type), 1, "two_I", 1))) __PYX_ERR(0, 671, __pyx_L1_error)
+  __pyx_r = __pyx_pf_7spinOps_8_spinOps_34create_Izf(__pyx_self, __pyx_v_r, __pyx_v_s, __pyx_v_two_I);
 
   /* function exit code */
   goto __pyx_L0;
@@ -12497,7 +12497,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_7spinOps_8_spinOps_34create_Izf(CYTHON_UNUSED PyObject *__pyx_self, int __pyx_v_r, int __pyx_v_s, PyObject *__pyx_v_i_times_2) {
+static PyObject *__pyx_pf_7spinOps_8_spinOps_34create_Izf(CYTHON_UNUSED PyObject *__pyx_self, int __pyx_v_r, int __pyx_v_s, PyObject *__pyx_v_two_I) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -12506,7 +12506,7 @@ static PyObject *__pyx_pf_7spinOps_8_spinOps_34create_Izf(CYTHON_UNUSED PyObject
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("create_Izf", 1);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = ((PyObject *)__pyx_f_7spinOps_8_spinOps_create_Izf(__pyx_v_r, __pyx_v_s, __pyx_v_i_times_2, 0)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 671, __pyx_L1_error)
+  __pyx_t_1 = ((PyObject *)__pyx_f_7spinOps_8_spinOps_create_Izf(__pyx_v_r, __pyx_v_s, __pyx_v_two_I, 0)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 671, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -12526,7 +12526,7 @@ static PyObject *__pyx_pf_7spinOps_8_spinOps_34create_Izf(CYTHON_UNUSED PyObject
 /* "spinOps/spinOps.pyx":715
  *     return myOp
  * 
- * cpdef ndarray[double complex, ndim=2] create_Ipf(int r, int s, list i_times_2):             # <<<<<<<<<<<<<<
+ * cpdef ndarray[double complex, ndim=2] create_Ipf(int r, int s, list two_I):             # <<<<<<<<<<<<<<
  *     """
  *     Generates the fictitious spin-1/2 raising operator matrix :math:`\hat{I}_+^{r-s}` for a transition
  */
@@ -12538,7 +12538,7 @@ PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_Ipf(int __pyx_v_r, int __pyx_v_s, PyObject *__pyx_v_i_times_2, CYTHON_UNUSED int __pyx_skip_dispatch) {
+static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_Ipf(int __pyx_v_r, int __pyx_v_s, PyObject *__pyx_v_two_I, CYTHON_UNUSED int __pyx_skip_dispatch) {
   int __pyx_v_nstates;
   int __pyx_v_total_spin_count;
   PyArrayObject *__pyx_v_spins = 0;
@@ -12579,18 +12579,18 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_Ipf(int __pyx_v_r, int _
   /* "spinOps/spinOps.pyx":743
  *     """
  *     # Validate input
- *     if not i_times_2:             # <<<<<<<<<<<<<<
- *         raise ValueError("The input list 'i_times_2' cannot be empty.")
+ *     if not two_I:             # <<<<<<<<<<<<<<
+ *         raise ValueError("The input list 'two_I' cannot be empty.")
  *     if r < 0 or s < 0:
  */
-  __pyx_t_1 = (__pyx_v_i_times_2 != Py_None)&&(PyList_GET_SIZE(__pyx_v_i_times_2) != 0);
+  __pyx_t_1 = (__pyx_v_two_I != Py_None)&&(PyList_GET_SIZE(__pyx_v_two_I) != 0);
   __pyx_t_2 = (!__pyx_t_1);
   if (unlikely(__pyx_t_2)) {
 
     /* "spinOps/spinOps.pyx":744
  *     # Validate input
- *     if not i_times_2:
- *         raise ValueError("The input list 'i_times_2' cannot be empty.")             # <<<<<<<<<<<<<<
+ *     if not two_I:
+ *         raise ValueError("The input list 'two_I' cannot be empty.")             # <<<<<<<<<<<<<<
  *     if r < 0 or s < 0:
  *         raise IndexError("State indices 'r' and 's' must be non-negative.")
  */
@@ -12603,15 +12603,15 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_Ipf(int __pyx_v_r, int _
     /* "spinOps/spinOps.pyx":743
  *     """
  *     # Validate input
- *     if not i_times_2:             # <<<<<<<<<<<<<<
- *         raise ValueError("The input list 'i_times_2' cannot be empty.")
+ *     if not two_I:             # <<<<<<<<<<<<<<
+ *         raise ValueError("The input list 'two_I' cannot be empty.")
  *     if r < 0 or s < 0:
  */
   }
 
   /* "spinOps/spinOps.pyx":745
- *     if not i_times_2:
- *         raise ValueError("The input list 'i_times_2' cannot be empty.")
+ *     if not two_I:
+ *         raise ValueError("The input list 'two_I' cannot be empty.")
  *     if r < 0 or s < 0:             # <<<<<<<<<<<<<<
  *         raise IndexError("State indices 'r' and 's' must be non-negative.")
  * 
@@ -12628,7 +12628,7 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_Ipf(int __pyx_v_r, int _
   if (unlikely(__pyx_t_2)) {
 
     /* "spinOps/spinOps.pyx":746
- *         raise ValueError("The input list 'i_times_2' cannot be empty.")
+ *         raise ValueError("The input list 'two_I' cannot be empty.")
  *     if r < 0 or s < 0:
  *         raise IndexError("State indices 'r' and 's' must be non-negative.")             # <<<<<<<<<<<<<<
  * 
@@ -12641,8 +12641,8 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_Ipf(int __pyx_v_r, int _
     __PYX_ERR(0, 746, __pyx_L1_error)
 
     /* "spinOps/spinOps.pyx":745
- *     if not i_times_2:
- *         raise ValueError("The input list 'i_times_2' cannot be empty.")
+ *     if not two_I:
+ *         raise ValueError("The input list 'two_I' cannot be empty.")
  *     if r < 0 or s < 0:             # <<<<<<<<<<<<<<
  *         raise IndexError("State indices 'r' and 's' must be non-negative.")
  * 
@@ -12652,31 +12652,31 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_Ipf(int __pyx_v_r, int _
   /* "spinOps/spinOps.pyx":749
  * 
  *     # Compute the number of states and prepare the operator matrix
- *     cdef int nstates = number_of_states(i_times_2)             # <<<<<<<<<<<<<<
- *     cdef int total_spin_count = len(i_times_2)
- *     cdef ndarray[int] spins = np.array(i_times_2, dtype=np.int32)
+ *     cdef int nstates = number_of_states(two_I)             # <<<<<<<<<<<<<<
+ *     cdef int total_spin_count = len(two_I)
+ *     cdef ndarray[int] spins = np.array(two_I, dtype=np.int32)
  */
-  __pyx_t_4 = __pyx_f_7spinOps_8_spinOps_number_of_states(__pyx_v_i_times_2, 0); if (unlikely(__pyx_t_4 == ((int)-1) && PyErr_Occurred())) __PYX_ERR(0, 749, __pyx_L1_error)
+  __pyx_t_4 = __pyx_f_7spinOps_8_spinOps_number_of_states(__pyx_v_two_I, 0); if (unlikely(__pyx_t_4 == ((int)-1) && PyErr_Occurred())) __PYX_ERR(0, 749, __pyx_L1_error)
   __pyx_v_nstates = __pyx_t_4;
 
   /* "spinOps/spinOps.pyx":750
  *     # Compute the number of states and prepare the operator matrix
- *     cdef int nstates = number_of_states(i_times_2)
- *     cdef int total_spin_count = len(i_times_2)             # <<<<<<<<<<<<<<
- *     cdef ndarray[int] spins = np.array(i_times_2, dtype=np.int32)
+ *     cdef int nstates = number_of_states(two_I)
+ *     cdef int total_spin_count = len(two_I)             # <<<<<<<<<<<<<<
+ *     cdef ndarray[int] spins = np.array(two_I, dtype=np.int32)
  *     cdef ndarray[double complex, ndim=2] myOp = np.zeros((nstates, nstates), dtype=np.complex128)
  */
-  if (unlikely(__pyx_v_i_times_2 == Py_None)) {
+  if (unlikely(__pyx_v_two_I == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "object of type 'NoneType' has no len()");
     __PYX_ERR(0, 750, __pyx_L1_error)
   }
-  __pyx_t_5 = __Pyx_PyList_GET_SIZE(__pyx_v_i_times_2); if (unlikely(__pyx_t_5 == ((Py_ssize_t)-1))) __PYX_ERR(0, 750, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyList_GET_SIZE(__pyx_v_two_I); if (unlikely(__pyx_t_5 == ((Py_ssize_t)-1))) __PYX_ERR(0, 750, __pyx_L1_error)
   __pyx_v_total_spin_count = __pyx_t_5;
 
   /* "spinOps/spinOps.pyx":751
- *     cdef int nstates = number_of_states(i_times_2)
- *     cdef int total_spin_count = len(i_times_2)
- *     cdef ndarray[int] spins = np.array(i_times_2, dtype=np.int32)             # <<<<<<<<<<<<<<
+ *     cdef int nstates = number_of_states(two_I)
+ *     cdef int total_spin_count = len(two_I)
+ *     cdef ndarray[int] spins = np.array(two_I, dtype=np.int32)             # <<<<<<<<<<<<<<
  *     cdef ndarray[double complex, ndim=2] myOp = np.zeros((nstates, nstates), dtype=np.complex128)
  * 
  */
@@ -12687,9 +12687,9 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_Ipf(int __pyx_v_r, int _
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 751, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __Pyx_INCREF(__pyx_v_i_times_2);
-  __Pyx_GIVEREF(__pyx_v_i_times_2);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_v_i_times_2)) __PYX_ERR(0, 751, __pyx_L1_error);
+  __Pyx_INCREF(__pyx_v_two_I);
+  __Pyx_GIVEREF(__pyx_v_two_I);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_v_two_I)) __PYX_ERR(0, 751, __pyx_L1_error);
   __pyx_t_7 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 751, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
   __Pyx_GetModuleGlobalName(__pyx_t_8, __pyx_n_s_np); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 751, __pyx_L1_error)
@@ -12719,8 +12719,8 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_Ipf(int __pyx_v_r, int _
   __pyx_t_9 = 0;
 
   /* "spinOps/spinOps.pyx":752
- *     cdef int total_spin_count = len(i_times_2)
- *     cdef ndarray[int] spins = np.array(i_times_2, dtype=np.int32)
+ *     cdef int total_spin_count = len(two_I)
+ *     cdef ndarray[int] spins = np.array(two_I, dtype=np.int32)
  *     cdef ndarray[double complex, ndim=2] myOp = np.zeros((nstates, nstates), dtype=np.complex128)             # <<<<<<<<<<<<<<
  * 
  *     # Call the external C function to populate the operator matrix
@@ -12814,7 +12814,7 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_Ipf(int __pyx_v_r, int _
  * 
  *     return myOp             # <<<<<<<<<<<<<<
  * 
- * cpdef ndarray[double complex, ndim=2] create_Imf(int r, int s, list i_times_2):
+ * cpdef ndarray[double complex, ndim=2] create_Imf(int r, int s, list two_I):
  */
   __Pyx_XDECREF((PyObject *)__pyx_r);
   __Pyx_INCREF((PyObject *)__pyx_v_myOp);
@@ -12824,7 +12824,7 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_Ipf(int __pyx_v_r, int _
   /* "spinOps/spinOps.pyx":715
  *     return myOp
  * 
- * cpdef ndarray[double complex, ndim=2] create_Ipf(int r, int s, list i_times_2):             # <<<<<<<<<<<<<<
+ * cpdef ndarray[double complex, ndim=2] create_Ipf(int r, int s, list two_I):             # <<<<<<<<<<<<<<
  *     """
  *     Generates the fictitious spin-1/2 raising operator matrix :math:`\hat{I}_+^{r-s}` for a transition
  */
@@ -12865,7 +12865,7 @@ PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-PyDoc_STRVAR(__pyx_doc_7spinOps_8_spinOps_36create_Ipf, "\n    Generates the fictitious spin-1/2 raising operator matrix :math:`\\hat{I}_+^{r-s}` for a transition\n    from state :math:`s` to state :math:`r`.\n\n    Parameters\n    ----------\n    r : int\n        Index of the target quantum state (row index).\n    s : int\n        Index of the source quantum state (column index).\n    i_times_2 : list of int\n        List of integers representing :math:`2I` values for each spin in the system,\n        where :math:`I` is the spin quantum number.\n\n    Returns\n    -------\n    ndarray[double complex, ndim=2]\n        A 2D NumPy array representing the operator :math:`\\hat{I}_+^{r-s}`.\n\n    Raises\n    ------\n    ValueError\n        If the input list `i_times_2` is empty.\n    IndexError\n        If `r` or `s` is negative.\n    ");
+PyDoc_STRVAR(__pyx_doc_7spinOps_8_spinOps_36create_Ipf, "\n    Generates the fictitious spin-1/2 raising operator matrix :math:`\\hat{I}_+^{r-s}` for a transition\n    from state :math:`s` to state :math:`r`.\n\n    Parameters\n    ----------\n    r : int\n        Index of the target quantum state (row index).\n    s : int\n        Index of the source quantum state (column index).\n    two_I : list of int\n        List of integers representing :math:`2I` values for each spin in the system,\n        where :math:`I` is the spin quantum number.\n\n    Returns\n    -------\n    ndarray[double complex, ndim=2]\n        A 2D NumPy array representing the operator :math:`\\hat{I}_+^{r-s}`.\n\n    Raises\n    ------\n    ValueError\n        If the input list `two_I` is empty.\n    IndexError\n        If `r` or `s` is negative.\n    ");
 static PyMethodDef __pyx_mdef_7spinOps_8_spinOps_37create_Ipf = {"create_Ipf", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_7spinOps_8_spinOps_37create_Ipf, __Pyx_METH_FASTCALL|METH_KEYWORDS, __pyx_doc_7spinOps_8_spinOps_36create_Ipf};
 static PyObject *__pyx_pw_7spinOps_8_spinOps_37create_Ipf(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
@@ -12876,7 +12876,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
 ) {
   int __pyx_v_r;
   int __pyx_v_s;
-  PyObject *__pyx_v_i_times_2 = 0;
+  PyObject *__pyx_v_two_I = 0;
   #if !CYTHON_METH_FASTCALL
   CYTHON_UNUSED Py_ssize_t __pyx_nargs;
   #endif
@@ -12897,7 +12897,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   #endif
   __pyx_kwvalues = __Pyx_KwValues_FASTCALL(__pyx_args, __pyx_nargs);
   {
-    PyObject **__pyx_pyargnames[] = {&__pyx_n_s_r,&__pyx_n_s_s,&__pyx_n_s_i_times_2,0};
+    PyObject **__pyx_pyargnames[] = {&__pyx_n_s_r,&__pyx_n_s_s,&__pyx_n_s_two_I,0};
     if (__pyx_kwds) {
       Py_ssize_t kw_args;
       switch (__pyx_nargs) {
@@ -12931,7 +12931,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
         }
         CYTHON_FALLTHROUGH;
         case  2:
-        if (likely((values[2] = __Pyx_GetKwValue_FASTCALL(__pyx_kwds, __pyx_kwvalues, __pyx_n_s_i_times_2)) != 0)) {
+        if (likely((values[2] = __Pyx_GetKwValue_FASTCALL(__pyx_kwds, __pyx_kwvalues, __pyx_n_s_two_I)) != 0)) {
           (void)__Pyx_Arg_NewRef_FASTCALL(values[2]);
           kw_args--;
         }
@@ -12953,7 +12953,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
     }
     __pyx_v_r = __Pyx_PyInt_As_int(values[0]); if (unlikely((__pyx_v_r == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 715, __pyx_L3_error)
     __pyx_v_s = __Pyx_PyInt_As_int(values[1]); if (unlikely((__pyx_v_s == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 715, __pyx_L3_error)
-    __pyx_v_i_times_2 = ((PyObject*)values[2]);
+    __pyx_v_two_I = ((PyObject*)values[2]);
   }
   goto __pyx_L6_skip;
   __pyx_L5_argtuple_error:;
@@ -12971,8 +12971,8 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_i_times_2), (&PyList_Type), 1, "i_times_2", 1))) __PYX_ERR(0, 715, __pyx_L1_error)
-  __pyx_r = __pyx_pf_7spinOps_8_spinOps_36create_Ipf(__pyx_self, __pyx_v_r, __pyx_v_s, __pyx_v_i_times_2);
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_two_I), (&PyList_Type), 1, "two_I", 1))) __PYX_ERR(0, 715, __pyx_L1_error)
+  __pyx_r = __pyx_pf_7spinOps_8_spinOps_36create_Ipf(__pyx_self, __pyx_v_r, __pyx_v_s, __pyx_v_two_I);
 
   /* function exit code */
   goto __pyx_L0;
@@ -12989,7 +12989,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_7spinOps_8_spinOps_36create_Ipf(CYTHON_UNUSED PyObject *__pyx_self, int __pyx_v_r, int __pyx_v_s, PyObject *__pyx_v_i_times_2) {
+static PyObject *__pyx_pf_7spinOps_8_spinOps_36create_Ipf(CYTHON_UNUSED PyObject *__pyx_self, int __pyx_v_r, int __pyx_v_s, PyObject *__pyx_v_two_I) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -12998,7 +12998,7 @@ static PyObject *__pyx_pf_7spinOps_8_spinOps_36create_Ipf(CYTHON_UNUSED PyObject
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("create_Ipf", 1);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = ((PyObject *)__pyx_f_7spinOps_8_spinOps_create_Ipf(__pyx_v_r, __pyx_v_s, __pyx_v_i_times_2, 0)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 715, __pyx_L1_error)
+  __pyx_t_1 = ((PyObject *)__pyx_f_7spinOps_8_spinOps_create_Ipf(__pyx_v_r, __pyx_v_s, __pyx_v_two_I, 0)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 715, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -13018,7 +13018,7 @@ static PyObject *__pyx_pf_7spinOps_8_spinOps_36create_Ipf(CYTHON_UNUSED PyObject
 /* "spinOps/spinOps.pyx":759
  *     return myOp
  * 
- * cpdef ndarray[double complex, ndim=2] create_Imf(int r, int s, list i_times_2):             # <<<<<<<<<<<<<<
+ * cpdef ndarray[double complex, ndim=2] create_Imf(int r, int s, list two_I):             # <<<<<<<<<<<<<<
  *     """
  *     Generates the fictitious spin-1/2 lowering operator matrix :math:`\hat{I}_-^{r-s}` for a transition
  */
@@ -13030,7 +13030,7 @@ PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_Imf(int __pyx_v_r, int __pyx_v_s, PyObject *__pyx_v_i_times_2, CYTHON_UNUSED int __pyx_skip_dispatch) {
+static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_Imf(int __pyx_v_r, int __pyx_v_s, PyObject *__pyx_v_two_I, CYTHON_UNUSED int __pyx_skip_dispatch) {
   int __pyx_v_nstates;
   int __pyx_v_total_spin_count;
   PyArrayObject *__pyx_v_spins = 0;
@@ -13071,18 +13071,18 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_Imf(int __pyx_v_r, int _
   /* "spinOps/spinOps.pyx":787
  *     """
  *     # Validate input
- *     if not i_times_2:             # <<<<<<<<<<<<<<
- *         raise ValueError("The input list 'i_times_2' cannot be empty.")
+ *     if not two_I:             # <<<<<<<<<<<<<<
+ *         raise ValueError("The input list 'two_I' cannot be empty.")
  *     if r < 0 or s < 0:
  */
-  __pyx_t_1 = (__pyx_v_i_times_2 != Py_None)&&(PyList_GET_SIZE(__pyx_v_i_times_2) != 0);
+  __pyx_t_1 = (__pyx_v_two_I != Py_None)&&(PyList_GET_SIZE(__pyx_v_two_I) != 0);
   __pyx_t_2 = (!__pyx_t_1);
   if (unlikely(__pyx_t_2)) {
 
     /* "spinOps/spinOps.pyx":788
  *     # Validate input
- *     if not i_times_2:
- *         raise ValueError("The input list 'i_times_2' cannot be empty.")             # <<<<<<<<<<<<<<
+ *     if not two_I:
+ *         raise ValueError("The input list 'two_I' cannot be empty.")             # <<<<<<<<<<<<<<
  *     if r < 0 or s < 0:
  *         raise IndexError("State indices 'r' and 's' must be non-negative.")
  */
@@ -13095,15 +13095,15 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_Imf(int __pyx_v_r, int _
     /* "spinOps/spinOps.pyx":787
  *     """
  *     # Validate input
- *     if not i_times_2:             # <<<<<<<<<<<<<<
- *         raise ValueError("The input list 'i_times_2' cannot be empty.")
+ *     if not two_I:             # <<<<<<<<<<<<<<
+ *         raise ValueError("The input list 'two_I' cannot be empty.")
  *     if r < 0 or s < 0:
  */
   }
 
   /* "spinOps/spinOps.pyx":789
- *     if not i_times_2:
- *         raise ValueError("The input list 'i_times_2' cannot be empty.")
+ *     if not two_I:
+ *         raise ValueError("The input list 'two_I' cannot be empty.")
  *     if r < 0 or s < 0:             # <<<<<<<<<<<<<<
  *         raise IndexError("State indices 'r' and 's' must be non-negative.")
  * 
@@ -13120,7 +13120,7 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_Imf(int __pyx_v_r, int _
   if (unlikely(__pyx_t_2)) {
 
     /* "spinOps/spinOps.pyx":790
- *         raise ValueError("The input list 'i_times_2' cannot be empty.")
+ *         raise ValueError("The input list 'two_I' cannot be empty.")
  *     if r < 0 or s < 0:
  *         raise IndexError("State indices 'r' and 's' must be non-negative.")             # <<<<<<<<<<<<<<
  * 
@@ -13133,8 +13133,8 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_Imf(int __pyx_v_r, int _
     __PYX_ERR(0, 790, __pyx_L1_error)
 
     /* "spinOps/spinOps.pyx":789
- *     if not i_times_2:
- *         raise ValueError("The input list 'i_times_2' cannot be empty.")
+ *     if not two_I:
+ *         raise ValueError("The input list 'two_I' cannot be empty.")
  *     if r < 0 or s < 0:             # <<<<<<<<<<<<<<
  *         raise IndexError("State indices 'r' and 's' must be non-negative.")
  * 
@@ -13144,31 +13144,31 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_Imf(int __pyx_v_r, int _
   /* "spinOps/spinOps.pyx":793
  * 
  *     # Compute the number of states and prepare the operator matrix
- *     cdef int nstates = number_of_states(i_times_2)             # <<<<<<<<<<<<<<
- *     cdef int total_spin_count = len(i_times_2)
- *     cdef ndarray[int] spins = np.array(i_times_2, dtype=np.int32)
+ *     cdef int nstates = number_of_states(two_I)             # <<<<<<<<<<<<<<
+ *     cdef int total_spin_count = len(two_I)
+ *     cdef ndarray[int] spins = np.array(two_I, dtype=np.int32)
  */
-  __pyx_t_4 = __pyx_f_7spinOps_8_spinOps_number_of_states(__pyx_v_i_times_2, 0); if (unlikely(__pyx_t_4 == ((int)-1) && PyErr_Occurred())) __PYX_ERR(0, 793, __pyx_L1_error)
+  __pyx_t_4 = __pyx_f_7spinOps_8_spinOps_number_of_states(__pyx_v_two_I, 0); if (unlikely(__pyx_t_4 == ((int)-1) && PyErr_Occurred())) __PYX_ERR(0, 793, __pyx_L1_error)
   __pyx_v_nstates = __pyx_t_4;
 
   /* "spinOps/spinOps.pyx":794
  *     # Compute the number of states and prepare the operator matrix
- *     cdef int nstates = number_of_states(i_times_2)
- *     cdef int total_spin_count = len(i_times_2)             # <<<<<<<<<<<<<<
- *     cdef ndarray[int] spins = np.array(i_times_2, dtype=np.int32)
+ *     cdef int nstates = number_of_states(two_I)
+ *     cdef int total_spin_count = len(two_I)             # <<<<<<<<<<<<<<
+ *     cdef ndarray[int] spins = np.array(two_I, dtype=np.int32)
  *     cdef ndarray[double complex, ndim=2] myOp = np.zeros((nstates, nstates), dtype=np.complex128)
  */
-  if (unlikely(__pyx_v_i_times_2 == Py_None)) {
+  if (unlikely(__pyx_v_two_I == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "object of type 'NoneType' has no len()");
     __PYX_ERR(0, 794, __pyx_L1_error)
   }
-  __pyx_t_5 = __Pyx_PyList_GET_SIZE(__pyx_v_i_times_2); if (unlikely(__pyx_t_5 == ((Py_ssize_t)-1))) __PYX_ERR(0, 794, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyList_GET_SIZE(__pyx_v_two_I); if (unlikely(__pyx_t_5 == ((Py_ssize_t)-1))) __PYX_ERR(0, 794, __pyx_L1_error)
   __pyx_v_total_spin_count = __pyx_t_5;
 
   /* "spinOps/spinOps.pyx":795
- *     cdef int nstates = number_of_states(i_times_2)
- *     cdef int total_spin_count = len(i_times_2)
- *     cdef ndarray[int] spins = np.array(i_times_2, dtype=np.int32)             # <<<<<<<<<<<<<<
+ *     cdef int nstates = number_of_states(two_I)
+ *     cdef int total_spin_count = len(two_I)
+ *     cdef ndarray[int] spins = np.array(two_I, dtype=np.int32)             # <<<<<<<<<<<<<<
  *     cdef ndarray[double complex, ndim=2] myOp = np.zeros((nstates, nstates), dtype=np.complex128)
  * 
  */
@@ -13179,9 +13179,9 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_Imf(int __pyx_v_r, int _
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 795, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __Pyx_INCREF(__pyx_v_i_times_2);
-  __Pyx_GIVEREF(__pyx_v_i_times_2);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_v_i_times_2)) __PYX_ERR(0, 795, __pyx_L1_error);
+  __Pyx_INCREF(__pyx_v_two_I);
+  __Pyx_GIVEREF(__pyx_v_two_I);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_v_two_I)) __PYX_ERR(0, 795, __pyx_L1_error);
   __pyx_t_7 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 795, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
   __Pyx_GetModuleGlobalName(__pyx_t_8, __pyx_n_s_np); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 795, __pyx_L1_error)
@@ -13211,8 +13211,8 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_Imf(int __pyx_v_r, int _
   __pyx_t_9 = 0;
 
   /* "spinOps/spinOps.pyx":796
- *     cdef int total_spin_count = len(i_times_2)
- *     cdef ndarray[int] spins = np.array(i_times_2, dtype=np.int32)
+ *     cdef int total_spin_count = len(two_I)
+ *     cdef ndarray[int] spins = np.array(two_I, dtype=np.int32)
  *     cdef ndarray[double complex, ndim=2] myOp = np.zeros((nstates, nstates), dtype=np.complex128)             # <<<<<<<<<<<<<<
  * 
  *     # Call the external C function to populate the operator matrix
@@ -13316,7 +13316,7 @@ static PyArrayObject *__pyx_f_7spinOps_8_spinOps_create_Imf(int __pyx_v_r, int _
   /* "spinOps/spinOps.pyx":759
  *     return myOp
  * 
- * cpdef ndarray[double complex, ndim=2] create_Imf(int r, int s, list i_times_2):             # <<<<<<<<<<<<<<
+ * cpdef ndarray[double complex, ndim=2] create_Imf(int r, int s, list two_I):             # <<<<<<<<<<<<<<
  *     """
  *     Generates the fictitious spin-1/2 lowering operator matrix :math:`\hat{I}_-^{r-s}` for a transition
  */
@@ -13357,7 +13357,7 @@ PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-PyDoc_STRVAR(__pyx_doc_7spinOps_8_spinOps_38create_Imf, "\n    Generates the fictitious spin-1/2 lowering operator matrix :math:`\\hat{I}_-^{r-s}` for a transition\n    from state :math:`s` to state :math:`r`.\n\n    Parameters\n    ----------\n    r : int\n        Index of the target quantum state (row index).\n    s : int\n        Index of the source quantum state (column index).\n    i_times_2 : list of int\n        List of integers representing :math:`2I` values for each spin in the system,\n        where :math:`I` is the spin quantum number.\n\n    Returns\n    -------\n    ndarray[double complex, ndim=2]\n        A 2D NumPy array representing the operator :math:`\\hat{I}_-^{r-s}`.\n\n    Raises\n    ------\n    ValueError\n        If the input list `i_times_2` is empty.\n    IndexError\n        If `r` or `s` is negative.\n    ");
+PyDoc_STRVAR(__pyx_doc_7spinOps_8_spinOps_38create_Imf, "\n    Generates the fictitious spin-1/2 lowering operator matrix :math:`\\hat{I}_-^{r-s}` for a transition\n    from state :math:`s` to state :math:`r`.\n\n    Parameters\n    ----------\n    r : int\n        Index of the target quantum state (row index).\n    s : int\n        Index of the source quantum state (column index).\n    two_I : list of int\n        List of integers representing :math:`2I` values for each spin in the system,\n        where :math:`I` is the spin quantum number.\n\n    Returns\n    -------\n    ndarray[double complex, ndim=2]\n        A 2D NumPy array representing the operator :math:`\\hat{I}_-^{r-s}`.\n\n    Raises\n    ------\n    ValueError\n        If the input list `two_I` is empty.\n    IndexError\n        If `r` or `s` is negative.\n    ");
 static PyMethodDef __pyx_mdef_7spinOps_8_spinOps_39create_Imf = {"create_Imf", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_7spinOps_8_spinOps_39create_Imf, __Pyx_METH_FASTCALL|METH_KEYWORDS, __pyx_doc_7spinOps_8_spinOps_38create_Imf};
 static PyObject *__pyx_pw_7spinOps_8_spinOps_39create_Imf(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
@@ -13368,7 +13368,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
 ) {
   int __pyx_v_r;
   int __pyx_v_s;
-  PyObject *__pyx_v_i_times_2 = 0;
+  PyObject *__pyx_v_two_I = 0;
   #if !CYTHON_METH_FASTCALL
   CYTHON_UNUSED Py_ssize_t __pyx_nargs;
   #endif
@@ -13389,7 +13389,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   #endif
   __pyx_kwvalues = __Pyx_KwValues_FASTCALL(__pyx_args, __pyx_nargs);
   {
-    PyObject **__pyx_pyargnames[] = {&__pyx_n_s_r,&__pyx_n_s_s,&__pyx_n_s_i_times_2,0};
+    PyObject **__pyx_pyargnames[] = {&__pyx_n_s_r,&__pyx_n_s_s,&__pyx_n_s_two_I,0};
     if (__pyx_kwds) {
       Py_ssize_t kw_args;
       switch (__pyx_nargs) {
@@ -13423,7 +13423,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
         }
         CYTHON_FALLTHROUGH;
         case  2:
-        if (likely((values[2] = __Pyx_GetKwValue_FASTCALL(__pyx_kwds, __pyx_kwvalues, __pyx_n_s_i_times_2)) != 0)) {
+        if (likely((values[2] = __Pyx_GetKwValue_FASTCALL(__pyx_kwds, __pyx_kwvalues, __pyx_n_s_two_I)) != 0)) {
           (void)__Pyx_Arg_NewRef_FASTCALL(values[2]);
           kw_args--;
         }
@@ -13445,7 +13445,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
     }
     __pyx_v_r = __Pyx_PyInt_As_int(values[0]); if (unlikely((__pyx_v_r == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 759, __pyx_L3_error)
     __pyx_v_s = __Pyx_PyInt_As_int(values[1]); if (unlikely((__pyx_v_s == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 759, __pyx_L3_error)
-    __pyx_v_i_times_2 = ((PyObject*)values[2]);
+    __pyx_v_two_I = ((PyObject*)values[2]);
   }
   goto __pyx_L6_skip;
   __pyx_L5_argtuple_error:;
@@ -13463,8 +13463,8 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_i_times_2), (&PyList_Type), 1, "i_times_2", 1))) __PYX_ERR(0, 759, __pyx_L1_error)
-  __pyx_r = __pyx_pf_7spinOps_8_spinOps_38create_Imf(__pyx_self, __pyx_v_r, __pyx_v_s, __pyx_v_i_times_2);
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_two_I), (&PyList_Type), 1, "two_I", 1))) __PYX_ERR(0, 759, __pyx_L1_error)
+  __pyx_r = __pyx_pf_7spinOps_8_spinOps_38create_Imf(__pyx_self, __pyx_v_r, __pyx_v_s, __pyx_v_two_I);
 
   /* function exit code */
   goto __pyx_L0;
@@ -13481,7 +13481,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_7spinOps_8_spinOps_38create_Imf(CYTHON_UNUSED PyObject *__pyx_self, int __pyx_v_r, int __pyx_v_s, PyObject *__pyx_v_i_times_2) {
+static PyObject *__pyx_pf_7spinOps_8_spinOps_38create_Imf(CYTHON_UNUSED PyObject *__pyx_self, int __pyx_v_r, int __pyx_v_s, PyObject *__pyx_v_two_I) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -13490,7 +13490,7 @@ static PyObject *__pyx_pf_7spinOps_8_spinOps_38create_Imf(CYTHON_UNUSED PyObject
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("create_Imf", 1);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = ((PyObject *)__pyx_f_7spinOps_8_spinOps_create_Imf(__pyx_v_r, __pyx_v_s, __pyx_v_i_times_2, 0)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 759, __pyx_L1_error)
+  __pyx_t_1 = ((PyObject *)__pyx_f_7spinOps_8_spinOps_create_Imf(__pyx_v_r, __pyx_v_s, __pyx_v_two_I, 0)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 759, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -14888,7 +14888,7 @@ static int __Pyx_CreateStringTabAndInitStrings(void) {
     {&__pyx_n_s_Rotate, __pyx_k_Rotate, sizeof(__pyx_k_Rotate), 0, 0, 1, 1},
     {&__pyx_kp_u_State_indices_r_and_s_must_be_no, __pyx_k_State_indices_r_and_s_must_be_no, sizeof(__pyx_k_State_indices_r_and_s_must_be_no), 0, 1, 0, 0},
     {&__pyx_kp_u_The_input_array_initial_cannot_b, __pyx_k_The_input_array_initial_cannot_b, sizeof(__pyx_k_The_input_array_initial_cannot_b), 0, 1, 0, 0},
-    {&__pyx_kp_u_The_input_list_i_times_2_cannot, __pyx_k_The_input_list_i_times_2_cannot, sizeof(__pyx_k_The_input_list_i_times_2_cannot), 0, 1, 0, 0},
+    {&__pyx_kp_u_The_input_list_two_I_cannot_be_e, __pyx_k_The_input_list_two_I_cannot_be_e, sizeof(__pyx_k_The_input_list_two_I_cannot_be_e), 0, 1, 0, 0},
     {&__pyx_kp_u_The_spin_index_is_out_of_bounds, __pyx_k_The_spin_index_is_out_of_bounds, sizeof(__pyx_k_The_spin_index_is_out_of_bounds), 0, 1, 0, 0},
     {&__pyx_n_s_ValueError, __pyx_k_ValueError, sizeof(__pyx_k_ValueError), 0, 0, 1, 1},
     {&__pyx_n_s__46, __pyx_k__46, sizeof(__pyx_k__46), 0, 0, 1, 1},
@@ -14921,7 +14921,6 @@ static int __Pyx_CreateStringTabAndInitStrings(void) {
     {&__pyx_n_s_dtype, __pyx_k_dtype, sizeof(__pyx_k_dtype), 0, 0, 1, 1},
     {&__pyx_n_s_eta, __pyx_k_eta, sizeof(__pyx_k_eta), 0, 0, 1, 1},
     {&__pyx_n_s_gamma, __pyx_k_gamma, sizeof(__pyx_k_gamma), 0, 0, 1, 1},
-    {&__pyx_n_s_i_times_2, __pyx_k_i_times_2, sizeof(__pyx_k_i_times_2), 0, 0, 1, 1},
     {&__pyx_n_s_import, __pyx_k_import, sizeof(__pyx_k_import), 0, 0, 1, 1},
     {&__pyx_n_s_initial, __pyx_k_initial, sizeof(__pyx_k_initial), 0, 0, 1, 1},
     {&__pyx_n_s_initializing, __pyx_k_initializing, sizeof(__pyx_k_initializing), 0, 0, 1, 1},
@@ -14949,6 +14948,7 @@ static int __Pyx_CreateStringTabAndInitStrings(void) {
     {&__pyx_n_s_spin_index, __pyx_k_spin_index, sizeof(__pyx_k_spin_index), 0, 0, 1, 1},
     {&__pyx_n_s_test, __pyx_k_test, sizeof(__pyx_k_test), 0, 0, 1, 1},
     {&__pyx_n_s_tlm, __pyx_k_tlm, sizeof(__pyx_k_tlm), 0, 0, 1, 1},
+    {&__pyx_n_s_two_I, __pyx_k_two_I, sizeof(__pyx_k_two_I), 0, 0, 1, 1},
     {&__pyx_n_s_unit_tlm, __pyx_k_unit_tlm, sizeof(__pyx_k_unit_tlm), 0, 0, 1, 1},
     {&__pyx_n_s_wigner_d, __pyx_k_wigner_d, sizeof(__pyx_k_wigner_d), 0, 0, 1, 1},
     {&__pyx_n_s_zeros, __pyx_k_zeros, sizeof(__pyx_k_zeros), 0, 0, 1, 1},
@@ -14972,7 +14972,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__Pyx_InitCachedConstants", 0);
 
-  /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-dndx0z3b/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":984
+  /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-hase58t8/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":984
  *         __pyx_import_array()
  *     except Exception:
  *         raise ImportError("numpy.core.multiarray failed to import")             # <<<<<<<<<<<<<<
@@ -14983,7 +14983,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple_);
   __Pyx_GIVEREF(__pyx_tuple_);
 
-  /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-dndx0z3b/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":990
+  /* "../../../../../private/var/folders/fb/zngdtm8507z8wkdrwm59p31h0000gn/T/pip-build-env-hase58t8/overlay/lib/python3.12/site-packages/numpy/__init__.cython-30.pxd":990
  *         _import_umath()
  *     except Exception:
  *         raise ImportError("numpy.core.umath failed to import")             # <<<<<<<<<<<<<<
@@ -14996,32 +14996,32 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
 
   /* "spinOps/spinOps.pyx":144
  *     """
- *     if not i_times_2:
- *         raise ValueError("The input list 'i_times_2' cannot be empty.")             # <<<<<<<<<<<<<<
+ *     if not two_I:
+ *         raise ValueError("The input list 'two_I' cannot be empty.")             # <<<<<<<<<<<<<<
  * 
- *     cdef int total_spin_count = len(i_times_2)
+ *     cdef int total_spin_count = len(two_I)
  */
-  __pyx_tuple__3 = PyTuple_Pack(1, __pyx_kp_u_The_input_list_i_times_2_cannot); if (unlikely(!__pyx_tuple__3)) __PYX_ERR(0, 144, __pyx_L1_error)
+  __pyx_tuple__3 = PyTuple_Pack(1, __pyx_kp_u_The_input_list_two_I_cannot_be_e); if (unlikely(!__pyx_tuple__3)) __PYX_ERR(0, 144, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__3);
   __Pyx_GIVEREF(__pyx_tuple__3);
 
   /* "spinOps/spinOps.pyx":179
- *         raise ValueError("The input list 'i_times_2' cannot be empty.")
- *     if spin_index < 0 or spin_index >= len(i_times_2):
+ *         raise ValueError("The input list 'two_I' cannot be empty.")
+ *     if spin_index < 0 or spin_index >= len(two_I):
  *         raise IndexError("The spin_index is out of bounds.")             # <<<<<<<<<<<<<<
  * 
- *     cdef int nstates = number_of_states(i_times_2)
+ *     cdef int nstates = number_of_states(two_I)
  */
   __pyx_tuple__4 = PyTuple_Pack(1, __pyx_kp_u_The_spin_index_is_out_of_bounds); if (unlikely(!__pyx_tuple__4)) __PYX_ERR(0, 179, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__4);
   __Pyx_GIVEREF(__pyx_tuple__4);
 
   /* "spinOps/spinOps.pyx":571
- *         raise ValueError("The input list 'i_times_2' cannot be empty.")
+ *         raise ValueError("The input list 'two_I' cannot be empty.")
  *     if r < 0 or s < 0:
  *         raise IndexError("State indices 'r' and 's' must be non-negative.")             # <<<<<<<<<<<<<<
  * 
- *     cdef int nstates = number_of_states(i_times_2)
+ *     cdef int nstates = number_of_states(two_I)
  */
   __pyx_tuple__5 = PyTuple_Pack(1, __pyx_kp_u_State_indices_r_and_s_must_be_no); if (unlikely(!__pyx_tuple__5)) __PYX_ERR(0, 571, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__5);
@@ -15096,11 +15096,11 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   /* "spinOps/spinOps.pyx":123
  * 
  * 
- * cpdef int number_of_states(list i_times_2):             # <<<<<<<<<<<<<<
+ * cpdef int number_of_states(list two_I):             # <<<<<<<<<<<<<<
  *     """
  *     Computes the total number of quantum states for a given spin system.
  */
-  __pyx_tuple__15 = PyTuple_Pack(1, __pyx_n_s_i_times_2); if (unlikely(!__pyx_tuple__15)) __PYX_ERR(0, 123, __pyx_L1_error)
+  __pyx_tuple__15 = PyTuple_Pack(1, __pyx_n_s_two_I); if (unlikely(!__pyx_tuple__15)) __PYX_ERR(0, 123, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__15);
   __Pyx_GIVEREF(__pyx_tuple__15);
   __pyx_codeobj__16 = (PyObject*)__Pyx_PyCode_New(1, 0, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__15, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_spinOps_spinOps_pyx, __pyx_n_s_number_of_states, 123, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__16)) __PYX_ERR(0, 123, __pyx_L1_error)
@@ -15108,11 +15108,11 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   /* "spinOps/spinOps.pyx":152
  * 
  * 
- * cpdef ndarray[double complex, ndim=2] create_single_spin_Ix(int spin_index, list i_times_2):             # <<<<<<<<<<<<<<
+ * cpdef ndarray[double complex, ndim=2] create_single_spin_Ix(int spin_index, list two_I):             # <<<<<<<<<<<<<<
  *     """
  *     Generates the single-spin :math:`\hat{I}_x` operator matrix for the specified spin within a spin system.
  */
-  __pyx_tuple__17 = PyTuple_Pack(2, __pyx_n_s_spin_index, __pyx_n_s_i_times_2); if (unlikely(!__pyx_tuple__17)) __PYX_ERR(0, 152, __pyx_L1_error)
+  __pyx_tuple__17 = PyTuple_Pack(2, __pyx_n_s_spin_index, __pyx_n_s_two_I); if (unlikely(!__pyx_tuple__17)) __PYX_ERR(0, 152, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__17);
   __Pyx_GIVEREF(__pyx_tuple__17);
   __pyx_codeobj__18 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__17, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_spinOps_spinOps_pyx, __pyx_n_s_create_single_spin_Ix, 152, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__18)) __PYX_ERR(0, 152, __pyx_L1_error)
@@ -15120,7 +15120,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   /* "spinOps/spinOps.pyx":190
  *     return myOp
  * 
- * cpdef ndarray[double complex, ndim=2] create_single_spin_Iy(int spin_index, list i_times_2):             # <<<<<<<<<<<<<<
+ * cpdef ndarray[double complex, ndim=2] create_single_spin_Iy(int spin_index, list two_I):             # <<<<<<<<<<<<<<
  *     """
  *     Generates the single-spin :math:`\hat{I}_y` operator matrix for a specified spin within a spin system.
  */
@@ -15129,7 +15129,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   /* "spinOps/spinOps.pyx":228
  *     return myOp
  * 
- * cpdef ndarray[double complex, ndim=2] create_single_spin_Iz(int spin_index, list i_times_2):             # <<<<<<<<<<<<<<
+ * cpdef ndarray[double complex, ndim=2] create_single_spin_Iz(int spin_index, list two_I):             # <<<<<<<<<<<<<<
  *     """
  *     Creates the single-spin :math:`\hat{I}_z` operator matrix for a single spin in a spin system.
  */
@@ -15138,7 +15138,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   /* "spinOps/spinOps.pyx":262
  * 
  * 
- * cpdef ndarray[double complex, ndim=2] create_single_spin_Ip(int spin_index, list i_times_2):             # <<<<<<<<<<<<<<
+ * cpdef ndarray[double complex, ndim=2] create_single_spin_Ip(int spin_index, list two_I):             # <<<<<<<<<<<<<<
  *     """
  *     Generates the single-spin raising operator (:math:`\hat{I}_+`) matrix for a specified spin within a spin system.
  */
@@ -15147,7 +15147,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   /* "spinOps/spinOps.pyx":300
  *     return myOp
  * 
- * cpdef ndarray[double complex, ndim=2] create_single_spin_Im(int spin_index, list i_times_2):             # <<<<<<<<<<<<<<
+ * cpdef ndarray[double complex, ndim=2] create_single_spin_Im(int spin_index, list two_I):             # <<<<<<<<<<<<<<
  *     """
  *     Generates the single-spin lowering operator (:math:`\hat{I}_-`) matrix for a specified spin within a spin system.
  */
@@ -15156,11 +15156,11 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   /* "spinOps/spinOps.pyx":339
  * 
  * 
- * cpdef ndarray[double complex, ndim=2] create_single_spin_Tlm(int L, int M, int spin_index, list i_times_2):             # <<<<<<<<<<<<<<
+ * cpdef ndarray[double complex, ndim=2] create_single_spin_Tlm(int L, int M, int spin_index, list two_I):             # <<<<<<<<<<<<<<
  *     """
  *     Generates the single-spin irreducible spherical tensor operator (:math:`\hat{T}_{L,M}`) matrix for a specified spin within a spin system.
  */
-  __pyx_tuple__23 = PyTuple_Pack(4, __pyx_n_s_L, __pyx_n_s_M, __pyx_n_s_spin_index, __pyx_n_s_i_times_2); if (unlikely(!__pyx_tuple__23)) __PYX_ERR(0, 339, __pyx_L1_error)
+  __pyx_tuple__23 = PyTuple_Pack(4, __pyx_n_s_L, __pyx_n_s_M, __pyx_n_s_spin_index, __pyx_n_s_two_I); if (unlikely(!__pyx_tuple__23)) __PYX_ERR(0, 339, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__23);
   __Pyx_GIVEREF(__pyx_tuple__23);
   __pyx_codeobj__24 = (PyObject*)__Pyx_PyCode_New(4, 0, 0, 4, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__23, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_spinOps_spinOps_pyx, __pyx_n_s_create_single_spin_Tlm, 339, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__24)) __PYX_ERR(0, 339, __pyx_L1_error)
@@ -15168,7 +15168,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   /* "spinOps/spinOps.pyx":382
  * 
  * 
- * cpdef ndarray[double complex, ndim=2] create_single_spin_Tlm_unit(int L, int M, int spin_index, list i_times_2):             # <<<<<<<<<<<<<<
+ * cpdef ndarray[double complex, ndim=2] create_single_spin_Tlm_unit(int L, int M, int spin_index, list two_I):             # <<<<<<<<<<<<<<
  *     """
  *     Generates the single-spin unit-normalized irreducible spherical tensor operator (:math:`\hat{\mathcal{T}}_{L,M}`) matrix for a specified spin within a spin system.
  */
@@ -15177,7 +15177,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   /* "spinOps/spinOps.pyx":425
  * 
  * 
- * cpdef ndarray[double complex, ndim=2] create_single_C0(int spin_index, list i_times_2):             # <<<<<<<<<<<<<<
+ * cpdef ndarray[double complex, ndim=2] create_single_C0(int spin_index, list two_I):             # <<<<<<<<<<<<<<
  *     """
  *     Generates the single-spin C0 operator (:math:`\hat{C}_0`) matrix for a specified spin within a spin system.
  */
@@ -15186,7 +15186,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   /* "spinOps/spinOps.pyx":463
  *     return myOp
  * 
- * cpdef ndarray[double complex, ndim=2] create_single_C2(int spin_index, list i_times_2):             # <<<<<<<<<<<<<<
+ * cpdef ndarray[double complex, ndim=2] create_single_C2(int spin_index, list two_I):             # <<<<<<<<<<<<<<
  *     """
  *     Generates the single-spin C2 operator (:math:`\hat{C}_2`) matrix for a specified spin within a spin system.
  */
@@ -15195,7 +15195,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   /* "spinOps/spinOps.pyx":502
  * 
  * 
- * cpdef ndarray[double complex, ndim=2] create_single_C4(int spin_index, list i_times_2):             # <<<<<<<<<<<<<<
+ * cpdef ndarray[double complex, ndim=2] create_single_C4(int spin_index, list two_I):             # <<<<<<<<<<<<<<
  *     """
  *     Generates the single-spin C4 operator (:math:`\hat{C}_4`) matrix for a specified spin within a spin system.
  */
@@ -15204,11 +15204,11 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   /* "spinOps/spinOps.pyx":541
  * 
  * 
- * cpdef ndarray[double complex, ndim=2] createEf(int r, int s, list i_times_2):             # <<<<<<<<<<<<<<
+ * cpdef ndarray[double complex, ndim=2] createEf(int r, int s, list two_I):             # <<<<<<<<<<<<<<
  *     """
  *     Generates the operator matrix :math:`\hat{E}^{r-s}` corresponding to the transition from state :math:`s` to :math:`r`
  */
-  __pyx_tuple__29 = PyTuple_Pack(3, __pyx_n_s_r, __pyx_n_s_s, __pyx_n_s_i_times_2); if (unlikely(!__pyx_tuple__29)) __PYX_ERR(0, 541, __pyx_L1_error)
+  __pyx_tuple__29 = PyTuple_Pack(3, __pyx_n_s_r, __pyx_n_s_s, __pyx_n_s_two_I); if (unlikely(!__pyx_tuple__29)) __PYX_ERR(0, 541, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__29);
   __Pyx_GIVEREF(__pyx_tuple__29);
   __pyx_codeobj__30 = (PyObject*)__Pyx_PyCode_New(3, 0, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__29, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_spinOps_spinOps_pyx, __pyx_n_s_createEf, 541, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__30)) __PYX_ERR(0, 541, __pyx_L1_error)
@@ -15216,7 +15216,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   /* "spinOps/spinOps.pyx":583
  * 
  * 
- * cpdef ndarray[double complex, ndim=2] create_Ixf(int r, int s, list i_times_2):             # <<<<<<<<<<<<<<
+ * cpdef ndarray[double complex, ndim=2] create_Ixf(int r, int s, list two_I):             # <<<<<<<<<<<<<<
  *     """
  *     Generates the fictitious spin-1/2 operator matrix :math:`\hat{I}_x^{r-s}` for a transition
  */
@@ -15225,7 +15225,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   /* "spinOps/spinOps.pyx":627
  *     return myOp
  * 
- * cpdef ndarray[double complex, ndim=2] create_Iyf(int r, int s, list i_times_2):             # <<<<<<<<<<<<<<
+ * cpdef ndarray[double complex, ndim=2] create_Iyf(int r, int s, list two_I):             # <<<<<<<<<<<<<<
  *     """
  *     Generates the fictitious spin-1/2 operator matrix :math:`\hat{I}_y^{r-s}` for a transition
  */
@@ -15234,7 +15234,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   /* "spinOps/spinOps.pyx":671
  *     return myOp
  * 
- * cpdef ndarray[double complex, ndim=2] create_Izf(int r, int s, list i_times_2):             # <<<<<<<<<<<<<<
+ * cpdef ndarray[double complex, ndim=2] create_Izf(int r, int s, list two_I):             # <<<<<<<<<<<<<<
  *     """
  *     Generates the fictitious spin-1/2 operator matrix :math:`\hat{I}_z^{r-s}` for a transition
  */
@@ -15243,7 +15243,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   /* "spinOps/spinOps.pyx":715
  *     return myOp
  * 
- * cpdef ndarray[double complex, ndim=2] create_Ipf(int r, int s, list i_times_2):             # <<<<<<<<<<<<<<
+ * cpdef ndarray[double complex, ndim=2] create_Ipf(int r, int s, list two_I):             # <<<<<<<<<<<<<<
  *     """
  *     Generates the fictitious spin-1/2 raising operator matrix :math:`\hat{I}_+^{r-s}` for a transition
  */
@@ -15252,7 +15252,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   /* "spinOps/spinOps.pyx":759
  *     return myOp
  * 
- * cpdef ndarray[double complex, ndim=2] create_Imf(int r, int s, list i_times_2):             # <<<<<<<<<<<<<<
+ * cpdef ndarray[double complex, ndim=2] create_Imf(int r, int s, list two_I):             # <<<<<<<<<<<<<<
  *     """
  *     Generates the fictitious spin-1/2 lowering operator matrix :math:`\hat{I}_-^{r-s}` for a transition
  */
@@ -15792,7 +15792,7 @@ if (!__Pyx_RefNanny) {
   /* "spinOps/spinOps.pyx":123
  * 
  * 
- * cpdef int number_of_states(list i_times_2):             # <<<<<<<<<<<<<<
+ * cpdef int number_of_states(list two_I):             # <<<<<<<<<<<<<<
  *     """
  *     Computes the total number of quantum states for a given spin system.
  */
@@ -15804,7 +15804,7 @@ if (!__Pyx_RefNanny) {
   /* "spinOps/spinOps.pyx":152
  * 
  * 
- * cpdef ndarray[double complex, ndim=2] create_single_spin_Ix(int spin_index, list i_times_2):             # <<<<<<<<<<<<<<
+ * cpdef ndarray[double complex, ndim=2] create_single_spin_Ix(int spin_index, list two_I):             # <<<<<<<<<<<<<<
  *     """
  *     Generates the single-spin :math:`\hat{I}_x` operator matrix for the specified spin within a spin system.
  */
@@ -15816,7 +15816,7 @@ if (!__Pyx_RefNanny) {
   /* "spinOps/spinOps.pyx":190
  *     return myOp
  * 
- * cpdef ndarray[double complex, ndim=2] create_single_spin_Iy(int spin_index, list i_times_2):             # <<<<<<<<<<<<<<
+ * cpdef ndarray[double complex, ndim=2] create_single_spin_Iy(int spin_index, list two_I):             # <<<<<<<<<<<<<<
  *     """
  *     Generates the single-spin :math:`\hat{I}_y` operator matrix for a specified spin within a spin system.
  */
@@ -15828,7 +15828,7 @@ if (!__Pyx_RefNanny) {
   /* "spinOps/spinOps.pyx":228
  *     return myOp
  * 
- * cpdef ndarray[double complex, ndim=2] create_single_spin_Iz(int spin_index, list i_times_2):             # <<<<<<<<<<<<<<
+ * cpdef ndarray[double complex, ndim=2] create_single_spin_Iz(int spin_index, list two_I):             # <<<<<<<<<<<<<<
  *     """
  *     Creates the single-spin :math:`\hat{I}_z` operator matrix for a single spin in a spin system.
  */
@@ -15840,7 +15840,7 @@ if (!__Pyx_RefNanny) {
   /* "spinOps/spinOps.pyx":262
  * 
  * 
- * cpdef ndarray[double complex, ndim=2] create_single_spin_Ip(int spin_index, list i_times_2):             # <<<<<<<<<<<<<<
+ * cpdef ndarray[double complex, ndim=2] create_single_spin_Ip(int spin_index, list two_I):             # <<<<<<<<<<<<<<
  *     """
  *     Generates the single-spin raising operator (:math:`\hat{I}_+`) matrix for a specified spin within a spin system.
  */
@@ -15852,7 +15852,7 @@ if (!__Pyx_RefNanny) {
   /* "spinOps/spinOps.pyx":300
  *     return myOp
  * 
- * cpdef ndarray[double complex, ndim=2] create_single_spin_Im(int spin_index, list i_times_2):             # <<<<<<<<<<<<<<
+ * cpdef ndarray[double complex, ndim=2] create_single_spin_Im(int spin_index, list two_I):             # <<<<<<<<<<<<<<
  *     """
  *     Generates the single-spin lowering operator (:math:`\hat{I}_-`) matrix for a specified spin within a spin system.
  */
@@ -15864,7 +15864,7 @@ if (!__Pyx_RefNanny) {
   /* "spinOps/spinOps.pyx":339
  * 
  * 
- * cpdef ndarray[double complex, ndim=2] create_single_spin_Tlm(int L, int M, int spin_index, list i_times_2):             # <<<<<<<<<<<<<<
+ * cpdef ndarray[double complex, ndim=2] create_single_spin_Tlm(int L, int M, int spin_index, list two_I):             # <<<<<<<<<<<<<<
  *     """
  *     Generates the single-spin irreducible spherical tensor operator (:math:`\hat{T}_{L,M}`) matrix for a specified spin within a spin system.
  */
@@ -15876,7 +15876,7 @@ if (!__Pyx_RefNanny) {
   /* "spinOps/spinOps.pyx":382
  * 
  * 
- * cpdef ndarray[double complex, ndim=2] create_single_spin_Tlm_unit(int L, int M, int spin_index, list i_times_2):             # <<<<<<<<<<<<<<
+ * cpdef ndarray[double complex, ndim=2] create_single_spin_Tlm_unit(int L, int M, int spin_index, list two_I):             # <<<<<<<<<<<<<<
  *     """
  *     Generates the single-spin unit-normalized irreducible spherical tensor operator (:math:`\hat{\mathcal{T}}_{L,M}`) matrix for a specified spin within a spin system.
  */
@@ -15888,7 +15888,7 @@ if (!__Pyx_RefNanny) {
   /* "spinOps/spinOps.pyx":425
  * 
  * 
- * cpdef ndarray[double complex, ndim=2] create_single_C0(int spin_index, list i_times_2):             # <<<<<<<<<<<<<<
+ * cpdef ndarray[double complex, ndim=2] create_single_C0(int spin_index, list two_I):             # <<<<<<<<<<<<<<
  *     """
  *     Generates the single-spin C0 operator (:math:`\hat{C}_0`) matrix for a specified spin within a spin system.
  */
@@ -15900,7 +15900,7 @@ if (!__Pyx_RefNanny) {
   /* "spinOps/spinOps.pyx":463
  *     return myOp
  * 
- * cpdef ndarray[double complex, ndim=2] create_single_C2(int spin_index, list i_times_2):             # <<<<<<<<<<<<<<
+ * cpdef ndarray[double complex, ndim=2] create_single_C2(int spin_index, list two_I):             # <<<<<<<<<<<<<<
  *     """
  *     Generates the single-spin C2 operator (:math:`\hat{C}_2`) matrix for a specified spin within a spin system.
  */
@@ -15912,7 +15912,7 @@ if (!__Pyx_RefNanny) {
   /* "spinOps/spinOps.pyx":502
  * 
  * 
- * cpdef ndarray[double complex, ndim=2] create_single_C4(int spin_index, list i_times_2):             # <<<<<<<<<<<<<<
+ * cpdef ndarray[double complex, ndim=2] create_single_C4(int spin_index, list two_I):             # <<<<<<<<<<<<<<
  *     """
  *     Generates the single-spin C4 operator (:math:`\hat{C}_4`) matrix for a specified spin within a spin system.
  */
@@ -15924,7 +15924,7 @@ if (!__Pyx_RefNanny) {
   /* "spinOps/spinOps.pyx":541
  * 
  * 
- * cpdef ndarray[double complex, ndim=2] createEf(int r, int s, list i_times_2):             # <<<<<<<<<<<<<<
+ * cpdef ndarray[double complex, ndim=2] createEf(int r, int s, list two_I):             # <<<<<<<<<<<<<<
  *     """
  *     Generates the operator matrix :math:`\hat{E}^{r-s}` corresponding to the transition from state :math:`s` to :math:`r`
  */
@@ -15936,7 +15936,7 @@ if (!__Pyx_RefNanny) {
   /* "spinOps/spinOps.pyx":583
  * 
  * 
- * cpdef ndarray[double complex, ndim=2] create_Ixf(int r, int s, list i_times_2):             # <<<<<<<<<<<<<<
+ * cpdef ndarray[double complex, ndim=2] create_Ixf(int r, int s, list two_I):             # <<<<<<<<<<<<<<
  *     """
  *     Generates the fictitious spin-1/2 operator matrix :math:`\hat{I}_x^{r-s}` for a transition
  */
@@ -15948,7 +15948,7 @@ if (!__Pyx_RefNanny) {
   /* "spinOps/spinOps.pyx":627
  *     return myOp
  * 
- * cpdef ndarray[double complex, ndim=2] create_Iyf(int r, int s, list i_times_2):             # <<<<<<<<<<<<<<
+ * cpdef ndarray[double complex, ndim=2] create_Iyf(int r, int s, list two_I):             # <<<<<<<<<<<<<<
  *     """
  *     Generates the fictitious spin-1/2 operator matrix :math:`\hat{I}_y^{r-s}` for a transition
  */
@@ -15960,7 +15960,7 @@ if (!__Pyx_RefNanny) {
   /* "spinOps/spinOps.pyx":671
  *     return myOp
  * 
- * cpdef ndarray[double complex, ndim=2] create_Izf(int r, int s, list i_times_2):             # <<<<<<<<<<<<<<
+ * cpdef ndarray[double complex, ndim=2] create_Izf(int r, int s, list two_I):             # <<<<<<<<<<<<<<
  *     """
  *     Generates the fictitious spin-1/2 operator matrix :math:`\hat{I}_z^{r-s}` for a transition
  */
@@ -15972,7 +15972,7 @@ if (!__Pyx_RefNanny) {
   /* "spinOps/spinOps.pyx":715
  *     return myOp
  * 
- * cpdef ndarray[double complex, ndim=2] create_Ipf(int r, int s, list i_times_2):             # <<<<<<<<<<<<<<
+ * cpdef ndarray[double complex, ndim=2] create_Ipf(int r, int s, list two_I):             # <<<<<<<<<<<<<<
  *     """
  *     Generates the fictitious spin-1/2 raising operator matrix :math:`\hat{I}_+^{r-s}` for a transition
  */
@@ -15984,7 +15984,7 @@ if (!__Pyx_RefNanny) {
   /* "spinOps/spinOps.pyx":759
  *     return myOp
  * 
- * cpdef ndarray[double complex, ndim=2] create_Imf(int r, int s, list i_times_2):             # <<<<<<<<<<<<<<
+ * cpdef ndarray[double complex, ndim=2] create_Imf(int r, int s, list two_I):             # <<<<<<<<<<<<<<
  *     """
  *     Generates the fictitious spin-1/2 lowering operator matrix :math:`\hat{I}_-^{r-s}` for a transition
  */

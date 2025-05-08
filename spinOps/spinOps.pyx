@@ -120,13 +120,13 @@ cpdef double unit_tlm(int l, int m, double I, double m1, double m2):
     return _unit_tlm(l, m, int(2*I), int(2*m1), int(2*m2))
 
 
-cpdef int number_of_states(list i_times_2):
+cpdef int number_of_states(list two_I):
     """
     Computes the total number of quantum states for a given spin system.
 
     Parameters
     ----------
-    i_times_2 : list of int
+    two_I : list of int
         List of integers representing :math:`2I` values for each spin in the system,
         where :math:`I` is the spin quantum number.
 
@@ -138,18 +138,18 @@ cpdef int number_of_states(list i_times_2):
     Raises
     ------
     ValueError
-        If the input list `i_times_2` is empty.
+        If the input list `two_I` is empty.
     """
-    if not i_times_2:
-        raise ValueError("The input list 'i_times_2' cannot be empty.")
+    if not two_I:
+        raise ValueError("The input list 'two_I' cannot be empty.")
 
-    cdef int total_spin_count = len(i_times_2)
-    cdef ndarray[int] spins = np.array(i_times_2, dtype=np.int32)
+    cdef int total_spin_count = len(two_I)
+    cdef ndarray[int] spins = np.array(two_I, dtype=np.int32)
 
     return _number_of_states(total_spin_count, &spins[0])
 
 
-cpdef ndarray[double complex, ndim=2] create_single_spin_Ix(int spin_index, list i_times_2):
+cpdef ndarray[double complex, ndim=2] create_single_spin_Ix(int spin_index, list two_I):
     """
     Generates the single-spin :math:`\hat{I}_x` operator matrix for the specified spin within a spin system.
 
@@ -157,7 +157,7 @@ cpdef ndarray[double complex, ndim=2] create_single_spin_Ix(int spin_index, list
     ----------
     spin_index : int
         Index of the spin for which the :math:`\hat{I}_x` operator is constructed.
-    i_times_2 : list of int
+    two_I : list of int
         List of integers representing :math:`2I` values for each spin in the system,
         where :math:`I` is the spin quantum number.
 
@@ -169,25 +169,25 @@ cpdef ndarray[double complex, ndim=2] create_single_spin_Ix(int spin_index, list
     Raises
     ------
     ValueError
-        If the input list `i_times_2` is empty.
+        If the input list `two_I` is empty.
     IndexError
         If `spin_index` is out of the valid range.
     """
-    if not i_times_2:
-        raise ValueError("The input list 'i_times_2' cannot be empty.")
-    if spin_index < 0 or spin_index >= len(i_times_2):
+    if not two_I:
+        raise ValueError("The input list 'two_I' cannot be empty.")
+    if spin_index < 0 or spin_index >= len(two_I):
         raise IndexError("The spin_index is out of bounds.")
 
-    cdef int nstates = number_of_states(i_times_2)
-    cdef int total_spin_count = len(i_times_2)
-    cdef ndarray[int] spins = np.array(i_times_2, dtype=np.int32)
+    cdef int nstates = number_of_states(two_I)
+    cdef int total_spin_count = len(two_I)
+    cdef ndarray[int] spins = np.array(two_I, dtype=np.int32)
     cdef ndarray[double complex, ndim=2] myOp = np.zeros((nstates, nstates), dtype=np.complex128)
 
     _get_single_spin_Ix(&myOp[0, 0], spin_index, &spins[0], total_spin_count)
 
     return myOp
 
-cpdef ndarray[double complex, ndim=2] create_single_spin_Iy(int spin_index, list i_times_2):
+cpdef ndarray[double complex, ndim=2] create_single_spin_Iy(int spin_index, list two_I):
     """
     Generates the single-spin :math:`\hat{I}_y` operator matrix for a specified spin within a spin system.
 
@@ -195,7 +195,7 @@ cpdef ndarray[double complex, ndim=2] create_single_spin_Iy(int spin_index, list
     ----------
     spin_index : int
         Index of the spin for which the :math:`\hat{I}_y` operator is constructed.
-    i_times_2 : list of int
+    two_I : list of int
         List of integers representing :math:`2I` values for each spin in the system,
         where :math:`I` is the spin quantum number.
 
@@ -207,50 +207,50 @@ cpdef ndarray[double complex, ndim=2] create_single_spin_Iy(int spin_index, list
     Raises
     ------
     ValueError
-        If the input list `i_times_2` is empty.
+        If the input list `two_I` is empty.
     IndexError
         If `spin_index` is out of the valid range.
     """
-    if not i_times_2:
-        raise ValueError("The input list 'i_times_2' cannot be empty.")
-    if spin_index < 0 or spin_index >= len(i_times_2):
+    if not two_I:
+        raise ValueError("The input list 'two_I' cannot be empty.")
+    if spin_index < 0 or spin_index >= len(two_I):
         raise IndexError("The spin_index is out of bounds.")
 
-    cdef int nstates = number_of_states(i_times_2)
-    cdef int total_spin_count = len(i_times_2)
-    cdef ndarray[int] spins = np.array(i_times_2, dtype=np.int32)
+    cdef int nstates = number_of_states(two_I)
+    cdef int total_spin_count = len(two_I)
+    cdef ndarray[int] spins = np.array(two_I, dtype=np.int32)
     cdef ndarray[double complex, ndim=2] myOp = np.zeros((nstates, nstates), dtype=np.complex128)
 
     _get_single_spin_Iy(&myOp[0, 0], spin_index, &spins[0], total_spin_count)
 
     return myOp
 
-cpdef ndarray[double complex, ndim=2] create_single_spin_Iz(int spin_index, list i_times_2):
+cpdef ndarray[double complex, ndim=2] create_single_spin_Iz(int spin_index, list two_I):
     """
     Creates the single-spin :math:`\hat{I}_z` operator matrix for a single spin in a spin system.
 
     Parameters:
         spin_index (int): The index of the spin for which the :math:`\hat{I}_z` operator is being created.
-        i_times_2 (list): A list of integers representing :math:`2 I` values for each spin in the system,
+        two_I (list): A list of integers representing :math:`2 I` values for each spin in the system,
                               where `I` is the spin quantum number.
 
     Returns:
         ndarray[double complex, ndim=2]: The :math:`\hat{I}_z` operator matrix as a 2D NumPy array.
 
     Raises:
-        ValueError: If the input list `i_times_2` is empty.
+        ValueError: If the input list `two_I` is empty.
         IndexError: If `spin_index` is out of bounds.
     """
     # Validate input
-    if not i_times_2:
-        raise ValueError("The input list 'i_times_2' cannot be empty.")
-    if spin_index < 0 or spin_index >= len(i_times_2):
+    if not two_I:
+        raise ValueError("The input list 'two_I' cannot be empty.")
+    if spin_index < 0 or spin_index >= len(two_I):
         raise IndexError("The spin_index is out of bounds.")
 
     # Compute the number of states and prepare the operator matrix
-    cdef int nstates = number_of_states(i_times_2)
-    cdef int total_spin_count = len(i_times_2)
-    cdef ndarray[int] spins = np.array(i_times_2, dtype=np.int32)
+    cdef int nstates = number_of_states(two_I)
+    cdef int total_spin_count = len(two_I)
+    cdef ndarray[int] spins = np.array(two_I, dtype=np.int32)
     cdef ndarray[double complex, ndim=2] myOp = np.zeros((nstates, nstates), dtype=np.complex128)
 
     # Call the external C function to populate the operator matrix
@@ -259,7 +259,7 @@ cpdef ndarray[double complex, ndim=2] create_single_spin_Iz(int spin_index, list
     return myOp
 
 
-cpdef ndarray[double complex, ndim=2] create_single_spin_Ip(int spin_index, list i_times_2):
+cpdef ndarray[double complex, ndim=2] create_single_spin_Ip(int spin_index, list two_I):
     """
     Generates the single-spin raising operator (:math:`\hat{I}_+`) matrix for a specified spin within a spin system.
 
@@ -267,7 +267,7 @@ cpdef ndarray[double complex, ndim=2] create_single_spin_Ip(int spin_index, list
     ----------
     spin_index : int
         Index of the spin for which the :math:`\hat{I}_+` operator is constructed.
-    i_times_2 : list of int
+    two_I : list of int
         List of integers representing :math:`2I` values for each spin in the system,
         where :math:`I` is the spin quantum number.
 
@@ -279,25 +279,25 @@ cpdef ndarray[double complex, ndim=2] create_single_spin_Ip(int spin_index, list
     Raises
     ------
     ValueError
-        If the input list `i_times_2` is empty.
+        If the input list `two_I` is empty.
     IndexError
         If `spin_index` is out of the valid range.
     """
-    if not i_times_2:
-        raise ValueError("The input list 'i_times_2' cannot be empty.")
-    if spin_index < 0 or spin_index >= len(i_times_2):
+    if not two_I:
+        raise ValueError("The input list 'two_I' cannot be empty.")
+    if spin_index < 0 or spin_index >= len(two_I):
         raise IndexError("The spin_index is out of bounds.")
 
-    cdef int nstates = number_of_states(i_times_2)
-    cdef int total_spin_count = len(i_times_2)
-    cdef ndarray[int] spins = np.array(i_times_2, dtype=np.int32)
+    cdef int nstates = number_of_states(two_I)
+    cdef int total_spin_count = len(two_I)
+    cdef ndarray[int] spins = np.array(two_I, dtype=np.int32)
     cdef ndarray[double complex, ndim=2] myOp = np.zeros((nstates, nstates), dtype=np.complex128)
 
     _get_single_spin_Ip(&myOp[0, 0], spin_index, &spins[0], total_spin_count)
 
     return myOp
 
-cpdef ndarray[double complex, ndim=2] create_single_spin_Im(int spin_index, list i_times_2):
+cpdef ndarray[double complex, ndim=2] create_single_spin_Im(int spin_index, list two_I):
     """
     Generates the single-spin lowering operator (:math:`\hat{I}_-`) matrix for a specified spin within a spin system.
 
@@ -305,7 +305,7 @@ cpdef ndarray[double complex, ndim=2] create_single_spin_Im(int spin_index, list
     ----------
     spin_index : int
         Index of the spin for which the :math:`\hat{I}_-` operator is constructed.
-    i_times_2 : list of int
+    two_I : list of int
         List of integers representing :math:`2I` values for each spin in the system,
         where :math:`I` is the spin quantum number.
 
@@ -317,18 +317,18 @@ cpdef ndarray[double complex, ndim=2] create_single_spin_Im(int spin_index, list
     Raises
     ------
     ValueError
-        If the input list `i_times_2` is empty.
+        If the input list `two_I` is empty.
     IndexError
         If `spin_index` is out of the valid range.
     """
-    if not i_times_2:
-        raise ValueError("The input list 'i_times_2' cannot be empty.")
-    if spin_index < 0 or spin_index >= len(i_times_2):
+    if not two_I:
+        raise ValueError("The input list 'two_I' cannot be empty.")
+    if spin_index < 0 or spin_index >= len(two_I):
         raise IndexError("The spin_index is out of bounds.")
 
-    cdef int nstates = number_of_states(i_times_2)
-    cdef int total_spin_count = len(i_times_2)
-    cdef ndarray[int] spins = np.array(i_times_2, dtype=np.int32)
+    cdef int nstates = number_of_states(two_I)
+    cdef int total_spin_count = len(two_I)
+    cdef ndarray[int] spins = np.array(two_I, dtype=np.int32)
     cdef ndarray[double complex, ndim=2] myOp = np.zeros((nstates, nstates), dtype=np.complex128)
 
     _get_single_spin_Im(&myOp[0, 0], spin_index, &spins[0], total_spin_count)
@@ -336,7 +336,7 @@ cpdef ndarray[double complex, ndim=2] create_single_spin_Im(int spin_index, list
     return myOp
 
 
-cpdef ndarray[double complex, ndim=2] create_single_spin_Tlm(int L, int M, int spin_index, list i_times_2):
+cpdef ndarray[double complex, ndim=2] create_single_spin_Tlm(int L, int M, int spin_index, list two_I):
     """
     Generates the single-spin irreducible spherical tensor operator (:math:`\hat{T}_{L,M}`) matrix for a specified spin within a spin system.
 
@@ -348,7 +348,7 @@ cpdef ndarray[double complex, ndim=2] create_single_spin_Tlm(int L, int M, int s
         Order of the tensor operator.
     spin_index : int
         Index of the spin for which the :math:`\hat{T}_{L,M}` operator is constructed.
-    i_times_2 : list of int
+    two_I : list of int
         List of integers representing :math:`2I` values for each spin in the system,
         where :math:`I` is the spin quantum number.
 
@@ -360,18 +360,18 @@ cpdef ndarray[double complex, ndim=2] create_single_spin_Tlm(int L, int M, int s
     Raises
     ------
     ValueError
-        If the input list `i_times_2` is empty.
+        If the input list `two_I` is empty.
     IndexError
         If `spin_index` is out of the valid range.
     """
-    if not i_times_2:
-        raise ValueError("The input list 'i_times_2' cannot be empty.")
-    if spin_index < 0 or spin_index >= len(i_times_2):
+    if not two_I:
+        raise ValueError("The input list 'two_I' cannot be empty.")
+    if spin_index < 0 or spin_index >= len(two_I):
         raise IndexError("The spin_index is out of bounds.")
 
-    cdef int nstates = number_of_states(i_times_2)
-    cdef int total_spin_count = len(i_times_2)
-    cdef ndarray[int] spins = np.array(i_times_2, dtype=np.int32)
+    cdef int nstates = number_of_states(two_I)
+    cdef int total_spin_count = len(two_I)
+    cdef ndarray[int] spins = np.array(two_I, dtype=np.int32)
     cdef ndarray[double complex, ndim=2] myOp = np.zeros((nstates, nstates), dtype=np.complex128)
 
     _get_single_spin_Tlm(<double complex *> cnp.PyArray_DATA(myOp), spin_index, &spins[0], total_spin_count, L, M)
@@ -379,7 +379,7 @@ cpdef ndarray[double complex, ndim=2] create_single_spin_Tlm(int L, int M, int s
     return myOp
 
 
-cpdef ndarray[double complex, ndim=2] create_single_spin_Tlm_unit(int L, int M, int spin_index, list i_times_2):
+cpdef ndarray[double complex, ndim=2] create_single_spin_Tlm_unit(int L, int M, int spin_index, list two_I):
     """
     Generates the single-spin unit-normalized irreducible spherical tensor operator (:math:`\hat{\mathcal{T}}_{L,M}`) matrix for a specified spin within a spin system.
 
@@ -391,7 +391,7 @@ cpdef ndarray[double complex, ndim=2] create_single_spin_Tlm_unit(int L, int M, 
         Order of the tensor operator.
     spin_index : int
         Index of the spin for which the unit-normalized :math:`\hat{\mathcal{T}}_{L,M}` operator is constructed.
-    i_times_2 : list of int
+    two_I : list of int
         List of integers representing :math:`2I` values for each spin in the system,
         where :math:`I` is the spin quantum number.
 
@@ -403,18 +403,18 @@ cpdef ndarray[double complex, ndim=2] create_single_spin_Tlm_unit(int L, int M, 
     Raises
     ------
     ValueError
-        If the input list `i_times_2` is empty.
+        If the input list `two_I` is empty.
     IndexError
         If `spin_index` is out of the valid range.
     """
-    if not i_times_2:
-        raise ValueError("The input list 'i_times_2' cannot be empty.")
-    if spin_index < 0 or spin_index >= len(i_times_2):
+    if not two_I:
+        raise ValueError("The input list 'two_I' cannot be empty.")
+    if spin_index < 0 or spin_index >= len(two_I):
         raise IndexError("The spin_index is out of bounds.")
 
-    cdef int nstates = number_of_states(i_times_2)
-    cdef int total_spin_count = len(i_times_2)
-    cdef ndarray[int] spins = np.array(i_times_2, dtype=np.int32)
+    cdef int nstates = number_of_states(two_I)
+    cdef int total_spin_count = len(two_I)
+    cdef ndarray[int] spins = np.array(two_I, dtype=np.int32)
     cdef ndarray[double complex, ndim=2] myOp = np.zeros((nstates, nstates), dtype=np.complex128)
 
     _get_single_spin_Tlm_unit(&myOp[0, 0], spin_index, &spins[0], total_spin_count, L, M)
@@ -422,7 +422,7 @@ cpdef ndarray[double complex, ndim=2] create_single_spin_Tlm_unit(int L, int M, 
     return myOp
 
 
-cpdef ndarray[double complex, ndim=2] create_single_C0(int spin_index, list i_times_2):
+cpdef ndarray[double complex, ndim=2] create_single_C0(int spin_index, list two_I):
     """
     Generates the single-spin C0 operator (:math:`\hat{C}_0`) matrix for a specified spin within a spin system.
 
@@ -430,7 +430,7 @@ cpdef ndarray[double complex, ndim=2] create_single_C0(int spin_index, list i_ti
     ----------
     spin_index : int
         Index of the spin for which the unit-normalized :math:`\hat{C}_{0}` operator is constructed.
-    i_times_2 : list of int
+    two_I : list of int
         List of integers representing :math:`2I` values for each spin in the system,
         where :math:`I` is the spin quantum number.
 
@@ -442,25 +442,25 @@ cpdef ndarray[double complex, ndim=2] create_single_C0(int spin_index, list i_ti
     Raises
     ------
     ValueError
-        If the input list `i_times_2` is empty.
+        If the input list `two_I` is empty.
     IndexError
         If `spin_index` is out of the valid range.
     """
-    if not i_times_2:
-        raise ValueError("The input list 'i_times_2' cannot be empty.")
-    if spin_index < 0 or spin_index >= len(i_times_2):
+    if not two_I:
+        raise ValueError("The input list 'two_I' cannot be empty.")
+    if spin_index < 0 or spin_index >= len(two_I):
         raise IndexError("The spin_index is out of bounds.")
 
-    cdef int nstates = number_of_states(i_times_2)
-    cdef int total_spin_count = len(i_times_2)
-    cdef ndarray[int] spins = np.array(i_times_2, dtype=np.int32)
+    cdef int nstates = number_of_states(two_I)
+    cdef int total_spin_count = len(two_I)
+    cdef ndarray[int] spins = np.array(two_I, dtype=np.int32)
     cdef ndarray[double complex, ndim=2] myOp = np.zeros((nstates, nstates), dtype=np.complex128)
 
     _get_single_spin_C0(&myOp[0, 0], spin_index, &spins[0], total_spin_count)
 
     return myOp
 
-cpdef ndarray[double complex, ndim=2] create_single_C2(int spin_index, list i_times_2):
+cpdef ndarray[double complex, ndim=2] create_single_C2(int spin_index, list two_I):
     """
     Generates the single-spin C2 operator (:math:`\hat{C}_2`) matrix for a specified spin within a spin system.
 
@@ -468,7 +468,7 @@ cpdef ndarray[double complex, ndim=2] create_single_C2(int spin_index, list i_ti
     ----------
     spin_index : int
         Index of the spin for which the unit-normalized :math:`\hat{C}_{2}` operator is constructed.
-    i_times_2 : list of int
+    two_I : list of int
         List of integers representing :math:`2I` values for each spin in the system,
         where :math:`I` is the spin quantum number.
 
@@ -480,18 +480,18 @@ cpdef ndarray[double complex, ndim=2] create_single_C2(int spin_index, list i_ti
     Raises
     ------
     ValueError
-        If the input list `i_times_2` is empty.
+        If the input list `two_I` is empty.
     IndexError
         If `spin_index` is out of the valid range.
     """
-    if not i_times_2:
-        raise ValueError("The input list 'i_times_2' cannot be empty.")
-    if spin_index < 0 or spin_index >= len(i_times_2):
+    if not two_I:
+        raise ValueError("The input list 'two_I' cannot be empty.")
+    if spin_index < 0 or spin_index >= len(two_I):
         raise IndexError("The spin_index is out of bounds.")
 
-    cdef int nstates = number_of_states(i_times_2)
-    cdef int total_spin_count = len(i_times_2)
-    cdef ndarray[int] spins = np.array(i_times_2, dtype=np.int32)
+    cdef int nstates = number_of_states(two_I)
+    cdef int total_spin_count = len(two_I)
+    cdef ndarray[int] spins = np.array(two_I, dtype=np.int32)
     cdef ndarray[double complex, ndim=2] myOp = np.zeros((nstates, nstates), dtype=np.complex128)
 
     _get_single_spin_C2(&myOp[0, 0], spin_index, &spins[0], total_spin_count)
@@ -499,7 +499,7 @@ cpdef ndarray[double complex, ndim=2] create_single_C2(int spin_index, list i_ti
     return myOp
 
 
-cpdef ndarray[double complex, ndim=2] create_single_C4(int spin_index, list i_times_2):
+cpdef ndarray[double complex, ndim=2] create_single_C4(int spin_index, list two_I):
     """
     Generates the single-spin C4 operator (:math:`\hat{C}_4`) matrix for a specified spin within a spin system.
 
@@ -507,7 +507,7 @@ cpdef ndarray[double complex, ndim=2] create_single_C4(int spin_index, list i_ti
     ----------
     spin_index : int
         Index of the spin for which the unit-normalized :math:`\hat{C}_{4}` operator is constructed.
-    i_times_2 : list of int
+    two_I : list of int
         List of integers representing :math:`2I` values for each spin in the system,
         where :math:`I` is the spin quantum number.
 
@@ -519,18 +519,18 @@ cpdef ndarray[double complex, ndim=2] create_single_C4(int spin_index, list i_ti
     Raises
     ------
     ValueError
-        If the input list `i_times_2` is empty.
+        If the input list `two_I` is empty.
     IndexError
         If `spin_index` is out of the valid range.
     """
-    if not i_times_2:
-        raise ValueError("The input list 'i_times_2' cannot be empty.")
-    if spin_index < 0 or spin_index >= len(i_times_2):
+    if not two_I:
+        raise ValueError("The input list 'two_I' cannot be empty.")
+    if spin_index < 0 or spin_index >= len(two_I):
         raise IndexError("The spin_index is out of bounds.")
 
-    cdef int nstates = number_of_states(i_times_2)
-    cdef int total_spin_count = len(i_times_2)
-    cdef ndarray[int] spins = np.array(i_times_2, dtype=np.int32)
+    cdef int nstates = number_of_states(two_I)
+    cdef int total_spin_count = len(two_I)
+    cdef ndarray[int] spins = np.array(two_I, dtype=np.int32)
     cdef ndarray[double complex, ndim=2] myOp = np.zeros((nstates, nstates), dtype=np.complex128)
 
     _get_single_spin_C4(&myOp[0, 0], spin_index, &spins[0], total_spin_count)
@@ -538,7 +538,7 @@ cpdef ndarray[double complex, ndim=2] create_single_C4(int spin_index, list i_ti
     return myOp
 
 
-cpdef ndarray[double complex, ndim=2] createEf(int r, int s, list i_times_2):
+cpdef ndarray[double complex, ndim=2] createEf(int r, int s, list two_I):
     """
     Generates the operator matrix :math:`\hat{E}^{r-s}` corresponding to the transition from state :math:`s` to :math:`r`
     in a fictitious spin-1/2 system.
@@ -549,7 +549,7 @@ cpdef ndarray[double complex, ndim=2] createEf(int r, int s, list i_times_2):
         Index of the first quantum state (row index).
     s : int
         Index of the second quantum state (column index).
-    i_times_2 : list of int
+    two_I : list of int
         List of integers representing :math:`2I` values for each spin in the system,
         where :math:`I` is the spin quantum number.
 
@@ -561,18 +561,18 @@ cpdef ndarray[double complex, ndim=2] createEf(int r, int s, list i_times_2):
     Raises
     ------
     ValueError
-        If the input list `i_times_2` is empty.
+        If the input list `two_I` is empty.
     IndexError
         If `r` or `s` is out of the valid range.
     """
-    if not i_times_2:
-        raise ValueError("The input list 'i_times_2' cannot be empty.")
+    if not two_I:
+        raise ValueError("The input list 'two_I' cannot be empty.")
     if r < 0 or s < 0:
         raise IndexError("State indices 'r' and 's' must be non-negative.")
 
-    cdef int nstates = number_of_states(i_times_2)
-    cdef int total_spin_count = len(i_times_2)
-    cdef ndarray[int] spins = np.array(i_times_2, dtype=np.int32)
+    cdef int nstates = number_of_states(two_I)
+    cdef int total_spin_count = len(two_I)
+    cdef ndarray[int] spins = np.array(two_I, dtype=np.int32)
     cdef ndarray[double complex, ndim=2] myOp = np.zeros((nstates, nstates), dtype=np.complex128)
 
     _getEf(&myOp[0, 0], r, s, &spins[0], total_spin_count)
@@ -580,7 +580,7 @@ cpdef ndarray[double complex, ndim=2] createEf(int r, int s, list i_times_2):
     return myOp
 
 
-cpdef ndarray[double complex, ndim=2] create_Ixf(int r, int s, list i_times_2):
+cpdef ndarray[double complex, ndim=2] create_Ixf(int r, int s, list two_I):
     """
     Generates the fictitious spin-1/2 operator matrix :math:`\hat{I}_x^{r-s}` for a transition
     from state :math:`s` to state :math:`r`.
@@ -591,7 +591,7 @@ cpdef ndarray[double complex, ndim=2] create_Ixf(int r, int s, list i_times_2):
         Index of the target quantum state (row index).
     s : int
         Index of the source quantum state (column index).
-    i_times_2 : list of int
+    two_I : list of int
         List of integers representing :math:`2I` values for each spin in the system,
         where :math:`I` is the spin quantum number.
 
@@ -603,20 +603,20 @@ cpdef ndarray[double complex, ndim=2] create_Ixf(int r, int s, list i_times_2):
     Raises
     ------
     ValueError
-        If the input list `i_times_2` is empty.
+        If the input list `two_I` is empty.
     IndexError
         If `r` or `s` is negative.
     """
     # Validate input
-    if not i_times_2:
-        raise ValueError("The input list 'i_times_2' cannot be empty.")
+    if not two_I:
+        raise ValueError("The input list 'two_I' cannot be empty.")
     if r < 0 or s < 0:
         raise IndexError("State indices 'r' and 's' must be non-negative.")
 
     # Compute the number of states and prepare the operator matrix
-    cdef int nstates = number_of_states(i_times_2)
-    cdef int total_spin_count = len(i_times_2)
-    cdef ndarray[int] spins = np.array(i_times_2, dtype=np.int32)
+    cdef int nstates = number_of_states(two_I)
+    cdef int total_spin_count = len(two_I)
+    cdef ndarray[int] spins = np.array(two_I, dtype=np.int32)
     cdef ndarray[double complex, ndim=2] myOp = np.zeros((nstates, nstates), dtype=np.complex128)
 
     # Call the external C function to populate the operator matrix
@@ -624,7 +624,7 @@ cpdef ndarray[double complex, ndim=2] create_Ixf(int r, int s, list i_times_2):
 
     return myOp
 
-cpdef ndarray[double complex, ndim=2] create_Iyf(int r, int s, list i_times_2):
+cpdef ndarray[double complex, ndim=2] create_Iyf(int r, int s, list two_I):
     """
     Generates the fictitious spin-1/2 operator matrix :math:`\hat{I}_y^{r-s}` for a transition
     from state :math:`s` to state :math:`r`.
@@ -635,7 +635,7 @@ cpdef ndarray[double complex, ndim=2] create_Iyf(int r, int s, list i_times_2):
         Index of the target quantum state (row index).
     s : int
         Index of the source quantum state (column index).
-    i_times_2 : list of int
+    two_I : list of int
         List of integers representing :math:`2I` values for each spin in the system,
         where :math:`I` is the spin quantum number.
 
@@ -647,20 +647,20 @@ cpdef ndarray[double complex, ndim=2] create_Iyf(int r, int s, list i_times_2):
     Raises
     ------
     ValueError
-        If the input list `i_times_2` is empty.
+        If the input list `two_I` is empty.
     IndexError
         If `r` or `s` is negative.
     """
     # Validate input
-    if not i_times_2:
-        raise ValueError("The input list 'i_times_2' cannot be empty.")
+    if not two_I:
+        raise ValueError("The input list 'two_I' cannot be empty.")
     if r < 0 or s < 0:
         raise IndexError("State indices 'r' and 's' must be non-negative.")
 
     # Compute the number of states and prepare the operator matrix
-    cdef int nstates = number_of_states(i_times_2)
-    cdef int total_spin_count = len(i_times_2)
-    cdef ndarray[int] spins = np.array(i_times_2, dtype=np.int32)
+    cdef int nstates = number_of_states(two_I)
+    cdef int total_spin_count = len(two_I)
+    cdef ndarray[int] spins = np.array(two_I, dtype=np.int32)
     cdef ndarray[double complex, ndim=2] myOp = np.zeros((nstates, nstates), dtype=np.complex128)
 
     # Call the external C function to populate the operator matrix
@@ -668,7 +668,7 @@ cpdef ndarray[double complex, ndim=2] create_Iyf(int r, int s, list i_times_2):
 
     return myOp
 
-cpdef ndarray[double complex, ndim=2] create_Izf(int r, int s, list i_times_2):
+cpdef ndarray[double complex, ndim=2] create_Izf(int r, int s, list two_I):
     """
     Generates the fictitious spin-1/2 operator matrix :math:`\hat{I}_z^{r-s}` for a transition
     from state :math:`s` to state :math:`r`.
@@ -679,7 +679,7 @@ cpdef ndarray[double complex, ndim=2] create_Izf(int r, int s, list i_times_2):
         Index of the target quantum state (row index).
     s : int
         Index of the source quantum state (column index).
-    i_times_2 : list of int
+    two_I : list of int
         List of integers representing :math:`2I` values for each spin in the system,
         where :math:`I` is the spin quantum number.
 
@@ -691,20 +691,20 @@ cpdef ndarray[double complex, ndim=2] create_Izf(int r, int s, list i_times_2):
     Raises
     ------
     ValueError
-        If the input list `i_times_2` is empty.
+        If the input list `two_I` is empty.
     IndexError
         If `r` or `s` is negative.
     """
     # Validate input
-    if not i_times_2:
-        raise ValueError("The input list 'i_times_2' cannot be empty.")
+    if not two_I:
+        raise ValueError("The input list 'two_I' cannot be empty.")
     if r < 0 or s < 0:
         raise IndexError("State indices 'r' and 's' must be non-negative.")
 
     # Compute the number of states and prepare the operator matrix
-    cdef int nstates = number_of_states(i_times_2)
-    cdef int total_spin_count = len(i_times_2)
-    cdef ndarray[int] spins = np.array(i_times_2, dtype=np.int32)
+    cdef int nstates = number_of_states(two_I)
+    cdef int total_spin_count = len(two_I)
+    cdef ndarray[int] spins = np.array(two_I, dtype=np.int32)
     cdef ndarray[double complex, ndim=2] myOp = np.zeros((nstates, nstates), dtype=np.complex128)
 
     # Call the external C function to populate the operator matrix
@@ -712,7 +712,7 @@ cpdef ndarray[double complex, ndim=2] create_Izf(int r, int s, list i_times_2):
 
     return myOp
 
-cpdef ndarray[double complex, ndim=2] create_Ipf(int r, int s, list i_times_2):
+cpdef ndarray[double complex, ndim=2] create_Ipf(int r, int s, list two_I):
     """
     Generates the fictitious spin-1/2 raising operator matrix :math:`\hat{I}_+^{r-s}` for a transition
     from state :math:`s` to state :math:`r`.
@@ -723,7 +723,7 @@ cpdef ndarray[double complex, ndim=2] create_Ipf(int r, int s, list i_times_2):
         Index of the target quantum state (row index).
     s : int
         Index of the source quantum state (column index).
-    i_times_2 : list of int
+    two_I : list of int
         List of integers representing :math:`2I` values for each spin in the system,
         where :math:`I` is the spin quantum number.
 
@@ -735,20 +735,20 @@ cpdef ndarray[double complex, ndim=2] create_Ipf(int r, int s, list i_times_2):
     Raises
     ------
     ValueError
-        If the input list `i_times_2` is empty.
+        If the input list `two_I` is empty.
     IndexError
         If `r` or `s` is negative.
     """
     # Validate input
-    if not i_times_2:
-        raise ValueError("The input list 'i_times_2' cannot be empty.")
+    if not two_I:
+        raise ValueError("The input list 'two_I' cannot be empty.")
     if r < 0 or s < 0:
         raise IndexError("State indices 'r' and 's' must be non-negative.")
 
     # Compute the number of states and prepare the operator matrix
-    cdef int nstates = number_of_states(i_times_2)
-    cdef int total_spin_count = len(i_times_2)
-    cdef ndarray[int] spins = np.array(i_times_2, dtype=np.int32)
+    cdef int nstates = number_of_states(two_I)
+    cdef int total_spin_count = len(two_I)
+    cdef ndarray[int] spins = np.array(two_I, dtype=np.int32)
     cdef ndarray[double complex, ndim=2] myOp = np.zeros((nstates, nstates), dtype=np.complex128)
 
     # Call the external C function to populate the operator matrix
@@ -756,7 +756,7 @@ cpdef ndarray[double complex, ndim=2] create_Ipf(int r, int s, list i_times_2):
 
     return myOp
 
-cpdef ndarray[double complex, ndim=2] create_Imf(int r, int s, list i_times_2):
+cpdef ndarray[double complex, ndim=2] create_Imf(int r, int s, list two_I):
     """
     Generates the fictitious spin-1/2 lowering operator matrix :math:`\hat{I}_-^{r-s}` for a transition
     from state :math:`s` to state :math:`r`.
@@ -767,7 +767,7 @@ cpdef ndarray[double complex, ndim=2] create_Imf(int r, int s, list i_times_2):
         Index of the target quantum state (row index).
     s : int
         Index of the source quantum state (column index).
-    i_times_2 : list of int
+    two_I : list of int
         List of integers representing :math:`2I` values for each spin in the system,
         where :math:`I` is the spin quantum number.
 
@@ -779,20 +779,20 @@ cpdef ndarray[double complex, ndim=2] create_Imf(int r, int s, list i_times_2):
     Raises
     ------
     ValueError
-        If the input list `i_times_2` is empty.
+        If the input list `two_I` is empty.
     IndexError
         If `r` or `s` is negative.
     """
     # Validate input
-    if not i_times_2:
-        raise ValueError("The input list 'i_times_2' cannot be empty.")
+    if not two_I:
+        raise ValueError("The input list 'two_I' cannot be empty.")
     if r < 0 or s < 0:
         raise IndexError("State indices 'r' and 's' must be non-negative.")
 
     # Compute the number of states and prepare the operator matrix
-    cdef int nstates = number_of_states(i_times_2)
-    cdef int total_spin_count = len(i_times_2)
-    cdef ndarray[int] spins = np.array(i_times_2, dtype=np.int32)
+    cdef int nstates = number_of_states(two_I)
+    cdef int total_spin_count = len(two_I)
+    cdef ndarray[int] spins = np.array(two_I, dtype=np.int32)
     cdef ndarray[double complex, ndim=2] myOp = np.zeros((nstates, nstates), dtype=np.complex128)
 
     # Call the external C function to populate the operator matrix

@@ -137,34 +137,24 @@ jobs:
           & "${{ env.pythonLocation }}\python.exe" -m pip install -e .
           & "${{ env.pythonLocation }}\python.exe" -m pip install -r requirements-dev.txt
 
-      - name: Run tests under MSYS2 Python
+
+
+      - name: Run tests under MSYS2 Python (with venv)
         shell: pwsh
         run: |
-          # 1) Locate MSYS2-MinGW Python bin
+          # 1) Locate the MSYS2-MinGW Python
           $mingw = "${{ runner.temp }}\msys64\mingw64\bin"
+          $Env:PATH = "$mingw;$Env:PATH"
 
-          # 2) Prepend so Python can find libgcc, libstdc++, etc.
-          $pkg   = Join-Path $PWD 'spinOps'
-          $Env:PATH = "$mingw;$pkg;$Env:PATH"
+          # 2) Create a venv in the workspace
+          & "$mingw\python.exe" -m venv .venv
 
-          # 3) Bootstrap pip into MSYS2 Python
-          try {
-            # CPython’s bundled ensurepip (if available)
-            & "$mingw\python.exe" -m ensurepip --upgrade
-          } catch {
-            # Fallback: download and run get-pip.py
-            $getpip = Join-Path $Env:RUNNER_TEMP 'get-pip.py'
-            Invoke-WebRequest 'https://bootstrap.pypa.io/get-pip.py' -UseBasicParsing -OutFile $getpip
-            & "$mingw\python.exe" $getpip
-            Remove-Item $getpip
-          }
+          # 3) Install into that venv (venv will have its own pip)
+          & ".venv\Scripts\python.exe" -m pip install --upgrade pip
+          & ".venv\Scripts\python.exe" -m pip install -r requirements-dev.txt pytest
 
-          # 4) Install your test requirements into the same interpreter
-          & "$mingw\python.exe" -m pip install --upgrade pip
-          & "$mingw\python.exe" -m pip install -r requirements-dev.txt pytest
-
-          # 5) Run pytest under the MSYS2-MinGW Python
-          & "$mingw\python.exe" -m pytest --maxfail=1 --disable-warnings -q
+          # 4) Run pytest from the venv
+          & ".venv\Scripts\python.exe" -m pytest --maxfail=1 --disable-warnings -q
 
       - name: Build wheel via pip
         shell: pwsh

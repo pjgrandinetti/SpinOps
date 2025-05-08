@@ -141,15 +141,20 @@ jobs:
 
       - name: Run tests under MSYS2 Python (with venv)
         shell: pwsh
+        env:
+          CC: x86_64-w64-mingw32-gcc
+          CXX: x86_64-w64-mingw32-g++
+          LIBRARY_PATH: ${{ runner.temp }}/msys64/mingw64/lib
+          LDFLAGS: "-L${{ runner.temp }}/msys64/mingw64/lib"
         run: |
-          # 1) Locate MSYS2-MinGW Python bin and make sure its DLLs are on PATH
+          # 1) Prepend the MSYS2-MinGW runtime DLL dir
           $mingw = "${{ runner.temp }}\msys64\mingw64\bin"
           $Env:PATH = "$mingw;$Env:PATH"
 
-          # 2) Create a venv using the MSYS2 Python
+          # 2) Create a venv using that interpreter
           & "$mingw\python.exe" -m venv .venv
 
-          # 3) Find the venv’s interpreter (Scripts on Windows, bin on POSIX)
+          # 3) Locate the venv’s python.exe
           if (Test-Path ".\.venv\Scripts\python.exe") {
             $py = ".\.venv\Scripts\python.exe"
           } elseif (Test-Path ".\.venv\bin\python.exe") {
@@ -158,12 +163,12 @@ jobs:
             throw "Unable to locate the venv python"
           }
 
-          # 4) Upgrade pip, build & install your package, then install pytest+dev deps
+          # 4) Install build tools and compile your extension in-place
           & $py -m pip install --upgrade pip setuptools wheel cython
-          & $py -m pip install -e .
-          & $py -m pip install -r requirements-dev.txt pytest
+          & $py setup.py build_ext --inplace
 
-          # 5) Finally, run your tests
+          # 5) Install dev dependencies (pytest, etc.) and run tests
+          & $py -m pip install -r requirements-dev.txt pytest
           & $py -m pytest --maxfail=1 --disable-warnings -q
 
 

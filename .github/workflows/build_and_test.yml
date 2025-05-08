@@ -138,7 +138,7 @@ jobs:
           & "${{ env.pythonLocation }}\python.exe" -m pip install -r requirements-dev.txt
 
 
-      - name: Run tests without activating
+      - name: Run tests in a Windows venv with MSYS2 compiler
         shell: pwsh
         env:
           CC: x86_64-w64-mingw32-gcc
@@ -146,19 +146,27 @@ jobs:
           LIBRARY_PATH: ${{ runner.temp }}/msys64/mingw64/lib
           LDFLAGS: "-L${{ runner.temp }}/msys64/mingw64/lib"
         run: |
+          # 1) Put MinGW’s gcc/g++ on PATH
           $mingw = "${{ runner.temp }}\msys64\mingw64\bin"
           $Env:PATH = "$mingw;$Env:PATH"
 
+          # 2) Create your venv
           python -m venv .venv
 
-          # build an absolute path
-          $py = Join-Path $PWD ".venv\Scripts\python.exe"
+          # 3) **Dot-source** the Activate.ps1 (note the leading “.” + space)
+          . .\.venv\Scripts\Activate.ps1
 
-          # now call it explicitly
-          & "$py" -m pip install --upgrade pip setuptools wheel cython numpy
-          & "$py" setup.py build_ext --inplace
-          & "$py" -m pip install -r requirements-dev.txt pytest
-          & "$py" -m pytest --maxfail=1 --disable-warnings -q
+          # 4) Now `python` is the venv’s python
+          pip install --upgrade pip setuptools wheel cython numpy
+
+          # 5) Build your C extension
+          python setup.py build_ext --inplace
+
+          # 6) Install test deps
+          pip install -r requirements-dev.txt pytest
+
+          # 7) Run pytest
+          pytest --maxfail=1 --disable-warnings -q
 
       - name: Build wheel via pip
         shell: pwsh

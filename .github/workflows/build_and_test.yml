@@ -95,20 +95,6 @@ jobs:
           msystem: MINGW64
           install: |
             mingw-w64-x86_64-toolchain
-            mingw-w64-x86_64-python
-
-      - name: Add MinGW64 to PATH
-        shell: pwsh
-        run: |
-          $mingw = "${{ runner.temp }}\msys64\mingw64\bin"
-          "${mingw}" | Out-File -FilePath $Env:GITHUB_PATH -Encoding utf8 -Append
-
-      - name: Alias Python import library
-        shell: pwsh
-        run: |
-          $lib = Join-Path $Env:RUNNER_TEMP 'msys64\mingw64\lib\libpython3.12.dll.a'
-          $dest = Join-Path $Env:RUNNER_TEMP 'msys64\mingw64\lib\libpython312.dll.a'
-          if (Test-Path $lib) { Copy-Item $lib $dest -Force }
 
       - name: Install build tools
         shell: pwsh

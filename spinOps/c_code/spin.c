@@ -1,5 +1,6 @@
 #include "spin.h"
 #include "fact.h"
+#include "object_struct.h"
 
 #define MAX_TWO_I  11    // supports 2I = 1,2,…,11  i.e. I = ½,1,…,11/2
 #define MAX_L       8    // supports l = 0,1,…,8
@@ -783,4 +784,14 @@ void getImf_(double complex *operator, int r, int s, int *i_times_2, int total_s
                 matrix[bra][ket] = 1;
         }
     }
+}
+
+
+void getH_(double complex *operator,
+    site_struct *sites,          // Pointer to a list of sites within a spin system.
+    coupling_struct *couplings,  // Pointer to a list of couplings within a spin system.
+    unsigned char *freq_contrib  // A list of freq_contrib booleans.
+)
+{
+
 }

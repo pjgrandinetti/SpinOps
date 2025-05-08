@@ -138,7 +138,7 @@ jobs:
           & "${{ env.pythonLocation }}\python.exe" -m pip install -r requirements-dev.txt
 
 
-      - name: Run tests in a Windows venv with MSYS2 compiler
+      - name: Run tests in a Windows venv with MSYS2 compiler (no activation)
         shell: pwsh
         env:
           CC: x86_64-w64-mingw32-gcc
@@ -146,25 +146,16 @@ jobs:
           LIBRARY_PATH: ${{ runner.temp }}/msys64/mingw64/lib
           LDFLAGS: "-L${{ runner.temp }}/msys64/mingw64/lib"
         run: |
-          # 1) Make sure MSYS2's gcc/g++ are on the PATH
           $mingw = "${{ runner.temp }}\msys64\mingw64\bin"
           $Env:PATH = "$mingw;$Env:PATH"
 
-          # 2) Create a *Windows* venv
           python -m venv .venv
-          .\.venv\Scripts\Activate.ps1
+          $py = ".\.venv\Scripts\python.exe"
 
-          # 3) Bootstrap build-time deps (wheels will be used for numpy, etc.)
-          pip install --upgrade pip setuptools wheel cython numpy
-
-          # 4) Build your C extension in-place
-          python setup.py build_ext --inplace
-
-          # 5) Now install your dev-requirements (pytest, sympy, black, etc.)
-          pip install -r requirements-dev.txt pytest
-
-          # 6) Finally, run your tests
-          pytest --maxfail=1 --disable-warnings -q
+          & $py -m pip install --upgrade pip setuptools wheel cython numpy
+          & $py setup.py build_ext --inplace
+          & $py -m pip install -r requirements-dev.txt pytest
+          & $py -m pytest --maxfail=1 --disable-warnings -q
 
 
       - name: Build wheel via pip

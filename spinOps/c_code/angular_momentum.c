@@ -1,12 +1,265 @@
-#include "spin.h"
-#include "fact.h"
-#include "object_struct.h"
+// Single compilation unit: include unified API
+#include "angular_momentum.h"
 
-#define MAX_TWO_I  11    // supports 2I = 1,2,…,11  i.e. I = ½,1,…,11/2
-#define MAX_L       8    // supports l = 0,1,…,8
+// fac_int and small_fac definition from fact.c
+static inline double fac_int(int n)
+{
+    if (n < 0)
+        return 0.0;
+    if (n <= MAX_SMALL_FAC)
+        return small_fac[n];
+    double result = 1.0;
+    for (int i = 2; i <= n; ++i)
+        result *= i;
+    return result;
+}
 
-#define MAX(a, b) (((a) > (b)) ? (a) : (b))
-#define MIN(a, b) (((a) < (b)) ? (a) : (b))
+/* The one—and only—definition of the lookup table */
+const double small_fac[MAX_SMALL_FAC + 1] = {
+    1.0, 1.0, 2.0, 6.0, 24.0, 120.0, 720.0, 5040.0, 40320.0,
+    362880.0, 3628800.0, 39916800.0, 479001600.0, 6227020800.0,
+    87178291200.0, 1307674368000.0, 20922789888000.0,
+    355687428096000.0, 6402373705728000.0, 121645100408832000.0,
+    2432902008176640000.0, 51090942171709440000.0,
+    1124000727777607680000.0, 25852016738884976640000.0,
+    620448401733239439360000.0, 15511210043330985984000000.0,
+    403291461126605635584000000.0, 10888869450418352160768000000.0,
+    304888344611713860501504000000.0, 8841761993739701954543616000000.0,
+    265252859812191058636308480000000.0,
+    8222838654177922817725562880000000.0,
+    263130836933693530167218012160000000.0
+};
+
+// spatial and rotation implementations follow
+
+/* General reduced Wigner-d as before */
+double _wigner_d_reduced_general(int two_J,
+                                 int two_m1,
+                                 int two_m2,
+                                 double theta)
+{
+    double J  = 0.5 * two_J;
+    double m1 = 0.5 * two_m1;
+    double m2 = 0.5 * two_m2;
+
+    double c2 = cos(0.5 * theta);
+    double s2 = sin(0.5 * theta);
+
+    /* summation limits */
+    int kmin = 0;
+    int tmp  = (two_m1 + two_m2)/2;
+    if(tmp < 0) kmin = -tmp;
+    int kmax1 = (two_J - two_m1) / 2;
+    int kmax2 = (two_J - two_m2) / 2;
+    int kmax  = kmax1 < kmax2 ? kmax1 : kmax2;
+
+    double sum = 0.0;
+    for(int k = kmin; k <= kmax; ++k) {
+        int a = k;
+        int b = (two_J - two_m1)/2 - k;
+        int c = (two_J - two_m2)/2 - k;
+        int d = tmp + k;
+        if(b<0||c<0||d<0) continue;
+
+        double sign = (k&1)? -1.0 : 1.0;
+        double p1   = pow(c2, m1 + m2 + 2.0*k);
+        double p2   = pow(s2, 2.0*J - m1 - m2 - 2.0*k);
+        double denom= fac_int(a)*fac_int(b)*fac_int(c)*fac_int(d);
+        sum += sign * (p1 * p2)/denom;
+    }
+
+    int expo = (two_J - two_m2)/2;
+    double phase = (expo&1)? -1.0 : 1.0;
+
+    int jm1    = (two_J + two_m1)/2;
+    int jm1bar = (two_J - two_m1)/2;
+    int jm2    = (two_J + two_m2)/2;
+    int jm2bar = (two_J - two_m2)/2;
+    double norm = sqrt(
+        fac_int(jm1)*fac_int(jm1bar) *
+        fac_int(jm2)*fac_int(jm2bar)
+    );
+
+    return phase * norm * sum;
+}
+
+/* Special-case for J=2 (two_J==4) using your hard-coded expressions: */
+double _wigner_d_reduced_J2(int two_m1, int two_m2, double theta) {
+    double cx = cos(theta);
+    double sx = sin(theta);
+    /* use exactly the same constants you inlined before */
+    if (two_m1 ==  4) {
+        if (two_m2 ==  4) return  0.25 * (1+cx)*(1+cx);
+        if (two_m2 ==  2) return -0.5  * sx*(1+cx);
+        if (two_m2 ==  0) return  0.6123724355 * sx*sx;
+        if (two_m2 == -2) return -0.5  * sx*(1-cx);
+        if (two_m2 == -4) return  0.25 * (1-cx)*(1-cx);
+    }
+    else if (two_m1 == -4) {
+        if (two_m2 ==  4) return  0.25 * (1-cx)*(1-cx);
+        if (two_m2 ==  2) return  0.5  * sx*(1-cx);
+        if (two_m2 ==  0) return  0.6123724355 * sx*sx;
+        if (two_m2 == -2) return  0.5  * sx*(1+cx);
+        if (two_m2 == -4) return  0.25 * (1+cx)*(1+cx);
+    }
+    else if (two_m1 ==  2) {
+        if (two_m2 ==  4) return  0.5  * sx*(1+cx);
+        if (two_m2 ==  2) return  0.5  * (2*cx*cx + cx - 1);
+        if (two_m2 ==  0) return -1.224744871 * sx*cx;
+        if (two_m2 == -2) return -0.5  * (2*cx*cx - cx - 1);
+        if (two_m2 == -4) return -0.5  * sx*(1-cx);
+    }
+    else if (two_m1 ==  0) {
+        if (two_m2 ==  4 || two_m2 == -4) return  0.6123724355 * sx*sx;
+        if (two_m2 ==  2) return  1.224744871 * sx*cx;
+        if (two_m2 ==  0) return  1.5 * cx*cx - 0.5;
+        if (two_m2 == -2) return -1.224744871 * sx*cx;
+    }
+    else if (two_m1 == -2) {
+        if (two_m2 ==  4) return  0.5  * sx*(1-cx);
+        if (two_m2 ==  2) return -0.5  * (2*cx*cx - cx - 1);
+        if (two_m2 ==  0) return  1.224744871 * sx*cx;
+        if (two_m2 == -2) return  0.5  * (2*cx*cx + cx - 1);
+        if (two_m2 == -4) return -0.5  * sx*(1+cx);
+    }
+    /* (should never fall through for valid two_m1,two_m2) */
+    return 0.0;
+}
+
+/**
+ * Top-level entry point: picks the J=2 shortcut if possible,
+ * otherwise falls back to the full summation.
+ */
+double wigner_d_(const int two_J, const int two_m1, const int two_m2, const double theta)
+{
+    if (two_J == 4) {
+        return _wigner_d_reduced_J2(two_m1, two_m2, theta);
+    }
+    else {
+        return _wigner_d_reduced_general(two_J, two_m1, two_m2, theta);
+    }
+}
+
+/**
+ * Computes the Wigner D-matrix element D^l_{m1,m2}(α, β, γ)
+ * using the Euler angle decomposition:
+ *     D^l_{m1,m2}(α, β, γ) = e^{-i m1 α} d^l_{m1,m2}(β) e^{-i m2 γ}
+ *
+ * All quantum numbers are passed as 2× their values.
+ *
+ * @param two_l   Integer: 2 × l
+ * @param two_m1  Integer: 2 × m₁
+ * @param two_m2  Integer: 2 × m₂
+ * @param alpha   Euler angle α (in radians)
+ * @param beta    Euler angle β  (in radians)
+ * @param gamma   Euler angle γ  (in radians)
+ *
+ * @return        Complex D-matrix element D^l_{m1,m2}(α, β, γ)
+ */
+double complex DLM_(const int two_l, const int two_m1, const int two_m2, const double alpha, const double beta, const double gamma)
+{
+    // Compute the phase factor exp(-i(m1*α + m2*γ))
+    double phase_angle = 0.5 * two_m1 * alpha + 0.5 * two_m2 * gamma;
+    double d_element = wigner_d_(two_l, two_m1, two_m2, beta);
+    return d_element * cexp(-I * phase_angle);
+}
+
+/**
+ * Applies a rotation defined by Euler angles (α, β, γ) to a spin state vector
+ * of angular momentum j, using Wigner D-matrix elements.
+ *
+ * All quantum numbers are passed as 2× their values (i.e., integer-doubled).
+ *
+ * @param two_j     Integer: 2 × j
+ * @param initial   Input vector of size (two_j + 1)
+ * @param alpha     Euler angle α (in radians)
+ * @param beta      Euler angle β  (in radians)
+ * @param gamma     Euler angle γ  (in radians)
+ * @param final     Output vector (must be preallocated, size = two_j + 1)
+ */
+void Rot_(const int two_j, const double complex *initial, const double alpha, const double beta, const double gamma, double complex *final)
+{
+    int length = two_j + 1;
+
+    // Identity rotation shortcut
+    if (alpha == 0.0 && beta == 0.0 && gamma == 0.0) {
+        for (int i = 0; i < length; i++) {
+            final[i] = initial[i];
+        }
+        return;
+    }
+
+    // Handle j == 2 (two_j == 4) using hard-coded Wigner d
+    if (two_j == 4) {
+        for (int two_m2 = -two_j; two_m2 <= two_j; two_m2 += 2) {
+            int index2 = (two_j + two_m2) / 2;
+            final[index2] = 0.0 + 0.0 * I;
+            for (int two_m1 = -two_j; two_m1 <= two_j; two_m1 += 2) {
+                int index1 = (two_j + two_m1) / 2;
+                double db = wigner_d_(two_j, two_m1, two_m2, beta);
+                double pha = 0.5 * (two_m1 * alpha + two_m2 * gamma);
+                double complex d = db * cexp(-I * pha);
+                final[index2] += d * initial[index1];
+            }
+        }
+    }
+    else {
+        // General case
+        double complex temp[length];
+        for (int i = 0; i < length; i++) temp[i] = 0.0 + 0.0 * I;
+
+        for (int two_m2 = -two_j; two_m2 <= two_j; two_m2 += 2) {
+            int index2 = (two_j + two_m2) / 2;
+            for (int two_m1 = -two_j; two_m1 <= two_j; two_m1 += 2) {
+                int index1 = (two_j + two_m1) / 2;
+                double complex D = DLM_(two_j, two_m1, two_m2, alpha, beta, gamma);
+                temp[index2] += D * initial[index1];
+            }
+        }
+
+        for (int i = 0; i < length; i++) {
+            final[i] = temp[i];
+        }
+    }
+}
+
+/*!
+ @function get_rho1_pas_
+ */
+void get_rho1_pas_(double complex *tensor, const double zeta) {
+    if (tensor == NULL) {
+        fprintf(stderr, "Error: tensor pointer is NULL.\n");
+        return;
+    }
+
+    const double SQRT_2 = 1.41421356237;
+    tensor[0] = 0;
+    tensor[1] = -I * SQRT_2 * zeta;
+    tensor[2] = 0;
+}
+
+/*!
+ @function get_rho2_pas_
+ */
+void get_rho2_pas_(double complex *tensor, const double zeta, const double eta) {
+    // Validate input
+    if (tensor == NULL) {
+        fprintf(stderr, "Error: tensor pointer is NULL.\n");
+        return;
+    }
+
+    // Define constants for clarity
+    const double SQRT_6_OVER_2 = 1.224744871391589;  // sqrt(6)/2
+
+    // Initialize the tensor components
+    tensor[0] = eta * zeta / 2;               // m = -2
+    tensor[1] = 0;                            // m = -1
+    tensor[2] = SQRT_6_OVER_2 * zeta;         // m = 0
+    tensor[3] = 0;                            // m = +1
+    tensor[4] = eta * zeta / 2;               // m = +2
+}
+
+// spin operator implementations follow
 
 double clebsch_(const int two_J1, const int two_M1,
                 const int two_J2, const int two_M2,
@@ -73,7 +326,6 @@ static double inv_sqrt2I1[MAX_TWO_I+1];
 static int    tables_initialized = 0;
 
 #include <math.h>
-#include "spin.h"   // brings in small_fac[] and MAX_SMALL_FAC
 
 static void init_tlm_tables(void)
 {
@@ -194,15 +446,15 @@ int number_of_states_(int total_spin_count, const int *two_I)
  * @return Pointer to flattened array: layout is [total_spin_count][nstates]
  *         Each column is a spin configuration: [2m_0, 2m_1, ..., 2m_{N-1}]
  */
-int *createQuantumNumbers(int total_spin_count, const int *two_I)
+int *create_quantum_numbers(int total_spin_count, const int *two_I, int *nstates)
 {
-    const int nstates = number_of_states_(total_spin_count, two_I);
+    *nstates = number_of_states_(total_spin_count, two_I);
 
     // Allocate matrix [total_spin_count][nstates] in row-major layout
-    int *qnum_data = malloc(sizeof(int) * total_spin_count * nstates);
+    int *qnum_data = malloc(sizeof(int) * total_spin_count * (*nstates));
     if (!qnum_data)
     {
-        fprintf(stderr, "Error: memory allocation failed in createQuantumNumbers.\n");
+        fprintf(stderr, "Error: memory allocation failed in create_quantum_numbers.\n");
         return NULL;
     }
 
@@ -214,12 +466,12 @@ int *createQuantumNumbers(int total_spin_count, const int *two_I)
         return NULL;
     }
 
-    for (int s = 0; s < nstates; s++)
+    for (int s = 0; s < (*nstates); s++)
     {
         for (int i = 0; i < total_spin_count; i++)
         {
             int two_m = -two_I[i] + 2 * current_state[i];
-            qnum_data[i * nstates + s] = two_m;
+            qnum_data[i * (*nstates) + s] = two_m;
         }
 
         // Increment current_state[] like a mixed-base counter
@@ -242,7 +494,7 @@ int *createQuantumNumbers(int total_spin_count, const int *two_I)
  * @param two_m2  Integer: 2 × m₂
  * @return        1 if m₁ == m₂, 0 otherwise
  */
-static inline int deltaFunction(const int two_m1, const int two_m2)
+static inline int delta_function(const int two_m1, const int two_m2)
 {
     return (two_m1 == two_m2);
 }
@@ -258,7 +510,7 @@ static inline int deltaFunction(const int two_m1, const int two_m2)
  * @param ket               Index of ket state (column index)
  * @return                  1 if states match on all spins except iskip, 0 otherwise
  */
-int systemDeltaProduct(const int *qnum_data,
+int system_delta_product(const int *qnum_data,
                        const int total_spin_count,
                        const int nstates,
                        const int iskip,
@@ -283,8 +535,8 @@ void get_single_spin_Ix_(double complex *operator, int spin_index, int *two_I, i
 {
     if (spin_index < 0 || spin_index > total_spin_count - 1)
         return;
-    int nstates = number_of_states_(total_spin_count, two_I);
-    int *qnum_data = createQuantumNumbers(total_spin_count, two_I);
+    int nstates;
+    int *qnum_data = create_quantum_numbers(total_spin_count, two_I, &nstates);
     int (*qnum)[nstates] = (int (*)[nstates])qnum_data;
     double complex(*matrix)[nstates] = (double complex(*)[nstates])operator;
 
@@ -292,7 +544,7 @@ void get_single_spin_Ix_(double complex *operator, int spin_index, int *two_I, i
     {
         for (int ket = 0; ket < nstates; ket++)
         {
-            int del = systemDeltaProduct(qnum_data, total_spin_count, nstates, spin_index, bra, ket);
+            int del = system_delta_product(qnum_data, total_spin_count, nstates, spin_index, bra, ket);
             if (del == 0)
                 matrix[bra][ket] = 0;
             else
@@ -314,10 +566,11 @@ void get_Ix_(double complex *operator, int *spin_indexes, int spin_count, int *t
         if (spin_indexes[i] < 0 || spin_indexes[i] > total_spin_count - 1)
             return;
 
-    int nstates = number_of_states_(total_spin_count, two_I);
-    memset(operator, 0, nstates * nstates * sizeof(double complex)); // zero operator
-    int *qnum_data = createQuantumNumbers(total_spin_count, two_I);
+    int nstates;
+    int *qnum_data = create_quantum_numbers(total_spin_count, two_I, &nstates);
     int (*qnum)[nstates] = (int (*)[nstates])qnum_data;
+
+    memset(operator, 0, nstates * nstates * sizeof(double complex)); // zero operator
     double complex(*matrix)[nstates] = (double complex(*)[nstates])operator;
 
     for (int bra = 0; bra < nstates; bra++)
@@ -327,7 +580,7 @@ void get_Ix_(double complex *operator, int *spin_indexes, int spin_count, int *t
             for (int i = 0; i < spin_count; i++)
             {
                 int spin_index = spin_indexes[i];
-                int del = systemDeltaProduct(qnum_data, total_spin_count, nstates, spin_index, bra, ket);
+                int del = system_delta_product(qnum_data, total_spin_count, nstates, spin_index, bra, ket);
                 matrix[bra][ket] += 1 / sqrt(2) * tlm_(1., -1., two_I[spin_index], qnum[spin_index][bra], qnum[spin_index][ket]) * del;
                 matrix[bra][ket] -= 1 / sqrt(2) * tlm_(1., 1., two_I[spin_index], qnum[spin_index][bra], qnum[spin_index][ket]) * del;
             }
@@ -343,8 +596,8 @@ void get_single_spin_Iy_(double complex *operator, int spin_index, int *two_I, i
 {
     if (spin_index < 0 || spin_index > total_spin_count - 1)
         return;
-    int nstates = number_of_states_(total_spin_count, two_I);
-    int *qnum_data = createQuantumNumbers(total_spin_count, two_I);
+    int nstates;
+    int *qnum_data = create_quantum_numbers(total_spin_count, two_I, &nstates);
     int (*qnum)[nstates] = (int (*)[nstates])qnum_data;
     double complex(*matrix)[nstates] = (double complex(*)[nstates])operator;
 
@@ -352,7 +605,7 @@ void get_single_spin_Iy_(double complex *operator, int spin_index, int *two_I, i
     {
         for (int ket = 0; ket < nstates; ket++)
         {
-            int del = systemDeltaProduct(qnum_data, total_spin_count, nstates, spin_index, bra, ket);
+            int del = system_delta_product(qnum_data, total_spin_count, nstates, spin_index, bra, ket);
             if (del == 0)
                 matrix[bra][ket] = 0;
             else
@@ -374,10 +627,10 @@ void get_Iy_(double complex *operator, int *spin_indexes, int spin_count, int *t
         if (spin_indexes[i] < 0 || spin_indexes[i] > total_spin_count - 1)
             return;
 
-    int nstates = number_of_states_(total_spin_count, two_I);
-    memset(operator, 0, nstates * nstates * sizeof(double complex)); // zero operator
-    int *qnum_data = createQuantumNumbers(total_spin_count, two_I);
+    int nstates;
+    int *qnum_data = create_quantum_numbers(total_spin_count, two_I, &nstates);
     int (*qnum)[nstates] = (int (*)[nstates])qnum_data;
+    memset(operator, 0, nstates * nstates * sizeof(double complex)); // zero operator
     double complex(*matrix)[nstates] = (double complex(*)[nstates])operator;
 
     for (int bra = 0; bra < nstates; bra++)
@@ -387,7 +640,7 @@ void get_Iy_(double complex *operator, int *spin_indexes, int spin_count, int *t
             for (int i = 0; i < spin_count; i++)
             {
                 int spin_index = spin_indexes[i];
-                int del = systemDeltaProduct(qnum_data, total_spin_count, nstates, spin_index, bra, ket);
+                int del = system_delta_product(qnum_data, total_spin_count, nstates, spin_index, bra, ket);
                 matrix[bra][ket] += I / sqrt(2) * tlm_(1., -1., two_I[spin_index], qnum[spin_index][bra], qnum[spin_index][ket]) * del;
                 matrix[bra][ket] += I / sqrt(2) * tlm_(1., 1., two_I[spin_index], qnum[spin_index][bra], qnum[spin_index][ket]) * del;
             }
@@ -403,8 +656,8 @@ void get_single_spin_Iz_(double complex *operator, int spin_index, int *two_I, i
 {
     if (spin_index < 0 || spin_index > total_spin_count - 1)
         return;
-    int nstates = number_of_states_(total_spin_count, two_I);
-    int *qnum_data = createQuantumNumbers(total_spin_count, two_I);
+    int nstates;
+    int *qnum_data = create_quantum_numbers(total_spin_count, two_I, &nstates);
     int (*qnum)[nstates] = (int (*)[nstates])qnum_data;
     double complex(*matrix)[nstates] = (double complex(*)[nstates])operator;
 
@@ -412,7 +665,7 @@ void get_single_spin_Iz_(double complex *operator, int spin_index, int *two_I, i
     {
         for (int ket = 0; ket < nstates; ket++)
         {
-            int del = systemDeltaProduct(qnum_data, total_spin_count, nstates, spin_index, bra, ket);
+            int del = system_delta_product(qnum_data, total_spin_count, nstates, spin_index, bra, ket);
             matrix[bra][ket] += tlm_(1., 0., two_I[spin_index], qnum[spin_index][bra], qnum[spin_index][ket]) * del;
         }
     }
@@ -428,10 +681,11 @@ void get_Iz_(double complex *operator, int *spin_indexes, int spin_count, int *t
         if (spin_indexes[i] < 0 || spin_indexes[i] > total_spin_count - 1)
             return;
 
-    int nstates = number_of_states_(total_spin_count, two_I);
-    memset(operator, 0, nstates * nstates * sizeof(double complex)); // zero operator
-    int *qnum_data = createQuantumNumbers(total_spin_count, two_I);
+    int nstates;
+    int *qnum_data = create_quantum_numbers(total_spin_count, two_I, &nstates);
     int (*qnum)[nstates] = (int (*)[nstates])qnum_data;
+
+    memset(operator, 0, nstates * nstates * sizeof(double complex)); // zero operator
     double complex(*matrix)[nstates] = (double complex(*)[nstates])operator;
 
     for (int bra = 0; bra < nstates; bra++)
@@ -441,7 +695,7 @@ void get_Iz_(double complex *operator, int *spin_indexes, int spin_count, int *t
             for (int i = 0; i < spin_count; i++)
             {
                 int spin_index = spin_indexes[i];
-                int del = systemDeltaProduct(qnum_data, total_spin_count, nstates, spin_index, bra, ket);
+                int del = system_delta_product(qnum_data, total_spin_count, nstates, spin_index, bra, ket);
                 matrix[bra][ket] += I / sqrt(2) * tlm_(1., -1., two_I[spin_index], qnum[spin_index][bra], qnum[spin_index][ket]) * del;
                 matrix[bra][ket] += I / sqrt(2) * tlm_(1., 1., two_I[spin_index], qnum[spin_index][bra], qnum[spin_index][ket]) * del;
             }
@@ -457,8 +711,8 @@ void get_single_spin_Ip_(double complex *operator, int spin_index, int *two_I, i
 {
     if (spin_index < 0 || spin_index > total_spin_count - 1)
         return;
-    int nstates = number_of_states_(total_spin_count, two_I);
-    int *qnum_data = createQuantumNumbers(total_spin_count, two_I);
+    int nstates;
+    int *qnum_data = create_quantum_numbers(total_spin_count, two_I, &nstates);
     int (*qnum)[nstates] = (int (*)[nstates])qnum_data;
     double complex(*matrix)[nstates] = (double complex(*)[nstates])operator;
 
@@ -466,7 +720,7 @@ void get_single_spin_Ip_(double complex *operator, int spin_index, int *two_I, i
     {
         for (int ket = 0; ket < nstates; ket++)
         {
-            int del = systemDeltaProduct(qnum_data, total_spin_count, nstates, spin_index, bra, ket);
+            int del = system_delta_product(qnum_data, total_spin_count, nstates, spin_index, bra, ket);
             if (del == 0)
                 matrix[bra][ket] = 0;
             else
@@ -485,10 +739,11 @@ void get_Ip_(double complex *operator, int *spin_indexes, int spin_count, int *t
         if (spin_indexes[i] < 0 || spin_indexes[i] > total_spin_count - 1)
             return;
 
-    int nstates = number_of_states_(total_spin_count, two_I);
-    memset(operator, 0, nstates * nstates * sizeof(double complex)); // zero operator
-    int *qnum_data = createQuantumNumbers(total_spin_count, two_I);
+    int nstates;
+    int *qnum_data = create_quantum_numbers(total_spin_count, two_I, &nstates);
     int (*qnum)[nstates] = (int (*)[nstates])qnum_data;
+
+    memset(operator, 0, nstates * nstates * sizeof(double complex)); // zero operator
     double complex(*matrix)[nstates] = (double complex(*)[nstates])operator;
 
     for (int bra = 0; bra < nstates; bra++)
@@ -498,7 +753,7 @@ void get_Ip_(double complex *operator, int *spin_indexes, int spin_count, int *t
             for (int i = 0; i < spin_count; i++)
             {
                 int spin_index = spin_indexes[i];
-                int del = systemDeltaProduct(qnum_data, total_spin_count, nstates, spin_index, bra, ket);
+                int del = system_delta_product(qnum_data, total_spin_count, nstates, spin_index, bra, ket);
                 matrix[bra][ket] = -sqrt(2) * tlm_(1., 1., two_I[spin_index], qnum[spin_index][bra], qnum[spin_index][ket]) * del;
             }
         }
@@ -513,8 +768,8 @@ void get_single_spin_Im_(double complex *operator, int spin_index, int *two_I, i
 {
     if (spin_index < 0 || spin_index > total_spin_count - 1)
         return;
-    int nstates = number_of_states_(total_spin_count, two_I);
-    int *qnum_data = createQuantumNumbers(total_spin_count, two_I);
+    int nstates;
+    int *qnum_data = create_quantum_numbers(total_spin_count, two_I, &nstates);
     int (*qnum)[nstates] = (int (*)[nstates])qnum_data;
     double complex(*matrix)[nstates] = (double complex(*)[nstates])operator;
 
@@ -522,7 +777,7 @@ void get_single_spin_Im_(double complex *operator, int spin_index, int *two_I, i
     {
         for (int ket = 0; ket < nstates; ket++)
         {
-            int del = systemDeltaProduct(qnum_data, total_spin_count, nstates, spin_index, bra, ket);
+            int del = system_delta_product(qnum_data, total_spin_count, nstates, spin_index, bra, ket);
             if (del == 0)
                 matrix[bra][ket] = 0;
             else
@@ -541,10 +796,11 @@ void get_Im_(double complex *operator, int *spin_indexes, int spin_count, int *t
         if (spin_indexes[i] < 0 || spin_indexes[i] > total_spin_count - 1)
             return;
 
-    int nstates = number_of_states_(total_spin_count, two_I);
-    memset(operator, 0, nstates * nstates * sizeof(double complex)); // zero operator
-    int *qnum_data = createQuantumNumbers(total_spin_count, two_I);
+    int nstates;
+    int *qnum_data = create_quantum_numbers(total_spin_count, two_I, &nstates);
     int (*qnum)[nstates] = (int (*)[nstates])qnum_data;
+
+    memset(operator, 0, nstates * nstates * sizeof(double complex)); // zero operator
     double complex(*matrix)[nstates] = (double complex(*)[nstates])operator;
 
     for (int bra = 0; bra < nstates; bra++)
@@ -554,7 +810,7 @@ void get_Im_(double complex *operator, int *spin_indexes, int spin_count, int *t
             for (int i = 0; i < spin_count; i++)
             {
                 int spin_index = spin_indexes[i];
-                int del = systemDeltaProduct(qnum_data, total_spin_count, nstates, spin_index, bra, ket);
+                int del = system_delta_product(qnum_data, total_spin_count, nstates, spin_index, bra, ket);
                 matrix[bra][ket] = sqrt(2) * tlm_(1., -1., two_I[spin_index], qnum[spin_index][bra], qnum[spin_index][ket]) * del;
             }
         }
@@ -569,8 +825,8 @@ void get_single_spin_Tlm_(double complex *operator, int spin_index, int *two_I, 
 {
     if (spin_index < 0 || spin_index > total_spin_count - 1)
         return;
-    int nstates = number_of_states_(total_spin_count, two_I);
-    int *qnum_data = createQuantumNumbers(total_spin_count, two_I);
+    int nstates;
+    int *qnum_data = create_quantum_numbers(total_spin_count, two_I, &nstates);
     int (*qnum)[nstates] = (int (*)[nstates])qnum_data;
     double complex(*matrix)[nstates] = (double complex(*)[nstates])operator;
 
@@ -578,7 +834,7 @@ void get_single_spin_Tlm_(double complex *operator, int spin_index, int *two_I, 
     {
         for (int ket = 0; ket < nstates; ket++)
         {
-            int del = systemDeltaProduct(qnum_data, total_spin_count, nstates, spin_index, bra, ket);
+            int del = system_delta_product(qnum_data, total_spin_count, nstates, spin_index, bra, ket);
             if (del == 0)
                 matrix[bra][ket] = 0;
             else
@@ -595,8 +851,8 @@ void get_single_spin_Tlm_unit_(double complex *operator, int spin_index, int *tw
 {
     if (spin_index < 0 || spin_index > total_spin_count - 1)
         return;
-    int nstates = number_of_states_(total_spin_count, two_I);
-    int *qnum_data = createQuantumNumbers(total_spin_count, two_I);
+    int nstates;
+    int *qnum_data = create_quantum_numbers(total_spin_count, two_I, &nstates);
     int (*qnum)[nstates] = (int (*)[nstates])qnum_data;
     double complex(*matrix)[nstates] = (double complex(*)[nstates])operator;
 
@@ -604,7 +860,7 @@ void get_single_spin_Tlm_unit_(double complex *operator, int spin_index, int *tw
     {
         for (int ket = 0; ket < nstates; ket++)
         {
-            int del = systemDeltaProduct(qnum_data, total_spin_count, nstates, spin_index, bra, ket);
+            int del = system_delta_product(qnum_data, total_spin_count, nstates, spin_index, bra, ket);
             if (del == 0)
                 matrix[bra][ket] = 0;
             else
@@ -619,8 +875,8 @@ static void get_single_spin_C_generic(double complex *operator, int spin_index, 
 {
     if (spin_index < 0 || spin_index >= total_spin_count)
         return;
-    int nstates = number_of_states_(total_spin_count, two_I);
-    int *qnum_data = createQuantumNumbers(total_spin_count, two_I);
+    int nstates;
+    int *qnum_data = create_quantum_numbers(total_spin_count, two_I, &nstates);
     int (*qnum)[nstates] = (int (*)[nstates])qnum_data;
     double complex (*matrix)[nstates] = (double complex (*)[nstates])operator;
 
@@ -630,7 +886,7 @@ static void get_single_spin_C_generic(double complex *operator, int spin_index, 
 
     for (int bra = 0; bra < nstates; ++bra) {
         for (int ket = 0; ket < nstates; ++ket) {
-            int del = systemDeltaProduct(qnum_data, total_spin_count, nstates,
+            int del = system_delta_product(qnum_data, total_spin_count, nstates,
                                          spin_index, bra, ket);
             if (!del) {
                 matrix[bra][ket] = 0;
@@ -784,23 +1040,3 @@ void get_Imf_(double complex *operator, int r, int s, int *two_I, int total_spin
         }
     }
 }
-
-
-void get_hamiltonian_(double complex *operator,
-    site_struct *sites,          // Pointer to a list of sites within a spin system.
-    coupling_struct *couplings,  // Pointer to a list of couplings within a spin system.
-    unsigned char *freq_contrib  // A list of freq_contrib booleans.
-)
-{
-    int total_spin_count = sites->number_of_sites;
-    int two_I[total_spin_count];
-    for(int i = 0; i < total_spin_count; i++)
-    {
-        two_I[i] = (int) sites->spin[i] * 2;
-    }
-    int nstates = number_of_states_(total_spin_count, two_I);
-
-    memset(operator, 0, nstates * nstates * sizeof(double complex)); 
-
-}
-

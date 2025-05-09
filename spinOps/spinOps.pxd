@@ -2,14 +2,12 @@
 cimport numpy as cnp
 
 
-cdef extern from "spatial.h":
+cdef extern from "angular_momentum.h":
     double wigner_d_(const int two_l, const int two_m1, const int two_m2, const double beta)
     double complex DLM_(const int two_l, const int two_m1, const int two_m2, const double alpha, const double beta, const double gamma)
     void Rot_(const int two_j, const double complex *initial,const double alpha, const double beta, const double gamma,double complex *final)
     void get_rho2_pas_(double complex *tensor, double zeta, double eta)
     void get_rho1_pas_(double complex *tensor, double zeta)
-
-cdef extern from "spin.h":
     double clebsch_(const int two_J1, const int two_M1,const int two_J2, const int two_M2,const int two_J,  const int two_M)
     double tlm_(const int l, const int m, const int two_I, const int two_m1, const int two_m2)
     double unit_tlm_(const int l, const int m, const int two_I, const int two_m1, const int two_m2)

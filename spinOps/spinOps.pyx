@@ -10,28 +10,35 @@ import numpy as np
 from .spinOps cimport DLM_ as _DLM
 from .spinOps cimport Rot_ as _Rot
 from .spinOps cimport clebsch_ as _clebsch
-from .spinOps cimport get_single_spin_Im_ as _get_single_spin_Im
-from .spinOps cimport get_single_spin_Ip_ as _get_single_spin_Ip
-from .spinOps cimport get_single_spin_Ix_ as _get_single_spin_Ix
-from .spinOps cimport get_single_spin_Iy_ as _get_single_spin_Iy
-from .spinOps cimport get_single_spin_Iz_ as _get_single_spin_Iz
-from .spinOps cimport get_single_spin_Tlm_ as _get_single_spin_Tlm
-from .spinOps cimport get_single_spin_Tlm_unit_ as _get_single_spin_Tlm_unit
-from .spinOps cimport get_single_spin_C0_ as _get_single_spin_C0
-from .spinOps cimport get_single_spin_C2_ as _get_single_spin_C2
-from .spinOps cimport get_single_spin_C4_ as _get_single_spin_C4
-from .spinOps cimport get_Ef_ as _getEf
-from .spinOps cimport get_Imf_ as _get_Imf
-from .spinOps cimport get_Ipf_ as _get_Ipf
-from .spinOps cimport get_Ixf_ as _get_Ixf
-from .spinOps cimport get_Iyf_ as _get_Iyf
-from .spinOps cimport get_Izf_ as _get_Izf
-from .spinOps cimport get_rho1_pas_ as _get_rho1_pas
-from .spinOps cimport get_rho2_pas_ as _get_rho2_pas
-from .spinOps cimport number_of_states_ as _number_of_states
+from .spinOps cimport init_single_spin_Ix as _init_single_spin_Ix
+from .spinOps cimport init_Ix_ as _init_Ix
+from .spinOps cimport init_single_spin_Iy as _init_single_spin_Iy
+from .spinOps cimport init_Iy_ as _init_Iy
+from .spinOps cimport init_single_spin_Iz_ as _init_single_spin_Iz
+from .spinOps cimport init_single_spin_Im_ as _init_single_spin_Im
+from .spinOps cimport init_single_spin_Ip_ as _init_single_spin_Ip
+from .spinOps cimport init_single_spin_Tlm_ as _init_single_spin_Tlm
+from .spinOps cimport init_single_spin_Tlm_unit_ as _init_single_spin_Tlm_unit
+from .spinOps cimport init_single_spin_C0_ as _init_single_spin_C0
+from .spinOps cimport init_single_spin_C2_ as _init_single_spin_C2
+from .spinOps cimport init_single_spin_C4_ as _init_single_spin_C4
+from .spinOps cimport init_Ef_ as _init_Ef
+from .spinOps cimport init_Imf_ as _init_Imf
+from .spinOps cimport init_Ipf_ as _init_Ipf
+from .spinOps cimport init_Ixf_ as _init_Ixf
+from .spinOps cimport init_Iyf_ as _init_Iyf
+from .spinOps cimport init_Izf_ as _init_Izf
 from .spinOps cimport tlm_ as _tlm
 from .spinOps cimport unit_tlm_ as _unit_tlm
+from .spinOps cimport number_of_states_ as _number_of_states
 from .spinOps cimport wigner_d_ as _wigner_d
+from .spinOps cimport init_rho1_pas_ as _init_rho1_pas
+from .spinOps cimport init_rho2_pas_ as _init_rho2_pas
+
+# new quantum_numbers struct support
+from .spinOps cimport create_quantum_numbers_struct
+from .spinOps cimport free_quantum_numbers_struct
+from .spinOps cimport quantum_numbers_t
 
 
 cpdef double clebsch(double j1, double m1, double j2, double m2, double j, double m):
@@ -151,79 +158,102 @@ cpdef int number_of_states(list two_I):
 
 cpdef ndarray[double complex, ndim=2] create_single_spin_Ix(int spin_index, list two_I):
     """
-    Generates the single-spin :math:`\hat{I}_x` operator matrix for the specified spin within a spin system.
-
-    Parameters
-    ----------
-    spin_index : int
-        Index of the spin for which the :math:`\hat{I}_x` operator is constructed.
-    two_I : list of int
-        List of integers representing :math:`2I` values for each spin in the system,
-        where :math:`I` is the spin quantum number.
-
-    Returns
-    -------
-    ndarray[double complex, ndim=2]
-        A 2D NumPy array representing the :math:`\hat{I}_x` operator matrix.
-
-    Raises
-    ------
-    ValueError
-        If the input list `two_I` is empty.
-    IndexError
-        If `spin_index` is out of the valid range.
+    Generates the single-spin Ix operator matrix for the specified spin using quantum_numbers_t.
     """
     if not two_I:
         raise ValueError("The input list 'two_I' cannot be empty.")
     if spin_index < 0 or spin_index >= len(two_I):
         raise IndexError("The spin_index is out of bounds.")
 
-    cdef int nstates = number_of_states(two_I)
-    cdef int total_spin_count = len(two_I)
+    # build quantum_numbers struct
     cdef ndarray[int] spins = np.array(two_I, dtype=np.int32)
-    cdef ndarray[double complex, ndim=2] myOp = np.zeros((nstates, nstates), dtype=np.complex128)
-
-    _get_single_spin_Ix(&myOp[0, 0], spin_index, &spins[0], total_spin_count)
-
+    cdef int total_spin_count = len(two_I)
+    cdef quantum_numbers_t *qn = create_quantum_numbers_struct(total_spin_count, &spins[0])
+    if qn == NULL:
+        raise MemoryError("could not allocate quantum_numbers_t")
+    cdef int n
+    cdef ndarray[double complex, ndim=2] myOp
+    try:
+        n = qn.nstates
+        myOp = np.zeros((n, n), dtype=np.complex128)
+        _init_single_spin_Ix(<double complex *> &myOp[0, 0], spin_index, qn)
+    finally:
+        free_quantum_numbers_struct(qn)
     return myOp
+
+cpdef ndarray[double complex, ndim=2] create_Ix(list spin_indexes, list two_I):
+    """
+    Generates the multi-spin Ix operator matrix for the specified spin indices.
+    """
+    cdef int total_spin_count, n
+    cdef ndarray[int] spins, idx
+    cdef quantum_numbers_t *qn
+    cdef ndarray[double complex, ndim=2] M
+    if not spin_indexes or not two_I:
+        raise ValueError("spin_indexes and two_I cannot be empty.")
+    total_spin_count = len(two_I)
+    spins = np.array(two_I, dtype=np.int32)
+    idx = np.array(spin_indexes, dtype=np.int32)
+    qn = create_quantum_numbers_struct(total_spin_count, &spins[0])
+    if qn == NULL:
+        raise MemoryError("could not allocate quantum_numbers_t")
+    try:
+        n = qn.nstates
+        M = np.zeros((n, n), dtype=np.complex128)
+        _init_Ix(<double complex *> &M[0, 0], &idx[0], len(spin_indexes), qn)
+    finally:
+        free_quantum_numbers_struct(qn)
+    return M
 
 cpdef ndarray[double complex, ndim=2] create_single_spin_Iy(int spin_index, list two_I):
     """
-    Generates the single-spin :math:`\hat{I}_y` operator matrix for a specified spin within a spin system.
-
-    Parameters
-    ----------
-    spin_index : int
-        Index of the spin for which the :math:`\hat{I}_y` operator is constructed.
-    two_I : list of int
-        List of integers representing :math:`2I` values for each spin in the system,
-        where :math:`I` is the spin quantum number.
-
-    Returns
-    -------
-    ndarray[double complex, ndim=2]
-        A 2D NumPy array representing the :math:`\hat{I}_y` operator matrix.
-
-    Raises
-    ------
-    ValueError
-        If the input list `two_I` is empty.
-    IndexError
-        If `spin_index` is out of the valid range.
+    Generates the single-spin Iy operator matrix for the specified spin using quantum_numbers_t.
     """
     if not two_I:
         raise ValueError("The input list 'two_I' cannot be empty.")
     if spin_index < 0 or spin_index >= len(two_I):
         raise IndexError("The spin_index is out of bounds.")
 
-    cdef int nstates = number_of_states(two_I)
-    cdef int total_spin_count = len(two_I)
+    # build quantum_numbers struct
     cdef ndarray[int] spins = np.array(two_I, dtype=np.int32)
-    cdef ndarray[double complex, ndim=2] myOp = np.zeros((nstates, nstates), dtype=np.complex128)
-
-    _get_single_spin_Iy(&myOp[0, 0], spin_index, &spins[0], total_spin_count)
-
+    cdef int total_spin_count = len(two_I)
+    cdef quantum_numbers_t *qn = create_quantum_numbers_struct(total_spin_count, &spins[0])
+    if qn == NULL:
+        raise MemoryError("could not allocate quantum_numbers_t")
+    cdef int n
+    cdef ndarray[double complex, ndim=2] myOp
+    try:
+        n = qn.nstates
+        myOp = np.zeros((n, n), dtype=np.complex128)
+        _init_single_spin_Iy(<double complex *> &myOp[0, 0], spin_index, qn)
+    finally:
+        free_quantum_numbers_struct(qn)
     return myOp
+
+cpdef ndarray[double complex, ndim=2] create_Iy(list spin_indexes, list two_I):
+    """
+    Generates the multi-spin Iy operator matrix for the specified spin indices.
+    """
+    cdef int total_spin_count, n
+    cdef ndarray[int] spins, idx
+    cdef quantum_numbers_t *qn
+    cdef ndarray[double complex, ndim=2] M
+    if not spin_indexes or not two_I:
+        raise ValueError("spin_indexes and two_I cannot be empty.")
+    total_spin_count = len(two_I)
+    spins = np.array(two_I, dtype=np.int32)
+    idx = np.array(spin_indexes, dtype=np.int32)
+    qn = create_quantum_numbers_struct(total_spin_count, &spins[0])
+    if qn == NULL:
+        raise MemoryError("could not allocate quantum_numbers_t")
+    try:
+        n = qn.nstates
+        M = np.zeros((n, n), dtype=np.complex128)
+        _init_Iy(<double complex *> &M[0, 0], &idx[0], len(spin_indexes), qn)
+    finally:
+        free_quantum_numbers_struct(qn)
+    return M
+
 
 cpdef ndarray[double complex, ndim=2] create_single_spin_Iz(int spin_index, list two_I):
     """
@@ -254,7 +284,7 @@ cpdef ndarray[double complex, ndim=2] create_single_spin_Iz(int spin_index, list
     cdef ndarray[double complex, ndim=2] myOp = np.zeros((nstates, nstates), dtype=np.complex128)
 
     # Call the external C function to populate the operator matrix
-    _get_single_spin_Iz(&myOp[0, 0], spin_index, &spins[0], total_spin_count)
+    _init_single_spin_Iz(&myOp[0, 0], spin_index, &spins[0], total_spin_count)
 
     return myOp
 
@@ -293,7 +323,7 @@ cpdef ndarray[double complex, ndim=2] create_single_spin_Ip(int spin_index, list
     cdef ndarray[int] spins = np.array(two_I, dtype=np.int32)
     cdef ndarray[double complex, ndim=2] myOp = np.zeros((nstates, nstates), dtype=np.complex128)
 
-    _get_single_spin_Ip(&myOp[0, 0], spin_index, &spins[0], total_spin_count)
+    _init_single_spin_Ip(&myOp[0, 0], spin_index, &spins[0], total_spin_count)
 
     return myOp
 
@@ -331,7 +361,7 @@ cpdef ndarray[double complex, ndim=2] create_single_spin_Im(int spin_index, list
     cdef ndarray[int] spins = np.array(two_I, dtype=np.int32)
     cdef ndarray[double complex, ndim=2] myOp = np.zeros((nstates, nstates), dtype=np.complex128)
 
-    _get_single_spin_Im(&myOp[0, 0], spin_index, &spins[0], total_spin_count)
+    _init_single_spin_Im(&myOp[0, 0], spin_index, &spins[0], total_spin_count)
 
     return myOp
 
@@ -374,7 +404,7 @@ cpdef ndarray[double complex, ndim=2] create_single_spin_Tlm(int L, int M, int s
     cdef ndarray[int] spins = np.array(two_I, dtype=np.int32)
     cdef ndarray[double complex, ndim=2] myOp = np.zeros((nstates, nstates), dtype=np.complex128)
 
-    _get_single_spin_Tlm(<double complex *> cnp.PyArray_DATA(myOp), spin_index, &spins[0], total_spin_count, L, M)
+    _init_single_spin_Tlm(<double complex *> cnp.PyArray_DATA(myOp), spin_index, &spins[0], total_spin_count, L, M)
 
     return myOp
 
@@ -417,7 +447,7 @@ cpdef ndarray[double complex, ndim=2] create_single_spin_Tlm_unit(int L, int M, 
     cdef ndarray[int] spins = np.array(two_I, dtype=np.int32)
     cdef ndarray[double complex, ndim=2] myOp = np.zeros((nstates, nstates), dtype=np.complex128)
 
-    _get_single_spin_Tlm_unit(&myOp[0, 0], spin_index, &spins[0], total_spin_count, L, M)
+    _init_single_spin_Tlm_unit(&myOp[0, 0], spin_index, &spins[0], total_spin_count, L, M)
 
     return myOp
 
@@ -456,7 +486,7 @@ cpdef ndarray[double complex, ndim=2] create_single_C0(int spin_index, list two_
     cdef ndarray[int] spins = np.array(two_I, dtype=np.int32)
     cdef ndarray[double complex, ndim=2] myOp = np.zeros((nstates, nstates), dtype=np.complex128)
 
-    _get_single_spin_C0(&myOp[0, 0], spin_index, &spins[0], total_spin_count)
+    _init_single_spin_C0(&myOp[0, 0], spin_index, &spins[0], total_spin_count)
 
     return myOp
 
@@ -494,7 +524,7 @@ cpdef ndarray[double complex, ndim=2] create_single_C2(int spin_index, list two_
     cdef ndarray[int] spins = np.array(two_I, dtype=np.int32)
     cdef ndarray[double complex, ndim=2] myOp = np.zeros((nstates, nstates), dtype=np.complex128)
 
-    _get_single_spin_C2(&myOp[0, 0], spin_index, &spins[0], total_spin_count)
+    _init_single_spin_C2(&myOp[0, 0], spin_index, &spins[0], total_spin_count)
 
     return myOp
 
@@ -533,7 +563,7 @@ cpdef ndarray[double complex, ndim=2] create_single_C4(int spin_index, list two_
     cdef ndarray[int] spins = np.array(two_I, dtype=np.int32)
     cdef ndarray[double complex, ndim=2] myOp = np.zeros((nstates, nstates), dtype=np.complex128)
 
-    _get_single_spin_C4(&myOp[0, 0], spin_index, &spins[0], total_spin_count)
+    _init_single_spin_C4(&myOp[0, 0], spin_index, &spins[0], total_spin_count)
 
     return myOp
 
@@ -575,7 +605,7 @@ cpdef ndarray[double complex, ndim=2] createEf(int r, int s, list two_I):
     cdef ndarray[int] spins = np.array(two_I, dtype=np.int32)
     cdef ndarray[double complex, ndim=2] myOp = np.zeros((nstates, nstates), dtype=np.complex128)
 
-    _getEf(&myOp[0, 0], r, s, &spins[0], total_spin_count)
+    _init_Ef(&myOp[0, 0], r, s, &spins[0], total_spin_count)
 
     return myOp
 
@@ -620,7 +650,7 @@ cpdef ndarray[double complex, ndim=2] create_Ixf(int r, int s, list two_I):
     cdef ndarray[double complex, ndim=2] myOp = np.zeros((nstates, nstates), dtype=np.complex128)
 
     # Call the external C function to populate the operator matrix
-    _get_Ixf(&myOp[0, 0], r, s, &spins[0], total_spin_count)
+    _init_Ixf(&myOp[0, 0], r, s, &spins[0], total_spin_count)
 
     return myOp
 
@@ -664,7 +694,7 @@ cpdef ndarray[double complex, ndim=2] create_Iyf(int r, int s, list two_I):
     cdef ndarray[double complex, ndim=2] myOp = np.zeros((nstates, nstates), dtype=np.complex128)
 
     # Call the external C function to populate the operator matrix
-    _get_Iyf(&myOp[0, 0], r, s, &spins[0], total_spin_count)
+    _init_Iyf(&myOp[0, 0], r, s, &spins[0], total_spin_count)
 
     return myOp
 
@@ -708,7 +738,7 @@ cpdef ndarray[double complex, ndim=2] create_Izf(int r, int s, list two_I):
     cdef ndarray[double complex, ndim=2] myOp = np.zeros((nstates, nstates), dtype=np.complex128)
 
     # Call the external C function to populate the operator matrix
-    _get_Izf(&myOp[0, 0], r, s, &spins[0], total_spin_count)
+    _init_Izf(&myOp[0, 0], r, s, &spins[0], total_spin_count)
 
     return myOp
 
@@ -752,7 +782,7 @@ cpdef ndarray[double complex, ndim=2] create_Ipf(int r, int s, list two_I):
     cdef ndarray[double complex, ndim=2] myOp = np.zeros((nstates, nstates), dtype=np.complex128)
 
     # Call the external C function to populate the operator matrix
-    _get_Ipf(&myOp[0, 0], r, s, &spins[0], total_spin_count)
+    _init_Ipf(&myOp[0, 0], r, s, &spins[0], total_spin_count)
 
     return myOp
 
@@ -796,7 +826,7 @@ cpdef ndarray[double complex, ndim=2] create_Imf(int r, int s, list two_I):
     cdef ndarray[double complex, ndim=2] myOp = np.zeros((nstates, nstates), dtype=np.complex128)
 
     # Call the external C function to populate the operator matrix
-    _get_Imf(&myOp[0, 0], r, s, &spins[0], total_spin_count)
+    _init_Imf(&myOp[0, 0], r, s, &spins[0], total_spin_count)
 
     return myOp
 
@@ -925,7 +955,7 @@ cpdef cnp.ndarray[double complex, ndim=1] create_rho1(double zeta):
     cdef cnp.ndarray[double complex, ndim=1] myOp = np.zeros(3, dtype=np.complex128)
 
     # Call the external C function to populate the tensor
-    _get_rho1_pas(<double complex *> cnp.PyArray_DATA(myOp), zeta)
+    _init_rho1_pas(<double complex *> cnp.PyArray_DATA(myOp), zeta)
 
     return myOp
 
@@ -955,7 +985,7 @@ cpdef cnp.ndarray[double complex, ndim=1] create_rho2(double zeta, double eta):
     cdef cnp.ndarray[double complex, ndim=1] myOp = np.zeros(5, dtype=np.complex128)
 
     # Call the external C function to populate the tensor
-    _get_rho2_pas(<double complex *> cnp.PyArray_DATA(myOp), zeta, eta)
+    _init_rho2_pas(<double complex *> cnp.PyArray_DATA(myOp), zeta, eta)
 
     return myOp
 

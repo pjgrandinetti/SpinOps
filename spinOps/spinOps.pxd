@@ -6,26 +6,43 @@ cdef extern from "angular_momentum.h":
     double wigner_d_(const int two_l, const int two_m1, const int two_m2, const double beta)
     double complex DLM_(const int two_l, const int two_m1, const int two_m2, const double alpha, const double beta, const double gamma)
     void Rot_(const int two_j, const double complex *initial,const double alpha, const double beta, const double gamma,double complex *final)
-    void get_rho2_pas_(double complex *tensor, double zeta, double eta)
-    void get_rho1_pas_(double complex *tensor, double zeta)
+    void init_rho2_pas_(double complex *tensor, double zeta, double eta)
+    void init_rho1_pas_(double complex *tensor, double zeta)
     double clebsch_(const int two_J1, const int two_M1,const int two_J2, const int two_M2,const int two_J,  const int two_M)
     double tlm_(const int l, const int m, const int two_I, const int two_m1, const int two_m2)
     double unit_tlm_(const int l, const int m, const int two_I, const int two_m1, const int two_m2)
     int number_of_states_(int total_spin_count, int *two_I)
-    void get_single_spin_Ix_(double complex *operator, int spin_index, int *two_I, int total_spin_count)
-    void get_single_spin_Iy_(double complex *operator, int spin_index, int *two_I, int total_spin_count)
-    void get_single_spin_Iz_(double complex *operator, int spin_index, int *two_I, int total_spin_count)
-    void get_single_spin_Ip_(double complex *operator, int spin_index, int *two_I, int total_spin_count)
-    void get_single_spin_Im_(double complex *operator, int spin_index, int *two_I, int total_spin_count)
-    void get_single_spin_Tlm_(double complex *operator, int spin_index, int *two_I, int total_spin_count, int L, int M)
-    void get_single_spin_Tlm_unit_(double complex *operator, int spin_index, int *two_I, int total_spin_count, int L, int M)
-    void get_single_spin_C0_(double complex *operator, int spin_index, int *two_I, int total_spin_count)
-    void get_single_spin_C2_(double complex *operator, int spin_index, int *two_I, int total_spin_count)
-    void get_single_spin_C4_(double complex *operator, int spin_index, int *two_I, int total_spin_count)
-    void get_Ef_(double complex *operator, int r, int s, int *two_I, int total_spin_count)
-    void get_Ixf_(double complex *operator, int r, int s, int *two_I, int total_spin_count)
-    void get_Iyf_(double complex *operator, int r, int s, int *two_I, int total_spin_count)
-    void get_Izf_(double complex *operator, int r, int s, int *two_I, int total_spin_count)
-    void get_Ipf_(double complex *operator, int r, int s, int *two_I, int total_spin_count)
-    void get_Imf_(double complex *operator, int r, int s, int *two_I, int total_spin_count)
+    void init_single_spin_Iz_(double complex *operator, int spin_index, int *two_I, int total_spin_count)
+    void init_single_spin_Ip_(double complex *operator, int spin_index, int *two_I, int total_spin_count)
+    void init_single_spin_Im_(double complex *operator, int spin_index, int *two_I, int total_spin_count)
+    void init_single_spin_Tlm_(double complex *operator, int spin_index, int *two_I, int total_spin_count, int L, int M)
+    void init_single_spin_Tlm_unit_(double complex *operator, int spin_index, int *two_I, int total_spin_count, int L, int M)
+    void init_single_spin_C0_(double complex *operator, int spin_index, int *two_I, int total_spin_count)
+    void init_single_spin_C2_(double complex *operator, int spin_index, int *two_I, int total_spin_count)
+    void init_single_spin_C4_(double complex *operator, int spin_index, int *two_I, int total_spin_count)
+    void init_Ef_(double complex *operator, int r, int s, int *two_I, int total_spin_count)
+    void init_Ixf_(double complex *operator, int r, int s, int *two_I, int total_spin_count)
+    void init_Iyf_(double complex *operator, int r, int s, int *two_I, int total_spin_count)
+    void init_Izf_(double complex *operator, int r, int s, int *two_I, int total_spin_count)
+    void init_Ipf_(double complex *operator, int r, int s, int *two_I, int total_spin_count)
+    void init_Imf_(double complex *operator, int r, int s, int *two_I, int total_spin_count)
+
+    # new multi-spin Ix using struct
+    void init_Ix_(double complex *operator, int *spin_indexes, int spin_count, const quantum_numbers_t *qn)
+    void init_Iy_(double complex *operator, int *spin_indexes, int spin_count, const quantum_numbers_t *qn)
+
+    # new struct for bundling spin magnitudes and quantum numbers
+    ctypedef struct quantum_numbers_t:
+        int total_spin_count
+        int nstates
+        int *two_I
+        int *qnum_data
+
+    # new create/free for quantum numbers struct
+    quantum_numbers_t *create_quantum_numbers_struct(int total_spin_count, const int *two_I)
+    void free_quantum_numbers_struct(quantum_numbers_t *qn)
+
+    # specialized struct‐based initializer
+    void init_single_spin_Ix(double complex *operator, int spin_index, const quantum_numbers_t *qn)
+    void init_single_spin_Iy(double complex *operator, int spin_index, const quantum_numbers_t *qn)
 
